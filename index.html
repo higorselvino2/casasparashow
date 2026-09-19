@@ -3,11 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Shortlist pesquisada de casas de show com aderência ao sertanejo em São Paulo e interior, com capacidade, contatos, responsáveis, redes sociais, fontes e recomendação comercial.">
-  <title>João Bosco &amp; Gabriel — casas e contatos diretos em SP</title>
+  <meta name="description" content="Dossiê comercial de oportunidades para João Bosco &amp; Gabriel em São Paulo: prioridades, responsáveis, contatos, capacidade, estratégia e fontes verificadas.">
+  <meta name="theme-color" content="#241711">
+  <meta name="color-scheme" content="light">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="João Bosco &amp; Gabriel — mapa de oportunidades em SP">
+  <meta property="og:description" content="19 operações qualificadas, contatos acionáveis e ordem recomendada de abordagem.">
+  <title>João Bosco &amp; Gabriel — mapa de oportunidades em SP</title>
   <style>
     :root {
-      --paper: #f3efe6;
+      --paper: #f5f1e8;
       --surface: #fffdf8;
       --surface-2: #ebe4d7;
       --ink: #25231f;
@@ -24,6 +31,8 @@
       --danger-soft: #f0dcd7;
       --blue: #38576a;
       --blue-soft: #dce7ed;
+      --gold: #d4a261;
+      --hero: #241711;
       --radius: 18px;
       --shadow: 0 14px 34px rgba(53, 42, 31, .08);
       --max: 1220px;
@@ -33,7 +42,9 @@
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background: var(--paper);
+      background:
+        radial-gradient(circle at 100% 0, rgba(212,162,97,.1), transparent 28rem),
+        var(--paper);
       color: var(--ink);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.55;
@@ -42,6 +53,9 @@
     a { color: inherit; text-underline-offset: 3px; }
     a:hover { color: var(--accent-2); }
     button, input { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid rgba(212,162,97,.8); outline-offset: 3px; }
+    [id] { scroll-margin-top: 112px; }
     h1, h2, h3, h4, p { margin-top: 0; }
     h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
     h1 {
@@ -62,7 +76,31 @@
     p { margin-bottom: 12px; }
 
     .shell { width: min(calc(100% - 34px), var(--max)); margin-inline: auto; }
-    .hero { padding: 72px 0 48px; border-bottom: 1px solid var(--line); }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 52px;
+      border-bottom: 0;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(212,162,97,.22), transparent 27rem),
+        linear-gradient(135deg, #1d1410, #4a291e 72%, #5f3324);
+      color: #fffaf4;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -160px;
+      width: 390px;
+      height: 390px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      box-shadow: 0 0 0 55px rgba(255,255,255,.025), 0 0 0 110px rgba(255,255,255,.018);
+      pointer-events: none;
+    }
+    .hero .shell { position: relative; z-index: 1; }
+    .hero .tag { border-color: rgba(255,255,255,.18); background: rgba(255,255,255,.08); color: #eadfd4; }
+    .hero .tag.primary { border-color: var(--gold); background: var(--gold); color: #241711; }
     .eyebrow { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
     .tag {
       display: inline-flex;
@@ -83,6 +121,7 @@
     .tag.mid { border-color: #dec896; background: var(--warning-soft); color: var(--warning); }
     .tag.info { border-color: #b9ccd7; background: var(--blue-soft); color: var(--blue); }
     .lead { max-width: 850px; color: var(--muted); font-size: 1.14rem; }
+    .hero .lead { color: #dfd2c7; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
     .button {
       display: inline-flex;
@@ -102,6 +141,10 @@
     .button:hover { background: #47271d; color: white; }
     .button.secondary { border-color: var(--line); background: var(--surface); color: var(--ink); }
     .button.secondary:hover { border-color: var(--accent); color: var(--accent); }
+    .hero .button { border-color: var(--gold); background: var(--gold); color: #241711; }
+    .hero .button:hover { background: #edc38d; color: #241711; }
+    .hero .button.secondary { border-color: rgba(255,255,255,.24); background: rgba(255,255,255,.08); color: white; }
+    .hero .button.secondary:hover { border-color: rgba(255,255,255,.58); background: rgba(255,255,255,.15); }
 
     .stats {
       display: grid;
@@ -116,6 +159,7 @@
       border-radius: var(--radius);
       background: var(--surface);
     }
+    .hero .stat { border-color: rgba(255,255,255,.12); background: rgba(255,255,255,.07); backdrop-filter: blur(8px); }
     .stat strong {
       display: block;
       margin-bottom: 4px;
@@ -125,6 +169,10 @@
       font-weight: 500;
     }
     .stat span { color: var(--muted); font-size: .88rem; }
+    .hero .stat strong { color: #efc786; }
+    .hero .stat span { color: #dfd2c7; }
+    .hero .notice.success { border-color: #8ec0a0; background: rgba(34,72,49,.74); }
+    .hero .notice.success p { color: #e5f2e8; }
 
     .notice {
       margin-top: 18px;
@@ -146,6 +194,53 @@
     .section-intro { max-width: 790px; margin-bottom: 26px; color: var(--muted); }
     .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+
+    .quick-start { padding-top: 42px; }
+    .section-kicker {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: .74rem;
+      font-weight: 850;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    .handoff-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+    .handoff-card {
+      position: relative;
+      min-height: 178px;
+      padding: 20px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .handoff-card .step {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 16px;
+      border-radius: 11px;
+      background: var(--accent);
+      color: white;
+      font-weight: 850;
+    }
+    .handoff-card p { margin: 0; color: var(--muted); font-size: .91rem; }
+    .legend-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 16px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(255,253,248,.68);
+    }
+    .legend-items { display: flex; flex-wrap: wrap; gap: 8px; }
+    .legend-bar p { margin: 0; color: var(--muted); font-size: .86rem; }
 
     .panel {
       border: 1px solid var(--line);
@@ -182,6 +277,7 @@
       backdrop-filter: blur(12px);
     }
     .toolbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    .toolbar-tools { display: flex; align-items: center; gap: 10px; min-width: min(100%, 390px); }
     .filters { display: flex; flex-wrap: wrap; gap: 7px; }
     .filter {
       min-height: 37px;
@@ -204,6 +300,7 @@
       background: var(--surface);
       color: var(--ink);
     }
+    .results { min-width: 64px; margin: 0; color: var(--muted); font-size: .76rem; font-weight: 800; text-align: right; white-space: nowrap; }
 
     .venue-list { display: grid; gap: 22px; }
     .venue {
@@ -278,8 +375,14 @@
       font-size: .81rem;
       font-weight: 780;
       text-decoration: none;
+      overflow-wrap: anywhere;
     }
     .contact-actions a:hover { background: white; }
+    .contact-actions a[href^="tel:"]::before { content: "☎"; margin-right: 7px; }
+    .contact-actions a[href^="mailto:"]::before { content: "✉"; margin-right: 7px; }
+    .contact-actions a[href*="wa.me"] { border-color: rgba(33,116,65,.35); background: rgba(255,255,255,.72); }
+    .contact-actions a[href*="wa.me"]::before { content: "◉"; margin-right: 7px; }
+    .contact-actions a[href*="instagram.com"]::before { content: "◎"; margin-right: 7px; }
 
     details { margin-top: 16px; border: 1px solid var(--line); border-radius: 13px; background: #faf7f1; }
     summary { padding: 13px 15px; font-size: .88rem; font-weight: 800; cursor: pointer; }
@@ -310,6 +413,7 @@
     }
     .script p { margin: 0; }
     .script em { color: var(--muted); }
+    .copy-action { margin-top: 16px; }
 
     .excluded { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
     .excluded-card { padding: 18px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); }
@@ -321,32 +425,103 @@
       right: 20px;
       bottom: 20px;
       z-index: 30;
+      width: 54px;
+      height: 54px;
       border: 0;
-      border-radius: 999px;
-      padding: 12px 17px;
+      border-radius: 17px;
+      padding: 0;
       background: var(--accent);
       color: white;
+      font-size: 0;
       font-weight: 780;
       box-shadow: 0 10px 30px rgba(49,31,23,.2);
       cursor: pointer;
     }
+    .print-button::before { content: "PDF"; font-size: .75rem; letter-spacing: .05em; }
+    .print-button:hover { background: #47271d; }
+    .mobile-dock { display: none; }
 
     @media (max-width: 900px) {
       .stats, .facts { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .grid-3, .analysis-grid { grid-template-columns: 1fr; }
+      .grid-3, .analysis-grid, .handoff-grid { grid-template-columns: 1fr; }
       .toolbar-inner { align-items: stretch; flex-direction: column; }
-      .search { width: 100%; max-width: none; }
+      .toolbar-tools, .search { width: 100%; max-width: none; }
     }
     @media (max-width: 650px) {
-      .hero { padding-top: 44px; }
-      .stats, .grid-2, .facts, .excluded { grid-template-columns: 1fr; }
-      section { padding: 42px 0; }
-      .venue-top { grid-template-columns: 58px 1fr; padding: 18px; }
+      body { padding-bottom: 72px; }
+      .shell { width: min(calc(100% - 24px), var(--max)); }
+      .hero { padding: 34px 0 30px; }
+      .hero::after { right: -220px; bottom: -210px; }
+      h1 { margin-bottom: 16px; font-size: clamp(2.25rem, 12vw, 3.25rem); line-height: .98; }
+      h2 { font-size: 1.78rem; }
+      .lead { font-size: .98rem; }
+      .eyebrow { margin-bottom: 20px; gap: 6px; }
+      .tag { min-height: 27px; padding: 4px 9px; font-size: .67rem; }
+      .hero-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .hero-actions .button { min-height: 46px; padding-inline: 10px; font-size: .8rem; text-align: center; }
+      .stats { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin-top: 24px; }
+      .stat { min-height: 0; padding: 14px; border-radius: 14px; }
+      .stat strong { font-size: 1.55rem; }
+      .stat span { font-size: .75rem; line-height: 1.35; }
+      .hero .notice { padding: 14px; }
+      .hero .notice p { font-size: .86rem; }
+      .toolbar { padding: 9px 0; }
+      .toolbar-inner { gap: 8px; }
+      .filters { flex-wrap: nowrap; margin-inline: -12px; padding-inline: 12px; overflow-x: auto; scrollbar-width: none; }
+      .filters::-webkit-scrollbar { display: none; }
+      .filter { flex: 0 0 auto; min-height: 38px; }
+      .toolbar-tools { gap: 8px; }
+      .search { min-width: 0; min-height: 42px; }
+      .results { min-width: 56px; font-size: .7rem; }
+      .grid-2, .excluded { grid-template-columns: 1fr; }
+      .facts { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+      .fact { min-height: 0; padding: 12px; }
+      .fact strong { font-size: .94rem; }
+      .fact small { font-size: .76rem; }
+      section { padding: 38px 0; }
+      .quick-start { padding-top: 30px; }
+      .handoff-card { min-height: 0; padding: 17px; }
+      .handoff-card .step { float: left; margin: 0 12px 8px 0; }
+      .legend-bar { align-items: flex-start; flex-direction: column; }
+      .venue-list { gap: 16px; }
+      .venue { border-radius: 18px; }
+      .venue-top { grid-template-columns: 50px 1fr; gap: 12px; padding: 16px; }
       .rank { width: 52px; height: 52px; border-radius: 15px; font-size: 1.45rem; }
       .score { grid-column: 2; text-align: left; }
       .score strong { display: inline; margin-right: 5px; font-size: 1.4rem; }
-      .venue-body { padding: 18px; }
-      .print-button { right: 13px; bottom: 13px; }
+      .venue-title h3 { font-size: 1.35rem; }
+      .venue-title p { font-size: .86rem; }
+      .venue-body { padding: 14px; }
+      .analysis-grid { gap: 10px; }
+      .block, .contact-card { padding: 14px; }
+      .contact-actions { display: grid; grid-template-columns: 1fr; }
+      .contact-actions a { justify-content: center; min-height: 46px; padding: 10px 12px; text-align: center; }
+      details { margin-top: 12px; }
+      summary { min-height: 46px; }
+      .print-button { display: none; }
+      .mobile-dock {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        z-index: 40;
+        display: grid;
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        gap: 4px;
+        padding: 5px;
+        border: 1px solid rgba(255,255,255,.16);
+        border-radius: 17px;
+        background: rgba(36,23,17,.94);
+        box-shadow: 0 16px 40px rgba(32,20,15,.28);
+        backdrop-filter: blur(14px);
+      }
+      .mobile-dock a { padding: 10px 6px; border-radius: 12px; color: #f7eee5; font-size: .72rem; font-weight: 800; text-align: center; text-decoration: none; }
+      .mobile-dock a:active { background: rgba(255,255,255,.1); }
+    }
+
+    @media (max-width: 380px) {
+      .facts { grid-template-columns: 1fr; }
+      .hero-actions { grid-template-columns: 1fr; }
     }
 
     @media print {
@@ -355,7 +530,7 @@
       .shell { width: 100%; }
       .hero { padding-top: 0; }
       h1 { font-size: 33pt; }
-      .toolbar, .print-button, .hero-actions { display: none !important; }
+      .toolbar, .print-button, .mobile-dock, .hero-actions { display: none !important; }
       section { padding: 27px 0; }
       .venue, .panel, .priority-card, .excluded-card { break-inside: avoid; box-shadow: none; }
       details { break-inside: avoid; }
@@ -367,31 +542,32 @@
   <header class="hero">
     <div class="shell">
       <div class="eyebrow">
-        <span class="tag primary">Pesquisa concluída</span>
+        <span class="tag primary">Dossiê comercial</span>
         <span class="tag">São Paulo + interior</span>
         <span class="tag">Sertanejo</span>
-        <span class="tag">Verificado em 19/09/2026</span>
+        <span class="tag">Revisado em 19/09/2026</span>
       </div>
-      <h1>Casas e contatos para vender João Bosco &amp; Gabriel em São Paulo</h1>
-      <p class="lead">Shortlist recalibrada para o porte real da dupla, com foco em chegar a uma pessoa nominal — dono, diretor, produtor ou profissional de programação — e não apenas ao atendimento genérico da casa. Cada rota informa o que está comprovado e o que ainda precisa ser confirmado na primeira conversa.</p>
+      <h1>Mapa de oportunidades para João Bosco &amp; Gabriel</h1>
+      <p class="lead">Um material de trabalho para quem vai fazer a prospecção: onde ligar primeiro, quem procurar, qual canal usar e o argumento comercial de cada oportunidade em São Paulo e no interior.</p>
       <div class="hero-actions">
-        <a class="button" href="#artista">Perfil do artista</a>
-        <a class="button" href="#contatos">Contatos diretos</a>
-        <a class="button" href="#shortlist">Ver a shortlist</a>
-        <a class="button secondary" href="#ordem">Ordem de abordagem</a>
-        <a class="button secondary" href="plano-prospeccao-casas-sertanejas.html">Abrir o plano-base</a>
+        <a class="button" href="#ordem">Ver 3 prioridades</a>
+        <a class="button" href="#mais-lugares">Abrir oportunidades</a>
+        <a class="button secondary" href="#contatos">Contatos das casas</a>
+        <a class="button secondary" href="#roteiro">Roteiro de abordagem</a>
+        <a class="button secondary" href="#artista">Argumentos do artista</a>
+        <button class="button secondary" id="shareButton" type="button">Compartilhar página</button>
       </div>
 
       <div class="stats" aria-label="Resumo da pesquisa">
-        <div class="stat"><strong>8</strong><span>Operações pesquisadas com uma pessoa nominal identificada</span></div>
-        <div class="stat"><strong>8</strong><span>Operações com rota pessoal por LinkedIn, Instagram, e-mail ou WhatsApp</span></div>
-        <div class="stat"><strong>839 mil</strong><span>Ouvintes mensais exibidos pelo Spotify na conferência</span></div>
-        <div class="stat"><strong>R$ 80–230 mil</strong><span>Faixa encontrada em contratações públicas de 2025–2026</span></div>
+        <div class="stat"><strong>19</strong><span>Operações pesquisadas entre casas, rodeios, exposições e eventos municipais</span></div>
+        <div class="stat"><strong>11</strong><span>Novos alvos com rota fora do LinkedIn: WhatsApp, telefone, e-mail ou Instagram</span></div>
+        <div class="stat"><strong>R$ 30 mil</strong><span>Condição comercial informada para apresentação do show</span></div>
+        <div class="stat"><strong>104</strong><span>Links de fontes, redes e contatos testados na revisão final</span></div>
       </div>
 
       <div class="notice success">
-        <strong>Conclusão executiva para esta dupla</strong>
-        <p>O artista tem porte para abordar diretamente promotores e diretores, não apenas casas. Villa Country é o encaixe artístico mais óbvio; Gui Moron/VIVA+ é a melhor porta para várias agendas no interior; Terra SP, Folk Valley e Estância também são alvos fortes. O preço de R$ 30 mil deve ser explicado como condição especial autorizada, pois está muito abaixo dos contratos públicos recentes localizados.</p>
+        <strong>Direção recomendada</strong>
+        <p>Começar pelas recontratações de Nova Independência e Itatiba. Depois, abordar produtores que controlam vários eventos. Apresentar os R$ 30 mil como condição especial autorizada — não como referência normal de mercado.</p>
       </div>
     </div>
   </header>
@@ -400,15 +576,35 @@
     <div class="shell toolbar-inner">
       <div class="filters">
         <button class="filter active" type="button" data-filter="all">Todos</button>
+        <button class="filter" type="button" data-filter="rebooking">Já receberam a dupla</button>
+        <button class="filter" type="button" data-filter="rodeio">Rodeios / expos</button>
         <button class="filter" type="button" data-filter="primeiro">Atacar primeiro</button>
         <button class="filter" type="button" data-filter="festival">Escala / festival</button>
         <button class="filter" type="button" data-filter="condicional">Condicional</button>
       </div>
-      <input class="search" id="search" type="search" placeholder="Buscar casa, cidade ou pessoa…" aria-label="Buscar na shortlist">
+      <div class="toolbar-tools">
+        <input class="search" id="search" type="search" placeholder="Buscar cidade, evento ou pessoa…" aria-label="Buscar nas oportunidades">
+        <p class="results" id="results" aria-live="polite">19 resultados</p>
+      </div>
     </div>
   </section>
 
   <main class="shell">
+    <section class="quick-start" id="comecar">
+      <span class="section-kicker">Comece por aqui</span>
+      <h2>Use este material como uma fila de contatos</h2>
+      <p class="section-intro">A página foi organizada para a execução comercial. Não é necessário ler tudo antes de começar: siga os três passos e abra as fontes somente quando precisar confirmar uma informação.</p>
+      <div class="handoff-grid">
+        <article class="handoff-card"><span class="step">1</span><h3>Recontratações primeiro</h3><p>Nova Independência e Itatiba já receberam a dupla. A conversa começa pelo histórico real, não por uma apresentação fria.</p></article>
+        <article class="handoff-card"><span class="step">2</span><h3>Produtores em seguida</h3><p>HR Estruturas, FAICI e NLN podem abrir outras datas e cidades. O objetivo é descobrir quem efetivamente fecha a grade artística.</p></article>
+        <article class="handoff-card"><span class="step">3</span><h3>Registrar cada retorno</h3><p>Anote nome, função, canal, data do contato, resposta e próximo passo. Quando houver encaminhamento, confirme o novo responsável nominal.</p></article>
+      </div>
+      <div class="legend-bar">
+        <p><strong>Como ler:</strong> a nota de prioridade vai de 0 a 100. Verde indica contato nominal ou rota mais forte; amarelo indica canal de apoio ou informação a reconfirmar.</p>
+        <div class="legend-items"><span class="tag good">Rota forte</span><span class="tag mid">Confirmar</span><span class="tag info">Fonte oficial</span></div>
+      </div>
+    </section>
+
     <section id="artista">
       <h2>Leitura comercial de João Bosco &amp; Gabriel</h2>
       <p class="section-intro">A dupla não deve ser apresentada como aposta desconhecida. O argumento é “artista nacional com repertório reconhecido, números comprováveis e oportunidade especial de contratação”.</p>
@@ -437,27 +633,40 @@
       </details>
     </section>
 
+    <section id="historico">
+      <h2>O padrão real de lugares onde a dupla já tocou</h2>
+      <p class="section-intro">As fontes mostram que João Bosco &amp; Gabriel trabalham bem em eventos públicos e agrosertanejos de vários dias. Isso muda a prospecção: além de casas, entram prefeituras, comissões de festa e produtoras de rodeio.</p>
+      <div class="grid-3">
+        <article class="panel"><div class="panel-body"><span class="tag good">São Paulo · recontratação</span><h3>41ª Festa do Peão de Nova Independência</h3><p>Show em 19/05/2024, com duração contratada de ao menos 90 minutos. O portal oficial registra contrato de <strong>R$ 97,5 mil</strong>.</p><div class="contact-actions"><a href="https://www.novaindependencia.sp.gov.br/portal/editais/0/4/309/" target="_blank" rel="noopener">Fonte oficial</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag good">São Paulo · recontratação</span><h3>27ª Festa de São Pedro de Itatiba</h3><p>Show em 18/07/2025 no Parque Luís Latorre, em evento municipal gratuito, familiar e com dois palcos. O processo oficial registra <strong>R$ 150 mil</strong>.</p><div class="contact-actions"><a href="https://www.itatiba.sp.gov.br/turismo-itatiba/noticias/itatiba-traz-joao-bosco-gabriel-bruna-viola-e-fiduma-jeca-para-a-27-festa-de-sao-pedro" target="_blank" rel="noopener">Notícia oficial</a><a href="https://ecrie.com.br/Sistema/Conteudos/DiarioOficial/upload/u_133_13062025163336.pdf" target="_blank" rel="noopener">Processo oficial</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag info">Exposição agropecuária</span><h3>36ª Expoagro de Rolim de Moura</h3><p>Em 2025, a dupla abriu a programação de uma exposição com parque lotado e grade que também recebeu Zé Neto &amp; Cristiano e César Menotti &amp; Fabiano.</p><div class="contact-actions"><a href="https://mail.jornalinforondonia.com/show-de-joao-bosco-e-gabriel-agita-a-primeira-noite-da-36a-expoagro-2025/" target="_blank" rel="noopener">Registro do show</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag info">Rodeio + exposição</span><h3>2ª ExpoPardo</h3><p>Em 2024, João Bosco &amp; Gabriel integraram uma feira com rodeio, praça de alimentação e artistas como Rick &amp; Renner e João Bosco &amp; Vinícius.</p><div class="contact-actions"><a href="https://www.perfilnews.com.br/2024/07/11/com-entrada-gratuita-2o-edicao-da-expopardo-acontece-neste-fim-de-semana-em-santa-rita-do-pardo/" target="_blank" rel="noopener">Registro da programação</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag info">Aniversário municipal</span><h3>29 anos de Bom Jesus</h3><p>Em 2024, a dupla apareceu em programação municipal com rodeio e shows de Traia Véia e Guilherme &amp; Benuto — exatamente o tipo de grade coletiva em que R$ 30 mil pode ser apresentado como oportunidade especial.</p><div class="contact-actions"><a href="https://lancenoticias.com.br/noticia/mostra/confira-a-programacao-completa-dos-29-anos-de-bom-jesus/" target="_blank" rel="noopener">Registro da programação</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag mid">Leitura comercial</span><h3>O produto é “festa pronta”, não só balada</h3><p>A combinação recorrente é sertanejo nacional + rodeio/feira + várias atrações + receita pública, patrocínio, camarote ou bar. Esse modelo é mais parecido com o histórico da dupla do que uma casa pequena dependente apenas de ingresso.</p></div></article>
+      </div>
+    </section>
+
     <section id="ordem">
       <h2>Ordem de abordagem recomendada</h2>
-      <p class="section-intro">A ordem não é um ranking de fama. Ela considera o quanto a oportunidade parece compatível com um cachê de R$ 30 mil, a aderência do público e a facilidade de chegar à equipe certa.</p>
+      <p class="section-intro">A ordem agora privilegia quem já contratou a dupla e quem pode abrir mais de uma praça. Todos os primeiros caminhos abaixo funcionam sem depender do LinkedIn.</p>
       <div class="grid-3">
         <article class="panel priority-card" data-rank="1">
-          <span class="tag good">Melhor encaixe</span>
-          <h3>Villa Country</h3>
-          <p>Marca sertaneja consolidada, 3 mil pessoas na capacidade comercial publicada e executivo do grupo claramente identificado.</p>
-          <div class="mini-meta"><span class="tag">São Paulo</span><span class="tag">3.000</span><span class="tag info">Marco via LinkedIn</span></div>
+          <span class="tag good">Recontratação direta</span>
+          <h3>Nova Independência</h3>
+          <p>A cidade contratou a dupla em 2024. Selma Macchi Santana é a responsável atual pela Cultura e publica celular direto da pasta.</p>
+          <div class="mini-meta"><span class="tag">Festa do Peão</span><span class="tag">R$ 97,5 mil em 2024</span><span class="tag info">WhatsApp</span></div>
         </article>
         <article class="panel priority-card" data-rank="2">
-          <span class="tag good">Melhor porta múltipla</span>
-          <h3>UZNA + VIVA+</h3>
-          <p>Gui Moron é CEO publicamente identificado e escreve sobre curadoria musical. A conversa pode abrir a UZNA e outros eventos do interior.</p>
-          <div class="mini-meta"><span class="tag">Sorocaba + interior</span><span class="tag">12.000</span><span class="tag info">Gui via LinkedIn</span></div>
+          <span class="tag good">Recontratação direta</span>
+          <h3>Itatiba</h3>
+          <p>A dupla fechou a Festa de São Pedro de 2025. Luís Soares de Camargo segue ligado à Cultura e Turismo, com telefone e e-mail oficiais.</p>
+          <div class="mini-meta"><span class="tag">Evento municipal</span><span class="tag">R$ 150 mil em 2025</span><span class="tag info">Telefone + e-mail</span></div>
         </article>
         <article class="panel priority-card" data-rank="3">
-          <span class="tag good">Rota dupla em SP</span>
-          <h3>Terra SP + Arena+</h3>
-          <p>Jonatas Camargo é uma ponte pessoal ligada à Terra e com histórico em direção artística; Yhosefe Pereira administra as duas empresas.</p>
-          <div class="mini-meta"><span class="tag">São Paulo</span><span class="tag">2 casas</span><span class="tag info">Jonatas + Yhosefe</span></div>
+          <span class="tag good">Produtor multi-eventos</span>
+          <h3>Reinaldo Bicudo / HR Estruturas</h3>
+          <p>A empresa organizou a Festa do Peão de Monte Mor e também aparece em outras festas e exposições. Um contato pode abrir várias cidades.</p>
+          <div class="mini-meta"><span class="tag">Interior de SP</span><span class="tag">Vários eventos</span><span class="tag info">WhatsApp direto</span></div>
         </article>
       </div>
       <div class="notice warning">
@@ -467,17 +676,128 @@
     </section>
 
     <section id="contatos">
-      <h2>Mapa rápido de contatos pessoais</h2>
-      <p class="section-intro">Use esta parte para executar a prospecção. A ficha completa de cada casa, logo abaixo, explica a fonte, o grau de certeza e o argumento recomendado.</p>
+      <h2>Contatos das casas já analisadas</h2>
+      <p class="section-intro">Os botões principais abaixo foram convertidos para telefone, WhatsApp, e-mail ou Instagram. LinkedIn aparece apenas dentro das fichas antigas como comprovação de cargo, não como canal recomendado de venda.</p>
       <div class="grid-2">
-        <article class="panel"><div class="panel-body"><span class="tag good">Villa Country</span><h3>Marco Antônio Tobal Júnior</h3><p>Diretor do grupo e gestor ligado à casa. Canal direto público: LinkedIn.</p><div class="contact-actions"><a href="https://br.linkedin.com/in/marco-ant%C3%B4nio-tobal-junior-b9064b80" target="_blank" rel="noopener">Falar com Marco</a></div></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag good">Terra SP</span><h3>Jonatas Camargo + Yhosefe Pereira</h3><p>Jonatas é a ponte artística; Yhosefe é o administrador. LinkedIn, e-mail nominal e telefone empresarial.</p><div class="contact-actions"><a href="https://br.linkedin.com/in/jonatas-camargo-2641a761" target="_blank" rel="noopener">Falar com Jonatas</a><a href="mailto:yhosefe@hotmail.com?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20Terra%20SP">E-mail de Yhosefe</a></div></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag good">Red Eventos</span><h3>Valdomiro Poliselli Júnior</h3><p>Sócio-administrador. Para o canal de shows, pedir nominalmente Francisco Granguelli Júnior ou Eduardo Prado.</p><div class="contact-actions"><a href="https://br.linkedin.com/in/valdomiro-poliselli-junior-8b040046" target="_blank" rel="noopener">Falar com Valdomiro</a><a href="https://wa.me/5519993369909?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20Francisco%20Granguelli%20J%C3%BAnior%20ou%20Eduardo%20Prado%20sobre%20uma%20data%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel." target="_blank" rel="noopener">Pedir Francisco/Eduardo</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag mid">Villa Country · rota de apoio</span><h3>Marco Antônio Tobal Júnior</h3><p>Diretor do grupo e gestor ligado à casa. Não foi localizado celular pessoal público; ligar para a operação e pedir nominalmente por Marco ou pela programação artística.</p><div class="contact-actions"><a href="tel:+551138685858">Ligar para a Villa: (11) 3868-5858</a><a href="https://www.instagram.com/villacountry/" target="_blank" rel="noopener">Instagram da Villa</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag good">Terra SP</span><h3>Yhosefe Pereira</h3><p>Administrador nominal da Terra SP e da Arena Eventos. O caminho útil é o e-mail pessoal publicado no cadastro da empresa e o telefone empresarial.</p><div class="contact-actions"><a href="mailto:yhosefe@hotmail.com?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20Terra%20SP">E-mail de Yhosefe</a><a href="tel:+551933444900">Telefone empresarial</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag good">Red Eventos</span><h3>Francisco Granguelli Júnior / Eduardo Prado</h3><p>Responsáveis pela G&amp;P Produções, operação indicada pela própria Red para shows. O WhatsApp leva à equipe; pedir nominalmente por um dos dois.</p><div class="contact-actions"><a href="https://wa.me/5519993369909?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20Francisco%20Granguelli%20J%C3%BAnior%20ou%20Eduardo%20Prado%20sobre%20uma%20data%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel." target="_blank" rel="noopener">WhatsApp — pedir Francisco/Eduardo</a></div></div></article>
         <article class="panel"><div class="panel-body"><span class="tag good">Arena+</span><h3>Yhosefe Rafael Sabino Pereira</h3><p>Administrador da Arena Eventos e da Terra SP. E-mail e telefone empresariais publicados nominalmente.</p><div class="contact-actions"><a href="mailto:yhosefe@hotmail.com?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20Arena%2B">E-mail de Yhosefe</a><a href="tel:+551933444900">Telefone empresarial vinculado</a></div></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag good">Folk Valley</span><h3>Fauze Abdouch</h3><p>Sócio-diretor do grupo controlador. Contato pessoal por Instagram e LinkedIn.</p><div class="contact-actions"><a href="https://www.instagram.com/fauze_abdouch/" target="_blank" rel="noopener">Instagram de Fauze</a><a href="https://www.linkedin.com/in/fauze-abdouch-70915b188/" target="_blank" rel="noopener">LinkedIn de Fauze</a></div></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag good">Estância Alto da Serra</span><h3>Nathalia Palermo Carlone</h3><p>Vínculo atual com a casa e referência pública como diretora de eventos. Contato pessoal por LinkedIn.</p><div class="contact-actions"><a href="https://br.linkedin.com/in/nathaliacarlone" target="_blank" rel="noopener">Falar com Nathalia</a></div></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag good">UZNA / VIVA+</span><h3>Gui Moron</h3><p>CEO e profissional que publica sobre curadoria musical e seleção de atrações. Contato pessoal por LinkedIn.</p><div class="contact-actions"><a href="https://br.linkedin.com/in/guilherme-moron" target="_blank" rel="noopener">Falar com Gui Moron</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag good">Folk Valley</span><h3>Fauze Abdouch</h3><p>Sócio-diretor do grupo controlador. O Instagram pessoal é o canal direto público mais útil localizado.</p><div class="contact-actions"><a href="https://www.instagram.com/fauze_abdouch/" target="_blank" rel="noopener">Instagram de Fauze</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag mid">Estância Alto da Serra · rota de apoio</span><h3>Nathalia Palermo Carlone</h3><p>Vínculo atual com a casa e referência pública como diretora de eventos. Telefonar ou escrever pedindo por Nathalia e pela programação de shows.</p><div class="contact-actions"><a href="tel:+551141015000">Ligar: (11) 4101-5000</a><a href="mailto:estancia@estancia.com.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Nathalia%20Carlone">E-mail aos cuidados de Nathalia</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag good">UZNA / VIVA+</span><h3>Gui Moron</h3><p>CEO ligado diretamente à seleção de atrações e produtor de eventos em diversas cidades. Use o Instagram pessoal; o WhatsApp oficial da UZNA serve como segunda rota.</p><div class="contact-actions"><a href="https://www.instagram.com/guimoron/" target="_blank" rel="noopener">Instagram de Gui Moron</a><a href="https://wa.me/5515996669999?text=Ol%C3%A1%2C%20gostaria%20de%20encaminhar%20ao%20Gui%20Moron%20uma%20proposta%20de%20show%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel." target="_blank" rel="noopener">WhatsApp oficial UZNA</a></div></div></article>
         <article class="panel"><div class="panel-body"><span class="tag mid">Coração Sertanejo</span><h3>Zacarias — gerente</h3><p>WhatsApp nominal publicado pela própria operação em resposta a cliente. Pedir confirmação de quem fecha a agenda.</p><div class="contact-actions"><a href="https://wa.me/5511987326651?text=Ol%C3%A1%2C%20Zacarias.%20Represento%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20e%20gostaria%20de%20conversar%20sobre%20uma%20data%20especial%20na%20casa." target="_blank" rel="noopener">Falar com Zacarias</a></div></div></article>
+      </div>
+    </section>
+
+    <section id="mais-lugares">
+      <h2>Mais lugares semelhantes aos palcos da dupla</h2>
+      <p class="section-intro">Lista nova, baseada em rodeios, exposições e festas municipais. “Capacidade” só aparece quando há fonte; nos demais casos, uso público total, área do recinto ou deixo a lotação como “a confirmar”. O canal indicado em cada ficha não depende do LinkedIn.</p>
+      <div class="notice success">
+        <strong>Prioridade prática</strong>
+        <p>Comece pelas fichas R1 a R5. R1 e R2 já contrataram João Bosco &amp; Gabriel. R3, R4 e R5 dão acesso a empresas ou comissões que repetem eventos e podem comprar mais de uma data.</p>
+      </div>
+      <div class="venue-list" style="margin-top:22px">
+
+        <article class="venue" data-tier="rebooking" data-search="nova independência festa do peão selma macchi santana joão bosco gabriel recontratação whatsapp">
+          <div class="venue-top"><div class="rank">R1</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag good">Atacar primeiro</span><span class="tag info">Já recebeu a dupla</span></div><h3>Festa do Peão de Nova Independência</h3><p>Nova Independência · Noroeste paulista</p></div><div class="score"><strong>98</strong><span>prioridade</span></div></div>
+          <div class="venue-body">
+            <div class="facts"><div class="fact"><b>Prova de encaixe</b><strong>Show em 2024</strong><small>41ª Festa do Peão; contrato de 90 minutos.</small></div><div class="fact"><b>Valor público anterior</b><strong>R$ 97,5 mil</strong><small>Contrato nº 15/2024.</small></div><div class="fact"><b>Capacidade</b><strong>A confirmar</strong><small>Não foi localizada lotação oficial do recinto.</small></div><div class="fact"><b>Modelo</b><strong>Festa municipal</strong><small>Compra pública por inexigibilidade.</small></div></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que é a melhor primeira ligação</h4><ul class="check"><li>A cidade já conhece o show, a documentação e o histórico de entrega da dupla.</li><li>A oferta de R$ 30 mil fica muito abaixo do contrato de 2024 e pode ser apresentada como oportunidade de retorno.</li><li>O contato atual da Cultura está publicado nominalmente com celular.</li></ul><p class="risk"><strong>Pergunta-chave:</strong> “Selma, vocês já estão montando o calendário da próxima Festa do Peão ou do aniversário da cidade?”</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>Selma Macchi Santana</strong><span>Responsável atual pela Secretaria Municipal de Cultura. Página oficial atualizada em maio de 2026.</span></div><div class="contact-actions"><a href="https://wa.me/5518996174025?text=Ol%C3%A1%2C%20Selma.%20Estou%20trabalhando%20a%20agenda%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel.%20A%20dupla%20esteve%20na%2041%C2%AA%20Festa%20do%20Pe%C3%A3o%20e%20temos%20uma%20condi%C3%A7%C3%A3o%20especial%20para%20retorno.%20Podemos%20conversar%3F" target="_blank" rel="noopener">WhatsApp de Selma</a><a href="tel:+5518996174025">Ligar</a></div></aside></div>
+            <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.novaindependencia.sp.gov.br/portal/editais/0/4/309/" target="_blank" rel="noopener">Contratação oficial de João Bosco &amp; Gabriel em 2024</a>.</li><li><a href="https://www.novaindependencia.sp.gov.br/portal/secretarias/22/seretaria-de-cultura" target="_blank" rel="noopener">Secretaria de Cultura: nome, função e telefone de Selma</a>.</li></ul></div></details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rebooking" data-search="itatiba festa são pedro luis soares camargo joão bosco gabriel recontratação cultura turismo">
+          <div class="venue-top"><div class="rank">R2</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag good">Atacar primeiro</span><span class="tag info">Já recebeu a dupla</span></div><h3>Festa de São Pedro / Prefeitura de Itatiba</h3><p>Parque Luís Latorre · Itatiba</p></div><div class="score"><strong>96</strong><span>prioridade</span></div></div>
+          <div class="venue-body">
+            <div class="facts"><div class="fact"><b>Prova de encaixe</b><strong>Show em 2025</strong><small>A dupla fechou a primeira noite da 27ª edição.</small></div><div class="fact"><b>Valor público anterior</b><strong>R$ 150 mil</strong><small>Processo municipal publicado em 2025.</small></div><div class="fact"><b>Entrada</b><strong>Gratuita</strong><small>Evento familiar com estacionamento gratuito.</small></div><div class="fact"><b>Estrutura</b><strong>2 palcos + telões</strong><small>Lotação oficial não localizada.</small></div></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que abordar</h4><ul class="check"><li>É recontratação, não apresentação fria.</li><li>Luís Soares de Camargo aparece como secretário na gestão 2025–2028 e representante da pasta em ato de 2026.</li><li>O município mantém calendário de Festa do Caqui, São Pedro, aniversário e outros eventos.</li></ul><p class="risk"><strong>Observação:</strong> usar telefone/e-mail da pasta aos cuidados de Luís; não foi localizado celular pessoal público.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>Luís Soares de Camargo</strong><span>Secretário de Cultura e Turismo ligado à contratação e ao evento.</span></div><div class="contact-actions"><a href="tel:+551145244237">Ligar: (11) 4524-4237</a><a href="mailto:cultura@cultura.itatiba.sp.gov.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Lu%C3%ADs%20Soares%20de%20Camargo">E-mail aos cuidados de Luís</a><a href="https://www.instagram.com/culturaeturismoitatiba/" target="_blank" rel="noopener">Instagram da pasta</a></div></aside></div>
+            <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.itatiba.sp.gov.br/turismo-itatiba/noticias/itatiba-traz-joao-bosco-gabriel-bruna-viola-e-fiduma-jeca-para-a-27-festa-de-sao-pedro" target="_blank" rel="noopener">Notícia oficial do show e fala do secretário</a>.</li><li><a href="https://www.itatiba.sp.gov.br/secretarias/cultura-e-turismo" target="_blank" rel="noopener">Contatos oficiais da Secretaria</a>.</li><li><a href="https://itatiba.sp.gov.br/cerimonia-de-posse-da-inicio-a-gestao-2025-2028" target="_blank" rel="noopener">Secretariado 2025–2028</a>.</li></ul></div></details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rodeio" data-search="monte mor festa peão hr estruturas reinaldo mendes bicudo whatsapp produtor rodeio">
+          <div class="venue-top"><div class="rank">R3</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag good">Produtor multi-eventos</span><span class="tag">WhatsApp direto</span></div><h3>Festa do Peão de Monte Mor / HR Estruturas</h3><p>Monte Mor + carteira de eventos no interior</p></div><div class="score"><strong>94</strong><span>prioridade</span></div></div>
+          <div class="venue-body">
+            <div class="facts"><div class="fact"><b>Edição analisada</b><strong>4 dias / 10 atrações</strong><small>Guilherme &amp; Benuto, Panda, Simone Mendes e outros em 2026.</small></div><div class="fact"><b>Entrada</b><strong>Solidária</strong><small>1 kg de alimento; setores especiais pagos.</small></div><div class="fact"><b>Capacidade</b><strong>A confirmar</strong><small>A prefeitura informa expectativa de milhares de pessoas.</small></div><div class="fact"><b>Modelo</b><strong>Produtora + município</strong><small>HR Estruturas foi a organizadora habilitada.</small></div></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que esse contato vale mais que uma casa</h4><ul class="check"><li>A HR monta e opera festas de peão e exposições em mais de um município.</li><li>O mesmo contato pode avaliar a dupla para Monte Mor e para futuras licitações/ocupações.</li><li>O número abaixo é o WhatsApp empresarial publicado e ligado ao responsável legal.</li></ul><p class="risk"><strong>Abordagem:</strong> vender “data de rota para sua carteira de eventos”, não apenas Monte Mor.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>Reinaldo Mendes Bicudo</strong><span>Responsável/sócio ligado à HR Estruturas em documentação pública.</span></div><div class="contact-actions"><a href="https://wa.me/5517996182568?text=Ol%C3%A1%2C%20Reinaldo.%20Estou%20trabalhando%20a%20agenda%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20e%20gostaria%20de%20apresentar%20uma%20condi%C3%A7%C3%A3o%20especial%20para%20os%20eventos%20da%20HR%20Estruturas." target="_blank" rel="noopener">WhatsApp de Reinaldo / HR</a><a href="mailto:hrestrutura@hrestrutura.com.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20agenda%20de%20eventos">E-mail empresarial</a></div></aside></div>
+            <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.montemor.sp.gov.br/portal/noticias/0/3/9320/monte-mor-anuncia-grandes-shows-da-festa-do-peao-2026" target="_blank" rel="noopener">Prefeitura identifica a HR Estruturas como organizadora</a>.</li><li><a href="https://www.tribunaliberal.com.br/index.php/geral/Empresa-e-habilitada-para-organizar-Festa-do-Peao-de-Monte-Mor-em-2026" target="_blank" rel="noopener">Resultado do chamamento da organização</a>.</li><li><a href="https://casadosdados.com.br/solucao/cnpj/hr-estruturas-ltda-25069864000190" target="_blank" rel="noopener">Cadastro empresarial e WhatsApp publicado</a>.</li></ul></div></details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rodeio" data-search="faici indaiatuba jose marques barbosa presidente festa peao whatsapp">
+          <div class="venue-top"><div class="rank">R4</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag good">Presidente identificado</span><span class="tag">WhatsApp oficial</span></div><h3>FAICI — Festa do Peão de Indaiatuba</h3><p>Indaiatuba · Região de Campinas</p></div><div class="score"><strong>91</strong><span>prioridade</span></div></div>
+          <div class="venue-body">
+            <div class="facts"><div class="fact"><b>Dimensão</b><strong>120 mil m²</strong><small>Área oficial do recinto; não é a lotação.</small></div><div class="fact"><b>Formato</b><strong>6 noites</strong><small>Palco principal, Palco Cultural 360°, rodeio e praça coberta.</small></div><div class="fact"><b>Ingresso</b><strong>Vários setores</strong><small>Pista, arquibancada, Arena VIP e camarotes.</small></div><div class="fact"><b>Fit R$ 30 mil</b><strong>Grade / abertura</strong><small>Melhor como composição de line-up ou condição de rota.</small></div></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que entra</h4><ul class="check"><li>Um dos maiores rodeios do interior, com estrutura e público qualificados.</li><li>José Marques Barbosa é citado pelo próprio evento como presidente.</li><li>O telefone oficial é divulgado como WhatsApp para informações e negócios.</li></ul><p class="risk"><strong>Estratégia:</strong> pedir avaliação para palco principal em noite compartilhada; se a grade estiver fechada, entrar cedo no calendário seguinte.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>José Marques Barbosa</strong><span>Presidente da FAICI em 2026.</span></div><div class="contact-actions"><a href="https://wa.me/5519996202320?text=Ol%C3%A1.%20Gostaria%20de%20encaminhar%20ao%20presidente%20Jos%C3%A9%20Marques%20Barbosa%20uma%20proposta%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20para%20a%20FAICI." target="_blank" rel="noopener">WhatsApp — pedir por José</a><a href="mailto:contato@faici.com?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Jos%C3%A9%20Marques%20Barbosa">E-mail aos cuidados do presidente</a><a href="https://www.instagram.com/faicioficial/" target="_blank" rel="noopener">Instagram oficial</a></div></aside></div>
+            <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://faici.com/2026/04/01/faici-2026-apresenta-line-up-de-artistas-e-novidades-em-sua-estrutura/" target="_blank" rel="noopener">Line-up, estrutura e fala do presidente</a>.</li><li><a href="https://faici.com/a-festa/" target="_blank" rel="noopener">Área do recinto e contato oficial</a>.</li></ul></div></details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rodeio" data-search="rodeio itu festival herculano neto nln eventos whatsapp arena itu">
+          <div class="venue-top"><div class="rank">R5</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag good">CEO identificado</span><span class="tag">WhatsApp empresarial</span></div><h3>Rodeio Itu Festival / NLN Eventos</h3><p>Arena Itu · Itu</p></div><div class="score"><strong>90</strong><span>prioridade</span></div></div>
+          <div class="venue-body">
+            <div class="facts"><div class="fact"><b>Público 2026</b><strong>+200 mil total</strong><small>Ao longo das quatro noites; não é capacidade simultânea.</small></div><div class="fact"><b>Média observada</b><strong>~50 mil/noite</strong><small>Divisão simples do público total; não é lotação licenciada.</small></div><div class="fact"><b>Ingresso</b><strong>Vários setores</strong><small>Uma noite de pista teve reserva gratuita em 2026.</small></div><div class="fact"><b>Perfil</b><strong>Festival nacional</strong><small>Palco principal e espaço para novos talentos.</small></div></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que entra</h4><ul class="check"><li>Herculano Neto é CEO da NLN e idealizador do Rodeio Itu.</li><li>A produtora atua em festivais, shows, ativações e contratação artística.</li><li>WhatsApp e e-mail empresariais são publicados pela própria NLN.</li></ul><p class="risk"><strong>Fit:</strong> R$ 30 mil é mais plausível como slot complementar, palco alternativo ou oportunidade de última hora do que como atração principal.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>Herculano Neto</strong><span>CEO da NLN Eventos e idealizador do festival.</span></div><div class="contact-actions"><a href="https://wa.me/5511981634820?text=Ol%C3%A1.%20Gostaria%20de%20encaminhar%20ao%20Herculano%20Neto%20uma%20proposta%20de%20show%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20para%20o%20calend%C3%A1rio%20da%20NLN." target="_blank" rel="noopener">WhatsApp NLN — pedir por Herculano</a><a href="mailto:contato@nlneventos.com.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Herculano%20Neto">E-mail aos cuidados de Herculano</a><a href="https://www.instagram.com/rodeioitu/" target="_blank" rel="noopener">Instagram oficial</a></div></aside></div>
+            <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://rodeioitu.com.br/" target="_blank" rel="noopener">Site oficial, contato e estrutura</a>.</li><li><a href="https://www.jornaldeitu.com.br/herculano-neto-fala-sobre-os-20-anos-do-rodeio-itu-o-publico-compra-uma-noite-inteira-de-experiencia" target="_blank" rel="noopener">Herculano como CEO e idealizador</a>.</li><li><a href="https://www.crsaopaulo.com.br/noticia/rodeio-itu-festival-encerra-edicao-historica-de-20-anos-apos-reunir-mais-de-200-mil-pessoas-na-arena-itu" target="_blank" rel="noopener">Público total de 2026</a>.</li></ul></div></details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rodeio" data-search="emapa avaré thais francini giovani saltou exposição agropecuária cultura">
+          <div class="venue-top"><div class="rank">R6</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag good">Evento público</span><span class="tag">Contato nominal</span></div><h3>EMAPA — Exposição Agropecuária de Avaré</h3><p>Parque Fernando Cruz Pimentel · Avaré</p></div><div class="score"><strong>88</strong><span>prioridade</span></div></div>
+          <div class="venue-body">
+            <div class="facts"><div class="fact"><b>Formato 2026</b><strong>10+ dias</strong><small>Shows nacionais, rodeio, agro, parque e alimentação.</small></div><div class="fact"><b>Entrada</b><strong>Gratuita</strong><small>Portões abertos; camarotes corporativos pagos.</small></div><div class="fact"><b>Capacidade</b><strong>A confirmar</strong><small>Lotação licenciada não publicada na fonte atual.</small></div><div class="fact"><b>Compra</b><strong>Município + comissão</strong><small>Produção selecionada por chamamento.</small></div></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que entra</h4><ul class="check"><li>Modelo praticamente idêntico às festas municipais já feitas pela dupla.</li><li>Thais Francini é a secretária de Cultura em 2026; Giovani Saltou presidiu a comissão organizadora.</li><li>O calendário longo permite encaixe em dia intermediário ou grade complementar.</li></ul><p class="risk"><strong>Rota recomendada:</strong> falar com Thais e perguntar se a curadoria do próximo ciclo fica com a Secretaria, a comissão ou o agente cultural vencedor.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>Thais Francini Christino</strong><span>Secretária Municipal de Cultura em 2026.</span></div><div class="person"><strong>Giovani Saltou</strong><span>Presidente da Comissão Organizadora da EMAPA 2026.</span></div><div class="contact-actions"><a href="tel:+551437325057">Ligar para a Cultura: (14) 3732-5057</a><a href="mailto:cultura@avare.sp.gov.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Thais%20Francini%20e%20Giovani%20Saltou">E-mail para Thais/Giovani</a><a href="https://www.instagram.com/culturaavare/" target="_blank" rel="noopener">Instagram da Cultura</a></div></aside></div>
+            <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://avare.sp.gov.br/confira-a-programacao-completa-da-56a-emapa-que-acontece-de-11-a-20-de-setembro/" target="_blank" rel="noopener">Programação e formato oficial de 2026</a>.</li><li><a href="https://www.jsudoeste.com.br/page/noticia/prefeito-roberto-araujo-anuncia-atracoes-da-maior-festa-de-portoes-abertos-do-brasil-e-confirma-emapa-historica-em-setembro" target="_blank" rel="noopener">Giovani Saltou como presidente da comissão</a>.</li><li><a href="https://www.jsudoeste.com.br/page/noticia/secretaria-de-cultura-de-avare-participa-do-encontro-de-gestores-culturais-2026-em-sao-paulo" target="_blank" rel="noopener">Thais Francini como secretária em 2026</a>.</li></ul></div></details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rodeio" data-search="ribeirão rodeo music matheus calil produtor viola show contato telefone">
+          <div class="venue-top"><div class="rank">R7</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag good">Produtor identificado</span><span class="tag">Circuito Sertanejo</span></div><h3>Ribeirão Rodeo Music</h3><p>Parque Permanente de Exposições · Ribeirão Preto</p></div><div class="score"><strong>86</strong><span>prioridade</span></div></div>
+          <div class="venue-body">
+            <div class="facts"><div class="fact"><b>Público 2026</b><strong>+140 mil total</strong><small>Quatro noites; não é capacidade simultânea.</small></div><div class="fact"><b>Atrações 2026</b><strong>16 artistas</strong><small>Ícones e nova geração do sertanejo/forró.</small></div><div class="fact"><b>Capacidade</b><strong>A confirmar</strong><small>Lotação licenciada do parque não localizada.</small></div><div class="fact"><b>Fit R$ 30 mil</b><strong>Line-up / abertura</strong><small>Festival grande; proposta deve ser de composição.</small></div></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que entra</h4><ul class="check"><li>Matheus Calil é produtor e sócio-administrador da operação.</li><li>Seu ecossistema inclui RRM, Viola Show e dezenas de projetos sertanejos por ano.</li><li>É contato multiplicador para Ribeirão e outras praças.</li></ul><p class="risk"><strong>Rota:</strong> telefonar para a empresa e pedir diretamente por Matheus Calil ou pela curadoria artística.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>Matheus Abdo Costa Calil</strong><span>Produtor do RRM e sócio-administrador da empresa do evento.</span></div><div class="contact-actions"><a href="tel:+551636358581">Ligar: (16) 3635-8581</a><a href="https://www.instagram.com/ribeiraorodeomusic/" target="_blank" rel="noopener">Instagram oficial — pedir Matheus</a></div></aside></div>
+            <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.tribunaribeirao.com.br/podcast-tribuna-ribeirao-matheus-calil-conta-detalhes-sobre-20a-edicao-do-ribeirao-rodeo-music/" target="_blank" rel="noopener">Matheus identificado como produtor do evento</a>.</li><li><a href="https://www.jkproducoes.com.br/ribeirao-rodeo-music-2026-encerra-edicao-especial/" target="_blank" rel="noopener">Público e atrações de 2026</a>.</li><li><a href="https://casadosdados.com.br/solucao/cnpj/ribeirao-rodeo-music-ltda-22140513000130" target="_blank" rel="noopener">Sócios e telefone empresarial</a>.</li></ul></div></details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rodeio" data-search="rio preto country bulls paulo emilio marques são josé rio preto instagram telefone">
+          <div class="venue-top"><div class="rank">R8</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag good">Presidente identificado</span><span class="tag">Instagram pessoal</span></div><h3>Rio Preto Country Bulls</h3><p>Recinto Alberto Bertelli Lucatto · São José do Rio Preto</p></div><div class="score"><strong>85</strong><span>prioridade</span></div></div>
+          <div class="venue-body">
+            <div class="facts"><div class="fact"><b>Público de referência</b><strong>~100 mil / 5 dias</strong><small>Dado de 2025; não é capacidade simultânea.</small></div><div class="fact"><b>Pista 2026</b><strong>R$ 25–155</strong><small>Valores publicados variavam por noite/lote.</small></div><div class="fact"><b>Perfil</b><strong>28 edições</strong><small>Festival sertanejo e rodeio de alto rendimento.</small></div><div class="fact"><b>Fit R$ 30 mil</b><strong>Noite compartilhada</strong><small>Mais plausível em abertura ou grade complementar.</small></div></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que entra</h4><ul class="check"><li>Paulo Emílio Marques é fundador/organizador e presidente publicamente identificado.</li><li>O evento declara foco em sertanejo de várias gerações.</li><li>Há telefone institucional e perfil pessoal público do responsável.</li></ul><p class="risk"><strong>Rota:</strong> enviar DM curta para Paulo e, no mesmo dia, ligar no escritório citando o nome dele.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>Paulo Emílio Marques</strong><span>Presidente do Country Bulls e empresário da Cia. de Rodeio Paulo Emílio.</span></div><div class="contact-actions"><a href="https://www.instagram.com/pauloemilio_/" target="_blank" rel="noopener">Instagram de Paulo Emílio</a><a href="tel:+551732224499">Ligar: (17) 3222-4499</a><a href="https://www.instagram.com/riopretocountrybullsoficial/" target="_blank" rel="noopener">Instagram oficial</a></div></aside></div>
+            <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://countrybulls.com.br/sobre-rcb/" target="_blank" rel="noopener">Site oficial e perfil da edição</a>.</li><li><a href="https://atendimento.baladapp.com.br/hc/pt-br/articles/46304442634651-FAQ-Rio-Preto-Country-Bulls-2026-SP" target="_blank" rel="noopener">Produtor oficial identificado</a>.</li><li><a href="https://countrybulls.com.br/" target="_blank" rel="noopener">Valores de pista publicados em 2026</a>.</li></ul></div></details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rodeio" data-search="festa peão americana beto lahr clube cavaleiros contato whatsapp email">
+          <div class="venue-top"><div class="rank">R9</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag good">Presidente identificado</span><span class="tag">2027 anunciado</span></div><h3>Festa do Peão de Americana</h3><p>Parque de Eventos CCA · Americana</p></div><div class="score"><strong>82</strong><span>prioridade</span></div></div>
+          <div class="venue-body">
+            <div class="facts"><div class="fact"><b>Próxima edição</b><strong>11–20/06/2027</strong><small>Datas já publicadas no site oficial.</small></div><div class="fact"><b>Escala estimada</b><strong>+400 mil total</strong><small>Estimativa anual de fonte setorial; confirmar com o CCA.</small></div><div class="fact"><b>Recinto</b><strong>1 milhão m²</strong><small>Área divulgada; não é lotação.</small></div><div class="fact"><b>Fit R$ 30 mil</b><strong>Stretch</strong><small>Mais viável em abertura, palco secundário ou oportunidade de grade.</small></div></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que ainda vale</h4><ul class="check"><li>Beto Lahr é presidente do Clube dos Cavaleiros e liderança histórica da festa.</li><li>O planejamento de 2027 já está visível: abordagem deve ocorrer com antecedência.</li><li>Telefone e e-mail do CCA são publicados e vinculados ao presidente no cadastro atual.</li></ul><p class="risk"><strong>Não vender como headline:</strong> apresentar como combinação de repertório conhecido + condição excepcional + noite compartilhada.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>José Roberto “Beto” Lahr</strong><span>Presidente do Clube dos Cavaleiros de Americana.</span></div><div class="contact-actions"><a href="https://wa.me/551934610907?text=Ol%C3%A1.%20Gostaria%20de%20encaminhar%20ao%20presidente%20Beto%20Lahr%20uma%20proposta%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20para%20a%20Festa%20do%20Pe%C3%A3o%20de%20Americana." target="_blank" rel="noopener">WhatsApp/telefone do CCA — pedir Beto</a><a href="mailto:cca@festadopeaodeamericana.com.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Beto%20Lahr">E-mail aos cuidados de Beto</a><a href="https://www.instagram.com/festadopeaodeamericana/" target="_blank" rel="noopener">Instagram oficial</a></div></aside></div>
+            <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://festadopeaodeamericana.com.br/" target="_blank" rel="noopener">Site oficial e datas de 2027</a>.</li><li><a href="https://casadosdados.com.br/solucao/cnpj/clube-dos-cavaleiros-de-americana-55356943000143" target="_blank" rel="noopener">Presidente e contatos atuais do CCA</a>.</li><li><a href="https://novomomento.com.br/cora-faz-homenagem-festa-peao-americana-40-anos/" target="_blank" rel="noopener">Beto Lahr confirmado como presidente em 2026</a>.</li></ul></div></details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rodeio" data-search="jaguariúna rodeo festival gui marconi diverti email diretor contato">
+          <div class="venue-top"><div class="rank">R10</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag good">E-mail nominal</span><span class="tag">Circuito Sertanejo</span></div><h3>Jaguariúna Rodeo Festival / Diverti</h3><p>Red Park · Jaguariúna</p></div><div class="score"><strong>81</strong><span>prioridade</span></div></div>
+          <div class="venue-body">
+            <div class="facts"><div class="fact"><b>Público de referência</b><strong>~40 mil/dia</strong><small>Número divulgado em edição anterior; confirmar a configuração atual.</small></div><div class="fact"><b>Organização</b><strong>Diverti / Grupo DVT</strong><small>Organizador identificado no site oficial.</small></div><div class="fact"><b>Perfil</b><strong>Festival nacional</strong><small>Grandes shows, montarias e múltiplos setores.</small></div><div class="fact"><b>Fit R$ 30 mil</b><strong>Stretch</strong><small>Entrada de grade, slot alternativo ou substituição.</small></div></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que entra</h4><ul class="check"><li>Gui Marconi é sócio-diretor da Diverti e fala publicamente sobre curadoria do festival.</li><li>A Diverti opera Jaguariúna e outros eventos do Circuito Sertanejo.</li><li>Foi localizado e-mail profissional nominal em documento público assinado pelo próprio executivo.</li></ul><p class="risk"><strong>Valor maior que o evento isolado:</strong> a conversa pode abrir outras etapas do circuito, mesmo que Jaguariúna esteja fechada.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>Guilherme “Gui” Marconi</strong><span>Sócio-diretor da Diverti e responsável ligado à curadoria do JRF.</span></div><div class="contact-actions"><a href="mailto:gui.marconi@divertieventos.com.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20Circuito%20Sertanejo">E-mail profissional de Gui Marconi</a><a href="https://www.instagram.com/jaguariunarodeofestival/" target="_blank" rel="noopener">Instagram oficial</a></div></aside></div>
+            <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.jaguariunarodeofestival.com.br/" target="_blank" rel="noopener">Site oficial e organizadora Diverti</a>.</li><li><a href="https://gshow.globo.com/festivais/circuito-sertanejo/2025/noticia/socio-do-jaguariuna-rodeo-festival-compara-kacey-musgraves-a-ana-castela-conectar-a-nova-geracao.ghtml" target="_blank" rel="noopener">Gui Marconi como sócio-diretor e voz da curadoria</a>.</li><li><a href="https://diariooficial.prefeitura.sp.gov.br/md_epubli_visualizar.php?zKDSjGmoMutrG31ttNSOzsQUODQwCtk8JYmKq7PpyEhuIbymuYjiyUnmeSJ4457Awlm7gGKVp7ncoknLIOr0PgKETQAoP8aUmBTVvjSyBv9eT6VamfKnsG4SSHVWBczV=" target="_blank" rel="noopener">Documento público com e-mail profissional e assinatura de Gui</a>.</li></ul></div></details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rodeio" data-search="barretos os independentes jeronimo muzeti presidente contato direto festa peão">
+          <div class="venue-top"><div class="rank">R11</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag mid">Oportunidade stretch</span><span class="tag">Canal direto do presidente</span></div><h3>Festa do Peão de Barretos</h3><p>Parque do Peão · Barretos</p></div><div class="score"><strong>74</strong><span>prioridade</span></div></div>
+          <div class="venue-body">
+            <div class="facts"><div class="fact"><b>Dimensão</b><strong>+2 milhões m²</strong><small>Área do complexo segundo a organização.</small></div><div class="fact"><b>Estrutura</b><strong>4 palcos</strong><small>Rodeio, shows, cultura, feira e camping.</small></div><div class="fact"><b>Capacidade da arena</b><strong>35–50 mil</strong><small>Referência histórica; confirmar configuração de cada palco.</small></div><div class="fact"><b>Fit R$ 30 mil</b><strong>Palco alternativo</strong><small>Não é proposta realista para headline.</small></div></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que não foi descartado</h4><ul class="check"><li>A página oficial oferece um canal declarado como comunicação direta com o presidente.</li><li>Os quatro palcos criam possibilidades além da atração principal.</li><li>A abordagem serve também para posicionar a dupla no radar do maior evento do segmento.</li></ul><p class="risk"><strong>Use só depois dos demais:</strong> propor palco/horário específico e não ancorar a conversa no cachê de headline.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>Jerônimo Luiz Muzeti</strong><span>Presidente de Os Independentes na gestão 2025/2026.</span></div><div class="contact-actions"><a href="https://www.independentes.com.br/festadopeao/contato" target="_blank" rel="noopener">Canal direto do presidente</a><a href="tel:+551733210000">Ligar: (17) 3321-0000</a><a href="mailto:turismo@independentes.com.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Jer%C3%B4nimo%20Muzeti">E-mail aos cuidados de Jerônimo</a></div></aside></div>
+            <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.independentes.com.br/festadopeao/contato" target="_blank" rel="noopener">Página oficial com canal direto do presidente</a>.</li><li><a href="https://www.independentes.com.br/festadopeao/noticia/3411/-jeronimo-luiz-muzeti-e-empossado-presidente-de-os-independentes" target="_blank" rel="noopener">Posse de Jerônimo na gestão 2025/2026</a>.</li><li><a href="https://www.independentes.com.br/festadopeao/" target="_blank" rel="noopener">Portal oficial da Festa do Peão de Barretos</a>.</li></ul></div></details>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -517,9 +837,10 @@
               <aside class="contact-card">
                 <h4>Contato pessoal prioritário</h4>
                 <div class="person"><strong>Marco Antônio Tobal Júnior</strong><span>Diretor do Grupo São Paulo Eventos e gestor publicamente ligado ao Villa Country. É um decisor sênior real; não foi localizado um telefone ou e-mail pessoal publicado para booking.</span></div>
-                <div class="person"><strong>Como abordar</strong><span>Enviar mensagem direta no LinkedIn citando João Bosco &amp; Gabriel, os números do hit e a condição especial de rota. Pedir que ele próprio avalie ou indique o comprador artístico atual.</span></div>
+                <div class="person"><strong>Como abordar</strong><span>Ligar para a operação e pedir nominalmente por Marco ou pela programação artística. Se não transferirem, enviar uma mensagem curta ao Instagram oficial da casa e solicitar o contato de quem compra os shows.</span></div>
                 <div class="contact-actions">
-                  <a href="https://br.linkedin.com/in/marco-ant%C3%B4nio-tobal-junior-b9064b80" target="_blank" rel="noopener">Mensagem direta para Marco</a>
+                  <a href="tel:+551138685858">Ligar para a Villa: (11) 3868-5858</a>
+                  <a href="https://www.instagram.com/villacountry/" target="_blank" rel="noopener">Instagram oficial da Villa</a>
                 </div>
                 <p class="risk"><strong>Transparência:</strong> o canal é pessoal, mas a função específica de comprador artístico não está publicada.</p>
               </aside>
@@ -570,9 +891,8 @@
                 <h4>Contatos pessoais prioritários</h4>
                 <div class="person"><strong>1º — Jonatas Camargo</strong><span>Perfil atual listado na equipe da Terra SP. Tem histórico público como diretor artístico/internacional e promotor de shows, por isso é a ponte nominal mais aderente localizada — embora o cargo atual de buyer não esteja visível publicamente.</span></div>
                 <div class="person"><strong>2º — Yhosefe Rafael Sabino Pereira</strong><span>Sócio-administrador da Terra SP e da Arena Eventos. O e-mail abaixo é o contato empresarial nominal publicado no cadastro da companhia.</span></div>
-                <div class="person"><strong>Como abordar</strong><span>Começar por Jonatas no LinkedIn. Em paralelo, enviar proposta curta a Yhosefe com assunto “João Bosco &amp; Gabriel — data especial Terra SP / Arena+”.</span></div>
+                <div class="person"><strong>Como abordar</strong><span>Enviar proposta curta diretamente a Yhosefe com assunto “João Bosco &amp; Gabriel — data especial Terra SP / Arena+” e, em seguida, ligar no telefone empresarial para confirmar o recebimento.</span></div>
                 <div class="contact-actions">
-                  <a href="https://br.linkedin.com/in/jonatas-camargo-2641a761" target="_blank" rel="noopener">Mensagem direta para Jonatas</a>
                   <a href="mailto:yhosefe@hotmail.com?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20Terra%20SP%20%2F%20Arena%2B">E-mail nominal de Yhosefe</a>
                   <a href="tel:+551933444900">Telefone empresarial de Yhosefe</a>
                 </div>
@@ -585,7 +905,7 @@
                   <li><span class="source-label">Capacidade e rider:</span> <a href="https://terrasp.com/faca-seu-evento/" target="_blank" rel="noopener">Faça seu evento — Terra SP</a>.</li>
                   <li><span class="source-label">Contato e agenda atual:</span> <a href="https://terrasp.com/contato/" target="_blank" rel="noopener">contato oficial</a> e <a href="https://terrasp.com/eventos/14-11-leo-magalhaes/" target="_blank" rel="noopener">show de Léo Magalhães em 2026</a>.</li>
                   <li><span class="source-label">Preço sertanejo:</span> <a href="https://feverup.com/m/765349/es" target="_blank" rel="noopener">Terraneja no Terra SP — Fever</a>.</li>
-                  <li><span class="source-label">Pessoa ligada à equipe e histórico artístico:</span> <a href="https://br.linkedin.com/in/jonatas-camargo-2641a761" target="_blank" rel="noopener">LinkedIn de Jonatas Camargo</a> e <a href="https://www.portaldoinferno.com.br/noticias/4469-8x8-live-nota-de-esclarecimento-ao-publico.html" target="_blank" rel="noopener">registro de sua atuação anterior como diretor artístico e promotor</a>.</li>
+                  <li><span class="source-label">Histórico artístico de Jonatas:</span> <a href="https://www.portaldoinferno.com.br/noticias/4469-8x8-live-nota-de-esclarecimento-ao-publico.html" target="_blank" rel="noopener">registro público de sua atuação anterior como diretor artístico e promotor</a>.</li>
                   <li><span class="source-label">Administrador e contato nominal:</span> <a href="https://casadosdados.com.br/solucao/cnpj/terra-sp-ltda-48577205000160" target="_blank" rel="noopener">cadastro empresarial da Terra SP Ltda.</a>.</li>
                 </ul>
               </div>
@@ -625,9 +945,8 @@
                 <h4>Contatos pessoais prioritários</h4>
                 <div class="person"><strong>Valdomiro Poliselli Júnior</strong><span>Sócio-administrador da Red Eventos e contato pessoal verificável por LinkedIn. É decisor patrimonial; não foi confirmado como comprador artístico diário.</span></div>
                 <div class="person"><strong>Francisco Granguelli Júnior / Eduardo Prado de Almeida Cavalcanti</strong><span>Administrador e sócio atuais da G&amp;P Produções, empresa indicada no próprio site da Red para shows. O número de shows leva à equipe deles; pedir nominalmente um dos dois.</span></div>
-                <div class="person"><strong>Como abordar</strong><span>Mensagem direta para Valdomiro e, no WhatsApp de shows, abrir com “Gostaria de falar com Francisco ou Eduardo sobre uma data de João Bosco &amp; Gabriel”.</span></div>
+                <div class="person"><strong>Como abordar</strong><span>No WhatsApp de shows, abrir com “Gostaria de falar com Francisco ou Eduardo sobre uma data de João Bosco &amp; Gabriel”.</span></div>
                 <div class="contact-actions">
-                  <a href="https://br.linkedin.com/in/valdomiro-poliselli-junior-8b040046" target="_blank" rel="noopener">Mensagem direta para Valdomiro</a>
                   <a href="https://wa.me/5519993369909?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20Francisco%20Granguelli%20J%C3%BAnior%20ou%20Eduardo%20Prado%20sobre%20uma%20data%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel." target="_blank" rel="noopener">WhatsApp de shows — pedir Francisco/Eduardo</a>
                 </div>
               </aside>
@@ -732,10 +1051,9 @@
               <aside class="contact-card">
                 <h4>Contato pessoal prioritário</h4>
                 <div class="person"><strong>Fauze Abdouch</strong><span>Sócio-diretor do grupo que controla a Folk Valley. Há perfis pessoais públicos no Instagram e LinkedIn; entrevistas também o ligam a comunicação, vendas, relacionamento e gestão dos clubs.</span></div>
-                <div class="person"><strong>Como abordar</strong><span>Mensagem curta no Instagram ou LinkedIn propondo João Bosco &amp; Gabriel para line-up, data especial ou calendário da Faro Eventos — não como simples locação.</span></div>
+                <div class="person"><strong>Como abordar</strong><span>Mensagem curta no Instagram propondo João Bosco &amp; Gabriel para line-up, data especial ou calendário da Faro Eventos — não como simples locação.</span></div>
                 <div class="contact-actions">
                   <a href="https://www.instagram.com/fauze_abdouch/" target="_blank" rel="noopener">Mensagem direta no Instagram</a>
-                  <a href="https://www.linkedin.com/in/fauze-abdouch-70915b188/" target="_blank" rel="noopener">Mensagem direta no LinkedIn</a>
                 </div>
               </aside>
             </div>
@@ -785,9 +1103,10 @@
               <aside class="contact-card">
                 <h4>Contato pessoal prioritário</h4>
                 <div class="person"><strong>Nathalia Palermo Carlone</strong><span>Perfil atual ligado à Estância. Fontes públicas a identificam como diretora/diretora de eventos e sócia representante em contratos; é a rota nominal mais aderente localizada.</span></div>
-                <div class="person"><strong>Como abordar</strong><span>Mensagem direta no LinkedIn propondo a dupla para o Piso Central ou evento compartilhado. Perguntar se ela decide a programação ou quem conduz a compra artística hoje.</span></div>
+                <div class="person"><strong>Como abordar</strong><span>Ligar ou escrever aos cuidados de Nathalia propondo a dupla para o Piso Central ou um evento compartilhado. Perguntar se ela decide a programação ou quem conduz a compra artística hoje.</span></div>
                 <div class="contact-actions">
-                  <a href="https://br.linkedin.com/in/nathaliacarlone" target="_blank" rel="noopener">Mensagem direta para Nathalia</a>
+                  <a href="tel:+551141015000">Ligar: (11) 4101-5000</a>
+                  <a href="mailto:estancia@estancia.com.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Nathalia%20Carlone">E-mail aos cuidados de Nathalia</a>
                 </div>
                 <p class="risk"><strong>Transparência:</strong> o vínculo é atual; a referência explícita a “diretora de eventos” é histórica e deve ser reconfirmada.</p>
               </aside>
@@ -800,7 +1119,7 @@
                   <li><span class="source-label">Capacidade do complexo e estrutura:</span> <a href="https://www.linkedin.com/company/estanciaaltodaserra" target="_blank" rel="noopener">LinkedIn institucional</a>.</li>
                   <li><span class="source-label">Agenda e contato:</span> <a href="https://estancia.com.br/shows-programacoes/" target="_blank" rel="noopener">programação oficial</a> e <a href="https://linktr.ee/estancia.oficial" target="_blank" rel="noopener">Linktree verificado</a>.</li>
                   <li><span class="source-label">Sócios atuais:</span> <a href="https://www.econodata.com.br/consulta-empresa/02701199000100-agua-das-rochas-ltda" target="_blank" rel="noopener">cadastro da Água das Rochas Ltda.</a>.</li>
-                  <li><span class="source-label">Nathalia e função em eventos:</span> <a href="https://br.linkedin.com/in/nathaliacarlone" target="_blank" rel="noopener">perfil profissional atual</a> e <a href="https://www.portaleventos.com.br/news/Estancia-Alto-da-Serra-cria-solucao-economica-para-confraternizacao-de-empresas" target="_blank" rel="noopener">referência pública como diretora de eventos</a>.</li>
+                  <li><span class="source-label">Nathalia e função em eventos:</span> <a href="https://www.portaleventos.com.br/news/Estancia-Alto-da-Serra-cria-solucao-economica-para-confraternizacao-de-empresas" target="_blank" rel="noopener">referência pública como diretora de eventos</a>.</li>
                 </ul>
               </div>
             </details>
@@ -838,9 +1157,10 @@
               <aside class="contact-card">
                 <h4>Contato pessoal prioritário</h4>
                 <div class="person"><strong>Gui Moron (Guilherme Moron)</strong><span>CEO da VIVA+ Entretenimento/UZNA, identificação publicada por parceiro comercial. Ele também escreve publicamente sobre curadoria musical e seleção de artistas — é o contato mais próximo de um comprador confirmado nesta lista.</span></div>
-                <div class="person"><strong>Como abordar</strong><span>Mensagem direta no LinkedIn com proposta para a UZNA e para o calendário de eventos da VIVA+ no interior. Citar números de João Bosco &amp; Gabriel e a condição especial de rota.</span></div>
+                <div class="person"><strong>Como abordar</strong><span>Enviar mensagem ao Instagram pessoal de Gui com proposta para a UZNA e para o calendário da VIVA+ no interior. Em paralelo, usar o WhatsApp oficial pedindo que a proposta seja encaminhada nominalmente a ele.</span></div>
                 <div class="contact-actions">
-                  <a href="https://br.linkedin.com/in/guilherme-moron" target="_blank" rel="noopener">Mensagem direta para Gui Moron</a>
+                  <a href="https://www.instagram.com/guimoron/" target="_blank" rel="noopener">Instagram de Gui Moron</a>
+                  <a href="https://wa.me/5515996669999?text=Ol%C3%A1%2C%20gostaria%20de%20encaminhar%20ao%20Gui%20Moron%20uma%20proposta%20de%20show%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel." target="_blank" rel="noopener">WhatsApp oficial UZNA</a>
                 </div>
               </aside>
             </div>
@@ -850,7 +1170,7 @@
                 <ul>
                   <li><span class="source-label">Estrutura, telefone e agenda:</span> <a href="https://agendasorocaba.com.br/uzna/" target="_blank" rel="noopener">Agenda Sorocaba — perfil atualizado em 2026</a>.</li>
                   <li><span class="source-label">Capacidade e vínculo de Gui Moron:</span> <a href="https://www.metropoles.com/sao-paulo/casona-derrite-empresario-condecorado" target="_blank" rel="noopener">perfil jornalístico do empreendimento</a>. A matéria tem outro foco; foram usados apenas dados objetivos do negócio.</li>
-                  <li><span class="source-label">Cargo e atuação profissional:</span> <a href="https://comercial.guicheweb.com.br/" target="_blank" rel="noopener">depoimento que o identifica como CEO da VIVA+/UZNA</a>, <a href="https://br.linkedin.com/in/guilherme-moron" target="_blank" rel="noopener">LinkedIn de Gui Moron</a> e <a href="https://pt.linkedin.com/posts/guilherme-moron_eventos-entretenimento-shows-activity-7366416733357694976-50Mq" target="_blank" rel="noopener">publicação dele sobre curadoria e seleção de artistas</a>.</li>
+                  <li><span class="source-label">Cargo e atuação profissional:</span> <a href="https://comercial.guicheweb.com.br/" target="_blank" rel="noopener">depoimento que o identifica como CEO da VIVA+/UZNA</a> e <a href="https://www.instagram.com/guimoron/" target="_blank" rel="noopener">perfil pessoal público de Gui Moron</a>.</li>
                   <li><span class="source-label">Redes oficiais:</span> <a href="https://linktr.ee/uzna.oficial" target="_blank" rel="noopener">Linktree UZNA</a>.</li>
                 </ul>
               </div>
@@ -913,7 +1233,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="roteiro">
       <h2>Como fazer o primeiro contato</h2>
       <p class="section-intro">Como a dupla já tem reconhecimento nacional, a primeira mensagem deve parecer uma oportunidade concreta de agenda — curta, pessoal e com a razão específica do encaixe naquela operação.</p>
       <div class="grid-2">
@@ -929,7 +1249,8 @@
         <div>
           <div class="script">
             <h3>Mensagem curta para a pessoa indicada</h3>
-            <p>Olá, <em>[nome da pessoa]</em>. Sou <em>[seu nome]</em> e estou trabalhando a agenda de João Bosco &amp; Gabriel em São Paulo. A dupla tem “Alô Ex-Amor”, catálogo ativo e forte aderência ao público sertanejo. Vejo um bom encaixe com <em>[casa/evento]</em>. Temos uma condição especial autorizada de R$ 30 mil para <em>[data de rota/formato]</em>, com <em>[itens incluídos]</em>. Posso te enviar duas datas, vídeo ao vivo e o material comercial para você avaliar?</p>
+            <p id="messageTemplate">Olá, <em>[nome da pessoa]</em>. Sou <em>[seu nome]</em> e estou trabalhando a agenda de João Bosco &amp; Gabriel em São Paulo. A dupla tem “Alô Ex-Amor”, catálogo ativo e forte aderência ao público sertanejo. Vejo um bom encaixe com <em>[casa/evento]</em>. Temos uma condição especial autorizada de R$ 30 mil para <em>[data de rota/formato]</em>, com <em>[itens incluídos]</em>. Posso te enviar duas datas, vídeo ao vivo e o material comercial para você avaliar?</p>
+            <div class="copy-action"><button class="button secondary" id="copyTemplate" type="button">Copiar mensagem</button></div>
           </div>
           <div class="notice" style="margin-top:14px">
             <strong>Não esconder a diferença de preço</strong>
@@ -939,7 +1260,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="viabilidade">
       <h2>Economia: leitura rápida do cachê</h2>
       <p class="section-intro">Abaixo, receita bruta teórica a 70% da capacidade e ingresso médio de R$ 75 — apenas um teste de escala, antes de taxas, impostos, marketing, técnica, equipe, ECAD, hospitalidade e demais custos.</p>
       <div class="grid-3">
@@ -953,7 +1274,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="descartados">
       <h2>Lugares pesquisados e não priorizados</h2>
       <p class="section-intro">Não foram descartados por “serem ruins”, e sim porque a escala não parece compatível com R$ 30 mil ou porque faltou evidência suficiente.</p>
       <div class="excluded">
@@ -963,7 +1284,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="metodologia">
       <h2>Limites da pesquisa</h2>
       <div class="grid-2">
         <div class="panel"><div class="panel-body"><h3>O que está confirmado</h3><p>Estruturas e contatos oficiais foram priorizados. Sócios foram ligados às empresas por cadastros públicos atuais; redes sociais foram conectadas a sites oficiais, páginas institucionais ou perfis públicos convergentes.</p></div></div>
@@ -975,7 +1296,7 @@
       </div>
       <div class="notice success">
         <strong>Links revisados em 19/09/2026</strong>
-        <p>Todos os 60 endereços HTTP/HTTPS presentes nesta versão chegaram ao destino no teste final. Seis perfis pessoais do LinkedIn recusaram a checagem automatizada, comportamento normal da plataforma, mas foram confirmados individualmente na busca pública; eles podem exigir login. Links de e-mail e telefone tiveram o formato conferido, mas a existência da caixa ou a entrega de mensagem só pode ser comprovada com contato real.</p>
+        <p>Os 104 endereços HTTP/HTTPS únicos presentes nesta versão responderam com sucesso no teste final, incluindo sites oficiais, fontes, redes sociais e botões de WhatsApp. Links de e-mail e telefone tiveram o formato conferido; a existência da caixa, o atendimento do número e a entrega da mensagem só podem ser comprovados com o contato real.</p>
       </div>
     </section>
   </main>
@@ -984,21 +1305,41 @@
     <div class="shell">Pesquisa comercial para João Bosco &amp; Gabriel revisada em 19 de setembro de 2026. Preços, agenda, cargos e telefones podem mudar; reconfirmar antes de enviar proposta ou contrato.</div>
   </footer>
 
-  <button class="print-button" type="button" onclick="window.print()">Imprimir / salvar PDF</button>
+  <nav class="mobile-dock" aria-label="Atalhos da página">
+    <a href="#ordem">Prioridades</a>
+    <a href="#mais-lugares">Oportunidades</a>
+    <a href="#roteiro">Roteiro</a>
+  </nav>
+
+  <button class="print-button" type="button" onclick="window.print()" aria-label="Imprimir ou salvar a página em PDF">Imprimir / salvar PDF</button>
 
   <script>
+    const main = document.querySelector('main');
+    const readingOrder = ['comecar', 'ordem', 'mais-lugares', 'contatos', 'shortlist', 'roteiro', 'artista', 'historico', 'viabilidade', 'descartados', 'metodologia'];
+    readingOrder.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) main.appendChild(section);
+    });
+
     const buttons = [...document.querySelectorAll('.filter')];
     const venues = [...document.querySelectorAll('.venue')];
     const search = document.getElementById('search');
+    const results = document.getElementById('results');
+    const shareButton = document.getElementById('shareButton');
+    const copyTemplate = document.getElementById('copyTemplate');
+    const messageTemplate = document.getElementById('messageTemplate');
     let activeFilter = 'all';
 
     function applyFilters() {
       const query = search.value.trim().toLocaleLowerCase('pt-BR');
+      let visible = 0;
       venues.forEach((venue) => {
         const tierMatch = activeFilter === 'all' || venue.dataset.tier === activeFilter;
         const searchMatch = !query || venue.dataset.search.toLocaleLowerCase('pt-BR').includes(query) || venue.textContent.toLocaleLowerCase('pt-BR').includes(query);
         venue.hidden = !(tierMatch && searchMatch);
+        if (!venue.hidden) visible += 1;
       });
+      results.textContent = `${visible} ${visible === 1 ? 'resultado' : 'resultados'}`;
     }
 
     buttons.forEach((button) => {
@@ -1011,6 +1352,40 @@
     });
 
     search.addEventListener('input', applyFilters);
+
+    shareButton.addEventListener('click', async () => {
+      const shareData = {
+        title: document.title,
+        text: 'Mapa de oportunidades e contatos para João Bosco & Gabriel.',
+        url: window.location.href
+      };
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData);
+        } else {
+          await navigator.clipboard.writeText(window.location.href);
+          shareButton.textContent = 'Link copiado';
+          setTimeout(() => { shareButton.textContent = 'Compartilhar página'; }, 1800);
+        }
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          window.prompt('Copie o endereço da página:', window.location.href);
+        }
+      }
+    });
+
+    copyTemplate.addEventListener('click', async () => {
+      const text = messageTemplate.innerText;
+      try {
+        await navigator.clipboard.writeText(text);
+        copyTemplate.textContent = 'Mensagem copiada';
+        setTimeout(() => { copyTemplate.textContent = 'Copiar mensagem'; }, 1800);
+      } catch (error) {
+        window.prompt('Copie a mensagem:', text);
+      }
+    });
+
+    applyFilters();
   </script>
 </body>
 </html>
