@@ -595,8 +595,21 @@
       .tab-pane { width: 100%; min-width: 0; }
       .tech-specs-grid { grid-template-columns: 1fr; gap: 8px; width: 100%; }
       .stage-section { padding: 14px; }
-      .artist-badge { font-size: .82rem; padding: 4px 14px 4px 4px; gap: 8px; }
-      .artist-photo { width: 38px; height: 38px; }
+      .artist-badge {
+        gap: 10px;
+        padding: 5px 14px 5px 5px;
+      }
+      .artist-photo {
+        width: 68px;
+        height: 68px;
+        border-width: 2px;
+      }
+      .artist-name {
+        font-size: .88rem;
+      }
+      .artist-year {
+        font-size: .70rem;
+      }
       .analysis-grid { gap: 10px; width: 100%; }
       .block, .contact-card { padding: 14px 12px; width: 100%; box-sizing: border-box; }
       .contact-actions { display: grid; grid-template-columns: 1fr; gap: 8px; }
@@ -758,37 +771,55 @@
     .artist-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
     .artist-badge {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 5px 16px 5px 5px;
+      gap: 12px;
+      padding: 6px 18px 6px 6px;
       border: 1px solid #d9ccb9;
       border-radius: 999px;
       background: #fffdf9;
       color: #3b281c;
-      font-size: .88rem;
-      font-weight: 750;
-      box-shadow: 0 3px 8px rgba(53,42,31,.06);
-      transition: all .15s ease;
+      box-shadow: 0 3px 10px rgba(53,42,31,.06);
+      transition: all .2s ease;
     }
     .artist-badge:hover {
       border-color: var(--gold);
       background: #fff9f0;
       transform: translateY(-2px);
-      box-shadow: 0 5px 12px rgba(53,42,31,.1);
+      box-shadow: 0 6px 16px rgba(53,42,31,.12);
     }
     .artist-photo {
-      width: 44px;
-      height: 44px;
+      width: 84px;
+      height: 84px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--gold);
+      border: 2.5px solid var(--gold);
       flex-shrink: 0;
       background: #ece4d7;
-      box-shadow: 0 2px 5px rgba(0,0,0,.08);
+      box-shadow: 0 3px 8px rgba(0,0,0,.12);
+    }
+    .artist-meta {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2px;
+    }
+    .artist-name {
+      display: block;
+      color: #2b1f17;
+      font-size: .95rem;
+      font-weight: 780;
+      line-height: 1.25;
+    }
+    .artist-year {
+      display: block;
+      color: #8c8275;
+      font-size: .74rem;
+      font-weight: 600;
+      letter-spacing: .02em;
     }
 
     /* Tech specs grid */
@@ -1074,16 +1105,76 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'"><span>Gusttavo Lima</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'"><span>Jorge & Mateus</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'"><span>Luan Santana</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/lauana_prado.jpg" alt="Lauana Prado" loading="lazy" onerror="this.style.display='none'"><span>Lauana Prado</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/daniel.jpg" alt="Daniel" loading="lazy" onerror="this.style.display='none'"><span>Daniel</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'"><span>Ana Castela</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'"><span>Maiara & Maraisa</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/alok.jpg" alt="Alok" loading="lazy" onerror="this.style.display='none'"><span>Alok</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/thiaguinho.jpg" alt="Thiaguinho" loading="lazy" onerror="this.style.display='none'"><span>Thiaguinho</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Gusttavo Lima</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Jorge & Mateus</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Luan Santana</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/lauana_prado.jpg" alt="Lauana Prado" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Lauana Prado</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/daniel.jpg" alt="Daniel" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Daniel</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Ana Castela</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Maiara & Maraisa</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/alok.jpg" alt="Alok" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Alok</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/thiaguinho.jpg" alt="Thiaguinho" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Thiaguinho</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -1210,15 +1301,69 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/henrique_juliano.jpg" alt="Henrique & Juliano" loading="lazy" onerror="this.style.display='none'"><span>Henrique & Juliano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'"><span>Gusttavo Lima</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'"><span>Maiara & Maraisa</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'"><span>Luan Santana</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/bruno_marrone.jpg" alt="Bruno & Marrone" loading="lazy" onerror="this.style.display='none'"><span>Bruno & Marrone</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'"><span>Ana Castela</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/guilherme_benuto.jpg" alt="Guilherme & Benuto" loading="lazy" onerror="this.style.display='none'"><span>Guilherme & Benuto</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/edson_hudson.jpg" alt="Edson & Hudson" loading="lazy" onerror="this.style.display='none'"><span>Edson & Hudson</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/henrique_juliano.jpg" alt="Henrique & Juliano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Henrique & Juliano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Gusttavo Lima</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Maiara & Maraisa</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Luan Santana</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/bruno_marrone.jpg" alt="Bruno & Marrone" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Bruno & Marrone</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Ana Castela</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/guilherme_benuto.jpg" alt="Guilherme & Benuto" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Guilherme & Benuto</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/edson_hudson.jpg" alt="Edson & Hudson" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Edson & Hudson</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -1345,14 +1490,62 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'"><span>Gusttavo Lima</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/bruno_marrone.jpg" alt="Bruno & Marrone" loading="lazy" onerror="this.style.display='none'"><span>Bruno & Marrone</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/dennis_dj.jpg" alt="Dennis DJ" loading="lazy" onerror="this.style.display='none'"><span>Dennis DJ</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/pedro_sampaio.jpg" alt="Pedro Sampaio" loading="lazy" onerror="this.style.display='none'"><span>Pedro Sampaio</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/natanzinho_lima.jpg" alt="Natanzinho Lima" loading="lazy" onerror="this.style.display='none'"><span>Natanzinho Lima</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/icaro_gilmar.jpg" alt="Ícaro & Gilmar" loading="lazy" onerror="this.style.display='none'"><span>Ícaro & Gilmar</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/fiduma_jeca.jpg" alt="Fiduma & Jeca" loading="lazy" onerror="this.style.display='none'"><span>Fiduma & Jeca</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'"><span>Jorge & Mateus</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Gusttavo Lima</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/bruno_marrone.jpg" alt="Bruno & Marrone" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Bruno & Marrone</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/dennis_dj.jpg" alt="Dennis DJ" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Dennis DJ</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/pedro_sampaio.jpg" alt="Pedro Sampaio" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Pedro Sampaio</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/natanzinho_lima.jpg" alt="Natanzinho Lima" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Natanzinho Lima</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/icaro_gilmar.jpg" alt="Ícaro & Gilmar" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Ícaro & Gilmar</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/fiduma_jeca.jpg" alt="Fiduma & Jeca" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Fiduma & Jeca</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Jorge & Mateus</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -1480,10 +1673,34 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/michel_telo.jpg" alt="Michel Teló" loading="lazy" onerror="this.style.display='none'"><span>Michel Teló</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/joao_neto_frederico.jpg" alt="João Neto & Frederico" loading="lazy" onerror="this.style.display='none'"><span>João Neto & Frederico</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/chitaozinho_xororo.jpg" alt="Chitãozinho & Xororó" loading="lazy" onerror="this.style.display='none'"><span>Chitãozinho & Xororó</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/renato_teixeira.jpg" alt="Renato Teixeira" loading="lazy" onerror="this.style.display='none'"><span>Renato Teixeira</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/michel_telo.jpg" alt="Michel Teló" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Michel Teló</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/joao_neto_frederico.jpg" alt="João Neto & Frederico" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">João Neto & Frederico</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/chitaozinho_xororo.jpg" alt="Chitãozinho & Xororó" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Chitãozinho & Xororó</strong>
+              <small class="artist-year">Show em 2022</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/renato_teixeira.jpg" alt="Renato Teixeira" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Renato Teixeira</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -1610,13 +1827,55 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'"><span>Ana Castela</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/lauana_prado.jpg" alt="Lauana Prado" loading="lazy" onerror="this.style.display='none'"><span>Lauana Prado</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/fiduma_jeca.jpg" alt="Fiduma & Jeca" loading="lazy" onerror="this.style.display='none'"><span>Fiduma & Jeca</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/pixote.jpg" alt="Pixote" loading="lazy" onerror="this.style.display='none'"><span>Pixote</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/alok.jpg" alt="Alok" loading="lazy" onerror="this.style.display='none'"><span>Alok</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'"><span>Maiara & Maraisa</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Ana Castela</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/lauana_prado.jpg" alt="Lauana Prado" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Lauana Prado</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/fiduma_jeca.jpg" alt="Fiduma & Jeca" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Fiduma & Jeca</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/pixote.jpg" alt="Pixote" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Pixote</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/alok.jpg" alt="Alok" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Alok</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Maiara & Maraisa</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -1743,14 +2002,62 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/henrique_juliano.jpg" alt="Henrique & Juliano" loading="lazy" onerror="this.style.display='none'"><span>Henrique & Juliano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'"><span>Gusttavo Lima</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'"><span>Maiara & Maraisa</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/thiaguinho.jpg" alt="Thiaguinho" loading="lazy" onerror="this.style.display='none'"><span>Thiaguinho</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'"><span>Jorge & Mateus</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/sorriso_maroto.jpg" alt="Sorriso Maroto" loading="lazy" onerror="this.style.display='none'"><span>Sorriso Maroto</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/menos_e_mais.jpg" alt="Menos é Mais" loading="lazy" onerror="this.style.display='none'"><span>Menos é Mais</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/natiruts.jpg" alt="Natiruts" loading="lazy" onerror="this.style.display='none'"><span>Natiruts</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/henrique_juliano.jpg" alt="Henrique & Juliano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Henrique & Juliano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Gusttavo Lima</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Maiara & Maraisa</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/thiaguinho.jpg" alt="Thiaguinho" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Thiaguinho</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Jorge & Mateus</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/sorriso_maroto.jpg" alt="Sorriso Maroto" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Sorriso Maroto</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/menos_e_mais.jpg" alt="Menos é Mais" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Menos é Mais</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/natiruts.jpg" alt="Natiruts" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Natiruts</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -1949,10 +2256,34 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/joao_bosco_gabriel.jpg" alt="João Bosco & Gabriel (Histórico Comprovado 2024)" loading="lazy" onerror="this.style.display='none'"><span>João Bosco & Gabriel (Histórico Comprovado 2024)</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'"><span>Luan Santana</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/edson_hudson.jpg" alt="Edson & Hudson" loading="lazy" onerror="this.style.display='none'"><span>Edson & Hudson</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/joao_bosco_gabriel.jpg" alt="João Bosco & Gabriel" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">João Bosco & Gabriel</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Luan Santana</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2022</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/edson_hudson.jpg" alt="Edson & Hudson" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Edson & Hudson</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -2038,10 +2369,34 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/joao_bosco_gabriel.jpg" alt="João Bosco & Gabriel (Histórico Comprovado 2025)" loading="lazy" onerror="this.style.display='none'"><span>João Bosco & Gabriel (Histórico Comprovado 2025)</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/bruna_viola.jpg" alt="Bruna Viola" loading="lazy" onerror="this.style.display='none'"><span>Bruna Viola</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/fiduma_jeca.jpg" alt="Fiduma & Jeca" loading="lazy" onerror="this.style.display='none'"><span>Fiduma & Jeca</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/munhoz_mariano.jpg" alt="Munhoz & Mariano" loading="lazy" onerror="this.style.display='none'"><span>Munhoz & Mariano</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/joao_bosco_gabriel.jpg" alt="João Bosco & Gabriel" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">João Bosco & Gabriel</strong>
+              <small class="artist-year">Show em 2025</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/bruna_viola.jpg" alt="Bruna Viola" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Bruna Viola</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/fiduma_jeca.jpg" alt="Fiduma & Jeca" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Fiduma & Jeca</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/munhoz_mariano.jpg" alt="Munhoz & Mariano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Munhoz & Mariano</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -2127,10 +2482,34 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/bruno_barretto.jpg" alt="Bruno & Barretto" loading="lazy" onerror="this.style.display='none'"><span>Bruno & Barretto</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/guilherme_benuto.jpg" alt="Guilherme & Benuto" loading="lazy" onerror="this.style.display='none'"><span>Guilherme & Benuto</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/joao_bosco_vinicius.jpg" alt="João Bosco & Vinícius" loading="lazy" onerror="this.style.display='none'"><span>João Bosco & Vinícius</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/bruno_barretto.jpg" alt="Bruno & Barretto" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Bruno & Barretto</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/guilherme_benuto.jpg" alt="Guilherme & Benuto" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Guilherme & Benuto</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/joao_bosco_vinicius.jpg" alt="João Bosco & Vinícius" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">João Bosco & Vinícius</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -2213,12 +2592,48 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'"><span>Gusttavo Lima</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/rick_renner.jpg" alt="Rick & Renner" loading="lazy" onerror="this.style.display='none'"><span>Rick & Renner</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/gustavo_mioto.jpg" alt="Gustavo Mioto" loading="lazy" onerror="this.style.display='none'"><span>Gustavo Mioto</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/dennis_dj.jpg" alt="Dennis DJ" loading="lazy" onerror="this.style.display='none'"><span>Dennis DJ</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/thiaguinho.jpg" alt="Thiaguinho" loading="lazy" onerror="this.style.display='none'"><span>Thiaguinho</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Gusttavo Lima</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/rick_renner.jpg" alt="Rick & Renner" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Rick & Renner</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/gustavo_mioto.jpg" alt="Gustavo Mioto" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Gustavo Mioto</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/dennis_dj.jpg" alt="Dennis DJ" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Dennis DJ</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/thiaguinho.jpg" alt="Thiaguinho" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Thiaguinho</strong>
+              <small class="artist-year">Show em 2026</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -2304,13 +2719,55 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'"><span>Jorge & Mateus</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'"><span>Ana Castela</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'"><span>Luan Santana</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'"><span>Maiara & Maraisa</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/victor_leo.jpg" alt="Victor & Leo" loading="lazy" onerror="this.style.display='none'"><span>Victor & Leo</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/alok.jpg" alt="Alok" loading="lazy" onerror="this.style.display='none'"><span>Alok</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Jorge & Mateus</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Ana Castela</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Luan Santana</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Maiara & Maraisa</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/victor_leo.jpg" alt="Victor & Leo" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Victor & Leo</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/alok.jpg" alt="Alok" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Alok</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -2396,11 +2853,41 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/bruno_marrone.jpg" alt="Bruno & Marrone" loading="lazy" onerror="this.style.display='none'"><span>Bruno & Marrone</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'"><span>Luan Santana</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'"><span>Ana Castela</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'"><span>Maiara & Maraisa</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/bruno_marrone.jpg" alt="Bruno & Marrone" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Bruno & Marrone</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Luan Santana</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Ana Castela</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Maiara & Maraisa</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2022</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -2483,13 +2970,55 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'"><span>Jorge & Mateus</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/henrique_juliano.jpg" alt="Henrique & Juliano" loading="lazy" onerror="this.style.display='none'"><span>Henrique & Juliano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'"><span>Gusttavo Lima</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'"><span>Ana Castela</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'"><span>Luan Santana</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/lauana_prado.jpg" alt="Lauana Prado" loading="lazy" onerror="this.style.display='none'"><span>Lauana Prado</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Jorge & Mateus</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/henrique_juliano.jpg" alt="Henrique & Juliano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Henrique & Juliano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Gusttavo Lima</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Ana Castela</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Luan Santana</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/lauana_prado.jpg" alt="Lauana Prado" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Lauana Prado</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -2575,12 +3104,48 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'"><span>Luan Santana</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'"><span>Ana Castela</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/bruno_marrone.jpg" alt="Bruno & Marrone" loading="lazy" onerror="this.style.display='none'"><span>Bruno & Marrone</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/murilo_huff.jpg" alt="Murilo Huff" loading="lazy" onerror="this.style.display='none'"><span>Murilo Huff</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/clayton_romario.jpg" alt="Clayton & Romário" loading="lazy" onerror="this.style.display='none'"><span>Clayton & Romário</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Luan Santana</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Ana Castela</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/bruno_marrone.jpg" alt="Bruno & Marrone" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Bruno & Marrone</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/murilo_huff.jpg" alt="Murilo Huff" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Murilo Huff</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/clayton_romario.jpg" alt="Clayton & Romário" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Clayton & Romário</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -2666,13 +3231,55 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'"><span>Jorge & Mateus</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/chitaozinho_xororo.jpg" alt="Chitãozinho & Xororó" loading="lazy" onerror="this.style.display='none'"><span>Chitãozinho & Xororó</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'"><span>Gusttavo Lima</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/henrique_juliano.jpg" alt="Henrique & Juliano" loading="lazy" onerror="this.style.display='none'"><span>Henrique & Juliano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'"><span>Maiara & Maraisa</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'"><span>Luan Santana</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Jorge & Mateus</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/chitaozinho_xororo.jpg" alt="Chitãozinho & Xororó" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Chitãozinho & Xororó</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Gusttavo Lima</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/henrique_juliano.jpg" alt="Henrique & Juliano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Henrique & Juliano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/maiara_maraisa.jpg" alt="Maiara & Maraisa" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Maiara & Maraisa</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Luan Santana</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -2763,12 +3370,48 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'"><span>Jorge & Mateus</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'"><span>Gusttavo Lima</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/chitaozinho_xororo.jpg" alt="Chitãozinho & Xororó" loading="lazy" onerror="this.style.display='none'"><span>Chitãozinho & Xororó</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'"><span>Ana Castela</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/fernando_sorocaba.jpg" alt="Fernando & Sorocaba" loading="lazy" onerror="this.style.display='none'"><span>Fernando & Sorocaba</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Jorge & Mateus</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Gusttavo Lima</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/chitaozinho_xororo.jpg" alt="Chitãozinho & Xororó" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Chitãozinho & Xororó</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Ana Castela</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/fernando_sorocaba.jpg" alt="Fernando & Sorocaba" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Fernando & Sorocaba</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -2854,13 +3497,55 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/chitaozinho_xororo.jpg" alt="Chitãozinho & Xororó" loading="lazy" onerror="this.style.display='none'"><span>Chitãozinho & Xororó</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'"><span>Gusttavo Lima</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'"><span>Jorge & Mateus</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'"><span>Ana Castela</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/simone_mendes.jpg" alt="Simone Mendes" loading="lazy" onerror="this.style.display='none'"><span>Simone Mendes</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'"><span>Luan Santana</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/cesar_menotti_fabiano.jpg" alt="César Menotti & Fabiano" loading="lazy" onerror="this.style.display='none'"><span>César Menotti & Fabiano</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/chitaozinho_xororo.jpg" alt="Chitãozinho & Xororó" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Chitãozinho & Xororó</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Gusttavo Lima</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Jorge & Mateus</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Ana Castela</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/simone_mendes.jpg" alt="Simone Mendes" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Simone Mendes</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/luan_santana.jpg" alt="Luan Santana" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Luan Santana</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/cesar_menotti_fabiano.jpg" alt="César Menotti & Fabiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">César Menotti & Fabiano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -2973,12 +3658,48 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/marcos_belutti.jpg" alt="Marcos & Belutti" loading="lazy" onerror="this.style.display='none'"><span>Marcos & Belutti</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/edson_hudson.jpg" alt="Edson & Hudson" loading="lazy" onerror="this.style.display='none'"><span>Edson & Hudson</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/leonardo.jpg" alt="Leonardo" loading="lazy" onerror="this.style.display='none'"><span>Leonardo</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/matogrosso_mathias.jpg" alt="Matogrosso & Mathias" loading="lazy" onerror="this.style.display='none'"><span>Matogrosso & Mathias</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/clayton_romario.jpg" alt="Clayton & Romário" loading="lazy" onerror="this.style.display='none'"><span>Clayton & Romário</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/tierry.jpg" alt="Tierry" loading="lazy" onerror="this.style.display='none'"><span>Tierry</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/marcos_belutti.jpg" alt="Marcos & Belutti" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Marcos & Belutti</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/edson_hudson.jpg" alt="Edson & Hudson" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Edson & Hudson</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/leonardo.jpg" alt="Leonardo" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Leonardo</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/matogrosso_mathias.jpg" alt="Matogrosso & Mathias" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Matogrosso & Mathias</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/clayton_romario.jpg" alt="Clayton & Romário" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Clayton & Romário</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/tierry.jpg" alt="Tierry" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Tierry</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -3101,12 +3822,48 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/leo_magalhaes.jpg" alt="Léo Magalhães" loading="lazy" onerror="this.style.display='none'"><span>Léo Magalhães</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/naiara_azevedo.jpg" alt="Naiara Azevedo" loading="lazy" onerror="this.style.display='none'"><span>Naiara Azevedo</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/tierry.jpg" alt="Tierry" loading="lazy" onerror="this.style.display='none'"><span>Tierry</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_vaqueiro.jpg" alt="Zé Vaqueiro" loading="lazy" onerror="this.style.display='none'"><span>Zé Vaqueiro</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/calcinha_preta.jpg" alt="Calcinha Preta" loading="lazy" onerror="this.style.display='none'"><span>Calcinha Preta</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/raca_negra.jpg" alt="Raça Negra" loading="lazy" onerror="this.style.display='none'"><span>Raça Negra</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/leo_magalhaes.jpg" alt="Léo Magalhães" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Léo Magalhães</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/naiara_azevedo.jpg" alt="Naiara Azevedo" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Naiara Azevedo</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/tierry.jpg" alt="Tierry" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Tierry</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_vaqueiro.jpg" alt="Zé Vaqueiro" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Vaqueiro</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/calcinha_preta.jpg" alt="Calcinha Preta" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Calcinha Preta</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/raca_negra.jpg" alt="Raça Negra" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Raça Negra</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -3230,12 +3987,48 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/cesar_menotti_fabiano.jpg" alt="César Menotti & Fabiano" loading="lazy" onerror="this.style.display='none'"><span>César Menotti & Fabiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/chitaozinho_xororo.jpg" alt="Chitãozinho & Xororó" loading="lazy" onerror="this.style.display='none'"><span>Chitãozinho & Xororó</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/roupa_nova.jpg" alt="Roupa Nova" loading="lazy" onerror="this.style.display='none'"><span>Roupa Nova</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_ramalho.jpg" alt="Zé Ramalho" loading="lazy" onerror="this.style.display='none'"><span>Zé Ramalho</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/fabio_jr.jpg" alt="Fábio Jr." loading="lazy" onerror="this.style.display='none'"><span>Fábio Jr.</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/daniel.jpg" alt="Daniel" loading="lazy" onerror="this.style.display='none'"><span>Daniel</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/cesar_menotti_fabiano.jpg" alt="César Menotti & Fabiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">César Menotti & Fabiano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/chitaozinho_xororo.jpg" alt="Chitãozinho & Xororó" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Chitãozinho & Xororó</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/roupa_nova.jpg" alt="Roupa Nova" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Roupa Nova</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_ramalho.jpg" alt="Zé Ramalho" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Ramalho</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/fabio_jr.jpg" alt="Fábio Jr." loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Fábio Jr.</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/daniel.jpg" alt="Daniel" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Daniel</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -3358,12 +4151,48 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/felipe_araujo.jpg" alt="Felipe Araújo" loading="lazy" onerror="this.style.display='none'"><span>Felipe Araújo</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/nadson_o_ferinha.jpg" alt="Nadson o Ferinha" loading="lazy" onerror="this.style.display='none'"><span>Nadson o Ferinha</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/tayrone.jpg" alt="Tayrone" loading="lazy" onerror="this.style.display='none'"><span>Tayrone</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/tierry.jpg" alt="Tierry" loading="lazy" onerror="this.style.display='none'"><span>Tierry</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/lucas_reis_thacio.jpg" alt="Lucas Reis & Thácio" loading="lazy" onerror="this.style.display='none'"><span>Lucas Reis & Thácio</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/kadu_martins.jpg" alt="Kadu Martins" loading="lazy" onerror="this.style.display='none'"><span>Kadu Martins</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/felipe_araujo.jpg" alt="Felipe Araújo" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Felipe Araújo</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/nadson_o_ferinha.jpg" alt="Nadson o Ferinha" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Nadson o Ferinha</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/tayrone.jpg" alt="Tayrone" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Tayrone</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/tierry.jpg" alt="Tierry" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Tierry</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/lucas_reis_thacio.jpg" alt="Lucas Reis & Thácio" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Lucas Reis & Thácio</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/kadu_martins.jpg" alt="Kadu Martins" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Kadu Martins</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -3487,11 +4316,41 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/lauana_prado.jpg" alt="Lauana Prado + Belo" loading="lazy" onerror="this.style.display='none'"><span>Lauana Prado + Belo</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'"><span>Jorge & Mateus</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'"><span>Gusttavo Lima</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/dennis_dj.jpg" alt="Dennis DJ" loading="lazy" onerror="this.style.display='none'"><span>Dennis DJ</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/matheus_kauan.jpg" alt="Matheus & Kauan" loading="lazy" onerror="this.style.display='none'"><span>Matheus & Kauan</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/lauana_prado.jpg" alt="Lauana Prado + Belo" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Lauana Prado + Belo</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Jorge & Mateus</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/gusttavo_lima.jpg" alt="Gusttavo Lima" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Gusttavo Lima</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/dennis_dj.jpg" alt="Dennis DJ" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Dennis DJ</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/matheus_kauan.jpg" alt="Matheus & Kauan" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Matheus & Kauan</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -3613,12 +4472,48 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/wesley_safadao.jpg" alt="Wesley Safadão" loading="lazy" onerror="this.style.display='none'"><span>Wesley Safadão</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'"><span>Zé Neto & Cristiano</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'"><span>Jorge & Mateus</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/toque_dez.jpg" alt="Toque Dez" loading="lazy" onerror="this.style.display='none'"><span>Toque Dez</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/unha_pintada.jpg" alt="Unha Pintada" loading="lazy" onerror="this.style.display='none'"><span>Unha Pintada</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/bell_marques.jpg" alt="Bell Marques" loading="lazy" onerror="this.style.display='none'"><span>Bell Marques</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/wesley_safadao.jpg" alt="Wesley Safadão" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Wesley Safadão</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ze_neto_cristiano.jpg" alt="Zé Neto & Cristiano" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Zé Neto & Cristiano</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Jorge & Mateus</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/toque_dez.jpg" alt="Toque Dez" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Toque Dez</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/unha_pintada.jpg" alt="Unha Pintada" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Unha Pintada</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/bell_marques.jpg" alt="Bell Marques" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Bell Marques</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -3742,11 +4637,41 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'"><span>Ana Castela</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'"><span>Jorge & Mateus</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/almir_sater_sergio_reis.jpg" alt="Almir Sater + Sérgio Reis" loading="lazy" onerror="this.style.display='none'"><span>Almir Sater + Sérgio Reis</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/pablo_toque_dez.jpg" alt="Pablo + Toque Dez" loading="lazy" onerror="this.style.display='none'"><span>Pablo + Toque Dez</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/dennis_dj.jpg" alt="Dennis DJ" loading="lazy" onerror="this.style.display='none'"><span>Dennis DJ</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/ana_castela.jpg" alt="Ana Castela" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Ana Castela</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/jorge_mateus.jpg" alt="Jorge & Mateus" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Jorge & Mateus</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/almir_sater_sergio_reis.jpg" alt="Almir Sater + Sérgio Reis" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Almir Sater + Sérgio Reis</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/pablo_toque_dez.jpg" alt="Pablo + Toque Dez" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Pablo + Toque Dez</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/dennis_dj.jpg" alt="Dennis DJ" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Dennis DJ</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
@@ -3868,11 +4793,41 @@
       <div class="stage-section">
         <h4>⭐ Grandes nomes que já cantaram aqui</h4>
         <div class="artist-badges">
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/amado_batista.jpg" alt="Amado Batista" loading="lazy" onerror="this.style.display='none'"><span>Amado Batista</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/frank_aguiar.jpg" alt="Frank Aguiar" loading="lazy" onerror="this.style.display='none'"><span>Frank Aguiar</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/trio_parada_dura.jpg" alt="Trio Parada Dura" loading="lazy" onerror="this.style.display='none'"><span>Trio Parada Dura</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/teodoro_sampaio.jpg" alt="Teodoro & Sampaio" loading="lazy" onerror="this.style.display='none'"><span>Teodoro & Sampaio</span></span>
-          <span class="artist-badge"><img class="artist-photo" src="assets/artists/eduardo_costa.jpg" alt="Eduardo Costa" loading="lazy" onerror="this.style.display='none'"><span>Eduardo Costa</span></span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/amado_batista.jpg" alt="Amado Batista" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Amado Batista</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/frank_aguiar.jpg" alt="Frank Aguiar" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Frank Aguiar</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/trio_parada_dura.jpg" alt="Trio Parada Dura" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Trio Parada Dura</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/teodoro_sampaio.jpg" alt="Teodoro & Sampaio" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Teodoro & Sampaio</strong>
+              <small class="artist-year">Show em 2024</small>
+            </span>
+          </span>
+          <span class="artist-badge">
+            <img class="artist-photo" src="assets/artists/eduardo_costa.jpg" alt="Eduardo Costa" loading="lazy" onerror="this.style.display='none'">
+            <span class="artist-meta">
+              <strong class="artist-name">Eduardo Costa</strong>
+              <small class="artist-year">Show em 2023</small>
+            </span>
+          </span>
         </div>
       </div>
       <div class="tech-specs-grid">
