@@ -264,6 +264,7 @@
       border-radius: var(--radius);
       background: var(--surface);
       box-shadow: var(--shadow);
+      padding: 20px;
     }
     .panel-head { padding: 16px 19px; border-bottom: 1px solid var(--line); font-weight: 820; }
     .panel-body {
@@ -5776,8 +5777,10 @@
     let touchStartY = 0;
     let touchEndX = 0;
     let touchEndY = 0;
+    let swipeStartedInTabs = false;
 
     document.addEventListener('touchstart', e => {
+      swipeStartedInTabs = !!(e.target.closest('.venue-tabs') || e.target.closest('.venue-body'));
       touchStartX = e.changedTouches[0].screenX;
       touchStartY = e.changedTouches[0].screenY;
     }, { passive: true });
@@ -5789,6 +5792,7 @@
     }, { passive: true });
 
     function handleTouchSwipe() {
+      if (swipeStartedInTabs) return;
       const diffX = touchEndX - touchStartX;
       const diffY = touchEndY - touchStartY;
 
