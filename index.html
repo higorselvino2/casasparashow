@@ -546,6 +546,7 @@
       .toolbar-tools, .search { width: 100%; max-width: none; }
     }
     @media (max-width: 650px) {
+      .desktop-only { display: none !important; }
       body { padding-bottom: 78px; }
       .shell { width: calc(100% - 24px); max-width: calc(100% - 24px); margin-inline: auto; padding-inline: 0; }
       .hero { padding: 34px 0 28px; }
@@ -1193,6 +1194,7 @@
     }
 
     @media (max-width: 650px) {
+      .desktop-only { display: none !important; }
       .app-nav-bar {
         padding: 6px 0;
       }
@@ -1226,6 +1228,67 @@
       }
     }
 
+  
+    .mobile-label { display: none !important; }
+    .desktop-label { display: inline !important; }
+
+    @media (max-width: 650px) {
+      .mobile-label { display: inline !important; }
+      .desktop-label { display: none !important; }
+      .app-tabs {
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 4px !important;
+        padding: 3px !important;
+      }
+      .app-tab {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        padding: 7px 4px !important;
+        font-size: 0.74rem !important;
+        gap: 4px !important;
+        justify-content: center !important;
+      }
+      .app-tab .tab-icon {
+        font-size: 0.85rem !important;
+      }
+      .app-tab .tab-label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+  
+    @media (max-width: 650px) {
+      .app-nav-bar .shell {
+        width: calc(100% - 16px) !important;
+        max-width: 100% !important;
+        padding-inline: 0 !important;
+      }
+      .app-tabs {
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 3px !important;
+        padding: 3px !important;
+      }
+      .app-tab {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        padding: 7px 2px !important;
+        font-size: 0.74rem !important;
+        gap: 4px !important;
+        justify-content: center !important;
+      }
+      .app-tab .tab-icon {
+        font-size: 0.82rem !important;
+      }
+      .app-tab .tab-label {
+        font-size: 0.74rem !important;
+        font-weight: 750 !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1236,16 +1299,16 @@
       <div class="app-tabs" role="tablist">
         <button class="app-tab" id="tabBtnGeral" type="button" data-screen="geral" role="tab" aria-selected="false">
           <span class="tab-icon">📊</span>
-          <span class="tab-label">Visão Geral</span>
+          <span class="tab-label"><span class="desktop-label">Visão </span>Geral</span>
         </button>
         <button class="app-tab active" id="tabBtnOportunidades" type="button" data-screen="oportunidades" role="tab" aria-selected="true">
           <span class="tab-icon">🎯</span>
-          <span class="tab-label">Oportunidades</span>
-          <span class="tab-pill">25 Alvos</span>
+          <span class="tab-label"><span class="desktop-label">Oportunidades</span><span class="mobile-label">Alvos</span></span>
+          <span class="tab-pill desktop-label">25 Alvos</span>
         </button>
         <button class="app-tab" id="tabBtnRoteiro" type="button" data-screen="roteiro" role="tab" aria-selected="false">
           <span class="tab-icon">📞</span>
-          <span class="tab-label">Roteiro de Vendas</span>
+          <span class="tab-label">Roteiro<span class="desktop-label"> de Vendas</span></span>
         </button>
       </div>
       <div class="screen-dots-mobile" id="screenDotsMobile">
@@ -5577,8 +5640,33 @@
       }
     });
 
-    // Ensure Oportunidades is active initially
-    switchView('oportunidades', false);
+    // Hash checking or default to Oportunidades
+    const initialHash = window.location.hash;
+    if (['#artista', '#historico', '#viabilidade', '#descartados', '#metodologia', '#geral', '#viewGeral'].includes(initialHash)) {
+      switchView('geral', false);
+      if (initialHash && initialHash !== '#geral') {
+        setTimeout(() => {
+          const el = document.querySelector(initialHash);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else if (['#ordem', '#roteiro', '#manual-anti-gafe', '#vendas', '#viewRoteiro'].includes(initialHash)) {
+      switchView('roteiro', false);
+      if (initialHash && initialHash !== '#vendas' && initialHash !== '#roteiro') {
+        setTimeout(() => {
+          const el = document.querySelector(initialHash);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      switchView('oportunidades', false);
+      if (initialHash && initialHash !== '#oportunidades') {
+        setTimeout(() => {
+          const el = document.querySelector(initialHash);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
 
 
     const main = document.querySelector('main');
