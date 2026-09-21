@@ -11,6 +11,9 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="João Bosco &amp; Gabriel — mapa de oportunidades em SP">
   <meta property="og:description" content="19 operações qualificadas, contatos acionáveis e ordem recomendada de abordagem.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <title>João Bosco &amp; Gabriel — mapa de oportunidades em SP</title>
   <style>
     :root {
@@ -56,7 +59,7 @@
         radial-gradient(circle at 100% 0, rgba(212,162,97,.1), transparent 28rem),
         var(--paper);
       color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       line-height: 1.55;
     }
 
@@ -67,7 +70,7 @@
     :focus-visible { outline: 3px solid rgba(212,162,97,.8); outline-offset: 3px; }
     [id] { scroll-margin-top: 112px; }
     h1, h2, h3, h4, p { margin-top: 0; }
-    h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
+    h1, h2 { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-weight: 800; letter-spacing: -.035em; }
     h1 {
       max-width: 920px;
       margin-bottom: 20px;
@@ -178,7 +181,7 @@
       display: block;
       margin-bottom: 4px;
       color: var(--accent);
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       font-size: 2.05rem;
       font-weight: 500;
     }
@@ -274,7 +277,7 @@
         radial-gradient(circle at 100% 0, rgba(212,162,97,.1), transparent 28rem),
         var(--paper);
       color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       line-height: 1.55;
     }
     .panel p:last-child { margin-bottom: 0; }
@@ -286,7 +289,7 @@
       top: -18px;
       right: 10px;
       color: rgba(97,56,42,.08);
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       font-size: 7.5rem;
       line-height: 1;
     }
@@ -357,17 +360,17 @@
       border-radius: 20px;
       background: var(--accent);
       color: white;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       font-size: 2rem;
     }
-    .venue-title h3 { margin-bottom: 4px; font-family: Georgia, "Times New Roman", serif; font-size: 1.65rem; font-weight: 500; }
+    .venue-title h3 { margin-bottom: 4px; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-size: 1.65rem; font-weight: 500; }
     .venue-title p { margin: 0; color: var(--muted); }
     .score {
       min-width: 88px;
       text-align: right;
       font-variant-numeric: tabular-nums;
     }
-    .score strong { display: block; color: var(--accent); font-family: Georgia, "Times New Roman", serif; font-size: 2rem; font-weight: 500; line-height: 1; }
+    .score strong { display: block; color: var(--accent); font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; font-size: 2rem; font-weight: 500; line-height: 1; }
     .score span { color: var(--muted); font-size: .72rem; font-weight: 800; text-transform: uppercase; }
 
     .venue-body {
@@ -381,7 +384,7 @@
         radial-gradient(circle at 100% 0, rgba(212,162,97,.1), transparent 28rem),
         var(--paper);
       color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       line-height: 1.55;
     }
     .facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 21px; }
@@ -473,7 +476,7 @@
         radial-gradient(circle at 100% 0, rgba(212,162,97,.1), transparent 28rem),
         var(--paper);
       color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       line-height: 1.55;
     }
     .details-body p, .details-body li { color: var(--muted); font-size: .86rem; }
@@ -967,7 +970,128 @@
   </style>
 </head>
 <body>
-  <header class="hero">
+  
+
+  
+  
+  <!-- BARRA DE NAVEGAÇÃO ENTRE AS 3 TELAS -->
+  <nav class="app-nav-bar" id="appNavBar" aria-label="Navegação entre telas">
+    <div class="shell app-nav-shell">
+      <div class="app-tabs" role="tablist">
+        <button class="app-tab" id="tabBtnGeral" type="button" data-screen="geral" role="tab" aria-selected="false">
+          <span class="tab-icon">📊</span>
+          <span class="tab-label">Visão Geral</span>
+        </button>
+        <button class="app-tab active" id="tabBtnOportunidades" type="button" data-screen="oportunidades" role="tab" aria-selected="true">
+          <span class="tab-icon">🎯</span>
+          <span class="tab-label">Oportunidades</span>
+          <span class="tab-pill">25 Alvos</span>
+        </button>
+        <button class="app-tab" id="tabBtnRoteiro" type="button" data-screen="roteiro" role="tab" aria-selected="false">
+          <span class="tab-icon">📞</span>
+          <span class="tab-label">Roteiro de Vendas</span>
+        </button>
+      </div>
+    </div>
+    <div class="screen-indicator-bar" id="screenIndicatorBar">
+      <span class="screen-dot" data-dot="geral"></span>
+      <span class="screen-dot active" data-dot="oportunidades"></span>
+      <span class="screen-dot" data-dot="roteiro"></span>
+    </div>
+  </nav>
+
+  <div class="screens-viewport" id="screensViewport">
+    <div class="screens-track" id="screensTrack">
+      
+        <!-- TELA 1: 📊 VISÃO GERAL & INTELIGÊNCIA (ESQUERDA) -->
+        <div class="app-screen-pane" id="screenGeral" data-screen="geral" role="tabpanel">
+          <div class="shell" style="padding-top:24px">
+            <div class="screen-header-callout">
+              <span class="section-kicker">Inteligência de Mercado</span>
+              <h2>Visão Geral da Prospecção &amp; Validação Artística</h2>
+              <p>Contexto comercial de João Bosco &amp; Gabriel, histórico de apresentações reais, modelo financeiro do cachê de R$ 30 mil e filtros de qualidade.</p>
+            </div>
+            <section id="artista">
+      <h2>Leitura comercial de João Bosco &amp; Gabriel</h2>
+      <p class="section-intro">A dupla não deve ser apresentada como aposta desconhecida. O argumento é “artista nacional com repertório reconhecido, números comprováveis e oportunidade especial de contratação”.</p>
+      <div class="grid-3">
+        <article class="panel"><div class="panel-body"><span class="tag good">Prova de público</span><h3>“Alô Ex-Amor”</h3><p>É o principal cartão de visita. A biografia do Spotify registra mais de 224 milhões de visualizações no YouTube e mais de 113 milhões de execuções no Spotify para a faixa.</p></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag good">Momento atual</span><h3>Catálogo ativo em 2026</h3><p>O Spotify exibia 839.171 ouvintes mensais na conferência e lançamentos recentes como “De Cara Nova”, “Procedimento” e “Que Pancada”. Os números mudam e devem ser atualizados no dia do envio.</p></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag good">Fit de praça</span><h3>Rodeio + sertanejo popular</h3><p>Há histórico público de festas de peão, exposições e eventos municipais. Para casas, vender repertório conhecido, presença de palco e uma data especial de rota em São Paulo.</p></div></article>
+      </div>
+      <div class="contact-actions" style="margin-top:16px">
+        <a href="https://www.instagram.com/joaoboscoegabrieldupla/?hl=pt-br" target="_blank" rel="noopener">Instagram oficial informado</a>
+        <a href="https://open.spotify.com/artist/21WAvVROZ83oUvJwFTG2dH" target="_blank" rel="noopener">Spotify da dupla</a>
+        <a href="https://youtube.com/channel/UCBuSbeUxmZ-Zd1aZh41354Q" target="_blank" rel="noopener">YouTube da dupla</a>
+      </div>
+      <div class="notice warning">
+        <strong>Atenção ao preço de R$ 30 mil</strong>
+        <p>Foram localizadas contratações públicas de R$ 80 mil em 2026, R$ 115–150 mil em 2025 e até R$ 230 mil em 2026. Os pacotes não são necessariamente comparáveis, mas a diferença é grande. Antes da prospecção, deixar por escrito se os R$ 30 mil incluem banda, transporte, hospedagem, impostos e duração; e qual autorização comercial permite essa condição.</p>
+      </div>
+      <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
+        <div class="details-body"><ul>
+          <li><span class="source-label">Perfil e métricas atuais:</span> <a href="https://open.spotify.com/artist/21WAvVROZ83oUvJwFTG2dH" target="_blank" rel="noopener">Spotify</a> e <a href="https://maracaja.sc.gov.br/uploads/sites/373/2025/04/3.-ESTUDO-TECNICO-PRELIMINAR-2.pdf" target="_blank" rel="noopener">estudo técnico municipal com release e redes oficiais</a>.</li>
+          <li><span class="source-label">R$ 80 mil em 2026:</span> <a href="https://amm.diariomunicipal.org/publicacao/1791740/" target="_blank" rel="noopener">publicação oficial de Arenápolis/MT</a>.</li>
+          <li><span class="source-label">R$ 115 mil e R$ 150 mil em 2025:</span> <a href="https://maracaja.sc.gov.br/uploads/sites/373/2025/04/EDITAL-8.pdf" target="_blank" rel="noopener">processo de Maracajá/SC</a> e <a href="https://ecrie.com.br/Sistema/Conteudos/DiarioOficial/upload/u_133_13062025163336.pdf" target="_blank" rel="noopener">Diário Oficial de Itatiba/SP</a>.</li>
+          <li><span class="source-label">R$ 230 mil em 2026:</span> <a href="https://ailicita.com/contrato/37344371000109-2-000068%2F2026" target="_blank" rel="noopener">registro derivado do PNCP — São Salvador do Tocantins</a>.</li>
+        </ul></div>
+      </details>
+    </section>
+            <section id="historico">
+      <h2>O padrão real de lugares onde a dupla já tocou</h2>
+      <p class="section-intro">As fontes mostram que João Bosco &amp; Gabriel trabalham bem em eventos públicos e agrosertanejos de vários dias. Isso muda a prospecção: além de casas, entram prefeituras, comissões de festa e produtoras de rodeio.</p>
+      <div class="grid-3">
+        <article class="panel"><div class="panel-body"><span class="tag good">São Paulo · recontratação</span><h3>41ª Festa do Peão de Nova Independência</h3><p>Show em 19/05/2024, com duração contratada de ao menos 90 minutos. O portal oficial registra contrato de <strong>R$ 97,5 mil</strong>.</p><div class="contact-actions"><a href="https://www.novaindependencia.sp.gov.br/portal/editais/0/4/309/" target="_blank" rel="noopener">Fonte oficial</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag good">São Paulo · recontratação</span><h3>27ª Festa de São Pedro de Itatiba</h3><p>Show em 18/07/2025 no Parque Luís Latorre, em evento municipal gratuito, familiar e com dois palcos. O processo oficial registra <strong>R$ 150 mil</strong>.</p><div class="contact-actions"><a href="https://www.itatiba.sp.gov.br/turismo-itatiba/noticias/itatiba-traz-joao-bosco-gabriel-bruna-viola-e-fiduma-jeca-para-a-27-festa-de-sao-pedro" target="_blank" rel="noopener">Notícia oficial</a><a href="https://ecrie.com.br/Sistema/Conteudos/DiarioOficial/upload/u_133_13062025163336.pdf" target="_blank" rel="noopener">Processo oficial</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag info">Exposição agropecuária</span><h3>36ª Expoagro de Rolim de Moura</h3><p>Em 2025, a dupla abriu a programação de uma exposição com parque lotado e grade que também recebeu Zé Neto &amp; Cristiano e César Menotti &amp; Fabiano.</p><div class="contact-actions"><a href="https://mail.jornalinforondonia.com/show-de-joao-bosco-e-gabriel-agita-a-primeira-noite-da-36a-expoagro-2025/" target="_blank" rel="noopener">Registro do show</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag info">Rodeio + exposição</span><h3>2ª ExpoPardo</h3><p>Em 2024, João Bosco &amp; Gabriel integraram uma feira com rodeio, praça de alimentação e artistas como Rick &amp; Renner e João Bosco &amp; Vinícius.</p><div class="contact-actions"><a href="https://www.perfilnews.com.br/2024/07/11/com-entrada-gratuita-2o-edicao-da-expopardo-acontece-neste-fim-de-semana-em-santa-rita-do-pardo/" target="_blank" rel="noopener">Registro da programação</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag info">Aniversário municipal</span><h3>29 anos de Bom Jesus</h3><p>Em 2024, a dupla apareceu em programação municipal com rodeio e shows de Traia Véia e Guilherme &amp; Benuto — exatamente o tipo de grade coletiva em que R$ 30 mil pode ser apresentado como oportunidade especial.</p><div class="contact-actions"><a href="https://lancenoticias.com.br/noticia/mostra/confira-a-programacao-completa-dos-29-anos-de-bom-jesus/" target="_blank" rel="noopener">Registro da programação</a></div></div></article>
+        <article class="panel"><div class="panel-body"><span class="tag mid">Leitura comercial</span><h3>O produto é “festa pronta”, não só balada</h3><p>A combinação recorrente é sertanejo nacional + rodeio/feira + várias atrações + receita pública, patrocínio, camarote ou bar. Esse modelo é mais parecido com o histórico da dupla do que uma casa pequena dependente apenas de ingresso.</p></div></article>
+      </div>
+    </section>
+            <section id="viabilidade">
+      <h2>Economia: leitura rápida do cachê</h2>
+      <p class="section-intro">Abaixo, receita bruta teórica a 70% da capacidade e ingresso médio de R$ 75 — apenas um teste de escala, antes de taxas, impostos, marketing, técnica, equipe, ECAD, hospitalidade e demais custos.</p>
+      <div class="grid-3">
+        <div class="panel"><div class="panel-body"><h3>3.000 pessoas</h3><p><strong>R$ 157,5 mil</strong> brutos teóricos. Um cachê de R$ 30 mil consumiria cerca de 19% dessa bilheteria.</p></div></div>
+        <div class="panel"><div class="panel-body"><h3>4.000 pessoas</h3><p><strong>R$ 210 mil</strong> brutos teóricos. O cachê representaria cerca de 14% da bilheteria.</p></div></div>
+        <div class="panel"><div class="panel-body"><h3>5.000 pessoas</h3><p><strong>R$ 262,5 mil</strong> brutos teóricos. O cachê representaria cerca de 11% da bilheteria.</p></div></div>
+      </div>
+      <div class="notice warning">
+        <strong>O teste elimina impossibilidades; não prova venda</strong>
+        <p>Uma casa de 8 ou 12 mil lugares pode ter escala financeira, mas pode exigir um artista muito maior para headline. Já uma casa menor pode comprar o show se monetizar bem bar, mesas, camarotes, patrocínio ou evento fechado.</p>
+      </div>
+    </section>
+            <section id="descartados">
+      <h2>Lugares pesquisados e não priorizados</h2>
+      <p class="section-intro">Não foram descartados por “serem ruins”, e sim porque a escala não parece compatível com R$ 30 mil ou porque faltou evidência suficiente.</p>
+      <div class="excluded">
+        <article class="excluded-card"><h3>Folks Pub Campinas</h3><p>Capacidade municipal publicada de 225 pessoas. A conta fica apertada demais para o cachê, salvo patrocínio ou evento privado.</p></article>
+        <article class="excluded-card"><h3>Moon Campinas</h3><p>Capacidade divulgada em pouco mais de 300 pessoas. Boa programação não compensa a escala insuficiente para o modelo-base.</p></article>
+        <article class="excluded-card"><h3>Casas antigas/rebatizadas</h3><p>Wood’s, Villa Mix e nomes históricos apareceram em fontes antigas, mas não entraram sem comprovação atual de operação, capacidade e contato.</p></article>
+      </div>
+    </section>
+            <section id="metodologia">
+      <h2>Limites da pesquisa</h2>
+      <div class="grid-2">
+        <div class="panel"><div class="panel-body"><h3>O que está confirmado</h3><p>Estruturas e contatos oficiais foram priorizados. Sócios foram ligados às empresas por cadastros públicos atuais; redes sociais foram conectadas a sites oficiais, páginas institucionais ou perfis públicos convergentes.</p></div></div>
+        <div class="panel"><div class="panel-body"><h3>O que precisa ser confirmado na conversa</h3><p>Se a pessoa indicada decide a programação, se a casa compra cachê fixo, disponibilidade, lotação licenciada e quais despesas estão fora dos R$ 30 mil. O canal é pessoal; a atribuição de booking nem sempre é pública.</p></div></div>
+      </div>
+      <div class="notice">
+        <strong>Regra de integridade aplicada</strong>
+        <p>Nenhum número privado foi inferido ou comprado em base fechada. Foram usados somente canais empresariais ou perfis profissionais publicados. Nenhum sócio foi chamado de “responsável por booking” sem prova; o grau de certeza aparece em cada ficha.</p>
+      </div>
+      <div class="notice success">
+        <strong>Links revisados em 19/09/2026</strong>
+        <p>Os 104 endereços HTTP/HTTPS únicos presentes nesta versão responderam com sucesso no teste final, incluindo sites oficiais, fontes, redes sociais e botões de WhatsApp. Links de e-mail e telefone tiveram o formato conferido; a existência da caixa, o atendimento do número e a entrega da mensagem só podem ser comprovados com o contato real.</p>
+      </div>
+    </section>
+          </div>
+        </div>
+      
+        <!-- TELA 2: 🎯 25 OPORTUNIDADES & ALVOS (MEIO - PRINCIPAL) -->
+        <div class="app-screen-pane active" id="screenOportunidades" data-screen="oportunidades" role="tabpanel">
+          <header class="hero">
     <div class="shell">
       <div class="eyebrow">
         <span class="tag primary">Dossiê comercial</span>
@@ -1001,8 +1125,7 @@
       </div>
     </div>
   </header>
-
-  <section class="toolbar" aria-label="Filtros da shortlist">
+          <section class="toolbar" aria-label="Filtros da shortlist">
     <div class="shell toolbar-inner">
       <div class="filters">
         <button class="filter active" type="button" data-filter="all">Todos</button>
@@ -1020,9 +1143,8 @@
       </div>
     </div>
   </section>
-
-  <main class="shell">
-    <section class="quick-start" id="comecar">
+          <div class="shell">
+            <section class="quick-start" id="comecar">
       <span class="section-kicker">Comece por aqui</span>
       <h2>Use este material como uma fila de contatos</h2>
       <p class="section-intro">A página foi organizada para a execução comercial. Não é necessário ler tudo antes de começar: siga os três passos e abra as fontes somente quando precisar confirmar uma informação.</p>
@@ -1045,8 +1167,7 @@
         </div>
       </div>
     </section>
-
-    <section id="novos-adicionados">
+            <section id="novos-adicionados">
       <span class="section-kicker">Novos alvos qualificados</span>
       <h2>Novos adicionados: 6 oportunidades para abordagem</h2>
       <p class="section-intro">Operações pesquisadas e qualificadas com contatos nominais checados em 21/09/2026. Prioriza produtores com múltiplos rodeios (MP Promoções), arenas de grande fluxo (Sumaré e Piracicaba), grandes festas municipais com verba pública (Jundiaí e Valinhos) e polo de shows no Vale do Paraíba (Palácio Sunset).</p>
@@ -1235,8 +1356,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Cadastro empresarial e sócio:</span> <a href="https://cnpja.com/cnpj/06209387000177" target="_blank" rel="noopener">MDPM Promoções Artísticas Ltda (CNPJ 06.209.387/0001-77)</a>.</li>
@@ -1424,8 +1544,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Presidente e moção pública:</span> <a href="https://www.camarasumare.sp.gov.br/" target="_blank" rel="noopener">Câmara Municipal de Sumaré (moção de congratulação a Marcos Roberto Santos)</a>.</li>
@@ -1607,8 +1726,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Organização Estrela e Lucas Vilalta:</span> <a href="https://piracicaba.sp.gov.br/" target="_blank" rel="noopener">Prefeitura Municipal de Piracicaba</a> e cobertura da imprensa regional.</li>
@@ -1762,8 +1880,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Secretaria de Cultura e contatos:</span> <a href="https://cultura.jundiai.sp.gov.br" target="_blank" rel="noopener">Prefeitura Municipal de Jundiaí — Cultura</a>.</li>
@@ -1937,8 +2054,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Secretário e posse 2025–2028:</span> <a href="https://www.valinhos.sp.gov.br/" target="_blank" rel="noopener">Prefeitura Municipal de Valinhos</a> e Jornal de Valinhos.</li>
@@ -2119,8 +2235,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Estrutura e contato oficial:</span> <a href="http://www.palaciosunset.com.br" target="_blank" rel="noopener">site oficial Palácio Sunset</a>.</li>
@@ -2134,78 +2249,7 @@
 
       </div>
     </section>
-
-    <section id="artista">
-      <h2>Leitura comercial de João Bosco &amp; Gabriel</h2>
-      <p class="section-intro">A dupla não deve ser apresentada como aposta desconhecida. O argumento é “artista nacional com repertório reconhecido, números comprováveis e oportunidade especial de contratação”.</p>
-      <div class="grid-3">
-        <article class="panel"><div class="panel-body"><span class="tag good">Prova de público</span><h3>“Alô Ex-Amor”</h3><p>É o principal cartão de visita. A biografia do Spotify registra mais de 224 milhões de visualizações no YouTube e mais de 113 milhões de execuções no Spotify para a faixa.</p></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag good">Momento atual</span><h3>Catálogo ativo em 2026</h3><p>O Spotify exibia 839.171 ouvintes mensais na conferência e lançamentos recentes como “De Cara Nova”, “Procedimento” e “Que Pancada”. Os números mudam e devem ser atualizados no dia do envio.</p></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag good">Fit de praça</span><h3>Rodeio + sertanejo popular</h3><p>Há histórico público de festas de peão, exposições e eventos municipais. Para casas, vender repertório conhecido, presença de palco e uma data especial de rota em São Paulo.</p></div></article>
-      </div>
-      <div class="contact-actions" style="margin-top:16px">
-        <a href="https://www.instagram.com/joaoboscoegabrieldupla/?hl=pt-br" target="_blank" rel="noopener">Instagram oficial informado</a>
-        <a href="https://open.spotify.com/artist/21WAvVROZ83oUvJwFTG2dH" target="_blank" rel="noopener">Spotify da dupla</a>
-        <a href="https://youtube.com/channel/UCBuSbeUxmZ-Zd1aZh41354Q" target="_blank" rel="noopener">YouTube da dupla</a>
-      </div>
-      <div class="notice warning">
-        <strong>Atenção ao preço de R$ 30 mil</strong>
-        <p>Foram localizadas contratações públicas de R$ 80 mil em 2026, R$ 115–150 mil em 2025 e até R$ 230 mil em 2026. Os pacotes não são necessariamente comparáveis, mas a diferença é grande. Antes da prospecção, deixar por escrito se os R$ 30 mil incluem banda, transporte, hospedagem, impostos e duração; e qual autorização comercial permite essa condição.</p>
-      </div>
-      <details>
-        <summary>Fontes do perfil e referência de cachê</summary>
-        <div class="details-body"><ul>
-          <li><span class="source-label">Perfil e métricas atuais:</span> <a href="https://open.spotify.com/artist/21WAvVROZ83oUvJwFTG2dH" target="_blank" rel="noopener">Spotify</a> e <a href="https://maracaja.sc.gov.br/uploads/sites/373/2025/04/3.-ESTUDO-TECNICO-PRELIMINAR-2.pdf" target="_blank" rel="noopener">estudo técnico municipal com release e redes oficiais</a>.</li>
-          <li><span class="source-label">R$ 80 mil em 2026:</span> <a href="https://amm.diariomunicipal.org/publicacao/1791740/" target="_blank" rel="noopener">publicação oficial de Arenápolis/MT</a>.</li>
-          <li><span class="source-label">R$ 115 mil e R$ 150 mil em 2025:</span> <a href="https://maracaja.sc.gov.br/uploads/sites/373/2025/04/EDITAL-8.pdf" target="_blank" rel="noopener">processo de Maracajá/SC</a> e <a href="https://ecrie.com.br/Sistema/Conteudos/DiarioOficial/upload/u_133_13062025163336.pdf" target="_blank" rel="noopener">Diário Oficial de Itatiba/SP</a>.</li>
-          <li><span class="source-label">R$ 230 mil em 2026:</span> <a href="https://ailicita.com/contrato/37344371000109-2-000068%2F2026" target="_blank" rel="noopener">registro derivado do PNCP — São Salvador do Tocantins</a>.</li>
-        </ul></div>
-      </details>
-    </section>
-
-    <section id="historico">
-      <h2>O padrão real de lugares onde a dupla já tocou</h2>
-      <p class="section-intro">As fontes mostram que João Bosco &amp; Gabriel trabalham bem em eventos públicos e agrosertanejos de vários dias. Isso muda a prospecção: além de casas, entram prefeituras, comissões de festa e produtoras de rodeio.</p>
-      <div class="grid-3">
-        <article class="panel"><div class="panel-body"><span class="tag good">São Paulo · recontratação</span><h3>41ª Festa do Peão de Nova Independência</h3><p>Show em 19/05/2024, com duração contratada de ao menos 90 minutos. O portal oficial registra contrato de <strong>R$ 97,5 mil</strong>.</p><div class="contact-actions"><a href="https://www.novaindependencia.sp.gov.br/portal/editais/0/4/309/" target="_blank" rel="noopener">Fonte oficial</a></div></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag good">São Paulo · recontratação</span><h3>27ª Festa de São Pedro de Itatiba</h3><p>Show em 18/07/2025 no Parque Luís Latorre, em evento municipal gratuito, familiar e com dois palcos. O processo oficial registra <strong>R$ 150 mil</strong>.</p><div class="contact-actions"><a href="https://www.itatiba.sp.gov.br/turismo-itatiba/noticias/itatiba-traz-joao-bosco-gabriel-bruna-viola-e-fiduma-jeca-para-a-27-festa-de-sao-pedro" target="_blank" rel="noopener">Notícia oficial</a><a href="https://ecrie.com.br/Sistema/Conteudos/DiarioOficial/upload/u_133_13062025163336.pdf" target="_blank" rel="noopener">Processo oficial</a></div></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag info">Exposição agropecuária</span><h3>36ª Expoagro de Rolim de Moura</h3><p>Em 2025, a dupla abriu a programação de uma exposição com parque lotado e grade que também recebeu Zé Neto &amp; Cristiano e César Menotti &amp; Fabiano.</p><div class="contact-actions"><a href="https://mail.jornalinforondonia.com/show-de-joao-bosco-e-gabriel-agita-a-primeira-noite-da-36a-expoagro-2025/" target="_blank" rel="noopener">Registro do show</a></div></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag info">Rodeio + exposição</span><h3>2ª ExpoPardo</h3><p>Em 2024, João Bosco &amp; Gabriel integraram uma feira com rodeio, praça de alimentação e artistas como Rick &amp; Renner e João Bosco &amp; Vinícius.</p><div class="contact-actions"><a href="https://www.perfilnews.com.br/2024/07/11/com-entrada-gratuita-2o-edicao-da-expopardo-acontece-neste-fim-de-semana-em-santa-rita-do-pardo/" target="_blank" rel="noopener">Registro da programação</a></div></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag info">Aniversário municipal</span><h3>29 anos de Bom Jesus</h3><p>Em 2024, a dupla apareceu em programação municipal com rodeio e shows de Traia Véia e Guilherme &amp; Benuto — exatamente o tipo de grade coletiva em que R$ 30 mil pode ser apresentado como oportunidade especial.</p><div class="contact-actions"><a href="https://lancenoticias.com.br/noticia/mostra/confira-a-programacao-completa-dos-29-anos-de-bom-jesus/" target="_blank" rel="noopener">Registro da programação</a></div></div></article>
-        <article class="panel"><div class="panel-body"><span class="tag mid">Leitura comercial</span><h3>O produto é “festa pronta”, não só balada</h3><p>A combinação recorrente é sertanejo nacional + rodeio/feira + várias atrações + receita pública, patrocínio, camarote ou bar. Esse modelo é mais parecido com o histórico da dupla do que uma casa pequena dependente apenas de ingresso.</p></div></article>
-      </div>
-    </section>
-
-    <section id="ordem">
-      <h2>Ordem de abordagem recomendada</h2>
-      <p class="section-intro">A ordem agora privilegia quem já contratou a dupla e quem pode abrir mais de uma praça. Todos os primeiros caminhos abaixo funcionam sem depender do LinkedIn.</p>
-      <div class="grid-3">
-        <article class="panel priority-card" data-rank="1">
-          <span class="tag good">Recontratação direta</span>
-          <h3>Nova Independência</h3>
-          <p>A cidade contratou a dupla em 2024. Selma Macchi Santana é a responsável atual pela Cultura e publica celular direto da pasta.</p>
-          <div class="mini-meta"><span class="tag">Festa do Peão</span><span class="tag">R$ 97,5 mil em 2024</span><span class="tag info">WhatsApp</span></div>
-        </article>
-        <article class="panel priority-card" data-rank="2">
-          <span class="tag good">Recontratação direta</span>
-          <h3>Itatiba</h3>
-          <p>A dupla fechou a Festa de São Pedro de 2025. Luís Soares de Camargo segue ligado à Cultura e Turismo, com telefone e e-mail oficiais.</p>
-          <div class="mini-meta"><span class="tag">Evento municipal</span><span class="tag">R$ 150 mil em 2025</span><span class="tag info">Telefone + e-mail</span></div>
-        </article>
-        <article class="panel priority-card" data-rank="3">
-          <span class="tag good">Produtor multi-eventos</span>
-          <h3>Reinaldo Bicudo / HR Estruturas</h3>
-          <p>A empresa organizou a Festa do Peão de Monte Mor e também aparece em outras festas e exposições. Um contato pode abrir várias cidades.</p>
-          <div class="mini-meta"><span class="tag">Interior de SP</span><span class="tag">Vários eventos</span><span class="tag info">WhatsApp direto</span></div>
-        </article>
-      </div>
-      <div class="notice warning">
-        <strong>O ponto que decide a venda</strong>
-        <p>O tamanho da casa permite o cachê, mas o comprador vai perguntar quanto o artista movimenta naquela praça. O vendedor deve ter em mãos público comprovado, streaming e redes por região, vídeo ao vivo, rider enxuto e duas ou três datas possíveis.</p>
-      </div>
-    </section>
-
-    <section id="contatos">
+            <section id="contatos">
       <h2>Contatos das casas já analisadas</h2>
       <p class="section-intro">Os botões principais abaixo foram convertidos para telefone, WhatsApp, e-mail ou Instagram. LinkedIn aparece apenas dentro das fichas antigas como comprovação de cargo, não como canal recomendado de venda.</p>
       <div class="grid-2">
@@ -2219,8 +2263,7 @@
         <article class="panel"><div class="panel-body"><span class="tag mid">Coração Sertanejo</span><h3>Zacarias — gerente</h3><p>WhatsApp nominal publicado pela própria operação em resposta a cliente. Pedir confirmação de quem fecha a agenda.</p><div class="contact-actions"><a href="https://wa.me/5511987326651?text=Ol%C3%A1%2C%20Zacarias.%20Represento%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20e%20gostaria%20de%20conversar%20sobre%20uma%20data%20especial%20na%20casa." target="_blank" rel="noopener">Falar com Zacarias</a></div></div></article>
       </div>
     </section>
-
-    <section id="mais-lugares">
+            <section id="mais-lugares">
       <h2>Mais lugares semelhantes aos palcos da dupla</h2>
       <p class="section-intro">Lista nova, baseada em rodeios, exposições e festas municipais. “Capacidade” só aparece quando há fonte; nos demais casos, uso público total, área do recinto ou deixo a lotação como “a confirmar”. O canal indicado em cada ficha não depende do LinkedIn.</p>
       <div class="notice success">
@@ -2338,7 +2381,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources"><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.novaindependencia.sp.gov.br/portal/editais/0/4/309/" target="_blank" rel="noopener">Contratação oficial de João Bosco &amp; Gabriel em 2024</a>.</li><li><a href="https://www.novaindependencia.sp.gov.br/portal/secretarias/22/seretaria-de-cultura" target="_blank" rel="noopener">Secretaria de Cultura: nome, função e telefone de Selma</a>.</li></ul></div></details>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary><div class="details-body"><ul><li><a href="https://www.novaindependencia.sp.gov.br/portal/editais/0/4/309/" target="_blank" rel="noopener">Contratação oficial de João Bosco &amp; Gabriel em 2024</a>.</li><li><a href="https://www.novaindependencia.sp.gov.br/portal/secretarias/22/seretaria-de-cultura" target="_blank" rel="noopener">Secretaria de Cultura: nome, função e telefone de Selma</a>.</li></ul></div></details>
           </div>
 </article>
 
@@ -2451,7 +2494,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources"><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.itatiba.sp.gov.br/turismo-itatiba/noticias/itatiba-traz-joao-bosco-gabriel-bruna-viola-e-fiduma-jeca-para-a-27-festa-de-sao-pedro" target="_blank" rel="noopener">Notícia oficial do show e fala do secretário</a>.</li><li><a href="https://www.itatiba.sp.gov.br/secretarias/cultura-e-turismo" target="_blank" rel="noopener">Contatos oficiais da Secretaria</a>.</li><li><a href="https://itatiba.sp.gov.br/cerimonia-de-posse-da-inicio-a-gestao-2025-2028" target="_blank" rel="noopener">Secretariado 2025–2028</a>.</li></ul></div></details>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary><div class="details-body"><ul><li><a href="https://www.itatiba.sp.gov.br/turismo-itatiba/noticias/itatiba-traz-joao-bosco-gabriel-bruna-viola-e-fiduma-jeca-para-a-27-festa-de-sao-pedro" target="_blank" rel="noopener">Notícia oficial do show e fala do secretário</a>.</li><li><a href="https://www.itatiba.sp.gov.br/secretarias/cultura-e-turismo" target="_blank" rel="noopener">Contatos oficiais da Secretaria</a>.</li><li><a href="https://itatiba.sp.gov.br/cerimonia-de-posse-da-inicio-a-gestao-2025-2028" target="_blank" rel="noopener">Secretariado 2025–2028</a>.</li></ul></div></details>
           </div>
 </article>
 
@@ -2561,7 +2604,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources"><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.montemor.sp.gov.br/portal/noticias/0/3/9320/monte-mor-anuncia-grandes-shows-da-festa-do-peao-2026" target="_blank" rel="noopener">Prefeitura identifica a HR Estruturas como organizadora</a>.</li><li><a href="https://www.tribunaliberal.com.br/index.php/geral/Empresa-e-habilitada-para-organizar-Festa-do-Peao-de-Monte-Mor-em-2026" target="_blank" rel="noopener">Resultado do chamamento da organização</a>.</li><li><a href="https://casadosdados.com.br/solucao/cnpj/hr-estruturas-ltda-25069864000190" target="_blank" rel="noopener">Cadastro empresarial e WhatsApp publicado</a>.</li></ul></div></details>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary><div class="details-body"><ul><li><a href="https://www.montemor.sp.gov.br/portal/noticias/0/3/9320/monte-mor-anuncia-grandes-shows-da-festa-do-peao-2026" target="_blank" rel="noopener">Prefeitura identifica a HR Estruturas como organizadora</a>.</li><li><a href="https://www.tribunaliberal.com.br/index.php/geral/Empresa-e-habilitada-para-organizar-Festa-do-Peao-de-Monte-Mor-em-2026" target="_blank" rel="noopener">Resultado do chamamento da organização</a>.</li><li><a href="https://casadosdados.com.br/solucao/cnpj/hr-estruturas-ltda-25069864000190" target="_blank" rel="noopener">Cadastro empresarial e WhatsApp publicado</a>.</li></ul></div></details>
           </div>
 </article>
 
@@ -2688,7 +2731,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources"><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://faici.com/2026/04/01/faici-2026-apresenta-line-up-de-artistas-e-novidades-em-sua-estrutura/" target="_blank" rel="noopener">Line-up, estrutura e fala do presidente</a>.</li><li><a href="https://faici.com/a-festa/" target="_blank" rel="noopener">Área do recinto e contato oficial</a>.</li></ul></div></details>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary><div class="details-body"><ul><li><a href="https://faici.com/2026/04/01/faici-2026-apresenta-line-up-de-artistas-e-novidades-em-sua-estrutura/" target="_blank" rel="noopener">Line-up, estrutura e fala do presidente</a>.</li><li><a href="https://faici.com/a-festa/" target="_blank" rel="noopener">Área do recinto e contato oficial</a>.</li></ul></div></details>
           </div>
 </article>
 
@@ -2822,7 +2865,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources"><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://rodeioitu.com.br/" target="_blank" rel="noopener">Site oficial, contato e estrutura</a>.</li><li><a href="https://www.jornaldeitu.com.br/herculano-neto-fala-sobre-os-20-anos-do-rodeio-itu-o-publico-compra-uma-noite-inteira-de-experiencia" target="_blank" rel="noopener">Herculano como CEO e idealizador</a>.</li><li><a href="https://www.crsaopaulo.com.br/noticia/rodeio-itu-festival-encerra-edicao-historica-de-20-anos-apos-reunir-mais-de-200-mil-pessoas-na-arena-itu" target="_blank" rel="noopener">Público total de 2026</a>.</li></ul></div></details>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary><div class="details-body"><ul><li><a href="https://rodeioitu.com.br/" target="_blank" rel="noopener">Site oficial, contato e estrutura</a>.</li><li><a href="https://www.jornaldeitu.com.br/herculano-neto-fala-sobre-os-20-anos-do-rodeio-itu-o-publico-compra-uma-noite-inteira-de-experiencia" target="_blank" rel="noopener">Herculano como CEO e idealizador</a>.</li><li><a href="https://www.crsaopaulo.com.br/noticia/rodeio-itu-festival-encerra-edicao-historica-de-20-anos-apos-reunir-mais-de-200-mil-pessoas-na-arena-itu" target="_blank" rel="noopener">Público total de 2026</a>.</li></ul></div></details>
           </div>
 </article>
 
@@ -2939,7 +2982,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources"><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://avare.sp.gov.br/confira-a-programacao-completa-da-56a-emapa-que-acontece-de-11-a-20-de-setembro/" target="_blank" rel="noopener">Programação e formato oficial de 2026</a>.</li><li><a href="https://www.jsudoeste.com.br/page/noticia/prefeito-roberto-araujo-anuncia-atracoes-da-maior-festa-de-portoes-abertos-do-brasil-e-confirma-emapa-historica-em-setembro" target="_blank" rel="noopener">Giovani Saltou como presidente da comissão</a>.</li><li><a href="https://www.jsudoeste.com.br/page/noticia/secretaria-de-cultura-de-avare-participa-do-encontro-de-gestores-culturais-2026-em-sao-paulo" target="_blank" rel="noopener">Thais Francini como secretária em 2026</a>.</li></ul></div></details>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary><div class="details-body"><ul><li><a href="https://avare.sp.gov.br/confira-a-programacao-completa-da-56a-emapa-que-acontece-de-11-a-20-de-setembro/" target="_blank" rel="noopener">Programação e formato oficial de 2026</a>.</li><li><a href="https://www.jsudoeste.com.br/page/noticia/prefeito-roberto-araujo-anuncia-atracoes-da-maior-festa-de-portoes-abertos-do-brasil-e-confirma-emapa-historica-em-setembro" target="_blank" rel="noopener">Giovani Saltou como presidente da comissão</a>.</li><li><a href="https://www.jsudoeste.com.br/page/noticia/secretaria-de-cultura-de-avare-participa-do-encontro-de-gestores-culturais-2026-em-sao-paulo" target="_blank" rel="noopener">Thais Francini como secretária em 2026</a>.</li></ul></div></details>
           </div>
 </article>
 
@@ -3073,7 +3116,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources"><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.tribunaribeirao.com.br/podcast-tribuna-ribeirao-matheus-calil-conta-detalhes-sobre-20a-edicao-do-ribeirao-rodeo-music/" target="_blank" rel="noopener">Matheus identificado como produtor do evento</a>.</li><li><a href="https://www.jkproducoes.com.br/ribeirao-rodeo-music-2026-encerra-edicao-especial/" target="_blank" rel="noopener">Público e atrações de 2026</a>.</li><li><a href="https://casadosdados.com.br/solucao/cnpj/ribeirao-rodeo-music-ltda-22140513000130" target="_blank" rel="noopener">Sócios e telefone empresarial</a>.</li></ul></div></details>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary><div class="details-body"><ul><li><a href="https://www.tribunaribeirao.com.br/podcast-tribuna-ribeirao-matheus-calil-conta-detalhes-sobre-20a-edicao-do-ribeirao-rodeo-music/" target="_blank" rel="noopener">Matheus identificado como produtor do evento</a>.</li><li><a href="https://www.jkproducoes.com.br/ribeirao-rodeo-music-2026-encerra-edicao-especial/" target="_blank" rel="noopener">Público e atrações de 2026</a>.</li><li><a href="https://casadosdados.com.br/solucao/cnpj/ribeirao-rodeo-music-ltda-22140513000130" target="_blank" rel="noopener">Sócios e telefone empresarial</a>.</li></ul></div></details>
           </div>
 </article>
 
@@ -3200,7 +3243,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources"><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://countrybulls.com.br/sobre-rcb/" target="_blank" rel="noopener">Site oficial e perfil da edição</a>.</li><li><a href="https://atendimento.baladapp.com.br/hc/pt-br/articles/46304442634651-FAQ-Rio-Preto-Country-Bulls-2026-SP" target="_blank" rel="noopener">Produtor oficial identificado</a>.</li><li><a href="https://countrybulls.com.br/" target="_blank" rel="noopener">Valores de pista publicados em 2026</a>.</li></ul></div></details>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary><div class="details-body"><ul><li><a href="https://countrybulls.com.br/sobre-rcb/" target="_blank" rel="noopener">Site oficial e perfil da edição</a>.</li><li><a href="https://atendimento.baladapp.com.br/hc/pt-br/articles/46304442634651-FAQ-Rio-Preto-Country-Bulls-2026-SP" target="_blank" rel="noopener">Produtor oficial identificado</a>.</li><li><a href="https://countrybulls.com.br/" target="_blank" rel="noopener">Valores de pista publicados em 2026</a>.</li></ul></div></details>
           </div>
 </article>
 
@@ -3339,7 +3382,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources"><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://festadopeaodeamericana.com.br/" target="_blank" rel="noopener">Site oficial e datas de 2027</a>.</li><li><a href="https://casadosdados.com.br/solucao/cnpj/clube-dos-cavaleiros-de-americana-55356943000143" target="_blank" rel="noopener">Presidente e contatos atuais do CCA</a>.</li><li><a href="https://novomomento.com.br/cora-faz-homenagem-festa-peao-americana-40-anos/" target="_blank" rel="noopener">Beto Lahr confirmado como presidente em 2026</a>.</li></ul></div></details>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary><div class="details-body"><ul><li><a href="https://festadopeaodeamericana.com.br/" target="_blank" rel="noopener">Site oficial e datas de 2027</a>.</li><li><a href="https://casadosdados.com.br/solucao/cnpj/clube-dos-cavaleiros-de-americana-55356943000143" target="_blank" rel="noopener">Presidente e contatos atuais do CCA</a>.</li><li><a href="https://novomomento.com.br/cora-faz-homenagem-festa-peao-americana-40-anos/" target="_blank" rel="noopener">Beto Lahr confirmado como presidente em 2026</a>.</li></ul></div></details>
           </div>
 </article>
 
@@ -3466,7 +3509,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources"><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.jaguariunarodeofestival.com.br/" target="_blank" rel="noopener">Site oficial e organizadora Diverti</a>.</li><li><a href="https://gshow.globo.com/festivais/circuito-sertanejo/2025/noticia/socio-do-jaguariuna-rodeo-festival-compara-kacey-musgraves-a-ana-castela-conectar-a-nova-geracao.ghtml" target="_blank" rel="noopener">Gui Marconi como sócio-diretor e voz da curadoria</a>.</li><li><a href="https://diariooficial.prefeitura.sp.gov.br/md_epubli_visualizar.php?zKDSjGmoMutrG31ttNSOzsQUODQwCtk8JYmKq7PpyEhuIbymuYjiyUnmeSJ4457Awlm7gGKVp7ncoknLIOr0PgKETQAoP8aUmBTVvjSyBv9eT6VamfKnsG4SSHVWBczV=" target="_blank" rel="noopener">Documento público com e-mail profissional e assinatura de Gui</a>.</li></ul></div></details>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary><div class="details-body"><ul><li><a href="https://www.jaguariunarodeofestival.com.br/" target="_blank" rel="noopener">Site oficial e organizadora Diverti</a>.</li><li><a href="https://gshow.globo.com/festivais/circuito-sertanejo/2025/noticia/socio-do-jaguariuna-rodeo-festival-compara-kacey-musgraves-a-ana-castela-conectar-a-nova-geracao.ghtml" target="_blank" rel="noopener">Gui Marconi como sócio-diretor e voz da curadoria</a>.</li><li><a href="https://diariooficial.prefeitura.sp.gov.br/md_epubli_visualizar.php?zKDSjGmoMutrG31ttNSOzsQUODQwCtk8JYmKq7PpyEhuIbymuYjiyUnmeSJ4457Awlm7gGKVp7ncoknLIOr0PgKETQAoP8aUmBTVvjSyBv9eT6VamfKnsG4SSHVWBczV=" target="_blank" rel="noopener">Documento público com e-mail profissional e assinatura de Gui</a>.</li></ul></div></details>
           </div>
 </article>
 
@@ -3597,14 +3640,13 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources"><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://www.independentes.com.br/festadopeao/contato" target="_blank" rel="noopener">Página oficial com canal direto do presidente</a>.</li><li><a href="https://www.independentes.com.br/festadopeao/noticia/3411/-jeronimo-luiz-muzeti-e-empossado-presidente-de-os-independentes" target="_blank" rel="noopener">Posse de Jerônimo na gestão 2025/2026</a>.</li><li><a href="https://www.independentes.com.br/festadopeao/" target="_blank" rel="noopener">Portal oficial da Festa do Peão de Barretos</a>.</li></ul></div></details>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary><div class="details-body"><ul><li><a href="https://www.independentes.com.br/festadopeao/contato" target="_blank" rel="noopener">Página oficial com canal direto do presidente</a>.</li><li><a href="https://www.independentes.com.br/festadopeao/noticia/3411/-jeronimo-luiz-muzeti-e-empossado-presidente-de-os-independentes" target="_blank" rel="noopener">Posse de Jerônimo na gestão 2025/2026</a>.</li><li><a href="https://www.independentes.com.br/festadopeao/" target="_blank" rel="noopener">Portal oficial da Festa do Peão de Barretos</a>.</li></ul></div></details>
           </div>
 </article>
 
       </div>
     </section>
-
-    <section id="shortlist">
+            <section id="shortlist">
       <h2>Shortlist detalhada</h2>
       <p class="section-intro">Cada ficha agora começa por uma pessoa nominal. “Contato direto” significa mensagem para o perfil, e-mail ou WhatsApp daquela pessoa; não significa que todos estejam publicamente confirmados como talent buyers. Essa diferença está escrita em cada caso.</p>
 
@@ -3759,8 +3801,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Capacidade e estrutura:</span> <a href="https://www.saopauloeventos.com.br/" target="_blank" rel="noopener">Grupo São Paulo Eventos</a>.</li>
@@ -3923,8 +3964,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Capacidade e rider:</span> <a href="https://terrasp.com/faca-seu-evento/" target="_blank" rel="noopener">Faça seu evento — Terra SP</a>.</li>
@@ -4087,8 +4127,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Capacidade e estrutura:</span> <a href="https://redeventos.com.br/sobre/" target="_blank" rel="noopener">página oficial Sobre</a>.</li>
@@ -4252,8 +4291,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Capacidade, estrutura e orçamento:</span> <a href="https://arenamais.com/faca-seu-evento/" target="_blank" rel="noopener">site oficial Arena+</a>.</li>
@@ -4408,8 +4446,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Capacidade e estrutura:</span> <a href="https://folkvalley.com.br/club/" target="_blank" rel="noopener">Club — Folk Valley</a>.</li>
@@ -4573,8 +4610,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Capacidade do Piso Central:</span> <a href="https://piso-central.estancia.com.br/" target="_blank" rel="noopener">site oficial do espaço</a>.</li>
@@ -4730,8 +4766,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Estrutura, telefone e agenda:</span> <a href="https://agendasorocaba.com.br/uzna/" target="_blank" rel="noopener">Agenda Sorocaba — perfil atualizado em 2026</a>.</li>
@@ -4886,8 +4921,7 @@
             </div>
 
             <!-- FONTES E CONFERÊNCIA -->
-            <details class="venue-sources">
-              <summary>Fontes e conferência</summary>
+            <details class="subtle-sources"><summary>Fontes e checagem pública</summary>
               <div class="details-body">
                 <ul>
                   <li><span class="source-label">Estrutura, histórico e contatos:</span> <a href="https://coracaosertanejo.com.br/" target="_blank" rel="noopener">site oficial</a>.</li>
@@ -4902,8 +4936,46 @@
 </article>
       </div>
     </section>
-
-    <section id="roteiro">
+          </div>
+        </div>
+      
+        <!-- TELA 3: 📞 ROTEIRO & ABORDAGEM COMERCIAL (DIREITA) -->
+        <div class="app-screen-pane" id="screenRoteiro" data-screen="roteiro" role="tabpanel">
+          <div class="shell" style="padding-top:24px">
+            <div class="screen-header-callout">
+              <span class="section-kicker">Execução Comercial</span>
+              <h2>Roteiro de Abordagem &amp; Argumentação de Vendas</h2>
+              <p>Scripts prontos de WhatsApp e ligação, ordem tática de prioridade e regras de ouro para não passar vergonha com os contratantes.</p>
+            </div>
+            <section id="ordem">
+      <h2>Ordem de abordagem recomendada</h2>
+      <p class="section-intro">A ordem agora privilegia quem já contratou a dupla e quem pode abrir mais de uma praça. Todos os primeiros caminhos abaixo funcionam sem depender do LinkedIn.</p>
+      <div class="grid-3">
+        <article class="panel priority-card" data-rank="1">
+          <span class="tag good">Recontratação direta</span>
+          <h3>Nova Independência</h3>
+          <p>A cidade contratou a dupla em 2024. Selma Macchi Santana é a responsável atual pela Cultura e publica celular direto da pasta.</p>
+          <div class="mini-meta"><span class="tag">Festa do Peão</span><span class="tag">R$ 97,5 mil em 2024</span><span class="tag info">WhatsApp</span></div>
+        </article>
+        <article class="panel priority-card" data-rank="2">
+          <span class="tag good">Recontratação direta</span>
+          <h3>Itatiba</h3>
+          <p>A dupla fechou a Festa de São Pedro de 2025. Luís Soares de Camargo segue ligado à Cultura e Turismo, com telefone e e-mail oficiais.</p>
+          <div class="mini-meta"><span class="tag">Evento municipal</span><span class="tag">R$ 150 mil em 2025</span><span class="tag info">Telefone + e-mail</span></div>
+        </article>
+        <article class="panel priority-card" data-rank="3">
+          <span class="tag good">Produtor multi-eventos</span>
+          <h3>Reinaldo Bicudo / HR Estruturas</h3>
+          <p>A empresa organizou a Festa do Peão de Monte Mor e também aparece em outras festas e exposições. Um contato pode abrir várias cidades.</p>
+          <div class="mini-meta"><span class="tag">Interior de SP</span><span class="tag">Vários eventos</span><span class="tag info">WhatsApp direto</span></div>
+        </article>
+      </div>
+      <div class="notice warning">
+        <strong>O ponto que decide a venda</strong>
+        <p>O tamanho da casa permite o cachê, mas o comprador vai perguntar quanto o artista movimenta naquela praça. O vendedor deve ter em mãos público comprovado, streaming e redes por região, vídeo ao vivo, rider enxuto e duas ou três datas possíveis.</p>
+      </div>
+    </section>
+            <section id="roteiro">
       <h2>Como fazer o primeiro contato</h2>
       <p class="section-intro">Como a dupla já tem reconhecimento nacional, a primeira mensagem deve parecer uma oportunidade concreta de agenda — curta, pessoal e com a razão específica do encaixe naquela operação.</p>
       <div class="grid-2">
@@ -4929,8 +5001,7 @@
         </div>
       </div>
     </section>
-
-    <section id="manual-anti-gafe">
+            <section id="manual-anti-gafe">
       <span class="section-kicker">Segurança operacional na prospecção</span>
       <h2>Manual de Abordagem: Como não passar vergonha no primeiro contato</h2>
       <p class="section-intro">O maior risco em vendas artísticas é mandar mensagem informal como se estivesse no celular pessoal do presidente, quando na verdade quem atende é uma recepção ou assistente de produção. Abaixo, todos os contatos do dossiê estão classificados por quem realmente atende e qual frase exata deve ser dita.</p>
@@ -5101,47 +5172,11 @@
         </article>
       </div>
     </section>
+          </div>
+        </div>
+    </div>
+  </div>
 
-    <section id="viabilidade">
-      <h2>Economia: leitura rápida do cachê</h2>
-      <p class="section-intro">Abaixo, receita bruta teórica a 70% da capacidade e ingresso médio de R$ 75 — apenas um teste de escala, antes de taxas, impostos, marketing, técnica, equipe, ECAD, hospitalidade e demais custos.</p>
-      <div class="grid-3">
-        <div class="panel"><div class="panel-body"><h3>3.000 pessoas</h3><p><strong>R$ 157,5 mil</strong> brutos teóricos. Um cachê de R$ 30 mil consumiria cerca de 19% dessa bilheteria.</p></div></div>
-        <div class="panel"><div class="panel-body"><h3>4.000 pessoas</h3><p><strong>R$ 210 mil</strong> brutos teóricos. O cachê representaria cerca de 14% da bilheteria.</p></div></div>
-        <div class="panel"><div class="panel-body"><h3>5.000 pessoas</h3><p><strong>R$ 262,5 mil</strong> brutos teóricos. O cachê representaria cerca de 11% da bilheteria.</p></div></div>
-      </div>
-      <div class="notice warning">
-        <strong>O teste elimina impossibilidades; não prova venda</strong>
-        <p>Uma casa de 8 ou 12 mil lugares pode ter escala financeira, mas pode exigir um artista muito maior para headline. Já uma casa menor pode comprar o show se monetizar bem bar, mesas, camarotes, patrocínio ou evento fechado.</p>
-      </div>
-    </section>
-
-    <section id="descartados">
-      <h2>Lugares pesquisados e não priorizados</h2>
-      <p class="section-intro">Não foram descartados por “serem ruins”, e sim porque a escala não parece compatível com R$ 30 mil ou porque faltou evidência suficiente.</p>
-      <div class="excluded">
-        <article class="excluded-card"><h3>Folks Pub Campinas</h3><p>Capacidade municipal publicada de 225 pessoas. A conta fica apertada demais para o cachê, salvo patrocínio ou evento privado.</p></article>
-        <article class="excluded-card"><h3>Moon Campinas</h3><p>Capacidade divulgada em pouco mais de 300 pessoas. Boa programação não compensa a escala insuficiente para o modelo-base.</p></article>
-        <article class="excluded-card"><h3>Casas antigas/rebatizadas</h3><p>Wood’s, Villa Mix e nomes históricos apareceram em fontes antigas, mas não entraram sem comprovação atual de operação, capacidade e contato.</p></article>
-      </div>
-    </section>
-
-    <section id="metodologia">
-      <h2>Limites da pesquisa</h2>
-      <div class="grid-2">
-        <div class="panel"><div class="panel-body"><h3>O que está confirmado</h3><p>Estruturas e contatos oficiais foram priorizados. Sócios foram ligados às empresas por cadastros públicos atuais; redes sociais foram conectadas a sites oficiais, páginas institucionais ou perfis públicos convergentes.</p></div></div>
-        <div class="panel"><div class="panel-body"><h3>O que precisa ser confirmado na conversa</h3><p>Se a pessoa indicada decide a programação, se a casa compra cachê fixo, disponibilidade, lotação licenciada e quais despesas estão fora dos R$ 30 mil. O canal é pessoal; a atribuição de booking nem sempre é pública.</p></div></div>
-      </div>
-      <div class="notice">
-        <strong>Regra de integridade aplicada</strong>
-        <p>Nenhum número privado foi inferido ou comprado em base fechada. Foram usados somente canais empresariais ou perfis profissionais publicados. Nenhum sócio foi chamado de “responsável por booking” sem prova; o grau de certeza aparece em cada ficha.</p>
-      </div>
-      <div class="notice success">
-        <strong>Links revisados em 19/09/2026</strong>
-        <p>Os 104 endereços HTTP/HTTPS únicos presentes nesta versão responderam com sucesso no teste final, incluindo sites oficiais, fontes, redes sociais e botões de WhatsApp. Links de e-mail e telefone tiveram o formato conferido; a existência da caixa, o atendimento do número e a entrega da mensagem só podem ser comprovados com o contato real.</p>
-      </div>
-    </section>
-  </main>
 
   <footer>
     <div class="shell">Pesquisa comercial para João Bosco &amp; Gabriel revisada em 19 de setembro de 2026. Preços, agenda, cargos e telefones podem mudar; reconfirmar antes de enviar proposta ou contrato.</div>
@@ -5157,12 +5192,171 @@
   <button class="print-button" type="button" onclick="window.print()" aria-label="Imprimir ou salvar a página em PDF">Imprimir / salvar PDF</button>
 
   <script>
-    const main = document.querySelector('main');
-    const readingOrder = ['comecar', 'novos-adicionados', 'ordem', 'mais-lugares', 'contatos', 'shortlist', 'roteiro', 'manual-anti-gafe', 'artista', 'historico', 'viabilidade', 'descartados', 'metodologia'];
-    readingOrder.forEach((id) => {
-      const section = document.getElementById(id);
-      if (section) main.appendChild(section);
+    // --- 3 DYNAMIC SCREENS NAVIGATION LOGIC ---
+    const screensViewport = document.getElementById('screensViewport');
+    const screensTrack = document.getElementById('screensTrack');
+    const appTabs = document.querySelectorAll('.app-tab');
+    const screenDots = document.querySelectorAll('.screen-dot');
+    const screenPanes = document.querySelectorAll('.app-screen-pane');
+
+    const screensMap = {
+      'geral': 0,
+      'oportunidades': 1,
+      'roteiro': 2
+    };
+
+    let currentScreenIndex = 1; // Start on Oportunidades (Screen 2)
+
+    function goToScreen(screenName, smooth = true) {
+      if (!(screenName in screensMap)) return;
+      currentScreenIndex = screensMap[screenName];
+
+      // Update Tab Buttons
+      appTabs.forEach(tab => {
+        const isActive = tab.dataset.screen === screenName;
+        tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      // Update Dots
+      screenDots.forEach(dot => {
+        dot.classList.toggle('active', dot.dataset.dot === screenName);
+      });
+
+      // Update Desktop Transform
+      const isMobile = window.innerWidth <= 650;
+      if (isMobile) {
+        const targetPane = document.getElementById('screen' + screenName.charAt(0).toUpperCase() + screenName.slice(1));
+        if (targetPane) {
+          screensViewport.scrollTo({
+            left: targetPane.offsetLeft,
+            behavior: smooth ? 'smooth' : 'instant'
+          });
+        }
+      } else {
+        screensTrack.style.transform = `translateX(-${currentScreenIndex * 33.333333}%)`;
+        window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'instant' });
+      }
+    }
+
+    // Tab button click handlers
+    appTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        goToScreen(tab.dataset.screen);
+      });
     });
+
+    // Touch swipe listener for mobile via Scroll-Snap
+    if (screensViewport) {
+      let scrollTimeout;
+      screensViewport.addEventListener('scroll', () => {
+        if (window.innerWidth > 650) return;
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          const scrollLeft = screensViewport.scrollLeft;
+          const paneWidth = window.innerWidth;
+          const activeIdx = Math.round(scrollLeft / paneWidth);
+          const screenNames = ['geral', 'oportunidades', 'roteiro'];
+          const activeName = screenNames[activeIdx] || 'oportunidades';
+          
+          appTabs.forEach(tab => {
+            const isActive = tab.dataset.screen === activeName;
+            tab.classList.toggle('active', isActive);
+            tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+          screenDots.forEach(dot => {
+            dot.classList.toggle('active', dot.dataset.dot === activeName);
+          });
+        }, 60);
+      }, { passive: true });
+    }
+
+    // Touch Swipe gestures for desktop / trackpad support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    document.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    document.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipeGesture();
+    }, { passive: true });
+
+    function handleSwipeGesture() {
+      const diffX = touchEndX - touchStartX;
+      if (Math.abs(diffX) > 85 && window.innerWidth > 650) {
+        // Swipe left -> go right
+        if (diffX < 0 && currentScreenIndex < 2) {
+          const screens = ['geral', 'oportunidades', 'roteiro'];
+          goToScreen(screens[currentScreenIndex + 1]);
+        }
+        // Swipe right -> go left
+        else if (diffX > 0 && currentScreenIndex > 0) {
+          const screens = ['geral', 'oportunidades', 'roteiro'];
+          goToScreen(screens[currentScreenIndex - 1]);
+        }
+      }
+    }
+
+    // Header buttons shortcut routing
+    document.addEventListener('click', e => {
+      const btn = e.target.closest('a[href^="#"]');
+      if (!btn) return;
+      const href = btn.getAttribute('href');
+      if (['#artista', '#historico', '#viabilidade', '#descartados', '#metodologia'].includes(href)) {
+        e.preventDefault();
+        goToScreen('geral');
+        setTimeout(() => {
+          const target = document.querySelector(href);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      } else if (['#ordem', '#roteiro', '#manual-anti-gafe'].includes(href)) {
+        e.preventDefault();
+        goToScreen('roteiro');
+        setTimeout(() => {
+          const target = document.querySelector(href);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      } else if (['#novos-adicionados', '#contatos', '#mais-lugares', '#shortlist', '#comecar'].includes(href)) {
+        e.preventDefault();
+        goToScreen('oportunidades');
+        setTimeout(() => {
+          const target = document.querySelector(href);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      }
+    });
+
+    // Mobile dock shortcuts routing
+    document.querySelectorAll('.mobile-dock a').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#novos-adicionados' || href === '#mais-lugares') {
+          e.preventDefault();
+          goToScreen('oportunidades');
+          setTimeout(() => {
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+          }, 150);
+        } else if (href === '#manual-anti-gafe' || href === '#roteiro') {
+          e.preventDefault();
+          goToScreen('roteiro');
+          setTimeout(() => {
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+          }, 150);
+        }
+      });
+    });
+
+    // Initialize to Screen 2 (Oportunidades) on load
+    window.addEventListener('DOMContentLoaded', () => {
+      goToScreen('oportunidades', false);
+    });
+    // Also run immediately
+    setTimeout(() => { goToScreen('oportunidades', false); }, 50);
 
     const buttons = [...document.querySelectorAll('.filter')];
     const venues = [...document.querySelectorAll('.venue')];
