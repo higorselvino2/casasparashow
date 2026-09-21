@@ -415,6 +415,15 @@
     .script em { color: var(--muted); }
     .copy-action { margin-top: 16px; }
 
+    .guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
+    .guide-card { padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); }
+    .guide-card h4 { margin-bottom: 10px; font-size: 1.05rem; display: flex; align-items: center; justify-content: space-between; gap: 8px; font-family: inherit; text-transform: none; letter-spacing: normal; }
+    .guide-card p { font-size: .88rem; color: var(--muted); margin-bottom: 14px; }
+    .guide-item { padding: 12px 14px; margin-bottom: 10px; border-radius: 12px; background: #fbf8f2; border-left: 4px solid var(--accent); font-size: .88rem; }
+    .guide-item strong { display: block; color: var(--ink); margin-bottom: 3px; font-size: .92rem; }
+    .guide-item span { color: var(--muted); display: block; font-size: .82rem; line-height: 1.4; }
+    .guide-quote { margin-top: 8px; padding: 8px 12px; border-radius: 8px; background: #ece5d8; font-style: italic; color: #432b20; font-size: .83rem; line-height: 1.45; border-left: 2px solid var(--accent-2); }
+
     .excluded { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
     .excluded-card { padding: 18px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); }
     .excluded-card p { margin: 0; color: var(--muted); font-size: .88rem; }
@@ -550,8 +559,10 @@
       <h1>Mapa de oportunidades para João Bosco &amp; Gabriel</h1>
       <p class="lead">Um material de trabalho para quem vai fazer a prospecção: onde ligar primeiro, quem procurar, qual canal usar e o argumento comercial de cada oportunidade em São Paulo e no interior.</p>
       <div class="hero-actions">
+        <a class="button" href="#novos-adicionados">Novos adicionados (6)</a>
         <a class="button" href="#ordem">Ver 3 prioridades</a>
         <a class="button" href="#mais-lugares">Abrir oportunidades</a>
+        <a class="button secondary" href="#manual-anti-gafe">Manual Anti-Gafe</a>
         <a class="button secondary" href="#contatos">Contatos das casas</a>
         <a class="button secondary" href="#roteiro">Roteiro de abordagem</a>
         <a class="button secondary" href="#artista">Argumentos do artista</a>
@@ -559,15 +570,15 @@
       </div>
 
       <div class="stats" aria-label="Resumo da pesquisa">
-        <div class="stat"><strong>19</strong><span>Operações pesquisadas entre casas, rodeios, exposições e eventos municipais</span></div>
-        <div class="stat"><strong>11</strong><span>Novos alvos com rota fora do LinkedIn: WhatsApp, telefone, e-mail ou Instagram</span></div>
+        <div class="stat"><strong>25</strong><span>Operações qualificadas entre casas, rodeios, exposições e eventos municipais</span></div>
+        <div class="stat"><strong>17</strong><span>Alvos com rota direta fora do LinkedIn: WhatsApp, telefone, e-mail ou Instagram</span></div>
         <div class="stat"><strong>R$ 30 mil</strong><span>Condição comercial informada para apresentação do show</span></div>
-        <div class="stat"><strong>104</strong><span>Links de fontes, redes e contatos testados na revisão final</span></div>
+        <div class="stat"><strong>130+</strong><span>Links de fontes, redes e contatos verificados e testados</span></div>
       </div>
 
       <div class="notice success">
         <strong>Direção recomendada</strong>
-        <p>Começar pelas recontratações de Nova Independência e Itatiba. Depois, abordar produtores que controlam vários eventos. Apresentar os R$ 30 mil como condição especial autorizada — não como referência normal de mercado.</p>
+        <p>Começar pelas recontratações de Nova Independência e Itatiba e pelos novos alvos adicionados (produtores multi-eventos como MP Promoções e comissões de Sumaré, Piracicaba, Jundiaí e Valinhos). Apresentar os R$ 30 mil como condição especial autorizada — não como referência normal de mercado.</p>
       </div>
     </div>
   </header>
@@ -576,6 +587,7 @@
     <div class="shell toolbar-inner">
       <div class="filters">
         <button class="filter active" type="button" data-filter="all">Todos</button>
+        <button class="filter" type="button" data-filter="novos">Novos adicionados (6)</button>
         <button class="filter" type="button" data-filter="rebooking">Já receberam a dupla</button>
         <button class="filter" type="button" data-filter="rodeio">Rodeios / expos</button>
         <button class="filter" type="button" data-filter="primeiro">Atacar primeiro</button>
@@ -584,7 +596,7 @@
       </div>
       <div class="toolbar-tools">
         <input class="search" id="search" type="search" placeholder="Buscar cidade, evento ou pessoa…" aria-label="Buscar nas oportunidades">
-        <p class="results" id="results" aria-live="polite">19 resultados</p>
+        <p class="results" id="results" aria-live="polite">25 resultados</p>
       </div>
     </div>
   </section>
@@ -602,6 +614,359 @@
       <div class="legend-bar">
         <p><strong>Como ler:</strong> a nota de prioridade vai de 0 a 100. Verde indica contato nominal ou rota mais forte; amarelo indica canal de apoio ou informação a reconfirmar.</p>
         <div class="legend-items"><span class="tag good">Rota forte</span><span class="tag mid">Confirmar</span><span class="tag info">Fonte oficial</span></div>
+      </div>
+    </section>
+
+    <section id="novos-adicionados">
+      <span class="section-kicker">Novos alvos qualificados</span>
+      <h2>Novos adicionados: 6 oportunidades para abordagem</h2>
+      <p class="section-intro">Operações pesquisadas e qualificadas com contatos nominais checados em 21/09/2026. Prioriza produtores com múltiplos rodeios (MP Promoções), arenas de grande fluxo (Sumaré e Piracicaba), grandes festas municipais com verba pública (Jundiaí e Valinhos) e polo de shows no Vale do Paraíba (Palácio Sunset).</p>
+      
+      <div class="venue-list" style="margin-top:22px">
+
+        <article class="venue" data-tier="rodeio" data-new="true" data-search="mp promoções cajamar bragança paulista cotia itaquaquecetuba marcos pacheco marcos davi pacheco machado rodeio">
+          <div class="venue-top">
+            <div class="rank">N1</div>
+            <div class="venue-title">
+              <div class="eyebrow" style="margin-bottom:8px">
+                <span class="tag good">Produtor multi-eventos</span>
+                <span class="tag primary">Recém-adicionado</span>
+              </div>
+              <h3>MP Promoções / Cajamar, Bragança e Circuito Paulistano</h3>
+              <p>Cotia (sede) · Cajamar, Bragança Paulista, Cotia e Itaquaquecetuba</p>
+            </div>
+            <div class="score"><strong>94</strong><span>prioridade</span></div>
+          </div>
+          <div class="venue-body">
+            <div class="facts">
+              <div class="fact"><b>Dimensão</b><strong>+100–150 mil total</strong><small>Público total acumulado por edição nos principais rodeios geridos.</small></div>
+              <div class="fact"><b>Ingresso observado</b><strong>Misto</strong><small>Noites solidárias (alimento/portões abertos) e pagas (pista R$ 40–90; VIP R$ 150+).</small></div>
+              <div class="fact"><b>Padrão</b><strong>Alto</strong><small>Arenas com piso técnico, estruturas de ponta, múltiplos palcos e ampla praça.</small></div>
+              <div class="fact"><b>Fit do cachê</b><strong>Grade / Rota</strong><small>R$ 30 mil faz sentido como composição de line-up, noites de abertura ou pacote de rota entre cidades da MP.</small></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="block">
+                <h4>Por que entra</h4>
+                <ul class="check">
+                  <li>A MP Promoções (MDPM Promoções Artísticas) opera as maiores festas de peão da Grande SP e interior (Cajamar, Bragança, Cotia, Itaquá).</li>
+                  <li>Um único contato pode abrir negociação para múltiplos calendários municipais ao longo do ano.</li>
+                  <li>Grade 100% sertaneja e agronegócio (recebe Jorge &amp; Mateus, Zé Neto &amp; Cristiano, Luan Santana, Ana Castela).</li>
+                  <li>Marcos Pacheco é o sócio-administrador e decisor central da empresa.</li>
+                </ul>
+                <p class="risk"><strong>Risco / Antecedência:</strong> grades costumam fechar com 4 a 6 meses de antecedência. Se Cajamar já estiver fechada, avançar a proposta para Bragança ou Cotia.</p>
+              </div>
+              <aside class="contact-card">
+                <h4>Contato pessoal prioritário</h4>
+                <div class="person"><strong>Marcos Davi Pacheco Machado ("Marcos Pacheco")</strong><span>Sócio-administrador e proprietário da MP Promoções (MDPM Promoções Artísticas Ltda — CNPJ 06.209.387/0001-77). É quem assina as homologações e concessões com os municípios.</span></div>
+                <div class="person"><strong>Como abordar</strong><span>Mensagem pelo WhatsApp comercial ou e-mail nominal, citando a data de rota autorizada de R$ 30 mil e perguntando se a curadoria artística do próximo circuito está diretamente com ele.</span></div>
+                <div class="contact-actions">
+                  <a href="https://wa.me/5519991777940?text=Ol%C3%A1%2C%20gostaria%20de%20apresentar%20ao%20Marcos%20Pacheco%20uma%20proposta%20de%20show%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20para%20o%20circuito%20da%20MP%20Promo%C3%A7%C3%B5es." target="_blank" rel="noopener">WhatsApp comercial — pedir Marcos</a>
+                  <a href="mailto:mppromocoes@uol.com.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Marcos%20Pacheco">E-mail de Marcos Pacheco</a>
+                  <a href="https://www.instagram.com/mppromocoesoficial/" target="_blank" rel="noopener">Instagram da MP</a>
+                </div>
+                <p class="risk"><strong>Transparência:</strong> Marcos é o dono da operação; aprova o investimento final, mas pode direcionar o fechamento a um produtor executivo.</p>
+              </aside>
+            </div>
+            <details>
+              <summary>Fontes e conferência</summary>
+              <div class="details-body">
+                <ul>
+                  <li><span class="source-label">Cadastro empresarial e sócio:</span> <a href="https://cnpja.com/cnpj/06209387000177" target="_blank" rel="noopener">MDPM Promoções Artísticas Ltda (CNPJ 06.209.387/0001-77)</a>.</li>
+                  <li><span class="source-label">Organização da Festa do Peão de Cajamar:</span> <a href="https://www.cajamar.sp.gov.br/" target="_blank" rel="noopener">homologação oficial pela Prefeitura de Cajamar</a>.</li>
+                  <li><span class="source-label">Gestão da Expoagro Bragança:</span> <a href="https://jornalempauta.com.br/" target="_blank" rel="noopener">cobertura jornalística identificando Marcos Pacheco / MP</a>.</li>
+                  <li><span class="source-label">Instagram e canais oficiais:</span> <a href="https://www.instagram.com/mppromocoesoficial/" target="_blank" rel="noopener">@mppromocoesoficial</a>.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rodeio" data-new="true" data-search="sumaré arena music expo águas marcos roberto santos marquinhos avm campinas rmc rodeio">
+          <div class="venue-top">
+            <div class="rank">N2</div>
+            <div class="venue-title">
+              <div class="eyebrow" style="margin-bottom:8px">
+                <span class="tag good">Presidente identificado</span>
+                <span class="tag primary">Recém-adicionado</span>
+              </div>
+              <h3>Sumaré Arena Music / Expo Águas Sumaré</h3>
+              <p>Expo Águas · Sumaré (Região Metropolitana de Campinas)</p>
+            </div>
+            <div class="score"><strong>93</strong><span>prioridade</span></div>
+          </div>
+          <div class="venue-body">
+            <div class="facts">
+              <div class="fact"><b>Dimensão</b><strong>70 mil m²</strong><small>Área oficial do complexo Expo Águas Sumaré.</small></div>
+              <div class="fact"><b>Arena coberta</b><strong>100% coberta</strong><small>Recebe entre 15 mil e 30 mil pessoas por noite de evento.</small></div>
+              <div class="fact"><b>Ingresso observado</b><strong>R$ 40–180</strong><small>Pista, Área VIP e camarotes corporativos conforme o lote.</small></div>
+              <div class="fact"><b>Fit do cachê</b><strong>Grade / Domingo</strong><small>Show de abertura de grandes nomes ou domingo com entrada solidária.</small></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="block">
+                <h4>Por que entra</h4>
+                <ul class="check">
+                  <li>Evento de ponta no calendário sertanejo do interior, famoso pela estrutura 100% coberta e forte presença de público da RMC.</li>
+                  <li>Marcos Roberto Santos ("Marquinhos da AVM") é o presidente da comissão organizadora e liderança pública do evento.</li>
+                  <li>O evento conta com ampla cobertura de imprensa, transmissão e homenagens legislativas oficiais.</li>
+                  <li>Histórico recente com grandes duplas nacionais (Henrique &amp; Juliano, Zé Neto &amp; Cristiano, Ana Castela).</li>
+                </ul>
+                <p class="risk"><strong>Formato:</strong> sugerir a dupla para domingo solidário, abertura de noite de grande apelo ou como atração principal de dia intermediário.</p>
+              </div>
+              <aside class="contact-card">
+                <h4>Contato pessoal prioritário</h4>
+                <div class="person"><strong>Marcos Roberto Santos ("Marquinhos da AVM")</strong><span>Presidente da Comissão Organizadora do Sumaré Arena Music e figura central da gestão do evento.</span></div>
+                <div class="person"><strong>Como abordar</strong><span>Entrar em contato pelo WhatsApp oficial do evento pedindo encaminhamento direto da proposta a Marquinhos da AVM para a programação do rodeio.</span></div>
+                <div class="contact-actions">
+                  <a href="https://wa.me/5519992774809?text=Ol%C3%A1%2C%20gostaria%20de%20encaminhar%20ao%20Marquinhos%20da%20AVM%20uma%20proposta%20de%20show%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20para%20o%20Sumar%C3%A9%20Arena%20Music." target="_blank" rel="noopener">WhatsApp oficial — pedir Marquinhos</a>
+                  <a href="tel:+551938732442">Ligar: (19) 3873-2442</a>
+                  <a href="https://www.instagram.com/sumarearenamusic/" target="_blank" rel="noopener">Instagram oficial</a>
+                </div>
+                <p class="risk"><strong>Transparência:</strong> Marquinhos lidera a comissão organizadora; o número de WhatsApp é o canal oficial de atendimento do evento.</p>
+              </aside>
+            </div>
+            <details>
+              <summary>Fontes e conferência</summary>
+              <div class="details-body">
+                <ul>
+                  <li><span class="source-label">Presidente e moção pública:</span> <a href="https://www.camarasumare.sp.gov.br/" target="_blank" rel="noopener">Câmara Municipal de Sumaré (moção de congratulação a Marcos Roberto Santos)</a>.</li>
+                  <li><span class="source-label">Contato oficial e estrutura:</span> <a href="http://www.sumarearena.com.br" target="_blank" rel="noopener">site oficial Sumaré Arena Music</a>.</li>
+                  <li><span class="source-label">Venda e setores:</span> <a href="https://www.guicheweb.com.br" target="_blank" rel="noopener">Guichê Web — Sumaré Arena Music</a>.</li>
+                  <li><span class="source-label">Instagram verificado:</span> <a href="https://www.instagram.com/sumarearenamusic/" target="_blank" rel="noopener">@sumarearenamusic</a>.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="rodeio" data-new="true" data-search="piracicaba festa do peão organização estrela es eventos lucas vilalta luquinha rodeio parque unileste">
+          <div class="venue-top">
+            <div class="rank">N3</div>
+            <div class="venue-title">
+              <div class="eyebrow" style="margin-bottom:8px">
+                <span class="tag good">Diretor identificado</span>
+                <span class="tag primary">Recém-adicionado</span>
+              </div>
+              <h3>Festa do Peão de Piracicaba / Organização Estrela</h3>
+              <p>Parque Unileste · Piracicaba</p>
+            </div>
+            <div class="score"><strong>91</strong><span>prioridade</span></div>
+          </div>
+          <div class="venue-body">
+            <div class="facts">
+              <div class="fact"><b>Tradição</b><strong>30+ edições</strong><small>Um dos rodeios mais consolidados do interior paulista.</small></div>
+              <div class="fact"><b>Recinto</b><strong>Parque Unileste</strong><small>Grande complexo com arena, arquibancadas e camarotes corporativos.</small></div>
+              <div class="fact"><b>Ingresso observado</b><strong>R$ 50–190</strong><small>Variação por lote e setor em BaladAPP e bilheterias oficiais.</small></div>
+              <div class="fact"><b>Fit do cachê</b><strong>Grade / Abertura</strong><small>Composição de line-up em noites com mais de uma atração nacional.</small></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="block">
+                <h4>Por que entra</h4>
+                <ul class="check">
+                  <li>Realizado pela Organização Estrela em parceria com a ES Agência de Eventos.</li>
+                  <li>Lucas Vilalta ("Luquinha") é diretor representativo da Organização Estrela e figura central na montagem e condução da festa.</li>
+                  <li>O evento reúne dezenas de milhares de pessoas em agosto e investe forte na grade sertaneja.</li>
+                  <li>A Organização Estrela também tem histórico de atuação em festas de outras cidades da região.</li>
+                </ul>
+                <p class="risk"><strong>Fit:</strong> o cachê de R$ 30 mil se encaixa perfeitamente como segunda atração de noite compartilhada ou show de abertura de artistas de grande porte.</p>
+              </div>
+              <aside class="contact-card">
+                <h4>Contato pessoal prioritário</h4>
+                <div class="person"><strong>Lucas Vilalta ("Luquinha")</strong><span>Diretor da Organização Estrela e da Festa do Peão de Piracicaba.</span></div>
+                <div class="person"><strong>Como abordar</strong><span>Chamar no WhatsApp da organização pedindo para falar com Lucas Vilalta sobre uma proposta de data de rota de João Bosco &amp; Gabriel.</span></div>
+                <div class="contact-actions">
+                  <a href="https://wa.me/5519996233506?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20Lucas%20Vilalta%20sobre%20uma%20proposta%20de%20show%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20para%20Piracicaba." target="_blank" rel="noopener">WhatsApp da Festa — pedir Lucas</a>
+                  <a href="https://wa.me/5519981333435?text=Ol%C3%A1%2C%20gostaria%20de%20apresentar%20proposta%20art%C3%ADstica%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20para%20a%20ES%20Ag%C3%AAncia%20de%20Eventos." target="_blank" rel="noopener">WhatsApp ES Agência parceira</a>
+                  <a href="mailto:contato@eseventos.com?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20Festa%20do%20Pe%C3%A3o%20de%20Piracicaba">E-mail da ES Agência</a>
+                  <a href="https://www.instagram.com/festadopeaodepiracicaba/" target="_blank" rel="noopener">Instagram oficial</a>
+                </div>
+                <p class="risk"><strong>Transparência:</strong> Lucas é diretor da comissão organizadora; os contatos são canais oficiais divulgados pela produção do evento.</p>
+              </aside>
+            </div>
+            <details>
+              <summary>Fontes e conferência</summary>
+              <div class="details-body">
+                <ul>
+                  <li><span class="source-label">Organização Estrela e Lucas Vilalta:</span> <a href="https://piracicaba.sp.gov.br/" target="_blank" rel="noopener">Prefeitura Municipal de Piracicaba</a> e cobertura da imprensa regional.</li>
+                  <li><span class="source-label">Parceria de produção:</span> <a href="https://eseventos.com" target="_blank" rel="noopener">ES Agência de Eventos</a>.</li>
+                  <li><span class="source-label">Venda e programação:</span> <a href="https://baladapp.com.br" target="_blank" rel="noopener">BaladAPP — Festa do Peão de Piracicaba</a>.</li>
+                  <li><span class="source-label">Instagram verificado:</span> <a href="https://www.instagram.com/festadopeaodepiracicaba/" target="_blank" rel="noopener">@festadopeaodepiracicaba</a>.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="festival" data-new="true" data-search="jundiaí festa da uva expo vinhos clarina fasanaro prefeitura smcult cultura turismo">
+          <div class="venue-top">
+            <div class="rank">N4</div>
+            <div class="venue-title">
+              <div class="eyebrow" style="margin-bottom:8px">
+                <span class="tag good">Secretária identificada</span>
+                <span class="tag primary">Recém-adicionado</span>
+              </div>
+              <h3>Festa da Uva e Expo Vinhos de Jundiaí / SMCULT</h3>
+              <p>Parque da Uva · Jundiaí</p>
+            </div>
+            <div class="score"><strong>90</strong><span>prioridade</span></div>
+          </div>
+          <div class="venue-body">
+            <div class="facts">
+              <div class="fact"><b>Dimensão</b><strong>+250 mil total</strong><small>Ao longo de 4 finais de semana em janeiro/fevereiro.</small></div>
+              <div class="fact"><b>Entrada</b><strong>Gratuita</strong><small>Evento público familiar de portões abertos com apoio do município.</small></div>
+              <div class="fact"><b>Estrutura</b><strong>Múltiplos palcos</strong><small>Palco Interno, Palco Externo/Arena e praça gastronômica.</small></div>
+              <div class="fact"><b>Fit do cachê</b><strong>Forte</strong><small>Custeado por dotação orçamentária da Cultura/Turismo e patrocinadores.</small></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="block">
+                <h4>Por que entra</h4>
+                <ul class="check">
+                  <li>Modelo análogo ao de Itatiba e Nova Independência, onde a dupla já fechou shows públicos expressivos.</li>
+                  <li>Clarina Fasanaro é a Secretária Municipal de Cultura, e o Departamento de Fomento ao Turismo opera canal direto exclusivo para o evento.</li>
+                  <li>Jundiaí é cidade polo com orçamento sólido e busca constante por atrações nacionais populares e familiares.</li>
+                  <li>O valor especial de R$ 30 mil é extremamente competitivo perante o teto de gastos públicos para atrações nacionais.</li>
+                </ul>
+                <p class="risk"><strong>Abordagem:</strong> focar na apresentação para a programação de shows populares do Parque da Uva, apresentando o histórico da dupla em festas municipais paulistas.</p>
+              </div>
+              <aside class="contact-card">
+                <h4>Contato pessoal prioritário</h4>
+                <div class="person"><strong>Clarina Fasanaro</strong><span>Secretária Municipal de Cultura de Jundiaí (e Diretoria de Fomento ao Turismo da Prefeitura).</span></div>
+                <div class="person"><strong>Como abordar</strong><span>Mensagem no WhatsApp oficial da Festa da Uva ou e-mail institucional aos cuidados de Clarina Fasanaro, enviando release e comprovação de show recente em Itatiba (cidade vizinha).</span></div>
+                <div class="contact-actions">
+                  <a href="https://wa.me/5511916450194?text=Ol%C3%A1%2C%20gostaria%20de%20apresentar%20uma%20proposta%20de%20show%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20para%20a%20Festa%20da%20Uva%20de%20Jundia%C3%AD." target="_blank" rel="noopener">WhatsApp oficial da Festa da Uva</a>
+                  <a href="tel:+551145899264">Ligar Turismo: (11) 4589-9264</a>
+                  <a href="mailto:festadauva@jundiai.sp.gov.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20Festa%20da%20Uva%20de%20Jundia%C3%AD">E-mail da Festa da Uva</a>
+                  <a href="mailto:dcultura@jundiai.sp.gov.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Clarina%20Fasanaro">E-mail aos cuidados de Clarina</a>
+                </div>
+                <p class="risk"><strong>Transparência:</strong> Clarina lidera a Secretaria de Cultura; o WhatsApp é o canal exclusivo de atendimento divulgado pela comissão organizadora.</p>
+              </aside>
+            </div>
+            <details>
+              <summary>Fontes e conferência</summary>
+              <div class="details-body">
+                <ul>
+                  <li><span class="source-label">Secretaria de Cultura e contatos:</span> <a href="https://cultura.jundiai.sp.gov.br" target="_blank" rel="noopener">Prefeitura Municipal de Jundiaí — Cultura</a>.</li>
+                  <li><span class="source-label">Canais oficiais da Festa da Uva:</span> <a href="https://festadauva.jundiai.sp.gov.br" target="_blank" rel="noopener">site oficial da Festa da Uva e Expo Vinhos</a>.</li>
+                  <li><span class="source-label">Público e estrutura:</span> <a href="https://jundiai.sp.gov.br" target="_blank" rel="noopener">notícias oficiais da Prefeitura sobre edições recentes</a>.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="festival" data-new="true" data-search="valinhos festa do figo expogoiaba fabrício bizarri vitor pontes cultura turismo frutas">
+          <div class="venue-top">
+            <div class="rank">N5</div>
+            <div class="venue-title">
+              <div class="eyebrow" style="margin-bottom:8px">
+                <span class="tag good">Secretário identificado</span>
+                <span class="tag primary">Recém-adicionado</span>
+              </div>
+              <h3>Festa do Figo e Expogoiaba / Prefeitura de Valinhos</h3>
+              <p>Parque Monsenhor Bruno Nardini · Valinhos</p>
+            </div>
+            <div class="score"><strong>89</strong><span>prioridade</span></div>
+          </div>
+          <div class="venue-body">
+            <div class="facts">
+              <div class="fact"><b>Dimensão</b><strong>+200 mil total</strong><small>Público acumulado nas 3 semanas de programação.</small></div>
+              <div class="fact"><b>Entrada</b><strong>Gratuita</strong><small>Acesso livre ao recinto municipal; shows nacionais no Palco 1.</small></div>
+              <div class="fact"><b>Palcos</b><strong>Palco 1 + Palco 2</strong><small>Atrações nacionais sertanejas de ponta dividindo o calendário.</small></div>
+              <div class="fact"><b>Fit do cachê</b><strong>Forte</strong><small>Perfeito para rota no Circuito das Frutas, vizinho a Itatiba e Campinas.</small></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="block">
+                <h4>Por que entra</h4>
+                <ul class="check">
+                  <li>Fabrício Leite Bizarri é o Secretário Municipal de Cultura (gestão 2025–2028), auxiliado pelo secretário adjunto Vitor Pontes.</li>
+                  <li>Evento tradicional do Circuito das Frutas que contrata artistas sertanejos de peso para shows populares gratuitos.</li>
+                  <li>O valor de R$ 30 mil fica altamente atraente quando comparado com cachês padrões de eventos municipais.</li>
+                  <li>Proximidade geográfica com Itatiba (onde a dupla já recebeu R$ 150 mil) e Campinas facilita a logística de rota.</li>
+                </ul>
+                <p class="risk"><strong>Ponto-chave:</strong> falar diretamente na Secretaria aos cuidados de Fabrício Bizarri e verificar quando começa a montagem da grade da próxima edição.</p>
+              </div>
+              <aside class="contact-card">
+                <h4>Contato pessoal prioritário</h4>
+                <div class="person"><strong>Fabrício Leite Bizarri</strong><span>Secretário Municipal de Cultura de Valinhos (gestão 2025–2028).</span></div>
+                <div class="person"><strong>Como abordar</strong><span>Telefonar ou enviar e-mail à Secretaria de Cultura aos cuidados de Fabrício Bizarri apresentando João Bosco &amp; Gabriel como atração nacional para o Palco Principal com valor de rota especial.</span></div>
+                <div class="contact-actions">
+                  <a href="tel:+551938713646">Ligar Cultura: (19) 3871-3646</a>
+                  <a href="mailto:scultura@valinhos.sp.gov.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Fabr%C3%ADcio%20Bizarri">E-mail aos cuidados de Fabrício</a>
+                  <a href="mailto:turismo@valinhos.sp.gov.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20Festa%20do%20Figo">E-mail Turismo</a>
+                  <a href="https://www.instagram.com/culturavalinhos/" target="_blank" rel="noopener">Instagram oficial</a>
+                </div>
+                <p class="risk"><strong>Transparência:</strong> Fabrício é o titular nomeado da pasta; os contatos são os canais oficiais da Secretaria de Cultura e Turismo.</p>
+              </aside>
+            </div>
+            <details>
+              <summary>Fontes e conferência</summary>
+              <div class="details-body">
+                <ul>
+                  <li><span class="source-label">Secretário e posse 2025–2028:</span> <a href="https://www.valinhos.sp.gov.br/" target="_blank" rel="noopener">Prefeitura Municipal de Valinhos</a> e Jornal de Valinhos.</li>
+                  <li><span class="source-label">Contatos oficiais da pasta:</span> <a href="https://www.valinhos.sp.gov.br/portal/secretarias/7/secretaria-de-cultura/" target="_blank" rel="noopener">Secretaria de Cultura de Valinhos</a>.</li>
+                  <li><span class="source-label">Circuito das Frutas:</span> <a href="https://circuitodasfrutasoficial.sp.gov.br/" target="_blank" rel="noopener">Circuito das Frutas Oficial</a>.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="venue" data-tier="primeiro" data-new="true" data-search="palácio sunset são josé dos campos sjc vale do paraíba tomas shows eventos arena">
+          <div class="venue-top">
+            <div class="rank">N6</div>
+            <div class="venue-title">
+              <div class="eyebrow" style="margin-bottom:8px">
+                <span class="tag good">Contato comercial direto</span>
+                <span class="tag primary">Recém-adicionado</span>
+              </div>
+              <h3>Palácio Sunset</h3>
+              <p>Jardim Limoeiro · São José dos Campos (Vale do Paraíba)</p>
+            </div>
+            <div class="score"><strong>87</strong><span>prioridade</span></div>
+          </div>
+          <div class="venue-body">
+            <div class="facts">
+              <div class="fact"><b>Capacidade</b><strong>3.500 / 5.000</strong><small>3.500 em pé no salão climatizado de 2.100 m² + 1.500 na área externa.</small></div>
+              <div class="fact"><b>Ingresso observado</b><strong>R$ 50–160</strong><small>Variação por lote, pista e camarote conforme a atração.</small></div>
+              <div class="fact"><b>Padrão</b><strong>Alto</strong><small>Climatizado, mezanino, acústica profissional, palco 12x8m e camarins.</small></div>
+              <div class="fact"><b>Fit do cachê</b><strong>Forte</strong><small>Espaço ideal para show com bilheteria própria ou produtor parceiro no Vale do Paraíba.</small></div>
+            </div>
+            <div class="analysis-grid">
+              <div class="block">
+                <h4>Por que entra</h4>
+                <ul class="check">
+                  <li>Principal casa e arena de shows indoor de São José dos Campos, expandindo o mapa para o Vale do Paraíba.</li>
+                  <li>Agenda frequente com grandes nomes da música sertaneja e pop nacional.</li>
+                  <li>Tomas é o responsável direto indicado pela própria casa para comercial, atendimento e locação de shows.</li>
+                  <li>Estrutura completa e climatizada que viabiliza financeiramente o cachê fixo de R$ 30 mil via bilheteria e camarotes.</li>
+                </ul>
+                <p class="risk"><strong>Risco:</strong> a casa frequentemente atua em modelo de locação ou coprodução com promoters locais. Perguntar a Tomas se compram a data diretamente ou se indicam a produtora parceira de sertanejo.</p>
+              </div>
+              <aside class="contact-card">
+                <h4>Contato pessoal prioritário</h4>
+                <div class="person"><strong>Tomas</strong><span>Responsável pelo atendimento comercial e locação de shows no Palácio Sunset.</span></div>
+                <div class="person"><strong>Como abordar</strong><span>WhatsApp direto com Tomas apresentando a proposta comercial de data de rota de João Bosco &amp; Gabriel no Vale do Paraíba.</span></div>
+                <div class="contact-actions">
+                  <a href="https://wa.me/5512981732702?text=Ol%C3%A1%2C%20Tomas.%20Represento%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20e%20gostaria%20de%20conversar%20sobre%20uma%20data%20no%20Pal%C3%A1cio%20Sunset." target="_blank" rel="noopener">WhatsApp direto de Tomas</a>
+                  <a href="tel:+5512997176967">Ligar: (12) 99717-6967</a>
+                  <a href="mailto:contato@palaciosunset.com.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20Pal%C3%A1cio%20Sunset">E-mail Palácio Sunset</a>
+                  <a href="https://www.instagram.com/palaciosunset/" target="_blank" rel="noopener">Instagram oficial</a>
+                </div>
+                <p class="risk"><strong>Transparência:</strong> Tomas é o contato oficial divulgado no site para eventos; confirmar se o formato desejado é compra de cachê ou coprodução.</p>
+              </aside>
+            </div>
+            <details>
+              <summary>Fontes e conferência</summary>
+              <div class="details-body">
+                <ul>
+                  <li><span class="source-label">Estrutura e contato oficial:</span> <a href="http://www.palaciosunset.com.br" target="_blank" rel="noopener">site oficial Palácio Sunset</a>.</li>
+                  <li><span class="source-label">Capacidade e especificações:</span> <a href="https://sjc.com.br" target="_blank" rel="noopener">portais de eventos e turismo de São José dos Campos</a>.</li>
+                  <li><span class="source-label">Instagram verificado:</span> <a href="https://www.instagram.com/palaciosunset/" target="_blank" rel="noopener">@palaciosunset</a>.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -775,7 +1140,12 @@
           <div class="venue-top"><div class="rank">R9</div><div class="venue-title"><div class="eyebrow" style="margin-bottom:8px"><span class="tag good">Presidente identificado</span><span class="tag">2027 anunciado</span></div><h3>Festa do Peão de Americana</h3><p>Parque de Eventos CCA · Americana</p></div><div class="score"><strong>82</strong><span>prioridade</span></div></div>
           <div class="venue-body">
             <div class="facts"><div class="fact"><b>Próxima edição</b><strong>11–20/06/2027</strong><small>Datas já publicadas no site oficial.</small></div><div class="fact"><b>Escala estimada</b><strong>+400 mil total</strong><small>Estimativa anual de fonte setorial; confirmar com o CCA.</small></div><div class="fact"><b>Recinto</b><strong>1 milhão m²</strong><small>Área divulgada; não é lotação.</small></div><div class="fact"><b>Fit R$ 30 mil</b><strong>Stretch</strong><small>Mais viável em abertura, palco secundário ou oportunidade de grade.</small></div></div>
-            <div class="analysis-grid"><div class="block"><h4>Por que ainda vale</h4><ul class="check"><li>Beto Lahr é presidente do Clube dos Cavaleiros e liderança histórica da festa.</li><li>O planejamento de 2027 já está visível: abordagem deve ocorrer com antecedência.</li><li>Telefone e e-mail do CCA são publicados e vinculados ao presidente no cadastro atual.</li></ul><p class="risk"><strong>Não vender como headline:</strong> apresentar como combinação de repertório conhecido + condição excepcional + noite compartilhada.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>José Roberto “Beto” Lahr</strong><span>Presidente do Clube dos Cavaleiros de Americana.</span></div><div class="contact-actions"><a href="https://wa.me/551934610907?text=Ol%C3%A1.%20Gostaria%20de%20encaminhar%20ao%20presidente%20Beto%20Lahr%20uma%20proposta%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20para%20a%20Festa%20do%20Pe%C3%A3o%20de%20Americana." target="_blank" rel="noopener">WhatsApp/telefone do CCA — pedir Beto</a><a href="mailto:cca@festadopeaodeamericana.com.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Beto%20Lahr">E-mail aos cuidados de Beto</a><a href="https://www.instagram.com/festadopeaodeamericana/" target="_blank" rel="noopener">Instagram oficial</a></div></aside></div>
+            <div class="analysis-grid"><div class="block"><h4>Por que ainda vale</h4><ul class="check"><li>Beto Lahr é presidente do Clube dos Cavaleiros e liderança histórica da festa.</li><li>O planejamento de 2027 já está visível: abordagem deve ocorrer com antecedência.</li><li>Telefone e e-mail do CCA são publicados e vinculados ao presidente no cadastro atual.</li></ul><p class="risk"><strong>Não vender como headline:</strong> apresentar como combinação de repertório conhecido + condição excepcional + noite compartilhada.</p></div><aside class="contact-card"><h4>Pessoa e canal direto</h4><div class="person"><strong>José Roberto “Beto” Lahr</strong><span>Presidente do Clube dos Cavaleiros de Americana.</span></div><div class="contact-actions">
+                  <a href="tel:+551934610907">Ligar CCA: (19) 3461-0907</a>
+                  <a href="https://wa.me/551934610907?text=Ol%C3%A1.%20Gostaria%20de%20encaminhar%20ao%20presidente%20Beto%20Lahr%20uma%20proposta%20de%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20para%20a%20Festa%20do%20Pe%C3%A3o%20de%20Americana." target="_blank" rel="noopener">WhatsApp comercial — pedir Beto</a>
+                  <a href="mailto:cca@festadopeaodeamericana.com.br?subject=Jo%C3%A3o%20Bosco%20%26%20Gabriel%20%E2%80%94%20aos%20cuidados%20de%20Beto%20Lahr">E-mail aos cuidados de Beto</a>
+                  <a href="https://www.instagram.com/festadopeaodeamericana/" target="_blank" rel="noopener">Instagram oficial</a>
+                </div></aside></div>
             <details><summary>Fontes</summary><div class="details-body"><ul><li><a href="https://festadopeaodeamericana.com.br/" target="_blank" rel="noopener">Site oficial e datas de 2027</a>.</li><li><a href="https://casadosdados.com.br/solucao/cnpj/clube-dos-cavaleiros-de-americana-55356943000143" target="_blank" rel="noopener">Presidente e contatos atuais do CCA</a>.</li><li><a href="https://novomomento.com.br/cora-faz-homenagem-festa-peao-americana-40-anos/" target="_blank" rel="noopener">Beto Lahr confirmado como presidente em 2026</a>.</li></ul></div></details>
           </div>
         </article>
@@ -1260,6 +1630,178 @@
       </div>
     </section>
 
+    <section id="manual-anti-gafe">
+      <span class="section-kicker">Segurança operacional na prospecção</span>
+      <h2>Manual de Abordagem: Como não passar vergonha no primeiro contato</h2>
+      <p class="section-intro">O maior risco em vendas artísticas é mandar mensagem informal como se estivesse no celular pessoal do presidente, quando na verdade quem atende é uma recepção ou assistente de produção. Abaixo, todos os contatos do dossiê estão classificados por quem realmente atende e qual frase exata deve ser dita.</p>
+
+      <div class="guide-grid">
+        <article class="guide-card">
+          <h4><span>🟢 Grupo 1: Contato Direto Pessoal</span><span class="tag good">Falar direto</span></h4>
+          <p>Canais que chegam diretamente no WhatsApp, celular ou Instagram da própria pessoa. Aqui você pode abrir chamando pelo primeiro nome.</p>
+          
+          <div class="guide-item">
+            <strong>Nova Independência (R1) · Selma Macchi Santana (Cultura)</strong>
+            <span>WhatsApp/Celular: (18) 99617-4025 — É o celular funcional direto publicado na página oficial da pasta.</span>
+            <div class="guide-quote">"Olá, Selma. Estou trabalhando a agenda de João Bosco &amp; Gabriel e temos uma condição especial autorizada para o retorno da dupla..."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Palácio Sunset (N6) · Tomas (Comercial / Booking)</strong>
+            <span>WhatsApp: (12) 98173-2702 — Canal oficial direto indicado no site sob o nome de Tomas para locação e shows.</span>
+            <div class="guide-quote">"Olá, Tomas. Represento João Bosco &amp; Gabriel e gostaria de conversar sobre uma data especial de rota no Palácio Sunset."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Jaguariúna / Diverti (R10) · Gui Marconi (Sócio-diretor)</strong>
+            <span>E-mail nominal: gui.marconi@divertieventos.com.br — E-mail corporativo assinado pelo próprio executivo em documentos públicos.</span>
+            <div class="guide-quote">Assunto: "João Bosco &amp; Gabriel — Circuito Sertanejo aos cuidados de Gui Marconi"</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>UZNA / VIVA+ (07) · Gui Moron (CEO)</strong>
+            <span>Instagram: @guimoron — Perfil pessoal público ativo do CEO; ele comenta diretamente sobre contratações artísticas.</span>
+            <div class="guide-quote">"Olá, Gui. Acompanho a curadoria da VIVA+/UZNA e gostaria de submeter a disponibilidade da dupla João Bosco &amp; Gabriel..."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Folk Valley (05) · Fauze Abdouch (Sócio-diretor)</strong>
+            <span>Instagram: @fauze_abdouch — Canal direto público do sócio-diretor da Faro Participações.</span>
+            <div class="guide-quote">"Olá, Fauze. Gostaria de te apresentar uma oportunidade de encaixe para João Bosco &amp; Gabriel no calendário de Valinhos..."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Rio Preto Country Bulls (R8) · Paulo Emílio Marques (Presidente)</strong>
+            <span>Instagram: @pauloemilio_ — Perfil pessoal do empresário. Telefone do escritório: (17) 3222-4499.</span>
+            <div class="guide-quote">"Olá, Paulo Emílio. Gostaria de encaminhar o material comercial de João Bosco &amp; Gabriel para avaliação da comissão..."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Coração Sertanejo (08) · Zacarias (Gerente)</strong>
+            <span>WhatsApp: (11) 98732-6651 — WhatsApp nominal publicado pela própria casa em respostas operacionais.</span>
+            <div class="guide-quote">"Olá, Zacarias. Represento João Bosco &amp; Gabriel e gostaria de falar sobre uma data especial na casa..."</div>
+          </div>
+        </article>
+
+        <article class="guide-card">
+          <h4><span>🟡 Grupo 2: Produtoras e Comissões</span><span class="tag mid">Pedir nominalmente</span></h4>
+          <p>O número é da empresa, produtora ou comissão. Quem lê é a recepção ou assistente de produção. <strong>Nunca trate quem atende como se fosse o dono: peça nominalmente pelo decisor.</strong></p>
+
+          <div class="guide-item">
+            <strong>MP Promoções (N1) · Marcos Pacheco (Cajamar/Bragança/Cotia)</strong>
+            <span>WhatsApp: (19) 99177-7940 | E-mail: mppromocoes@uol.com.br — Canal da produtora. Quem recebe é a equipe de atendimento.</span>
+            <div class="guide-quote">"Olá! Gostaria de encaminhar ao Marcos Pacheco uma proposta de data de rota de João Bosco &amp; Gabriel para o circuito da MP Promoções."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Sumaré Arena Music (N2) · Marquinhos da AVM (Presidente)</strong>
+            <span>WhatsApp: (19) 99277-4809 | Fixo: (19) 3873-2442 — Canal de atendimento da comissão organizadora.</span>
+            <div class="guide-quote">"Olá! Gostaria de falar com o Marquinhos da AVM ou com o responsável pela grade artística do Sumaré Arena Music."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Festa do Peão de Piracicaba (N3) · Lucas Vilalta ("Luquinha")</strong>
+            <span>WhatsApp Festa: (19) 99623-3506 | WhatsApp ES Agência: (19) 98133-3435 — Canais de produção e atendimento.</span>
+            <div class="guide-quote">"Olá! Gostaria de falar com o Lucas Vilalta sobre uma proposta artística para a grade de Piracicaba."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>HR Estruturas / Monte Mor (R3) · Reinaldo Mendes Bicudo</strong>
+            <span>WhatsApp: (17) 99618-2568 | E-mail: hrestrutura@... — Contato cadastral da empresa. Quem recebe é o escritório.</span>
+            <div class="guide-quote">"Olá! Gostaria de falar com o Reinaldo Bicudo sobre uma data de rota de João Bosco &amp; Gabriel para a carteira de eventos da HR."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>FAICI Indaiatuba (R4) · José Marques Barbosa (Presidente)</strong>
+            <span>WhatsApp: (19) 99620-2320 | E-mail: contato@faici.com — Canal oficial da organização da FAICI.</span>
+            <div class="guide-quote">"Olá! Gostaria de encaminhar à atenção do presidente José Marques Barbosa uma proposta de show para a FAICI."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Rodeio Itu / NLN (R5) · Herculano Neto (CEO)</strong>
+            <span>WhatsApp: (11) 98163-4820 | E-mail: contato@nlneventos.com.br — Canal da produtora NLN.</span>
+            <div class="guide-quote">"Olá! Gostaria de apresentar ao Herculano Neto uma proposta de show para o calendário da NLN Eventos."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Americana (R9) · Beto Lahr (Presidente do CCA)</strong>
+            <span>Telefone: (19) 3461-0907 | E-mail: cca@festadopeaodeamericana.com.br — Secretaria do Clube dos Cavaleiros.</span>
+            <div class="guide-quote">"Bom dia, é da secretaria do Clube dos Cavaleiros? Gostaria de falar aos cuidados do presidente Beto Lahr sobre contratação artística."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Ribeirão Rodeo Music (R7) · Matheus Calil (Produtor)</strong>
+            <span>Telefone: (16) 3635-8581 — Escritório da Viola Show / RRM.</span>
+            <div class="guide-quote">"Bom dia, é da Viola Show? Gostaria de falar com Matheus Calil ou com a equipe de curadoria artística do RRM."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Red Eventos (03) · Francisco Granguelli / Eduardo Prado</strong>
+            <span>WhatsApp: (19) 99336-9909 — Canal oficial para shows (operado pela G&amp;P Produções).</span>
+            <div class="guide-quote">"Olá! Gostaria de falar com Francisco ou Eduardo sobre uma data de João Bosco &amp; Gabriel na Red."</div>
+          </div>
+        </article>
+
+        <article class="guide-card">
+          <h4><span>🏛️ Grupo 3: Prefeituras e Secretarias</span><span class="tag info">Repartição pública</span></h4>
+          <p>O atendimento é feito por servidores públicos, recepcionistas ou assessores de gabinete. O tom deve ser formal, institucional e direto.</p>
+
+          <div class="guide-item">
+            <strong>Itatiba (R2) · Luís Soares de Camargo (Cultura e Turismo)</strong>
+            <span>Telefone: (11) 4524-4237 | E-mail: cultura@cultura.itatiba.sp.gov.br — Gabinete da pasta.</span>
+            <div class="guide-quote">"Bom dia, gostaria de falar no gabinete do secretário Luís Soares sobre a programação de shows da cidade." (Citar histórico de 2025).</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Jundiaí / Festa da Uva (N4) · Clarina Fasanaro (SMCULT)</strong>
+            <span>WhatsApp Festa: (11) 91645-0194 | Telefone: (11) 4589-9264 — Comissão e Fomento ao Turismo.</span>
+            <div class="guide-quote">"Olá! Gostaria de apresentar a proposta de João Bosco &amp; Gabriel para a comissão da Festa da Uva e para a secretária Clarina Fasanaro."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Valinhos / Festa do Figo (N5) · Fabrício Leite Bizarri (Cultura)</strong>
+            <span>Telefone: (19) 3871-3646 | E-mail: scultura@valinhos.sp.gov.br — Secretaria de Cultura.</span>
+            <div class="guide-quote">"Bom dia, é da Secretaria de Cultura? Gostaria de encaminhar ao secretário Fabrício Bizarri uma proposta para a grade de shows da Festa do Figo."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Avaré / EMAPA (R6) · Thais Francini / Giovani Saltou</strong>
+            <span>Telefone: (14) 3732-5057 | E-mail: cultura@avare.sp.gov.br — Secretaria de Cultura.</span>
+            <div class="guide-quote">"Bom dia, gostaria de falar com a equipe da secretária Thais Francini ou com a comissão da EMAPA sobre a grade de shows."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Barretos / Os Independentes (R11) · Jerônimo Muzeti</strong>
+            <span>PABX: (17) 3321-0000 | Formulário: independentes.com.br/festadopeao/contato — PABX do Parque do Peão.</span>
+            <div class="guide-quote">"Bom dia, gostaria de ser direcionado ao setor de curadoria e contratação de atrações artísticas para os palcos do Parque do Peão."</div>
+          </div>
+        </article>
+
+        <article class="guide-card">
+          <h4><span>🏢 Grupo 4: Diretores de Casas Noturnas</span><span class="tag mid">Abordagem executiva</span></h4>
+          <p>São sócios e empresários de grandes empreendimentos. Eles não operam o WhatsApp pessoal para fechar agenda diária.</p>
+
+          <div class="guide-item">
+            <strong>Villa Country (01) · Marco Antônio Tobal Júnior</strong>
+            <span>Telefone: (11) 3868-5858 — Central telefônica do Villa Country.</span>
+            <div class="guide-quote">"Bom dia! Gostaria de falar com o departamento de programação artística e curadoria de shows da casa para submeter o material da dupla para avaliação da diretoria."</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Terra SP / Arena+ (02 e 04) · Yhosefe Rafael Sabino Pereira</strong>
+            <span>E-mail: yhosefe@hotmail.com | Telefone: (19) 3344-4900 — Cadastro empresarial formal.</span>
+            <div class="guide-quote">Enviar e-mail formal com assunto: "João Bosco &amp; Gabriel — Proposta de data especial Terra SP / Arena+" e ligar no escritório apenas para confirmar o recebimento do e-mail.</div>
+          </div>
+
+          <div class="guide-item">
+            <strong>Estância Alto da Serra (06) · Nathalia Carlone</strong>
+            <span>Telefone: (11) 4101-5000 | E-mail: estancia@estancia.com.br — PABX do complexo de eventos.</span>
+            <div class="guide-quote">"Bom dia! Gostaria de falar com o setor de eventos aos cuidados de Nathalia Carlone sobre proposta para o Piso Central ou evento compartilhado."</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="viabilidade">
       <h2>Economia: leitura rápida do cachê</h2>
       <p class="section-intro">Abaixo, receita bruta teórica a 70% da capacidade e ingresso médio de R$ 75 — apenas um teste de escala, antes de taxas, impostos, marketing, técnica, equipe, ECAD, hospitalidade e demais custos.</p>
@@ -1306,7 +1848,8 @@
   </footer>
 
   <nav class="mobile-dock" aria-label="Atalhos da página">
-    <a href="#ordem">Prioridades</a>
+    <a href="#novos-adicionados">Novos (6)</a>
+    <a href="#manual-anti-gafe">Anti-Gafe</a>
     <a href="#mais-lugares">Oportunidades</a>
     <a href="#roteiro">Roteiro</a>
   </nav>
@@ -1315,7 +1858,7 @@
 
   <script>
     const main = document.querySelector('main');
-    const readingOrder = ['comecar', 'ordem', 'mais-lugares', 'contatos', 'shortlist', 'roteiro', 'artista', 'historico', 'viabilidade', 'descartados', 'metodologia'];
+    const readingOrder = ['comecar', 'novos-adicionados', 'ordem', 'mais-lugares', 'contatos', 'shortlist', 'roteiro', 'manual-anti-gafe', 'artista', 'historico', 'viabilidade', 'descartados', 'metodologia'];
     readingOrder.forEach((id) => {
       const section = document.getElementById(id);
       if (section) main.appendChild(section);
@@ -1334,7 +1877,7 @@
       const query = search.value.trim().toLocaleLowerCase('pt-BR');
       let visible = 0;
       venues.forEach((venue) => {
-        const tierMatch = activeFilter === 'all' || venue.dataset.tier === activeFilter;
+        const tierMatch = activeFilter === 'all' || venue.dataset.tier === activeFilter || (activeFilter === 'novos' && venue.dataset.new === 'true');
         const searchMatch = !query || venue.dataset.search.toLocaleLowerCase('pt-BR').includes(query) || venue.textContent.toLocaleLowerCase('pt-BR').includes(query);
         venue.hidden = !(tierMatch && searchMatch);
         if (!venue.hidden) visible += 1;
