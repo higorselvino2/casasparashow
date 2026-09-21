@@ -1095,51 +1095,454 @@
       }
     }
 
+  
+    /* --- MODERN TYPOGRAPHY: PLUS JAKARTA SANS --- */
+    body, h1, h2, h3, h4, h5, h6, .hero h1, .lead, .panel h3, .venue-title h3,
+    .section-intro, .venue-tab-btn, .button, .tag, .stat, .fact {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    }
+    h1 {
+      font-weight: 800;
+      letter-spacing: -0.035em;
+    }
+    h2 {
+      font-weight: 750;
+      letter-spacing: -0.025em;
+    }
+    h3 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* --- BULLETPROOF OVERFLOW CONTAINMENT --- */
+    html, body {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* --- 3 APP VIEWS ARCHITECTURE --- */
+    .app-view {
+      display: none;
+      width: 100%;
+      min-width: 0;
+      overflow-x: hidden;
+      animation: viewFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .app-view.active {
+      display: block;
+    }
+
+    @keyframes viewFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* --- TOP STICKY NAVIGATION BAR --- */
+    .app-nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(36, 23, 17, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(216, 208, 194, 0.14);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      padding: 9px 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    .app-nav-shell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      width: min(calc(100% - 32px), var(--max));
+      margin-inline: auto;
+    }
+
+    .app-tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      max-width: 680px;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 4px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .app-tab {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: #d6ccbe;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .app-tab:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .app-tab.active {
+      background: #fffdf8;
+      color: #241711;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+      border-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .tab-icon {
+      font-size: 1.05rem;
+      line-height: 1;
+    }
+
+    .tab-pill {
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #a9653e;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+
+    .app-tab.active .tab-pill {
+      background: #241711;
+      color: #fff;
+    }
+
+    .screen-dots-mobile {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 0;
+    }
+
+    .screen-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .screen-dot.active {
+      width: 18px;
+      border-radius: 999px;
+      background: #d4a261;
+    }
+
+    .mobile-label { display: none !important; }
+    .desktop-label { display: inline !important; }
+
+    /* --- VIEW HEADERS (SCREENS 1 & 3) --- */
+    .view-header-callout {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px 30px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+    .view-header-callout h2 {
+      font-size: 1.72rem;
+      margin: 6px 0 8px;
+      color: var(--ink);
+    }
+    .view-header-callout p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* --- TOOLBAR STICKY POSITION --- */
+    .toolbar {
+      position: sticky;
+      top: 48px;
+      z-index: 800;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      width: 100%;
+      max-width: 100vw;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .toolbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+
+    .filters {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      flex: 1 1 auto;
+      padding-bottom: 2px;
+    }
+    .filters::-webkit-scrollbar { display: none; }
+
+    .venue-list {
+      display: grid;
+      gap: 22px;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box;
+    }
+
+    .venue {
+      overflow: hidden !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box;
+    }
+
+    .venue-top {
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box;
+    }
+
+    .venue-tabs {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box;
+    }
+    .venue-tabs::-webkit-scrollbar { display: none; }
+
+    .venue-tab-btn {
+      flex: 0 0 auto !important;
+      white-space: nowrap !important;
+    }
+
+    .venue-body, .tab-pane, .facts, .fact, .tech-specs-grid, .stage-section {
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box;
+    }
+
+    /* --- SUTILIZAÇÃO DAS FONTES (RODAPÉ DOS CARDS) --- */
+    .venue-sources {
+      margin-top: 18px;
+      border-top: 1px dashed var(--line);
+      padding-top: 12px;
+    }
+    .venue-sources summary {
+      font-size: 0.74rem;
+      color: #8c8275;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+    }
+    .venue-sources summary:hover {
+      color: var(--ink);
+      background: rgba(0, 0, 0, 0.04);
+    }
+    .venue-sources .details-body {
+      font-size: 0.78rem;
+      color: #736b61;
+      padding: 10px 14px;
+      margin-top: 8px;
+      background: #fbf9f4;
+      border-radius: 8px;
+      border: 1px solid #e8e2d7;
+    }
+    .venue-sources .details-body ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .venue-sources .details-body li {
+      margin-bottom: 6px;
+    }
+    .venue-sources .details-body a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Swipe hint */
+    .swipe-hint {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      color: #a89d8f;
+      text-align: center;
+      padding: 6px 0;
+    }
+
+    .mobile-dock { display: none !important; }
+
+    @media (max-width: 650px) {
+      .app-nav-bar {
+        padding: 6px 0;
+      }
+      .app-nav-shell {
+        width: calc(100% - 16px) !important;
+        max-width: 100% !important;
+        padding-inline: 0 !important;
+      }
+      .app-tabs {
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 3px !important;
+        padding: 3px !important;
+      }
+      .app-tab {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        padding: 7px 2px !important;
+        font-size: 0.74rem !important;
+        gap: 4px !important;
+        justify-content: center !important;
+      }
+      .app-tab .tab-icon {
+        font-size: 0.82rem !important;
+      }
+      .app-tab .tab-label {
+        font-size: 0.72rem !important;
+        font-weight: 750 !important;
+        white-space: nowrap;
+        letter-spacing: -0.015em;
+      }
+      .tab-pill {
+        display: none !important;
+      }
+      .mobile-label {
+        display: inline !important;
+      }
+      .desktop-label {
+        display: none !important;
+      }
+      .screen-dots-mobile {
+        display: flex;
+      }
+      .swipe-hint {
+        display: flex;
+      }
+      .view-header-callout {
+        padding: 18px 16px;
+      }
+      .view-header-callout h2 {
+        font-size: 1.32rem;
+      }
+      .app-view .shell {
+        max-width: calc(100% - 20px) !important;
+        width: calc(100% - 20px) !important;
+      }
+      .toolbar {
+        top: 42px;
+        padding: 8px 0;
+      }
+      .toolbar-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+      .toolbar-tools {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+      }
+      .search {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+    }
+
   </style>
 </head>
 <body>
-  
 
-  
-  
-  <!-- BARRA DE NAVEGAÇÃO ENTRE AS 3 TELAS -->
+  <!-- BARRA DE NAVEGAÇÃO SUPERIOR ENTRE AS 3 TELAS -->
   <nav class="app-nav-bar" id="appNavBar" aria-label="Navegação entre telas">
     <div class="shell app-nav-shell">
       <div class="app-tabs" role="tablist">
         <button class="app-tab" id="tabBtnGeral" type="button" data-screen="geral" role="tab" aria-selected="false">
           <span class="tab-icon">📊</span>
-          <span class="tab-label">Visão Geral</span>
+          <span class="tab-label"><span class="desktop-label">Visão </span>Geral</span>
         </button>
         <button class="app-tab active" id="tabBtnOportunidades" type="button" data-screen="oportunidades" role="tab" aria-selected="true">
           <span class="tab-icon">🎯</span>
-          <span class="tab-label">Oportunidades</span>
-          <span class="tab-pill">25 Alvos</span>
+          <span class="tab-label"><span class="desktop-label">Oportunidades</span><span class="mobile-label">Alvos</span></span>
+          <span class="tab-pill desktop-label">25 Alvos</span>
         </button>
         <button class="app-tab" id="tabBtnRoteiro" type="button" data-screen="roteiro" role="tab" aria-selected="false">
           <span class="tab-icon">📞</span>
-          <span class="tab-label">Roteiro de Vendas</span>
+          <span class="tab-label">Roteiro<span class="desktop-label"> de Vendas</span></span>
         </button>
       </div>
-    </div>
-    <div class="screen-indicator-bar" id="screenIndicatorBar">
-      <span class="screen-dot" data-dot="geral"></span>
-      <span class="screen-dot active" data-dot="oportunidades"></span>
-      <span class="screen-dot" data-dot="roteiro"></span>
+      <div class="screen-dots-mobile" id="screenDotsMobile">
+        <span class="screen-dot" data-dot="geral"></span>
+        <span class="screen-dot active" data-dot="oportunidades"></span>
+        <span class="screen-dot" data-dot="roteiro"></span>
+      </div>
     </div>
   </nav>
 
-  <div class="screens-viewport" id="screensViewport">
-    <div class="screens-track" id="screensTrack">
-      
-        <!-- TELA 1: 📊 VISÃO GERAL & INTELIGÊNCIA (ESQUERDA) -->
-        <div class="app-screen-pane" id="screenGeral" data-screen="geral" role="tabpanel">
-          <div class="shell" style="padding-top:24px">
-            <div class="screen-header-callout">
-              <span class="section-kicker">Inteligência de Mercado</span>
-              <h2>Visão Geral da Prospecção &amp; Validação Artística</h2>
-              <p>Contexto comercial de João Bosco &amp; Gabriel, histórico de apresentações reais, modelo financeiro do cachê de R$ 30 mil e filtros de qualidade.</p>
-            </div>
-            <section id="artista">
+
+    <!-- ==========================================
+         TELA 1: 📊 VISÃO GERAL & INTELIGÊNCIA (ESQUERDA)
+         ========================================== -->
+    <div class="app-view" id="viewGeral" role="tabpanel" aria-labelledby="tabBtnGeral">
+      <div class="shell" style="padding-top:28px">
+        <div class="view-header-callout">
+          <span class="section-kicker">Inteligência de Mercado</span>
+          <h2>Visão Geral da Prospecção &amp; Validação da Dupla</h2>
+          <p>Contexto comercial de João Bosco &amp; Gabriel, histórico de apresentações reais, modelo financeiro do cachê especial de R$ 30 mil e filtros de qualidade.</p>
+        </div>
+        <section id="artista">
       <h2>Leitura comercial de João Bosco &amp; Gabriel</h2>
       <p class="section-intro">A dupla não deve ser apresentada como aposta desconhecida. O argumento é “artista nacional com repertório reconhecido, números comprováveis e oportunidade especial de contratação”.</p>
       <div class="grid-3">
@@ -1165,7 +1568,7 @@
         </ul></div>
       </details>
     </section>
-            <section id="historico">
+        <section id="historico">
       <h2>O padrão real de lugares onde a dupla já tocou</h2>
       <p class="section-intro">As fontes mostram que João Bosco &amp; Gabriel trabalham bem em eventos públicos e agrosertanejos de vários dias. Isso muda a prospecção: além de casas, entram prefeituras, comissões de festa e produtoras de rodeio.</p>
       <div class="grid-3">
@@ -1177,7 +1580,7 @@
         <article class="panel"><div class="panel-body"><span class="tag mid">Leitura comercial</span><h3>O produto é “festa pronta”, não só balada</h3><p>A combinação recorrente é sertanejo nacional + rodeio/feira + várias atrações + receita pública, patrocínio, camarote ou bar. Esse modelo é mais parecido com o histórico da dupla do que uma casa pequena dependente apenas de ingresso.</p></div></article>
       </div>
     </section>
-            <section id="viabilidade">
+        <section id="viabilidade">
       <h2>Economia: leitura rápida do cachê</h2>
       <p class="section-intro">Abaixo, receita bruta teórica a 70% da capacidade e ingresso médio de R$ 75 — apenas um teste de escala, antes de taxas, impostos, marketing, técnica, equipe, ECAD, hospitalidade e demais custos.</p>
       <div class="grid-3">
@@ -1190,7 +1593,7 @@
         <p>Uma casa de 8 ou 12 mil lugares pode ter escala financeira, mas pode exigir um artista muito maior para headline. Já uma casa menor pode comprar o show se monetizar bem bar, mesas, camarotes, patrocínio ou evento fechado.</p>
       </div>
     </section>
-            <section id="descartados">
+        <section id="descartados">
       <h2>Lugares pesquisados e não priorizados</h2>
       <p class="section-intro">Não foram descartados por “serem ruins”, e sim porque a escala não parece compatível com R$ 30 mil ou porque faltou evidência suficiente.</p>
       <div class="excluded">
@@ -1199,7 +1602,7 @@
         <article class="excluded-card"><h3>Casas antigas/rebatizadas</h3><p>Wood’s, Villa Mix e nomes históricos apareceram em fontes antigas, mas não entraram sem comprovação atual de operação, capacidade e contato.</p></article>
       </div>
     </section>
-            <section id="metodologia">
+        <section id="metodologia">
       <h2>Limites da pesquisa</h2>
       <div class="grid-2">
         <div class="panel"><div class="panel-body"><h3>O que está confirmado</h3><p>Estruturas e contatos oficiais foram priorizados. Sócios foram ligados às empresas por cadastros públicos atuais; redes sociais foram conectadas a sites oficiais, páginas institucionais ou perfis públicos convergentes.</p></div></div>
@@ -1214,12 +1617,15 @@
         <p>Os 104 endereços HTTP/HTTPS únicos presentes nesta versão responderam com sucesso no teste final, incluindo sites oficiais, fontes, redes sociais e botões de WhatsApp. Links de e-mail e telefone tiveram o formato conferido; a existência da caixa, o atendimento do número e a entrega da mensagem só podem ser comprovados com o contato real.</p>
       </div>
     </section>
-          </div>
-        </div>
-      
-        <!-- TELA 2: 🎯 25 OPORTUNIDADES & ALVOS (MEIO - PRINCIPAL) -->
-        <div class="app-screen-pane active" id="screenOportunidades" data-screen="oportunidades" role="tabpanel">
-          <header class="hero">
+      </div>
+    </div>
+
+
+    <!-- ==========================================
+         TELA 2: 🎯 25 OPORTUNIDADES & ALVOS (MEIO - PRINCIPAL)
+         ========================================== -->
+    <div class="app-view active" id="viewOportunidades" role="tabpanel" aria-labelledby="tabBtnOportunidades">
+      <header class="hero">
     <div class="shell">
       <div class="eyebrow">
         <span class="tag primary">Dossiê comercial</span>
@@ -1253,7 +1659,7 @@
       </div>
     </div>
   </header>
-          <section class="toolbar" aria-label="Filtros da shortlist">
+      <section class="toolbar" aria-label="Filtros da shortlist">
     <div class="shell toolbar-inner">
       <div class="filters">
         <button class="filter active" type="button" data-filter="all">Todos</button>
@@ -1271,8 +1677,11 @@
       </div>
     </div>
   </section>
-          <div class="shell">
-            <section class="quick-start" id="comecar">
+      <div class="shell">
+        <div class="swipe-hint">
+          <span>👈 Arraste para os lados para alternar entre as 3 telas 👉</span>
+        </div>
+        <section class="quick-start" id="comecar">
       <span class="section-kicker">Comece por aqui</span>
       <h2>Use este material como uma fila de contatos</h2>
       <p class="section-intro">A página foi organizada para a execução comercial. Não é necessário ler tudo antes de começar: siga os três passos e abra as fontes somente quando precisar confirmar uma informação.</p>
@@ -1295,7 +1704,7 @@
         </div>
       </div>
     </section>
-            <section id="novos-adicionados">
+        <section id="novos-adicionados">
       <span class="section-kicker">Novos alvos qualificados</span>
       <h2>Novos adicionados: 6 oportunidades para abordagem</h2>
       <p class="section-intro">Operações pesquisadas e qualificadas com contatos nominais checados em 21/09/2026. Prioriza produtores com múltiplos rodeios (MP Promoções), arenas de grande fluxo (Sumaré e Piracicaba), grandes festas municipais com verba pública (Jundiaí e Valinhos) e polo de shows no Vale do Paraíba (Palácio Sunset).</p>
@@ -2377,7 +2786,7 @@
 
       </div>
     </section>
-            <section id="contatos">
+        <section id="contatos">
       <h2>Contatos das casas já analisadas</h2>
       <p class="section-intro">Os botões principais abaixo foram convertidos para telefone, WhatsApp, e-mail ou Instagram. LinkedIn aparece apenas dentro das fichas antigas como comprovação de cargo, não como canal recomendado de venda.</p>
       <div class="grid-2">
@@ -2391,7 +2800,7 @@
         <article class="panel"><div class="panel-body"><span class="tag mid">Coração Sertanejo</span><h3>Zacarias — gerente</h3><p>WhatsApp nominal publicado pela própria operação em resposta a cliente. Pedir confirmação de quem fecha a agenda.</p><div class="contact-actions"><a href="https://wa.me/5511987326651?text=Ol%C3%A1%2C%20Zacarias.%20Represento%20Jo%C3%A3o%20Bosco%20%26%20Gabriel%20e%20gostaria%20de%20conversar%20sobre%20uma%20data%20especial%20na%20casa." target="_blank" rel="noopener">Falar com Zacarias</a></div></div></article>
       </div>
     </section>
-            <section id="mais-lugares">
+        <section id="mais-lugares">
       <h2>Mais lugares semelhantes aos palcos da dupla</h2>
       <p class="section-intro">Lista nova, baseada em rodeios, exposições e festas municipais. “Capacidade” só aparece quando há fonte; nos demais casos, uso público total, área do recinto ou deixo a lotação como “a confirmar”. O canal indicado em cada ficha não depende do LinkedIn.</p>
       <div class="notice success">
@@ -3774,7 +4183,7 @@
 
       </div>
     </section>
-            <section id="shortlist">
+        <section id="shortlist">
       <h2>Shortlist detalhada</h2>
       <p class="section-intro">Cada ficha agora começa por uma pessoa nominal. “Contato direto” significa mensagem para o perfil, e-mail ou WhatsApp daquela pessoa; não significa que todos estejam publicamente confirmados como talent buyers. Essa diferença está escrita em cada caso.</p>
 
@@ -5064,18 +5473,21 @@
 </article>
       </div>
     </section>
-          </div>
+      </div>
+    </div>
+
+
+    <!-- ==========================================
+         TELA 3: 📞 ROTEIRO & ABORDAGEM COMERCIAL (DIREITA)
+         ========================================== -->
+    <div class="app-view" id="viewRoteiro" role="tabpanel" aria-labelledby="tabBtnRoteiro">
+      <div class="shell" style="padding-top:28px">
+        <div class="view-header-callout">
+          <span class="section-kicker">Execução Comercial</span>
+          <h2>Roteiro de Abordagem &amp; Argumentação de Vendas</h2>
+          <p>Scripts prontos de WhatsApp e ligação telefônica, ordem recomendada de abordagem e regras práticas para o vendedor falar com segurança.</p>
         </div>
-      
-        <!-- TELA 3: 📞 ROTEIRO & ABORDAGEM COMERCIAL (DIREITA) -->
-        <div class="app-screen-pane" id="screenRoteiro" data-screen="roteiro" role="tabpanel">
-          <div class="shell" style="padding-top:24px">
-            <div class="screen-header-callout">
-              <span class="section-kicker">Execução Comercial</span>
-              <h2>Roteiro de Abordagem &amp; Argumentação de Vendas</h2>
-              <p>Scripts prontos de WhatsApp e ligação, ordem tática de prioridade e regras de ouro para não passar vergonha com os contratantes.</p>
-            </div>
-            <section id="ordem">
+        <section id="ordem">
       <h2>Ordem de abordagem recomendada</h2>
       <p class="section-intro">A ordem agora privilegia quem já contratou a dupla e quem pode abrir mais de uma praça. Todos os primeiros caminhos abaixo funcionam sem depender do LinkedIn.</p>
       <div class="grid-3">
@@ -5103,7 +5515,7 @@
         <p>O tamanho da casa permite o cachê, mas o comprador vai perguntar quanto o artista movimenta naquela praça. O vendedor deve ter em mãos público comprovado, streaming e redes por região, vídeo ao vivo, rider enxuto e duas ou três datas possíveis.</p>
       </div>
     </section>
-            <section id="roteiro">
+        <section id="roteiro">
       <h2>Como fazer o primeiro contato</h2>
       <p class="section-intro">Como a dupla já tem reconhecimento nacional, a primeira mensagem deve parecer uma oportunidade concreta de agenda — curta, pessoal e com a razão específica do encaixe naquela operação.</p>
       <div class="grid-2">
@@ -5129,7 +5541,7 @@
         </div>
       </div>
     </section>
-            <section id="manual-anti-gafe">
+        <section id="manual-anti-gafe">
       <span class="section-kicker">Segurança operacional na prospecção</span>
       <h2>Manual de Abordagem: Como não passar vergonha no primeiro contato</h2>
       <p class="section-intro">O maior risco em vendas artísticas é mandar mensagem informal como se estivesse no celular pessoal do presidente, quando na verdade quem atende é uma recepção ou assistente de produção. Abaixo, todos os contatos do dossiê estão classificados por quem realmente atende e qual frase exata deve ser dita.</p>
@@ -5300,192 +5712,165 @@
         </article>
       </div>
     </section>
-          </div>
-        </div>
+      </div>
     </div>
-  </div>
 
-
-  <footer>
+<footer>
     <div class="shell">Pesquisa comercial para João Bosco &amp; Gabriel revisada em 19 de setembro de 2026. Preços, agenda, cargos e telefones podem mudar; reconfirmar antes de enviar proposta ou contrato.</div>
   </footer>
-
-  <nav class="mobile-dock" aria-label="Atalhos da página">
-    <a href="#novos-adicionados">Novos (6)</a>
-    <a href="#manual-anti-gafe">Anti-Gafe</a>
-    <a href="#mais-lugares">Oportunidades</a>
-    <a href="#roteiro">Roteiro</a>
-  </nav>
-
-  <button class="print-button" type="button" onclick="window.print()" aria-label="Imprimir ou salvar a página em PDF">Imprimir / salvar PDF</button>
-
+<button class="print-button" type="button" onclick="window.print()" aria-label="Imprimir ou salvar a página em PDF">Imprimir / salvar PDF</button>
   <script>
-    // --- 3 DYNAMIC SCREENS NAVIGATION LOGIC ---
-    const screensViewport = document.getElementById('screensViewport');
-    const screensTrack = document.getElementById('screensTrack');
-    const appTabs = document.querySelectorAll('.app-tab');
-    const screenDots = document.querySelectorAll('.screen-dot');
-    const screenPanes = document.querySelectorAll('.app-screen-pane');
+    // --- 3 VIEWS SWITCHING & MOBILE TOUCH SWIPE LOGIC ---
+    const screens = ['geral', 'oportunidades', 'roteiro'];
+    let currentScreen = 'oportunidades';
 
-    const screensMap = {
-      'geral': 0,
-      'oportunidades': 1,
-      'roteiro': 2
+    const tabButtons = {
+      geral: document.getElementById('tabBtnGeral'),
+      oportunidades: document.getElementById('tabBtnOportunidades'),
+      roteiro: document.getElementById('tabBtnRoteiro')
     };
 
-    let currentScreenIndex = 1; // Start on Oportunidades (Screen 2)
+    const views = {
+      geral: document.getElementById('viewGeral'),
+      oportunidades: document.getElementById('viewOportunidades'),
+      roteiro: document.getElementById('viewRoteiro')
+    };
 
-    function goToScreen(screenName, smooth = true) {
-      if (!(screenName in screensMap)) return;
-      currentScreenIndex = screensMap[screenName];
+    const dots = document.querySelectorAll('.screen-dot');
 
-      // Update Tab Buttons
-      appTabs.forEach(tab => {
-        const isActive = tab.dataset.screen === screenName;
-        tab.classList.toggle('active', isActive);
-        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      });
+    function switchView(targetScreen, scrollUp = true) {
+      if (!screens.includes(targetScreen)) return;
+      currentScreen = targetScreen;
 
-      // Update Dots
-      screenDots.forEach(dot => {
-        dot.classList.toggle('active', dot.dataset.dot === screenName);
-      });
-
-      // Update Desktop Transform
-      const isMobile = window.innerWidth <= 650;
-      if (isMobile) {
-        const targetPane = document.getElementById('screen' + screenName.charAt(0).toUpperCase() + screenName.slice(1));
-        if (targetPane) {
-          screensViewport.scrollTo({
-            left: targetPane.offsetLeft,
-            behavior: smooth ? 'smooth' : 'instant'
-          });
+      // Toggle views visibility
+      screens.forEach(s => {
+        if (views[s]) {
+          views[s].classList.toggle('active', s === targetScreen);
         }
-      } else {
-        screensTrack.style.transform = `translateX(-${currentScreenIndex * 33.333333}%)`;
-        window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'instant' });
+        if (tabButtons[s]) {
+          tabButtons[s].classList.toggle('active', s === targetScreen);
+          tabButtons[s].setAttribute('aria-selected', s === targetScreen ? 'true' : 'false');
+        }
+      });
+
+      // Update mobile dots
+      dots.forEach(d => {
+        d.classList.toggle('active', d.dataset.dot === targetScreen);
+      });
+
+      if (scrollUp) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
 
-    // Tab button click handlers
-    appTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        goToScreen(tab.dataset.screen);
-      });
+    // Attach click listeners to tabs
+    Object.keys(tabButtons).forEach(screen => {
+      const btn = tabButtons[screen];
+      if (btn) {
+        btn.addEventListener('click', () => switchView(screen, true));
+      }
     });
 
-    // Touch swipe listener for mobile via Scroll-Snap
-    if (screensViewport) {
-      let scrollTimeout;
-      screensViewport.addEventListener('scroll', () => {
-        if (window.innerWidth > 650) return;
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-          const scrollLeft = screensViewport.scrollLeft;
-          const paneWidth = window.innerWidth;
-          const activeIdx = Math.round(scrollLeft / paneWidth);
-          const screenNames = ['geral', 'oportunidades', 'roteiro'];
-          const activeName = screenNames[activeIdx] || 'oportunidades';
-          
-          appTabs.forEach(tab => {
-            const isActive = tab.dataset.screen === activeName;
-            tab.classList.toggle('active', isActive);
-            tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-          });
-          screenDots.forEach(dot => {
-            dot.classList.toggle('active', dot.dataset.dot === activeName);
-          });
-        }, 60);
-      }, { passive: true });
-    }
-
-    // Touch Swipe gestures for desktop / trackpad support
+    // --- MOBILE TOUCH SWIPE GESTURE SUPPORT ---
     let touchStartX = 0;
+    let touchStartY = 0;
     let touchEndX = 0;
+    let touchEndY = 0;
 
     document.addEventListener('touchstart', e => {
       touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
     }, { passive: true });
 
     document.addEventListener('touchend', e => {
       touchEndX = e.changedTouches[0].screenX;
-      handleSwipeGesture();
+      touchEndY = e.changedTouches[0].screenY;
+      handleTouchSwipe();
     }, { passive: true });
 
-    function handleSwipeGesture() {
+    function handleTouchSwipe() {
       const diffX = touchEndX - touchStartX;
-      if (Math.abs(diffX) > 85 && window.innerWidth > 650) {
-        // Swipe left -> go right
-        if (diffX < 0 && currentScreenIndex < 2) {
-          const screens = ['geral', 'oportunidades', 'roteiro'];
-          goToScreen(screens[currentScreenIndex + 1]);
+      const diffY = touchEndY - touchStartY;
+
+      // Only trigger if horizontal swipe is substantial and greater than vertical movement
+      if (Math.abs(diffX) > 65 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
+        const curIdx = screens.indexOf(currentScreen);
+        // Swiping right (finger moves ->) goes to screen on the left (e.g. Oportunidades -> Geral)
+        if (diffX > 0 && curIdx > 0) {
+          switchView(screens[curIdx - 1], true);
         }
-        // Swipe right -> go left
-        else if (diffX > 0 && currentScreenIndex > 0) {
-          const screens = ['geral', 'oportunidades', 'roteiro'];
-          goToScreen(screens[currentScreenIndex - 1]);
+        // Swiping left (finger moves <-) goes to screen on the right (e.g. Oportunidades -> Roteiro)
+        else if (diffX < 0 && curIdx < screens.length - 1) {
+          switchView(screens[curIdx + 1], true);
         }
       }
     }
 
-    // Header buttons shortcut routing
+    // --- LINK SHORTCUT ROUTING & AUTO-SWITCHING ---
     document.addEventListener('click', e => {
-      const btn = e.target.closest('a[href^="#"]');
-      if (!btn) return;
-      const href = btn.getAttribute('href');
-      if (['#artista', '#historico', '#viabilidade', '#descartados', '#metodologia'].includes(href)) {
+      const link = e.target.closest('a[href^="#"]');
+      if (!link) return;
+      const href = link.getAttribute('href');
+
+      if (['#artista', '#historico', '#viabilidade', '#descartados', '#metodologia', '#geral', '#viewGeral'].includes(href)) {
         e.preventDefault();
-        goToScreen('geral');
-        setTimeout(() => {
-          const target = document.querySelector(href);
-          if (target) target.scrollIntoView({ behavior: 'smooth' });
-        }, 150);
-      } else if (['#ordem', '#roteiro', '#manual-anti-gafe'].includes(href)) {
+        switchView('geral', false);
+        if (href !== '#geral' && href !== '#viewGeral') {
+          setTimeout(() => {
+            const el = document.querySelector(href);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 80);
+        }
+      } else if (['#ordem', '#roteiro', '#manual-anti-gafe', '#vendas', '#viewRoteiro'].includes(href)) {
         e.preventDefault();
-        goToScreen('roteiro');
-        setTimeout(() => {
-          const target = document.querySelector(href);
-          if (target) target.scrollIntoView({ behavior: 'smooth' });
-        }, 150);
-      } else if (['#novos-adicionados', '#contatos', '#mais-lugares', '#shortlist', '#comecar'].includes(href)) {
+        switchView('roteiro', false);
+        if (href !== '#roteiro' && href !== '#vendas' && href !== '#viewRoteiro') {
+          setTimeout(() => {
+            const el = document.querySelector(href);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 80);
+        }
+      } else if (['#novos-adicionados', '#contatos', '#mais-lugares', '#shortlist', '#comecar', '#oportunidades', '#viewOportunidades'].includes(href)) {
         e.preventDefault();
-        goToScreen('oportunidades');
-        setTimeout(() => {
-          const target = document.querySelector(href);
-          if (target) target.scrollIntoView({ behavior: 'smooth' });
-        }, 150);
+        switchView('oportunidades', false);
+        if (href !== '#oportunidades' && href !== '#viewOportunidades') {
+          setTimeout(() => {
+            const el = document.querySelector(href);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 80);
+        }
       }
     });
 
-    // Mobile dock shortcuts routing
-    document.querySelectorAll('.mobile-dock a').forEach(a => {
-      a.addEventListener('click', e => {
-        const href = a.getAttribute('href');
-        if (href === '#novos-adicionados' || href === '#mais-lugares') {
-          e.preventDefault();
-          goToScreen('oportunidades');
-          setTimeout(() => {
-            const target = document.querySelector(href);
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
-          }, 150);
-        } else if (href === '#manual-anti-gafe' || href === '#roteiro') {
-          e.preventDefault();
-          goToScreen('roteiro');
-          setTimeout(() => {
-            const target = document.querySelector(href);
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
-          }, 150);
-        }
-      });
-    });
+    // Hash check on initial load or default to Oportunidades
+    const initialHash = window.location.hash;
+    if (['#artista', '#historico', '#viabilidade', '#descartados', '#metodologia', '#geral', '#viewGeral'].includes(initialHash)) {
+      switchView('geral', false);
+      if (initialHash && initialHash !== '#geral' && initialHash !== '#viewGeral') {
+        setTimeout(() => {
+          const el = document.querySelector(initialHash);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else if (['#ordem', '#roteiro', '#manual-anti-gafe', '#vendas', '#viewRoteiro'].includes(initialHash)) {
+      switchView('roteiro', false);
+      if (initialHash && initialHash !== '#vendas' && initialHash !== '#roteiro' && initialHash !== '#viewRoteiro') {
+        setTimeout(() => {
+          const el = document.querySelector(initialHash);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      switchView('oportunidades', false);
+      if (initialHash && initialHash !== '#oportunidades' && initialHash !== '#viewOportunidades') {
+        setTimeout(() => {
+          const el = document.querySelector(initialHash);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
 
-    // Initialize to Screen 2 (Oportunidades) on load
-    window.addEventListener('DOMContentLoaded', () => {
-      goToScreen('oportunidades', false);
-    });
-    // Also run immediately
-    setTimeout(() => { goToScreen('oportunidades', false); }, 50);
-
+    // --- VENUE CARDS & FILTERS LOGIC ---
     const buttons = [...document.querySelectorAll('.filter')];
     const venues = [...document.querySelectorAll('.venue')];
     const search = document.getElementById('search');
@@ -5496,6 +5881,7 @@
     let activeFilter = 'all';
 
     function applyFilters() {
+      if (!search) return;
       const query = search.value.trim().toLocaleLowerCase('pt-BR');
       let visible = 0;
       venues.forEach((venue) => {
@@ -5504,130 +5890,55 @@
         venue.hidden = !(tierMatch && searchMatch);
         if (!venue.hidden) visible += 1;
       });
-      results.textContent = `${visible} ${visible === 1 ? 'resultado' : 'resultados'}`;
+      if (results) results.textContent = `${visible} de ${venues.length}`;
     }
 
     buttons.forEach((button) => {
       button.addEventListener('click', () => {
-        buttons.forEach((item) => item.classList.remove('active'));
+        buttons.forEach((b) => b.classList.remove('active'));
         button.classList.add('active');
         activeFilter = button.dataset.filter;
-        
-    // Tab switching for each venue card
-    document.addEventListener('click', (e) => {
-      // Tab button click
-      const tabBtn = e.target.closest('.venue-tab-btn');
-      if (tabBtn) {
-        const venue = tabBtn.closest('.venue');
-        const tab = tabBtn.dataset.tab;
-        if (!venue || !tab) return;
-        
-        venue.querySelectorAll('.venue-tab-btn').forEach(btn => {
-          btn.classList.remove('active');
-          btn.setAttribute('aria-selected', 'false');
-        });
-        tabBtn.classList.add('active');
-        tabBtn.setAttribute('aria-selected', 'true');
-
-        venue.querySelectorAll('.tab-pane').forEach(pane => {
-          pane.classList.remove('active');
-          if (pane.dataset.pane === tab) {
-            pane.classList.add('active');
-          }
-        });
-        return;
-      }
-
-      // Jump tab button click (e.g. "Ver Palco ->", "Ir para Contato ->")
-      const jumpBtn = e.target.closest('.btn-jump-tab');
-      if (jumpBtn) {
-        const venue = jumpBtn.closest('.venue');
-        const target = jumpBtn.dataset.target;
-        if (!venue || !target) return;
-
-        const targetTabBtn = venue.querySelector(`.venue-tab-btn[data-tab="${target}"]`);
-        if (targetTabBtn) {
-          targetTabBtn.click();
-          venue.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-        return;
-      }
-
-      // Copy script button click
-      const copyBtn = e.target.closest('.btn-copy-script');
-      if (copyBtn) {
-        const textToCopy = copyBtn.getAttribute('data-copy');
-        if (!textToCopy) return;
-        
-        navigator.clipboard.writeText(textToCopy).then(() => {
-          const originalText = copyBtn.innerHTML;
-          copyBtn.classList.add('copied');
-          copyBtn.innerHTML = '✓ Copiado!';
-          setTimeout(() => {
-            copyBtn.classList.remove('copied');
-            copyBtn.innerHTML = originalText;
-          }, 2200);
-        }).catch(() => {
-          window.prompt('Copie o script de abordagem:', textToCopy);
-        });
-        return;
-      }
+        applyFilters();
+      });
     });
 
-    // Toggle expand all tabs mode
-    const toggleExpandBtn = document.getElementById('toggleExpandAll');
-    if (toggleExpandBtn) {
-      let allExpanded = false;
-      toggleExpandBtn.addEventListener('click', () => {
-        allExpanded = !allExpanded;
-        document.body.classList.toggle('venues-expanded', allExpanded);
-        toggleExpandBtn.classList.toggle('active', allExpanded);
-        toggleExpandBtn.textContent = allExpanded ? '🗂️ Modo abas compactas' : '📑 Modo expandido';
+    if (search) search.addEventListener('input', applyFilters);
+
+    if (shareButton) {
+      shareButton.addEventListener('click', async () => {
+        const shareData = {
+          title: document.title,
+          text: 'Mapa de oportunidades em SP para João Bosco & Gabriel.',
+          url: window.location.href,
+        };
+        try {
+          if (navigator.share) {
+            await navigator.share(shareData);
+          } else {
+            await navigator.clipboard.writeText(window.location.href);
+            shareButton.textContent = 'Link copiado!';
+            setTimeout(() => { shareButton.textContent = 'Compartilhar página'; }, 2000);
+          }
+        } catch (error) {
+          if (error.name !== 'AbortError') {
+            await navigator.clipboard.writeText(window.location.href);
+            shareButton.textContent = 'Link copiado!';
+            setTimeout(() => { shareButton.textContent = 'Compartilhar página'; }, 2000);
+          }
+        }
       });
     }
 
-    applyFilters();
+    if (copyTemplate && messageTemplate) {
+      copyTemplate.addEventListener('click', async () => {
+        await navigator.clipboard.writeText(messageTemplate.value.trim());
+        copyTemplate.textContent = 'Mensagem copiada!';
+        setTimeout(() => { copyTemplate.textContent = 'Copiar mensagem de WhatsApp'; }, 2000);
       });
-    });
+    }
 
-    search.addEventListener('input', applyFilters);
-
-    shareButton.addEventListener('click', async () => {
-      const shareData = {
-        title: document.title,
-        text: 'Mapa de oportunidades e contatos para João Bosco & Gabriel.',
-        url: window.location.href
-      };
-      try {
-        if (navigator.share) {
-          await navigator.share(shareData);
-        } else {
-          await navigator.clipboard.writeText(window.location.href);
-          shareButton.textContent = 'Link copiado';
-          setTimeout(() => { shareButton.textContent = 'Compartilhar página'; }, 1800);
-        }
-      } catch (error) {
-        if (error.name !== 'AbortError') {
-          window.prompt('Copie o endereço da página:', window.location.href);
-        }
-      }
-    });
-
-    copyTemplate.addEventListener('click', async () => {
-      const text = messageTemplate.innerText;
-      try {
-        await navigator.clipboard.writeText(text);
-        copyTemplate.textContent = 'Mensagem copiada';
-        setTimeout(() => { copyTemplate.textContent = 'Copiar mensagem'; }, 1800);
-      } catch (error) {
-        window.prompt('Copie a mensagem:', text);
-      }
-    });
-
-    
-    // Tab switching for each venue card
+    // --- VENUE INTERNAL TABS (FIT, PALCO, CONTATO) ---
     document.addEventListener('click', (e) => {
-      // Tab button click
       const tabBtn = e.target.closest('.venue-tab-btn');
       if (tabBtn) {
         const venue = tabBtn.closest('.venue');
@@ -5643,14 +5954,12 @@
 
         venue.querySelectorAll('.tab-pane').forEach(pane => {
           pane.classList.remove('active');
-          if (pane.dataset.pane === tab) {
-            pane.classList.add('active');
-          }
         });
-        return;
+        const activePane = venue.querySelector(`.tab-pane[data-pane="${tab}"]`);
+        if (activePane) activePane.classList.add('active');
       }
 
-      // Jump tab button click (e.g. "Ver Palco ->", "Ir para Contato ->")
+      // Jump tab buttons
       const jumpBtn = e.target.closest('.btn-jump-tab');
       if (jumpBtn) {
         const venue = jumpBtn.closest('.venue');
@@ -5658,47 +5967,48 @@
         if (!venue || !target) return;
 
         const targetTabBtn = venue.querySelector(`.venue-tab-btn[data-tab="${target}"]`);
-        if (targetTabBtn) {
-          targetTabBtn.click();
-          venue.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-        return;
+        if (targetTabBtn) targetTabBtn.click();
       }
 
-      // Copy script button click
+      // Script copy buttons
       const copyBtn = e.target.closest('.btn-copy-script');
       if (copyBtn) {
-        const textToCopy = copyBtn.getAttribute('data-copy');
-        if (!textToCopy) return;
-        
-        navigator.clipboard.writeText(textToCopy).then(() => {
-          const originalText = copyBtn.innerHTML;
-          copyBtn.classList.add('copied');
-          copyBtn.innerHTML = '✓ Copiado!';
-          setTimeout(() => {
-            copyBtn.classList.remove('copied');
-            copyBtn.innerHTML = originalText;
-          }, 2200);
-        }).catch(() => {
-          window.prompt('Copie o script de abordagem:', textToCopy);
-        });
-        return;
+        const textToCopy = copyBtn.dataset.copy;
+        if (textToCopy) {
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            const originalText = copyBtn.innerHTML;
+            copyBtn.classList.add('copied');
+            copyBtn.innerHTML = '✅ Copiado!';
+            setTimeout(() => {
+              copyBtn.classList.remove('copied');
+              copyBtn.innerHTML = originalText;
+            }, 2000);
+          });
+        }
       }
     });
 
-    // Toggle expand all tabs mode
+    // Expand All Toggle in Toolbar
     const toggleExpandBtn = document.getElementById('toggleExpandAll');
     if (toggleExpandBtn) {
-      let allExpanded = false;
+      let isAllExpanded = false;
       toggleExpandBtn.addEventListener('click', () => {
-        allExpanded = !allExpanded;
-        document.body.classList.toggle('venues-expanded', allExpanded);
-        toggleExpandBtn.classList.toggle('active', allExpanded);
-        toggleExpandBtn.textContent = allExpanded ? '🗂️ Modo abas compactas' : '📑 Modo expandido';
+        isAllExpanded = !isAllExpanded;
+        toggleExpandBtn.classList.toggle('active', isAllExpanded);
+        toggleExpandBtn.innerHTML = isAllExpanded ? '📂 Modo compacto' : '📋 Ver tudo aberto';
+        
+        document.querySelectorAll('.venue').forEach(venue => {
+          if (isAllExpanded) {
+            venue.querySelectorAll('.tab-pane').forEach(p => p.style.display = 'block');
+          } else {
+            venue.querySelectorAll('.tab-pane').forEach(p => p.style.display = '');
+          }
+        });
       });
     }
 
     applyFilters();
   </script>
+
 </body>
 </html>
