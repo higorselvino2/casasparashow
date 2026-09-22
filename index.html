@@ -5780,7 +5780,12 @@
     let swipeStartedInTabs = false;
 
     document.addEventListener('touchstart', e => {
-      swipeStartedInTabs = !!(e.target.closest('.venue-tabs') || e.target.closest('.venue-body'));
+      swipeStartedInTabs = !!(
+        e.target.closest('.venue-tabs') ||
+        e.target.closest('.venue-body') ||
+        e.target.closest('.filters') ||
+        e.target.closest('.toolbar')
+      );
       touchStartX = e.changedTouches[0].screenX;
       touchStartY = e.changedTouches[0].screenY;
     }, { passive: true });
