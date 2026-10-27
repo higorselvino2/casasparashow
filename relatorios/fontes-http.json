@@ -1,0 +1,686 @@
+{
+  "researchDate": "2026-10-27",
+  "checkedAt": "2026-10-27T20:33:36.595Z",
+  "meaning": "Checagem HTTP das fontes; os fatos foram revisados na pesquisa. Erro ou bloqueio HTTP não significa que a informação seja falsa. Nenhuma mensagem ou ligação foi feita.",
+  "records": [
+    {
+      "url": "https://www.guiadasemana.com.br/sao-paulo/na-cidade/evento/rodeio-de-jaguariuna-jorge-mateus-complexo-red-eventos-11-05-2013",
+      "status": 403,
+      "finalUrl": "https://www.guiadasemana.com.br/sao-paulo/na-cidade/evento/rodeio-de-jaguariuna-jorge-mateus-complexo-red-eventos-11-05-2013",
+      "title": "Just a moment...",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://www.econodata.com.br/consulta-empresa/04001315000104-gp-producoes-e-eventos-ltda",
+      "status": 403,
+      "finalUrl": "https://www.econodata.com.br/consulta-empresa/04001315000104-gp-producoes-e-eventos-ltda",
+      "title": "Você atingiu o limite de consultas",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://www.instagram.com/redeventosjaguariuna/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/redeventosjaguariuna/",
+      "title": "Red Eventos Jaguariuna (&#064;redeventosjaguariuna) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://casadosdados.com.br/solucao/cnpj/terra-sp-ltda-48577205000160",
+      "status": 403,
+      "finalUrl": "https://casadosdados.com.br/solucao/cnpj/terra-sp-ltda-48577205000160",
+      "title": "Just a moment...",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://www.instagram.com/palaciosunset/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/palaciosunset/",
+      "title": "Palácio Sunset (&#064;palaciosunset) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://spriomais.com.br/2025/07/16/churrasco-majestade-leva-marcos-belutti-e-cardapio-com-wagyu-a-sao-jose/",
+      "status": 200,
+      "finalUrl": "https://spriomais.com.br/2025/07/16/churrasco-majestade-leva-marcos-belutti-e-cardapio-com-wagyu-a-sao-jose/",
+      "title": "Churrasco majestade leva Marcos &amp; Belutti e cardápio com Wagyu",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://terrasp.com/faca-seu-evento/",
+      "status": 200,
+      "finalUrl": "https://terrasp.com/faca-seu-evento/",
+      "title": "Faça seu evento &#8211; Terra SP",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/terrasp_/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/terrasp_/",
+      "title": "Terra SP (&#064;terrasp_) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://arenamais.com/contato/",
+      "status": 200,
+      "finalUrl": "https://arenamais.com/contato/",
+      "title": "Contato &#8211; Arena+",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://palaciosunset.com.br/contato/",
+      "status": 200,
+      "finalUrl": "https://palaciosunset.com.br/contato/",
+      "title": "Palácio Sunset | Enjoy Live",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://arenamais.com/faca-seu-evento/",
+      "status": 200,
+      "finalUrl": "https://arenamais.com/faca-seu-evento/",
+      "title": "Faça seu evento &#8211; Arena+",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://palaciosunset.com.br/apoio-ao-produtor/",
+      "status": 200,
+      "finalUrl": "https://palaciosunset.com.br/apoio-ao-produtor/",
+      "title": "Palácio Sunset | Enjoy Live",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://arenamais.com/o-que-ja-rolou/",
+      "status": 200,
+      "finalUrl": "https://arenamais.com/o-que-ja-rolou/",
+      "title": "O que já rolou &#8211; Arena+",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://cnpj.biz/53603300000121",
+      "status": 403,
+      "finalUrl": "https://cnpj.biz/53603300000121",
+      "title": "Attention Required! | Cloudflare",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://vejasp.abril.com.br/consumo/mais-amados-2023-villa-country/",
+      "status": 200,
+      "finalUrl": "https://vejasp.abril.com.br/consumo/mais-amados-2023-villa-country/",
+      "title": "Villa Country completa 21 anos com nova experiência de camarote | VEJA SÃO PAULO",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.saopauloeventos.com.br/",
+      "status": 200,
+      "finalUrl": "https://www.saopauloeventos.com.br/",
+      "title": "Grupo São Paulo Eventos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://vinocoruja.com.br/lancamento-da-festa-de-peao-de-barretos-2017/",
+      "status": 406,
+      "finalUrl": "https://vinocoruja.com.br/lancamento-da-festa-de-peao-de-barretos-2017/",
+      "title": "Not Acceptable!",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://comercial.guicheweb.com.br/",
+      "status": 200,
+      "finalUrl": "https://comercial.guicheweb.com.br/",
+      "title": "Comercial Guichê Web",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.metropoles.com/sao-paulo/casona-derrite-empresario-condecorado",
+      "status": 200,
+      "finalUrl": "https://www.metropoles.com/sao-paulo/casona-derrite-empresario-condecorado",
+      "title": "Casona de Derrite: empresário citado foi condecorado por secretário",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://linktr.ee/uzna.oficial",
+      "status": 200,
+      "finalUrl": "https://linktr.ee/uzna.oficial",
+      "title": "UZNA Official: Instagram, Facebook | Linktree",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://terrasp.com/contato/",
+      "status": 200,
+      "finalUrl": "https://terrasp.com/contato/",
+      "title": "Contato &#8211; Terra SP",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.appvillacountry.com.br/",
+      "status": 200,
+      "finalUrl": "https://www.appvillacountry.com.br/",
+      "title": "Villa Country",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/villacountry/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/villacountry/",
+      "title": "Villa Country (&#064;villacountry) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://folkvalley.com.br/club/",
+      "status": 200,
+      "finalUrl": "https://folkvalley.com.br/club/",
+      "title": "club - Folk Valley",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/guimoron/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/guimoron/",
+      "title": "Gui Moron (&#064;guimoron) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/uzna.oficial/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/uzna.oficial/",
+      "title": "UZNA (&#064;uzna.oficial) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/arenamais_/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/arenamais_/",
+      "title": "Arena + (&#064;arenamais_) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://midia.market/podcast/midia/lancamento-de-eventos-com-fauze-abdouch/",
+      "status": 200,
+      "finalUrl": "https://midia.market/podcast/midia/lancamento-de-eventos-com-fauze-abdouch/",
+      "title": "Mídia Market podcast: #121 Transformando eventos em experiências de marca com Fauze Abdouch da Faro.Ag - Mídia Market",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://cnpj.biz/03936866000105",
+      "status": 403,
+      "finalUrl": "https://cnpj.biz/03936866000105",
+      "title": "Attention Required! | Cloudflare",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://agendasorocaba.com.br/uzna/henrique-juliano-2/",
+      "status": 200,
+      "finalUrl": "https://agendasorocaba.com.br/uzna/henrique-juliano-2/",
+      "title": "Henrique &amp; Juliano - UZNA | Agenda Sorocaba",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.guiadasemana.com.br/sao-paulo/shows/evento/marilia-mendonca-e-maria-cecilia-rodolfo-no-estancia-alto-da-serra-estancia-alto-da-serra-22-09-2018",
+      "status": 403,
+      "finalUrl": "https://www.guiadasemana.com.br/sao-paulo/shows/evento/marilia-mendonca-e-maria-cecilia-rodolfo-no-estancia-alto-da-serra-estancia-alto-da-serra-22-09-2018",
+      "title": "Just a moment...",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://coracaosertanejo.com.br/",
+      "status": 406,
+      "finalUrl": "https://coracaosertanejo.com.br/",
+      "title": "Not Acceptable!",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://www.instagram.com/fauze_abdouch/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/fauze_abdouch/",
+      "title": "FAUZE ABDOUCH (&#064;fauze_abdouch) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/folkvalley/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/folkvalley/",
+      "title": "Folk Valley (&#064;folkvalley) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://onstage.mus.br/website/james-blunt-terra-sp-sao-paulo-08-07-2025/",
+      "status": 200,
+      "finalUrl": "https://onstage.mus.br/website/james-blunt-terra-sp-sao-paulo-08-07-2025/",
+      "title": "James Blunt – Terra SP &#8211; São Paulo &#8211; 08/07/2025 || ONSTAGE || Official Website",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.espacounimed.com.br/faca-seu-evento/",
+      "status": 200,
+      "finalUrl": "https://www.espacounimed.com.br/faca-seu-evento/",
+      "title": "Faça seu evento - Espaço Unimed",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.unimed.coop.br/site/-/espa%C3%A7o-das-am%C3%A9ricas-passa-a-se-chamar-espa%C3%A7o-unimed",
+      "status": 200,
+      "finalUrl": "https://www.unimed.coop.br/site/-/espa%C3%A7o-das-am%C3%A9ricas-passa-a-se-chamar-espa%C3%A7o-unimed",
+      "title": "Espaço das Américas passa a se chamar Espaço Unimed - Unimed Institucional",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/estancia.oficial/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/estancia.oficial/",
+      "title": "Estância Alto da Serra (&#064;estancia.oficial) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://estancia.com.br/",
+      "status": 200,
+      "finalUrl": "https://estancia.com.br/",
+      "title": "Estância Alto da Serra",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.eventoon.com.br/evento/folk-valley-apresenta-belo-lauana-prado-em-valinhos-28-02-2026",
+      "status": 200,
+      "finalUrl": "https://www.eventoon.com.br/evento/folk-valley-apresenta-belo-lauana-prado-em-valinhos-28-02-2026",
+      "title": "Folk Valley Apresenta: Belo & Lauana Prado em Valinhos - Evento ON",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.ticket360.com.br/local/1047/espaco-unimed",
+      "status": 200,
+      "finalUrl": "https://www.ticket360.com.br/local/1047/espaco-unimed",
+      "title": "Espaço Unimed · São Paulo / SP · Ticket360",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/coracaosertanejo/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/coracaosertanejo/",
+      "title": "Coração Sertanejo Oficial (&#064;coracaosertanejo) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.redetv.uol.com.br/amp/redetvi-noticias/noticia/geral/quando-o-sao-joao-pulsa-em-sao-paulo-os-bastidores-invisiveis-do-ctn-que-ma",
+      "status": 200,
+      "finalUrl": "https://www.redetv.uol.com.br/amp/redetvi-noticias/noticia/geral/quando-o-sao-joao-pulsa-em-sao-paulo-os-bastidores-invisiveis-do-ctn-que-ma",
+      "title": "RedeTV! Quando o S&#xE3;o Jo&#xE3;o pulsa em S&#xE3;o Paulo: os bastidores invis&#xED;veis do CTN que mant&#xEA;m viva a festa junina",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://restaurantguru.com.br/Coracao-Sertanejo-Sao-Paulo",
+      "status": 200,
+      "finalUrl": "https://restaurantguru.com.br/Coracao-Sertanejo-Sao-Paulo",
+      "title": "Coração Sertanejo, São Paulo - Menu do restaurante, preços e opiniões",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://cartaodevisita.com.br/conteudo/57495/festas-e-comemoracoes-nas-grandes-casas-de-espetaculos",
+      "status": 200,
+      "finalUrl": "https://cartaodevisita.com.br/conteudo/57495/festas-e-comemoracoes-nas-grandes-casas-de-espetaculos",
+      "title": "Festas e comemorações nas grandes casas de espetáculos - Cartão de Visita News",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://casadosdados.com.br/solucao/cnpj/elvis-lima-patez-producoes-artisticas-22654204000189",
+      "status": 403,
+      "finalUrl": "https://casadosdados.com.br/solucao/cnpj/elvis-lima-patez-producoes-artisticas-22654204000189",
+      "title": "Just a moment...",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://www.instagram.com/espacounimed/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/espacounimed/",
+      "title": "Espaço Unimed (&#064;espacounimed) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/ctnsp/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/ctnsp/",
+      "title": "CTN - Centro de Tradições Nordestinas (&#064;ctnsp) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.ticketmaster.com.br/event/roberto-carlos-tokio-marine-hall",
+      "status": 200,
+      "finalUrl": "https://www.ticketmaster.com.br/event/roberto-carlos-tokio-marine-hall",
+      "title": "Roberto Carlos - Tokio Marine Hall",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/tokiomarinehall/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/tokiomarinehall/",
+      "title": "Tokio Marine Hall (&#064;tokiomarinehall) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.ctn.org.br/contato/",
+      "status": 200,
+      "finalUrl": "https://www.ctn.org.br/contato/",
+      "title": "Contato &#8211; CTN &#8211; Centro de Tradições Nordestinas",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://jundiai.sp.gov.br/cultura/gestora/",
+      "status": 200,
+      "finalUrl": "https://jundiai.sp.gov.br/cultura/gestora/",
+      "title": "Secretária | Cultura",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.tokiomarinehall.com.br/faca-seu-evento-3/",
+      "status": 200,
+      "finalUrl": "https://www.tokiomarinehall.com.br/faca-seu-evento-3/",
+      "title": "Faça seu Evento &#8902; Tokio Marine Hall",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.tokiomarinehall.com.br/contato/",
+      "status": 200,
+      "finalUrl": "https://www.tokiomarinehall.com.br/contato/",
+      "title": "Contato &#8902; Tokio Marine Hall",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.ctn.org.br/",
+      "status": 200,
+      "finalUrl": "https://www.ctn.org.br/",
+      "title": "CTN &#8211; Centro de Tradições Nordestinas",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/culturavalinhos/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/culturavalinhos/",
+      "title": "Instagram",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.novaindependencia.sp.gov.br/portal/contrato/35",
+      "status": 200,
+      "finalUrl": "https://www.novaindependencia.sp.gov.br/portal/contrato/35",
+      "title": "Prefeitura Municipal de Nova Independência - Nº 15/2024",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.valinhos.sp.gov.br/portal/noticias/0/3/59415/prefeitura-promove-oitivas-publicas-para-apresentacao-do-plano-municipal-de-cultura-de-valinhos/",
+      "status": 200,
+      "finalUrl": "https://www.valinhos.sp.gov.br/portal/noticias/0/3/59415/prefeitura-promove-oitivas-publicas-para-apresentacao-do-plano-municipal-de-cultura-de-valinhos/",
+      "title": "Prefeitura promove oitivas públicas...",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.novaindependencia.sp.gov.br/portal/secretarias/22/seretaria-de-cultura",
+      "status": 200,
+      "finalUrl": "https://www.novaindependencia.sp.gov.br/portal/secretarias/22/seretaria-de-cultura",
+      "title": "Prefeitura Municipal de Nova Independência - SERETARIA DE CULTURA",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/cidadedejundiai/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/cidadedejundiai/",
+      "title": "Prefeitura de Jundiaí (&#064;cidadedejundiai) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.itatiba.sp.gov.br/secretarias/cultura-e-turismo",
+      "status": 200,
+      "finalUrl": "https://www.itatiba.sp.gov.br/secretarias/cultura-e-turismo",
+      "title": "Cultura e Turismo - Prefeitura de Itatiba",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://cultura.jundiai.sp.gov.br/",
+      "status": 200,
+      "finalUrl": "https://cultura.jundiai.sp.gov.br/",
+      "title": "Cultura Jundiaí &#8211; O Site da Secretaria Municipal de Cultura de Jundiaí",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://ofuxico.com.br/noticias/show-romantico-de-fabio-jr-tem-muitos-beijos-de-famosos/",
+      "status": 200,
+      "finalUrl": "https://ofuxico.com.br/noticias/show-romantico-de-fabio-jr-tem-muitos-beijos-de-famosos/",
+      "title": "Show romântico de Fábio Jr. tem muitos beijos de famosos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.itatiba.sp.gov.br/turismo-itatiba/noticias/itatiba-traz-joao-bosco-gabriel-bruna-viola-e-fiduma-jeca-para-a-27-festa-de-sao-pedro",
+      "status": 200,
+      "finalUrl": "https://www.itatiba.sp.gov.br/turismo-itatiba/noticias/itatiba-traz-joao-bosco-gabriel-bruna-viola-e-fiduma-jeca-para-a-27-festa-de-sao-pedro",
+      "title": "Itatiba traz Jo&#227;o Bosco &amp; Gabriel, Bruna Viola e Fiduma &amp; Jeca para a 27&#170; Festa de S&#227;o Pedro - Prefeitura de Itatiba",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://cnpja.com/cnpj/06209387000177",
+      "status": 429,
+      "finalUrl": "https://cnpja.com/cnpj/06209387000177",
+      "title": "Vercel Security Checkpoint",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://www.instagram.com/culturaeturismoitatiba/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/culturaeturismoitatiba/",
+      "title": "Cultura e Turismo Itatiba (&#064;culturaeturismoitatiba) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://ecrie.com.br/Sistema/Conteudos/DiarioOficial/upload/u_133_27062025164902.pdf",
+      "status": 200,
+      "finalUrl": "https://ecrie.com.br/Sistema/Conteudos/DiarioOficial/upload/u_133_27062025164902.pdf",
+      "title": "",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://camaraavare.sp.gov.br/semanarios/2026/a32b983b0788f3f45c705a151727c016.pdf",
+      "status": 200,
+      "finalUrl": "https://camaraavare.sp.gov.br/semanarios/2026/a32b983b0788f3f45c705a151727c016.pdf",
+      "title": "",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/culturaavare/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/culturaavare/",
+      "title": "Secretaria de Cultura Avaré (&#064;culturaavare) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://casadosdados.com.br/solucao/cnpj/hr-estruturas-ltda-25069864000190",
+      "status": 403,
+      "finalUrl": "https://casadosdados.com.br/solucao/cnpj/hr-estruturas-ltda-25069864000190",
+      "title": "Just a moment...",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://www.montemor.sp.gov.br/portal/noticias/0/3/9320/monte-mor-anuncia-grandes-shows-da-festa-do-peao-2026",
+      "status": 200,
+      "finalUrl": "https://www.montemor.sp.gov.br/portal/noticias/0/3/9320/monte-mor-anuncia-grandes-shows-da-festa-do-peao-2026",
+      "title": "MONTE MOR ANUNCIA GRANDES SHOWS DA...",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/sumarearenamusic/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/sumarearenamusic/",
+      "title": "SUMARÉ ARENA MUSIC (&#064;sumarearenamusic) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://faici.com/a-festa/",
+      "status": 406,
+      "finalUrl": "https://faici.com/a-festa/",
+      "title": "Not Acceptable!",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://faici.com/2026/04/01/faici-2026-apresenta-line-up-de-artistas-e-novidades-em-sua-estrutura/",
+      "status": 406,
+      "finalUrl": "https://faici.com/2026/04/01/faici-2026-apresenta-line-up-de-artistas-e-novidades-em-sua-estrutura/",
+      "title": "Not Acceptable!",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://www.instagram.com/festadopeaodepiracicaba/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/festadopeaodepiracicaba/",
+      "title": "Festa do Peão de Piracicaba (&#064;festadopeaodepiracicaba) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/mppromocoesoficial/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/mppromocoesoficial/",
+      "title": "MP Promoções (&#064;mppromocoesoficial) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://eseventos.com/",
+      "status": 200,
+      "finalUrl": "https://eseventos.com/",
+      "title": "ES Agência de Eventos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://casadosdados.com.br/solucao/cnpj/ribeirao-rodeo-music-ltda-22140513000130",
+      "status": 403,
+      "finalUrl": "https://casadosdados.com.br/solucao/cnpj/ribeirao-rodeo-music-ltda-22140513000130",
+      "title": "Just a moment...",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://rodeioitu.com.br/",
+      "status": 200,
+      "finalUrl": "https://rodeioitu.com.br/",
+      "title": "Rodeio Itu Festival",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/faicioficial/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/faicioficial/",
+      "title": "FAICI Festa do Peão Indaiatuba (&#064;faicioficial) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/rodeioitu/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/rodeioitu/",
+      "title": "RODEIO ITU FESTIVAL (&#064;rodeioitu) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://countrybulls.com.br/sobre-rcb/",
+      "status": 200,
+      "finalUrl": "https://countrybulls.com.br/cgi-sys/suspendedpage.cgi",
+      "title": "Account Suspended",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.jornaldeitu.com.br/herculano-neto-fala-sobre-os-20-anos-do-rodeio-itu-o-publico-compra-uma-noite-inteira-de-experiencia",
+      "status": 200,
+      "finalUrl": "https://www.jornaldeitu.com.br/herculano-neto-fala-sobre-os-20-anos-do-rodeio-itu-o-publico-compra-uma-noite-inteira-de-experiencia",
+      "title": "Herculano Neto fala sobre os 20 anos do Rodeio Itu - Jornal de Itu",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://casadosdados.com.br/solucao/cnpj/clube-dos-cavaleiros-de-americana-55356943000143",
+      "status": 403,
+      "finalUrl": "https://casadosdados.com.br/solucao/cnpj/clube-dos-cavaleiros-de-americana-55356943000143",
+      "title": "Just a moment...",
+      "note": "Fonte pode bloquear acesso automatizado; consulte manualmente."
+    },
+    {
+      "url": "https://festadopeaodeamericana.com.br/",
+      "status": 200,
+      "finalUrl": "https://festadopeaodeamericana.com.br/",
+      "title": "39ª Festa do Peão de Americana 2027 | 11 a 20 de Junho",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/ribeiraorodeomusic/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/ribeiraorodeomusic/",
+      "title": "Ribeirão Rodeo Music (&#064;ribeiraorodeomusic) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/riopretocountrybullsoficial/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/riopretocountrybullsoficial/",
+      "title": "Rio Preto Country Bulls (&#064;riopretocountrybullsoficial) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://gshow.globo.com/festivais/circuito-sertanejo/2025/noticia/socio-do-jaguariuna-rodeo-festival-compara-kacey-musgraves-a-ana-castela-conectar-a-nova-geracao.ghtml",
+      "status": 200,
+      "finalUrl": "https://gshow.globo.com/festivais/circuito-sertanejo/2025/noticia/socio-do-jaguariuna-rodeo-festival-compara-kacey-musgraves-a-ana-castela-conectar-a-nova-geracao.ghtml",
+      "title": "Além de Kacey Musgraves, JRF mira outras estrelas internacionais | Gshow",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/festadopeaodeamericana/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/festadopeaodeamericana/",
+      "title": "Festa do Peão de Americana (&#064;festadopeaodeamericana) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/pauloemilio_/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/pauloemilio_/",
+      "title": "Paulo Emilio (&#064;pauloemilio_) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://redeventos.com.br/sobre/",
+      "status": 200,
+      "finalUrl": "https://redeventos.com.br/sobre/",
+      "title": "Red &#8211; Red Eventos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.instagram.com/jaguariunarodeofestival/",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/jaguariunarodeofestival/",
+      "title": "Jaguariúna Rodeo Festival (&#064;jaguariunarodeofestival) • Instagram photos and videos",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.tribunaribeirao.com.br/podcast-tribuna-ribeirao-matheus-calil-conta-detalhes-sobre-20a-edicao-do-ribeirao-rodeo-music/",
+      "status": 200,
+      "finalUrl": "https://www.tribunaribeirao.com.br/podcast-tribuna-ribeirao-matheus-calil-conta-detalhes-sobre-20a-edicao-do-ribeirao-rodeo-music/",
+      "title": "Podcast Tribuna Ribeirão: Matheus Calil conta detalhes sobre 20ª edição do Ribeirão Rodeo Music - Tribuna Ribeirão",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://avare.sp.gov.br/confira-a-programacao-completa-da-56a-emapa-que-acontece-de-11-a-20-de-setembro/",
+      "status": 200,
+      "finalUrl": "https://avare.sp.gov.br/confira-a-programacao-completa-da-56a-emapa-que-acontece-de-11-a-20-de-setembro/",
+      "title": "Confira a programação completa da 56ª EMAPA, que acontece de 11 a 20 de setembro - Prefeitura de Estância Turística de Avaré | Gestão 2025-2028",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.independentes.com.br/festadopeao/contato",
+      "status": 200,
+      "finalUrl": "https://www.independentes.com.br/festadopeao/contato",
+      "title": "Festa do Peão de Barretos | Os Independentes",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.independentes.com.br/festadopeao/noticia/3411/-jeronimo-luiz-muzeti-e-empossado-presidente-de-os-independentes",
+      "status": 200,
+      "finalUrl": "https://www.independentes.com.br/festadopeao/noticia/3411/-jeronimo-luiz-muzeti-e-empossado-presidente-de-os-independentes",
+      "title": "Jerônimo Luiz Muzeti é empossado presidente de Os Independentes | Festa do Peão de Barretos | Os Independentes",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    },
+    {
+      "url": "https://www.jaguariunarodeofestival.com.br/",
+      "status": 200,
+      "finalUrl": "https://www.jaguariunarodeofestival.com.br/",
+      "title": "Redirecionando...",
+      "note": "Resposta HTTP recebida; não comprova autenticidade nem atendimento."
+    }
+  ]
+}

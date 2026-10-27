@@ -1,0 +1,110 @@
+/* Identidade e coleções da base ampliada. Mobile-first nos controles de contato. */
+.brand-logo { width:44px; height:44px; flex-shrink:0; }
+.brand { font-size:15px; }
+.brand small { font-size:8px; letter-spacing:.15em; }
+.intro { grid-template-columns:1.05fr .95fr; gap:32px 72px; padding-top:48px; }
+.intro-copy>p strong { color:#dce3ed; font-weight:500; }
+.intro-caption { display:flex; align-items:center; gap:9px; font-size:10px; color:#9eacbe; margin-top:25px; }
+.artist-cover { margin:0; position:relative; min-width:0; width:100%; max-width:460px; justify-self:end; border-radius:25px; overflow:hidden; background:#fa287c; border:1px solid #ffffff26; box-shadow:0 24px 75px #0004; }
+.artist-cover>img { width:100%; height:430px; object-fit:cover; object-position:center 27%; }
+.artist-cover:after { content:''; position:absolute; inset:0; pointer-events:none; background:linear-gradient(0deg,#080b10 0%,#080b10e6 8%,transparent 57%); }
+.artist-cover figcaption { position:absolute; left:26px; right:26px; bottom:23px; z-index:1; }
+.artist-cover figcaption>span { font-size:8px; letter-spacing:.21em; color:#e9ecf4; }
+.artist-cover figcaption>strong { display:block; font:700 38px/1.03 Manrope,sans-serif; letter-spacing:-.055em; margin-top:9px; }
+.artist-cover figcaption>a { display:inline-flex; align-items:center; min-height:44px; color:var(--lime); font-size:11px; }
+.cover-dot { color:var(--lime); }
+.cover-stamp { position:absolute; top:18px; left:20px; font:600 8px/1.6 Manrope; letter-spacing:.15em; background:#0b0e12c9; padding:8px 10px; border:1px solid #ffffff33; border-radius:7px; z-index:1; }
+.metrics { margin-top:0; }
+.collection-nav { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; padding-block:8px 20px; }
+.collection-nav>a { border:1px solid var(--line); padding:16px 14px; border-radius:12px; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:10px; background:#13171e; }
+.collection-nav>a:first-child { border-color:#71813f; background:#d5f6690a; }
+.collection-nav>a:hover { border-color:var(--lime); }
+.collection-nav span { color:#7b899c; font:500 11px Manrope; }
+.collection-nav strong { font-size:11px; font-weight:500; }
+.collection-nav b { color:var(--lime); font-size:12px; white-space:nowrap; }
+.collection-nav .booking-star { color:var(--lime); font-size:17px; }
+.section-counter { color:var(--muted); font-size:12px; padding:7px 12px; border:1px solid var(--line); border-radius:8px; white-space:nowrap; }
+.consult-note { display:flex; gap:13px; padding:16px 18px; border:1px solid #d5f6692b; border-radius:12px; margin-bottom:20px; background:#d5f66906; }
+.consult-note>span { color:var(--lime); font-size:24px; }
+.consult-note p { margin:0; color:var(--muted); font-size:12px; }
+.consult-note strong { color:#dce4c7; }
+.consult-results { font-size:11px; color:var(--muted); padding-block:12px 6px; }
+.social-strip { display:flex; gap:8px; flex-wrap:wrap; margin:0 21px 14px; }
+.social-quick { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:1px solid #695276; border-radius:10px; background:linear-gradient(110deg,#42233b55,#27234255); color:#e6c6ee; padding:8px 11px; min-height:44px; font-size:10px; }
+.social-quick svg { width:20px; height:20px; flex-shrink:0; }
+.social-quick>span:first-of-type { line-height:1.25; }
+.social-quick b { display:block; color:#f5e7f7; font-size:10px; font-weight:600; }
+.social-quick:hover { border-color:#dfa7e6; background:#442d49; }
+.social-person { border-color:#5f547e; background:#b6a4f40b; }
+.social-missing { font-size:10px; color:#8290a3; }
+.booking-badge { margin:0 21px 14px; background:#d5f66913; border:1px solid #d5f66947; border-radius:9px; padding:9px 11px; color:var(--lime); font-size:11px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-weight:600; }
+.booking-badge>a { margin-left:auto; font-size:10px; text-decoration:underline; text-underline-offset:3px; font-weight:400; min-height:28px; display:inline-flex; align-items:center; }
+.artist-history { padding:16px 21px; border-top:1px solid var(--line); background:#181e2644; }
+.artist-chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+.artist-chips>span { padding:6px 9px; border-radius:7px; background:#242c38; border:1px solid #354151; font-size:12px; color:#d5deec; }
+.artist-history p { font-size:10px; color:var(--muted); margin:8px 0 2px; line-height:1.7; }
+.history-source { color:var(--violet); font-size:11px; text-decoration:underline; text-underline-offset:3px; display:inline-flex; align-items:center; min-height:32px; }
+.no-history p { color:#7f8da1; }
+.person-name { font-size:20px; }
+.person-role { font-size:12px; }
+.people-card>.field-label { color:var(--lime); margin-bottom:9px; }
+.people-card .social-quick { margin-top:12px; }
+.location { font-size:11px; }
+.number { overflow-wrap:anywhere; }
+.detail-content p { font-size:12px; }
+.action-row a,.action-row button { font-size:11px; min-height:44px; }
+footer a { text-decoration:underline; text-underline-offset:3px; }
+@media (min-width:1400px) { .intro { padding-top:55px; } }
+@media (max-width:1050px) {
+  .intro { gap:30px; }
+  .collection-nav { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .artist-cover>img { height:390px; }
+  .app-header nav { gap:16px; font-size:11px; }
+}
+@media (max-width:700px) {
+  .brand-logo { width:38px; height:38px; }
+  .brand { font-size:14px; }
+  .intro { display:grid; grid-template-columns:1fr; padding-top:26px; gap:22px; }
+  .intro-copy { order:1; }
+  h1 { font-size:43px; }
+  .intro-copy>p { font-size:13px; }
+  .intro-caption { margin-top:17px; font-size:10px; align-items:start; }
+  .intro-caption .live-dot { margin-top:5px; flex-shrink:0; }
+  .artist-cover { order:2; max-width:none; border-radius:19px; }
+  .artist-cover>img { height:300px; object-position:center 31%; }
+  .artist-cover figcaption { left:20px; bottom:12px; }
+  .artist-cover figcaption>strong { font-size:32px; }
+  .cover-stamp { top:12px; left:14px; font-size:7px; }
+  .metrics { order:3; }
+  .collection-nav { gap:8px; padding-top:12px; }
+  .collection-nav>a { grid-template-columns:1fr auto; padding:12px 10px; gap:6px; min-height:75px; }
+  .collection-nav>a>span { grid-column:1/-1; font-size:9px; }
+  .collection-nav strong { font-size:11px; }
+  .collection-nav b { font-size:11px; }
+  .collection-nav .booking-star { font-size:13px; }
+  .social-strip { margin:0 16px 14px; }
+  .social-quick { min-height:46px; font-size:11px; padding:8px 12px; }
+  .social-quick b { font-size:11px; }
+  .person-topline { align-items:start; }
+  .person-name { font-size:19px; }
+  .person-role { font-size:12px; line-height:1.6; }
+  .venue-identity { grid-template-columns:36px 1fr; }
+  .venue-identity>div:last-child { grid-column:2; display:flex; align-items:center; gap:8px; }
+  .priority-label { margin:0; font-size:9px; }
+  .booking-badge { margin-inline:16px; font-size:11px; }
+  .booking-badge>a { min-height:36px; }
+  .artist-history { padding:15px 16px; }
+  .artist-chips>span { font-size:12px; }
+  .artist-history p { font-size:11px; }
+  .history-source { min-height:44px; }
+  .consult-note { padding:13px; }
+  .consult-note p { font-size:12px; }
+  .consult-results { font-size:11px; }
+  .tracking textarea { font-size:16px; }
+  input[type=search] { font-size:16px; }
+  .mobile-nav a span { font-size:10px; }
+  .mobile-nav a:first-child { background:transparent; color:#bbc5d5; }
+  .mobile-nav a.current { background:var(--lime); color:#1c230c; }
+  footer { line-height:1.8; }
+}
+@media print { .collection-nav,.social-strip { display:none; } .artist-cover { max-width:250px; } }
