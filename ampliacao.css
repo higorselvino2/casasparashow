@@ -39,6 +39,18 @@
 .social-missing { font-size:10px; color:#8290a3; }
 .booking-badge { margin:0 21px 14px; background:#d5f66913; border:1px solid #d5f66947; border-radius:9px; padding:9px 11px; color:var(--lime); font-size:11px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-weight:600; }
 .booking-badge>a { margin-left:auto; font-size:10px; text-decoration:underline; text-underline-offset:3px; font-weight:400; min-height:28px; display:inline-flex; align-items:center; }
+.booking-review { margin:0 0 20px; padding:20px; border:1px solid #f2c17a45; border-radius:14px; background:#f2c17a08; }
+.booking-review h3 { font-size:18px; margin:9px 0; }
+.booking-review p { margin:0; color:#b8c1cd; font-size:12px; line-height:1.8; }
+.booking-review b { color:#eee4d4; font-weight:600; }
+.agenda-state { margin:0 21px 14px; padding:13px; border-left:2px solid var(--amber); background:#f2c17a06; border-radius:0 9px 9px 0; }
+.agenda-state>strong { display:block; margin-top:6px; color:var(--amber); font-size:12px; }
+.agenda-state p { margin:6px 0 0; color:var(--muted); font-size:11px; line-height:1.7; }
+.channel-owner { margin:7px 0 12px; color:#a6b3c6; font-size:11px; }
+.channel-owner b { color:#d6dfeb; font-weight:500; }
+.action-row .artistic-action { background:var(--lime); color:#18200d; border-color:var(--lime); }
+.contact-suggestion { margin-top:14px; padding:13px; background:#10151d; border:1px solid #293443; border-radius:10px; }
+.contact-suggestion p { margin:7px 0 0; color:#bdc9da; font-size:12px; line-height:1.8; }
 .artist-history { padding:16px 21px; border-top:1px solid var(--line); background:#181e2644; }
 .artist-chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
 .artist-chips>span { padding:6px 9px; border-radius:7px; background:#242c38; border:1px solid #354151; font-size:12px; color:#d5deec; }
@@ -93,6 +105,10 @@ footer a { text-decoration:underline; text-underline-offset:3px; }
   .priority-label { margin:0; font-size:9px; }
   .booking-badge { margin-inline:16px; font-size:11px; }
   .booking-badge>a { min-height:36px; }
+  .agenda-state { margin-inline:16px; }
+  .agenda-state p,.channel-owner { font-size:11px; }
+  .booking-review { padding:16px; }
+  .booking-review h3 { font-size:17px; }
   .artist-history { padding:15px 16px; }
   .artist-chips>span { font-size:12px; }
   .artist-history p { font-size:11px; }

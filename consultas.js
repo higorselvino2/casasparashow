@@ -30,7 +30,6 @@
     checked:'Acervo recuperado em 27/10/2026. Fontes adicionais na ficha; números antigos exigem reconfirmação. Nenhum contato foi acionado.',
     ask:`Gostaria de falar com ${v.shortPerson||v.person} sobre programação artística. Quem avalia e aprova a contratação dos shows atualmente?`,
     strategy:v.type==='secretaria'?'Pedir encaminhamento nominal e entender planejamento, documentação e procedimento municipal antes de propor uma data.':'Confirmar edição e calendário atual; pedir nome e contato profissional do comprador artístico.',
-    message:`Olá! Gostaria de encaminhar a ${v.shortPerson||v.person} uma proposta de João Bosco & Gabriel para ${v.name}. Essa pessoa participa da contratação artística hoje? Podem me conectar diretamente ao responsável pela programação?`,
     ...v,
     sources:[...v.sources,['Origem dos canais recuperados — acervo anterior','acervo-anterior.html']]
   }));
@@ -50,8 +49,6 @@
     tokio:{instagram:'https://www.instagram.com/tokiomarinehall/',artists:{names:['Roberto Carlos'],label:'Programação anunciada · 16/08/2025',source:'https://www.ticketmaster.com.br/event/roberto-carlos-tokio-marine-hall'}}
   };
   window.CASAS.forEach(v => {Object.assign(v,additions[v.id]||{});if(v.artists)v.sources.push(['Artistas e contexto — fonte do histórico',v.artists.source]);});
-  // O host com www desta reportagem falha no certificado; a origem sem www responde.
-  window.CASAS.find(v=>v.id==='tokio').sources[0][1]='https://cartaodevisita.com.br/conteudo/57495/festas-e-comemoracoes-nas-grandes-casas-de-espetaculos';
   const nova=window.CONSULTAS.find(v=>v.id==='nova');
   nova.artists={names:['João Bosco & Gabriel'],label:'Contratação documentada para 19/05/2024 · execução não atestada',source:nova.booking.source};
 })();

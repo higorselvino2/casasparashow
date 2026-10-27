@@ -1,51 +1,68 @@
-# Casas para show — João Bosco & Gabriel
+# Mapa de Palcos — João Bosco & Gabriel
 
-Aplicação estática, sem instalação ou etapa de compilação. Abra `index.html` ou sirva esta pasta. Na Vercel, use a raiz do repositório com preset **Other**, sem Build Command. Não foi feito deploy, commit ou push nesta revisão.
+Aplicação estática em HTML/CSS/JavaScript. Abra index.html ou publique a raiz na Vercel, preset Other, sem etapa de compilação. Esta revisão não fez deploy, commit, push ou contato com terceiros.
 
-## Organização
+## Situação da pesquisa de agenda — 27/10/2026
 
-- `index.html`: estrutura da interface definitiva de operação.
-- `casas.js`: 12 casas permanentes, pessoas, funções, números, evidências, mensagens e notas de confiança.
-- `consultas.js`: 16 registros complementares (5 secretarias + 11 produtoras/eventos) recuperados do acervo, além do enriquecimento das casas com Instagram e histórico de artistas.
-- `app.js`: buscas e filtros independentes por coleção, agrupamento por pessoa, cópia, status e exportação das 28 fichas.
-- `site.css`: visual e adaptação para celular e computador.
-- `ampliacao.css`: capa, marca Mapa de Palcos, redes sociais visíveis, históricos e coleções complementares.
-- `assets/mapa-palcos.svg`: marca editorial do material, criada para a pesquisa; não é logotipo oficial da dupla.
-- `assets/casas`: três fotos de referência extraídas dos sites oficiais, com fonte em cada ficha e URL original em `casas.js`.
-- `assets/artists`: imagens do projeto anterior, preservadas. A foto da dupla é identificada como artista em prospecção, não como foto do contato.
-- `acervo-anterior.html`: cópia integral do index recebido. Preserva todas as 25 operações, imagens e conteúdo anterior, incluindo 16 eventos/circuitos que ficaram fora da fila principal.
-- `relatorios/fontes-http.json`: checagem HTTP de fontes e perfis das duas coleções, separada da verificação factual. Bloqueios automatizados não significam link inexistente; HTTP 200 não valida titularidade de um Instagram.
+A base mantém 28 registros: 12 casas permanentes no estado de São Paulo, 5 secretarias e 11 produtoras/eventos. Isso não significa 28 compradores ou contatos pessoais. Casas continuam sendo a prioridade, e as outras frentes permanecem separadas.
 
-## Revisão de 27/10/2026
+A revisão anterior confundia vínculo de propriedade/direção com função de compra de shows. Essa indicação foi retirada. Não foi comprovado contato direto com comprador atual nas 12 casas. A interface informa essa limitação, sem completar lacunas por inferência.
 
-Nove casas permanentes da base recebida foram reorganizadas. Três foram adicionadas: Espaço Unimed, CTN e Tokio Marine Hall. A página agora tem **28 oportunidades: 12 casas permanentes, 5 secretarias e 11 produtoras/eventos**. São 28 registros comerciais, não 28 casas ou 28 contatos diretos pessoais. As casas continuam principais; as demais operações ficam em coleção consultável própria, sem misturar suas capacidades com as de uma casa.
+- Duas pontes nominais: Tomas, contato comercial publicado pelo Palácio Sunset, e Zacarias, gerente citado em resposta pública histórica do Coração Sertanejo. Nenhum foi classificado como comprador. No segundo caso, titularidade e vínculo atuais também precisam ser confirmados.
+- Duas fichas com destino artístico formal: Villa Country e Espaço Unimed. O formulário oficial do mesmo grupo oferece “Contato Artístico (Empresários e Agências)”, sem publicar o nome do receptor. Não são dois compradores identificados.
+- Uma referência histórica de função artística: Elvis Patez, citado como diretor artístico em reportagem de 2025. O cargo atual e o contato direto seguem pendentes. O e-mail exibido é geral da casa, não dele.
+- Nos demais casos, há somente atendimento institucional para pedir encaminhamento. Os nomes dos donos e presidentes não foram mantidos como compradores presumidos.
 
-Todas as 12 casas têm atalho visível de Instagram. UZNA e Folk Valley também têm o perfil público da pessoa identificado no acervo. Nas demais operações, não foram inventados perfis pessoais. Selma Macchi Santana tem celular funcional nominal publicado na Secretaria de Nova Independência; não foi inferido que seja WhatsApp.
+Os filtros distinguem destino artístico, ponte nominal, WhatsApp da equipe e agenda pendente. A titularidade/finalidade do canal aparece junto de cada número, e a sugestão de encaminhamento é orientação, não mensagem pronta.
 
-As casas têm nomes de artistas com link e contexto: anúncio de programação, histórico divulgado pela operação ou cobertura de apresentação. Data e natureza da evidência ficam visíveis. O programa de um show não foi convertido em prova de execução. As capacidades e a adequação comercial continuam sujeitas a confirmação.
+## Correções dos canais
 
-O selo “Já contratou a dupla” só aparece em Nova Independência (contrato 15/2024 para 19/05/2024) e Itatiba (contrato 065/2025 e programa de 18/07/2025). Não há selo nas casas sem comprovação. Os documentos não são atestados de execução e não definem o cachê atual.
+- Terra SP: o antigo (11) 94597-4353 é descrito no FAQ para camarotes e aniversários. A rota passou para (11) 93224-2747, publicado no contato e em “Faça seu evento”; continua sendo institucional, não contratação artística comprovada.
+- UZNA: “Fale com nosso time”, no Linktree oficial, aponta para (15) 3191-2425. Não é telefone de Gui Moron.
+- Folk Valley: a página Info publica SAC/formulário e o botão de WhatsApp configurado para (19) 99148-8131. Não é telefone de Fauze.
+- Estância: a central (11) 4101-5000 aparece no rodapé e no botão de WhatsApp. Não é contato pessoal de sócio.
+- Red: o número da seção Shows não foi transformado em WhatsApp por inferência nem atribuído a sócios. O número de Eventos/locação é diferente.
+- Palácio e Coração: celular publicado nominalmente não comprova WhatsApp. Os atalhos de WhatsApp foram retirados; permanece a ligação com ressalvas.
+- Espaço Unimed: o celular de comercial/locação deixou de ser a rota principal de contratação. A prioridade é o formulário com opção artística.
+- Tokio: telefone cadastral da empresa de Elvis e telefone de reserva PCD foram excluídos da rota comercial.
+- CTN: o edital oficial confirma Coordenação de Produção Artística, mas não nomeia comprador. A presidência não foi tratada como agenda. O edital de bandas residentes não foi indicado como formato para vender o show de R$ 30 mil.
 
-Os 16 canais recuperados têm ressalvas de atualização. Não representam 16 números pessoais novos. Mensagens antigas que divergiam do nome documentado foram corrigidas (por exemplo, HR Estruturas).
+As fontes de cargo, canal e estrutura estão em cada ficha. A revisão documental não comprova identidade de quem atenderá, recebimento de mensagem, interesse, orçamento ou poder de contratar.
 
-A nova foto de capa é a imagem pública do perfil da dupla no Spotify: https://open.spotify.com/intl-pt/artist/21WAvVROZ83oUvJwFTG2dH — imagem original https://i.scdn.co/image/ab6761610000e5ebf3d9243b0437c17f528dd615, salva localmente em `assets/artists/joao-bosco-gabriel-capa.jpg`. Não é fotografia de responsável por casa nem imagem gerada.
+## Sem textos prontos
 
-Cada ficha distingue pessoa documentada, função, canal nominal ou da equipe, origem do contato e o que precisa ser confirmado. Os botões não enviam mensagens automaticamente: abrem a conversa preenchida para revisão do vendedor. Não houve contato com terceiros.
+Todos os botões de WhatsApp na página atual abrem apenas a conversa, sem parâmetro text. Os links de e-mail também não preenchem assunto ou mensagem. Não há script para copiar mensagem nem afirmação de data de rota, condição promocional, autorização especial ou itens do show. R$ 30 mil é somente a referência informada pela equipe.
 
-Tomas (Palácio Sunset) e Zacarias (Coração Sertanejo) têm celulares publicados nominalmente nas fontes consultadas. Isso não comprova que sejam compradores artísticos ou que respondam no WhatsApp. Yhosefe tem e-mail nominal cadastral; o WhatsApp do Terra SP e o da Arena+ são da equipe. Gui Moron e Fauze têm perfis públicos pessoais; não foram inventados WhatsApps pessoais. Os demais caminhos são institucionais ou exigem confirmação. Nomes divergentes nos scripts antigos foram corrigidos na página principal.
+O acervo anterior recebeu aviso de uso histórico, retirada de roteiros copiáveis, atalhos de WhatsApp sem texto e desativação visual de ações operacionais antigas. A cópia original recebida, antes dessas salvaguardas, foi preservada fora da pasta de publicação em:
+C:/Users/hhigo/Documents/Codex/2026-09-19/ticket-m-dio-pra-acessar-a/outputs/acervo-original-recebido-2026-10-27.html
 
-O número do CTN está na configuração `joinchat` da página oficial, como `telephone: 551134889420`. O telefone de reserva para PCD do Tokio Marine Hall não foi usado como canal comercial. O telefone da empresa de Elvis é cadastral, sem comprovação de WhatsApp.
+## Conteúdo e organização
 
-Ingressos antigos estão identificados como referência anterior. Valores atuais não consolidados permanecem “a confirmar”. O custo de R$ 30 mil vem da equipe do artista, não de aceite da casa.
+- index.html: interface, limites da pesquisa e coleções.
+- casas.js: 12 casas, fontes e distinção entre comprador, referência, canal nominal e equipe.
+- consultas.js: 16 operações complementares do acervo e histórico documentado de artistas.
+- app.js: busca, filtros, agrupamento de referências/rotas, status, notas e exportação.
+- site.css e ampliacao.css: visual adaptado a celular e computador.
+- assets/mapa-palcos.svg: marca editorial do material, não logotipo oficial da dupla.
+- assets/casas: três fotos de referência dos sites oficiais, com fonte na ficha.
+- assets/artists: imagens do acervo e capa da dupla. Retratos adicionais não são usados na página.
+- acervo-anterior.html: pesquisa histórica com salvaguardas; não é lista operacional de contatos.
+- relatorios/fontes-http.json: checagem HTTP, separada da verificação factual.
 
-## Retornos do vendedor
+Os nomes dos artistas e as fontes do histórico foram mantidos sem fotos, conforme solicitado. Os dois selos de contratação da dupla correspondem a documentos municipais de Nova Independência (2024) e Itatiba (2025). Contrato/programação não é atestado de execução ou proposta atual.
 
-Status, data e anotações usam localStorage, por navegador/dispositivo. Não há servidor nem sincronização. O botão de exportação baixa JSON com as 28 fichas e os retornos. Anotações são escapadas na renderização. Não há autenticação ou OAuth implementado neste repositório estático; eventuais controles da Vercel são externos ao código.
+Capacidade, ingresso e estrutura mantêm suas ressalvas. Faixas antigas não são apresentadas como preço médio atual. O encaixe comercial é uma avaliação, não confirmação de compra.
+
+## Retornos do vendedor e privacidade
+
+Status, datas e notas usam localStorage por navegador/dispositivo, sem sincronização. A exportação inclui os 28 registros, pessoa quando identificada, função, finalidade/titularidade do canal e flag de comprador confirmado. As chaves de armazenamento e ids das fichas foram preservados.
+
+Não há autenticação/OAuth implementados neste código estático. Noindex não restringe acesso. A capa é imagem pública do perfil da dupla: https://open.spotify.com/intl-pt/artist/21WAvVROZ83oUvJwFTG2dH
 
 ## Verificação
 
-- `node --check app.js`, `node --check casas.js` e `node --check consultas.js`.
-- `scripts/verify-ui.cjs`: navegador real em modo de teste; 28 fichas, 26 grupos, 14 atalhos Instagram nas casas, históricos, selos documentais, filtros independentes, busca sem acento, persistência em ambas as listas, exportação de 28, links locais, WhatsApp sem envio, fotos e larguras de 360, 390, 768 e 1440 px.
-- `scripts/review-sources.cjs`: checa HTTP de fontes, com falhas e bloqueios explícitos. Um HTTP 200 não prova atendimento nem autenticidade do conteúdo.
+scripts/verify-ui.cjs verifica dados → ficha → botões, ausência de roteiros/preenchimento automático, identificação de pendências, filtros, preservação de retornos, exportação, links locais, quatro larguras e ausência de erros de JavaScript. Os testes usam navegador isolado e não enviam mensagens.
 
-Os scripts de verificação requerem Node e Playwright disponíveis no ambiente. Não são dependências do site publicado. As capturas ficam em `relatorios/` e não são necessárias no pacote de publicação.
+scripts/review-sources.cjs registra respostas HTTP de fontes/perfis. Bloqueio automatizado não significa link inexistente; HTTP 200 não comprova cargo ou titularidade.
+
+Os scripts de fotos são históricos e não se aplicam ao visual atual. Os scripts de teste dependem de Node/Playwright locais, não são dependências do site publicado.

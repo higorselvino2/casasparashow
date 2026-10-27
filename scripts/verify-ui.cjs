@@ -15,9 +15,15 @@ const root=path.resolve(__dirname,'..');
   assert.equal(await page.locator('#venueGrid .venue-card').count(),12);
   assert.equal(await page.locator('#consultGrid .venue-card').count(),16);
   assert.equal(await page.locator('.venue-card').count(),28);
-  assert.equal(await page.locator('.people-card').count(),26);
+  assert.equal(await page.locator('.artist-history img').count(),0);
+  assert.equal(await page.locator('.artist-chips>span').count(),26);
+  assert.equal(await page.locator('#artistPhotoDialog').count(),0);
+  assert.equal(await page.locator('.people-card').count(),27);
   assert.equal(await page.locator('#totalMetric').textContent(),'28');
-  assert.equal(await page.locator('#venueGrid .social-quick').count(),14);
+  assert.equal(await page.locator('#venueGrid .social-quick').count(),12);
+  assert.equal(await page.locator('#venueGrid .agenda-state').count(),12);
+  assert.equal(await page.locator('[data-copy-message],.message-box').count(),0);
+  assert.equal(await page.locator('#venueGrid .person-name').filter({hasText:/Tobal|Yhosefe|Fauze|Moron|Christiane|Nathalia|Granguelli/}).count(),0);
   assert.equal(await page.locator('#venueGrid .artist-chips').count(),12);
   assert.equal(await page.locator('.booking-badge').count(),2);
   for (const [filter,count] of [['secretaria',5],['evento',11],['booked',2],['all',16]]) {
@@ -30,12 +36,12 @@ const root=path.resolve(__dirname,'..');
   await page.locator('#consultSearch').fill('nada-encontrado-xyz');
   assert.equal(await page.locator('#consultEmpty').isVisible(),true);
   await page.locator('#resetConsult').click();
-  for(const [filter,count] of [['new',3],['whatsapp',8],['direct',6],['pending',4],['all',12]]){
+  for(const [filter,count] of [['new',3],['artistic',2],['whatsapp',6],['direct',2],['pending',12],['all',12]]){
     await page.locator(`[data-filter="${filter}"]`).click();
     assert.equal(await page.locator('#venueGrid .venue-card').count(),count,filter);
   }
-  await page.locator('#search').fill('Yhosefe');
-  assert.equal(await page.locator('#venueGrid .venue-card').count(),2);
+  await page.locator('#search').fill('Tomas');
+  assert.equal(await page.locator('#venueGrid .venue-card').count(),1);
   await page.locator('#search').fill('sao jose');
   assert.equal(await page.locator('#venueGrid .venue-card').count(),1);
   await page.locator('#search').fill('nada-encontrado-xyz');
@@ -61,14 +67,19 @@ const root=path.resolve(__dirname,'..');
   const payload=JSON.parse(fs.readFileSync(await download.path(),'utf8'));
   assert.equal(payload.retornos.length,28);
   assert.equal(payload.retornos.find(v=>v.casa==='Palácio Sunset').status,'aguardando');
-  const wa=await page.locator('#casa-red a.whatsapp').getAttribute('href');
-  assert(wa.startsWith('https://wa.me/5519993369909?text='));
-  assert(decodeURIComponent(wa).includes('Francisco Granguelli'));
+  const wa=await page.locator('#casa-terra a.whatsapp').getAttribute('href');
+  assert.equal(wa,'https://wa.me/5511932242747');
+  assert.equal(await page.locator('#casa-uzna a.whatsapp').getAttribute('href'),'https://wa.me/551531912425');
+  assert.equal(await page.locator('#casa-folk a.whatsapp').getAttribute('href'),'https://wa.me/5519991488131');
+  assert.equal(await page.locator('#casa-villa .artistic-action').getAttribute('href'),'https://www.saopauloeventos.com.br/#contato');
+  assert.equal(await page.locator('#casa-red a.whatsapp,#casa-palacio a.whatsapp,#casa-coracao a.whatsapp').count(),0);
+  assert.equal(await page.locator('a[href*="wa.me/"]').evaluateAll(links=>links.some(a=>new URL(a.href).search!=='')),false);
+  assert.equal(await page.locator('a[href^="mailto:"]').evaluateAll(links=>links.some(a=>a.getAttribute('href').includes('?'))),false);
   assert.equal(await page.locator('#casa-villa a.whatsapp').count(),0);
   assert.equal(await page.locator('#casa-tokio a.whatsapp').count(),0);
   assert.equal(await page.locator('#casa-nova a.whatsapp').count(),0);
   assert.equal(await page.locator('#casa-nova a[href="tel:+5518996174025"]').count(),1);
-  assert.equal(await page.locator('#casa-uzna .social-quick').count(),2);
+  assert.equal(await page.locator('#casa-uzna .social-quick').count(),1);
   const unsafeLinks=await page.locator('a[href]').evaluateAll(links=>links.map(a=>a.getAttribute('href')).filter(h=>/^(javascript|data):/i.test(h)));
   assert.deepEqual(unsafeLinks,[]);
   const brokenLocal=await page.locator('[src],link[href],a[href]').evaluateAll(els=>els.map(e=>e.getAttribute('src')||e.getAttribute('href')).filter(h=>h&&!/^https?:|^mailto:|^tel:|^#/.test(h)));
@@ -80,7 +91,8 @@ const root=path.resolve(__dirname,'..');
   }
   await page.evaluate(()=>localStorage.clear());
   await page.reload({waitUntil:'networkidle'});
-  for(const id of ['red','terra','folk']) {await page.locator(`#casa-${id} details`).first().locator('summary').click();await page.locator(`#casa-${id} img`).scrollIntoViewIfNeeded();await page.locator(`#casa-${id} img`).evaluate(img=>img.decode());}
+  for(const id of ['red','terra','folk']) {await page.locator(`#casa-${id} details`).first().locator('summary').click();await page.locator(`#casa-${id} .house-image`).scrollIntoViewIfNeeded();await page.locator(`#casa-${id} .house-image`).evaluate(img=>img.decode());}
+  await page.locator('img').evaluateAll(imgs=>Promise.all(imgs.map(img=>{img.loading='eager';return img.decode();})));
   const imageFailures=await page.locator('img').evaluateAll(imgs=>imgs.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src));
   assert.equal(imageFailures.length,0);
   fs.mkdirSync(path.join(root,'relatorios'),{recursive:true});
@@ -98,6 +110,9 @@ const root=path.resolve(__dirname,'..');
   await page.locator('#casa-nova').scrollIntoViewIfNeeded();
   await page.screenshot({path:path.join(root,'relatorios','mobile-historico.png')});
   assert.equal(errors.length,0,errors.join('\n'));
-  console.log('OK: 28 fichas (12 casas + 5 secretarias + 11 eventos); 26 grupos; 14 atalhos Instagram nas casas; 12 históricos de artistas; 2 selos documentais; filtros independentes; buscas; persistência nas duas listas; exportação de 28; links locais; 4 larguras sem overflow; imagens; JS sem erros.');
+  await page.goto('http://127.0.0.1:8768/acervo-anterior.html',{waitUntil:'load'});
+  assert.equal(await page.locator('a[href*="wa.me/"]').evaluateAll(links=>links.some(a=>new URL(a.href).search!=='')),false);
+  assert.equal(await page.locator('.btn-copy-script,#copyTemplate,#messageTemplate').count(),0);
+  console.log('OK: 28 fichas; 12 casas com finalidade/titularidade do canal explícitas; 2 pontes nominais e 2 destinos artísticos; nenhum dono como comprador presumido; WhatsApp sem texto no site e acervo; filtros; persistência; exportação; 4 larguras sem overflow; sem fotos de artistas nos históricos; JS sem erros.');
   await browser.close();
 })();

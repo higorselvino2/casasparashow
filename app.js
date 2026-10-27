@@ -18,8 +18,9 @@
   const escape = (s = '') => String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const normalize = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const stateFor = (id) => tracking[id] || {status:'novo', date:'', note:''};
-  const isPending = (v) => v.priority === 3;
-  const priorityText = ['','Iniciar conversa','Encaminhar ao decisor','Qualificar primeiro'];
+  const isPending = (v) => !v.bookingConfirmed;
+  const priorityText = ['','Destino artístico publicado','Ponte / função a confirmar','Encaminhamento institucional'];
+  const contactName = v => v.shortPerson || v.person || (v.contactStatus==='rota-artistica'?'Equipe artística · encaminhamento':'Programação · solicitar encaminhamento');
   const statuses = [['novo','Ainda não contatado'],['tentativa','Contato tentado'],['aguardando','Aguardando retorno'],['encaminhado','Pessoa indicada'],['conversa','Em conversa'],['proposta','Proposta enviada'],['semfit','Sem encaixe agora']];
 
   function toast(message) {
@@ -34,7 +35,7 @@
     return `<a class="${className}" href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(label)}</a>`;
   }
   function badge(v) {
-    const label = v.direct ? v.directType : 'Canal da equipe';
+    const label = v.direct ? v.directType : v.contactStatus==='rota-artistica'?'Destino artístico · sem nome':'Canal da equipe';
     return `<span class="channel-badge ${v.direct ? 'nominal' : ''}">${escape(label)}</span>`;
   }
   const instagramIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>';
@@ -47,38 +48,42 @@
   }
   function actions(v) {
     const buttons = [];
-    if (v.whatsapp) buttons.push(external(`https://wa.me/${v.whatsapp}?text=${encodeURIComponent(v.message)}`, v.id === 'palacio' ? 'WhatsApp · Tomas ↗' : v.id === 'coracao' ? 'WhatsApp · confirmar Zacarias ↗' : 'WhatsApp · pedir encaminhamento ↗','whatsapp'));
+    if (v.routeUrl && v.contactStatus==='rota-artistica') buttons.push(external(v.routeUrl,v.routeLabel+' ↗','artistic-action'));
+    if (v.whatsapp) buttons.push(external(`https://wa.me/${v.whatsapp}`,v.type?'WhatsApp da operação ↗':'WhatsApp da equipe ↗','whatsapp'));
     if (v.phone) buttons.push(`<a href="tel:+${v.phone}">Ligar</a>`);
     if (v.phone) buttons.push(`<button type="button" data-copy-number="${v.id}">Copiar número</button>`);
-    if (v.email) buttons.push(`<a class="${v.personKey==='yhosefe'||v.id==='jaguariuna'?'nominal-action':''}" href="mailto:${escape(v.email)}?subject=${encodeURIComponent('João Bosco & Gabriel — '+v.name+' — A/C '+(v.shortPerson||v.person))}">${v.personKey==='yhosefe'?'E-mail de Yhosefe':v.id==='jaguariuna'?'E-mail de Gui Marconi':'E-mail da equipe'} ↗</a>`);
+    if (v.email) buttons.push(`<a href="mailto:${escape(v.email)}">${v.id==='jaguariuna'?'E-mail nominal do acervo':'E-mail institucional'} ↗</a>`);
+    if (v.routeUrl && v.contactStatus!=='rota-artistica') buttons.push(external(v.routeUrl,v.routeLabel+' ↗'));
     return buttons.join('');
   }
   function renderCard(v, index) {
     const saved = stateFor(v.id);
+    const bookingState=v.type?'':`<div class="agenda-state"><span class="field-label">QUEM CONTRATA OS SHOWS?</span><strong>${v.contactStatus==='referencia-artistica'?'Referência artística de 2025 · atualização pendente':'Comprador atual ainda não identificado'}</strong><p>${v.contactStatus==='rota-artistica'?'Há destino artístico publicado, mas a pessoa receptora não é nomeada.':v.contactKind==='person'?'Contato nominal abaixo é uma ponte, não comprovação de compra de cachê.':'O canal abaixo pertence à equipe. Não foi atribuído ao dono ou a um comprador.'}</p></div>`;
     const photo=v.photo?`<figure class="house-figure"><a href="${escape(v.photo.file)}" target="_blank" rel="noopener"><img class="house-image" src="${escape(v.photo.file)}" alt="${escape(v.photo.label)}" loading="lazy" width="720" height="400"></a><figcaption>Foto de referência da casa · ${external(v.photo.source,'fonte oficial ↗')} · toque para ampliar</figcaption></figure>`:'';
     return `<article class="venue-card ${v.id==='palacio'?'is-featured':''}" id="casa-${v.id}">
       <div class="venue-identity"><span class="venue-index">${String(index+1).padStart(2,'0')}</span><div><h3>${escape(v.name)}</h3><span class="location">${escape(v.city)} · ${escape(v.category)}</span></div><div>${v.added?'<span class="new-badge">NOVA</span>':''}<span class="priority-label">${escape(priorityText[v.priority])}</span></div></div>
       ${v.booking?`<div class="booking-badge"><span aria-hidden="true">✦</span> ${escape(v.booking.label)} ${external(v.booking.source,'Ver documento ↗')}</div>`:''}
       <div class="social-strip">${socialLink(v.instagram,v.name,v.type==='secretaria'?'Prefeitura / pasta':v.type?'Evento / produtora':'Casa')}${socialLink(v.personalSocial,v.shortPerson||v.person,'Pessoa')}${!v.instagram&&!v.personalSocial?'<span class="social-missing">Instagram não confirmado · nenhum perfil foi inferido</span>':''}</div>
-      <div class="person-block"><div class="person-topline"><span class="field-label">PESSOA A PROCURAR</span>${badge(v)}</div><strong class="person-name">${escape(v.shortPerson || v.person)}</strong><span class="person-role">${escape(v.role)}</span></div>
-      <div class="channel-area"><div class="channel-description"><span class="field-label">COMO CHEGAR A ESSA PESSOA</span></div><b class="channel-description-label">${escape(v.channelType)}</b><span class="number ${v.phone?'':'no-number'}">${escape(v.display)}</span><div class="action-row">${actions(v)}</div><p class="channel-caveat ${v.id==='coracao'?'pending-note':''}">${escape(v.whatsappEvidence)}</p></div>
+      ${bookingState}
+      <div class="person-block"><div class="person-topline"><span class="field-label">${v.type?'REFERÊNCIA NOMINAL DO ACERVO':v.person?'CONTATO / REFERÊNCIA ENCONTRADA':'CAMINHO PARA PEDIR O RESPONSÁVEL'}</span>${badge(v)}</div><strong class="person-name">${escape(contactName(v))}</strong><span class="person-role">${escape(v.role)}</span></div>
+      <div class="channel-area"><div class="channel-description"><span class="field-label">CANAL DISPONÍVEL E SUA FINALIDADE</span></div><b class="channel-description-label">${escape(v.channelType)}</b><span class="number ${v.phone?'':'no-number'}">${escape(v.display)}</span>${v.contactOwner?`<p class="channel-owner"><b>De quem é:</b> ${escape(v.contactOwner)}</p>`:''}<div class="action-row">${actions(v)}</div><p class="channel-caveat ${v.id==='coracao'?'pending-note':''}">${escape(v.whatsappEvidence)}</p>${v.routeInstruction?`<div class="contact-suggestion"><span class="field-label">SUGESTÃO · NÃO É MENSAGEM PRONTA</span><p>${escape(v.routeInstruction)}</p></div>`:''}</div>
       ${artistHistory(v)}
       <details class="card-details"><summary>${v.type?'Operação, calendário e encaixe comercial':'Casa, capacidade e encaixe comercial'}</summary><div class="detail-content">${photo}<div class="facts"><div class="fact"><span class="field-label">CAPACIDADE</span><strong>${escape(v.capacity)}</strong><small>${escape(v.capacityNote)}</small></div><div class="fact"><span class="field-label">INGRESSO</span><strong>${escape(v.ticket)}</strong><small>${escape(v.ticketNote)}</small></div></div><h4>Estrutura e padrão</h4><p>${escape(v.quality)}</p><h4>Encaixe para João Bosco & Gabriel</h4><p>${escape(v.fit)}</p>${v.booking?`<h4>Histórico da dupla · ${escape(v.booking.date)}</h4><p>${escape(v.booking.note)}</p>${external(v.booking.source,'Abrir evidência oficial ↗','history-source')}`:''}</div></details>
-      <details class="card-details"><summary>Abordagem para ${escape(v.shortPerson || v.person)}</summary><div class="detail-content"><h4>Pergunta que abre a conversa</h4><p class="question">${escape(v.ask)}</p><h4>Próximo passo sugerido</h4><p>${escape(v.strategy)}</p><h4>Mensagem pronta</h4><p class="message-box">${escape(v.message)}</p><div class="action-row"><button type="button" data-copy-message="${v.id}">Copiar mensagem</button></div></div></details>
-      <details class="card-details"><summary>Quem é a pessoa e de onde vem o contato</summary><div class="detail-content"><h4>${escape(v.person)}</h4><p>${escape(v.proof)}</p><ul class="source-list">${v.sources.map(([label,url])=>`<li>${external(url,label+' ↗')}</li>`).join('')}</ul><p class="checked">${escape(v.checked)}</p></div></details>
+      ${v.type?`<details class="card-details"><summary>Sugestão de encaminhamento</summary><div class="detail-content"><p>${escape(v.strategy)}</p><p>O nome do acervo não comprova que a pessoa compra a programação atual. Confirme função, destinatário e canal antes de enviar uma proposta.</p></div></details>`:''}
+      <details class="card-details"><summary>O que está comprovado e fonte de cada informação</summary><div class="detail-content"><h4>${escape(v.person||'Pessoa da programação não identificada')}</h4><p>${escape(v.proof)}</p><ul class="source-list">${v.sources.map(([label,url])=>`<li>${external(url,label+' ↗')}</li>`).join('')}</ul><p class="checked">${escape(v.checked)}</p></div></details>
       <div class="tracking"><div class="tracking-row"><label for="status-${v.id}">Status da conversa<select id="status-${v.id}" data-track="status" data-id="${v.id}">${statuses.map(([value,label])=>`<option value="${value}" ${saved.status===value?'selected':''}>${label}</option>`).join('')}</select></label><label for="date-${v.id}">Próximo retorno<input id="date-${v.id}" type="date" value="${escape(saved.date)}" data-track="date" data-id="${v.id}"></label></div><label class="note-label" for="note-${v.id}">Seu retorno / contato confirmado<textarea id="note-${v.id}" data-track="note" data-id="${v.id}" placeholder="Quem atendeu, contato direto indicado e próximo passo…">${escape(saved.note)}</textarea></label></div>
     </article>`;
   }
   function selected() {
     const query = normalize(search.value.trim());
     return venues.filter(v => {
-      const filterMatch = activeFilter==='all' || (activeFilter==='whatsapp' && v.whatsapp) || (activeFilter==='direct' && v.direct) || (activeFilter==='new'&&v.added) || (activeFilter==='pending'&&isPending(v)) || (activeFilter==='followup' && (stateFor(v.id).status!=='novo' || stateFor(v.id).date || stateFor(v.id).note));
+      const filterMatch = activeFilter==='all' || (activeFilter==='artistic'&&v.contactStatus==='rota-artistica') || (activeFilter==='whatsapp' && v.whatsapp) || (activeFilter==='direct' && v.direct) || (activeFilter==='new'&&v.added) || (activeFilter==='pending'&&isPending(v)) || (activeFilter==='followup' && (stateFor(v.id).status!=='novo' || stateFor(v.id).date || stateFor(v.id).note));
       return filterMatch && (!query || normalize([v.name,v.city,v.region,v.person,v.role,v.channelType].join(' ')).includes(query));
     }).sort((a,b)=>sort.value==='name'?a.name.localeCompare(b.name,'pt-BR'):sort.value==='city'?a.city.localeCompare(b.city,'pt-BR'):a.priority-b.priority || venues.indexOf(a)-venues.indexOf(b));
   }
   function render() {
     const list = selected(); grid.innerHTML = list.map((v,index)=>renderCard(v,index)).join('');
-    document.getElementById('results').textContent = `${list.length} de ${venues.length} casas · ${list.filter(v=>v.whatsapp).length} com rota para WhatsApp`;
+    document.getElementById('results').textContent = `${list.length} de ${venues.length} casas em SP · ${list.filter(v=>v.direct).length} pontes nominais · ${list.filter(v=>v.contactStatus==='rota-artistica').length} destinos artísticos publicados`;
     document.getElementById('emptyState').hidden = list.length!==0;
     filterButtons.forEach(b=>{ b.classList.toggle('active',b.dataset.filter===activeFilter); b.setAttribute('aria-pressed',String(b.dataset.filter===activeFilter)); });
   }
@@ -86,7 +91,7 @@
     const groups = new Map();
     allVenues.forEach(v=>{ if(!groups.has(v.personKey)) groups.set(v.personKey,[]); groups.get(v.personKey).push(v); });
     document.getElementById('peopleGrid').innerHTML=[...groups.values()].map(group=>{
-      const v=group[0];return `<article class="people-card"><span class="field-label">${v.type==='secretaria'?'SECRETARIA MUNICIPAL':v.type?'PRODUTORA / EVENTO':'CASA DE SHOW'}</span><h3>${escape(v.shortPerson||v.person)}</h3><p>${escape(v.role)}</p><div class="houses">${group.map(h=>`<a href="#casa-${h.id}">${escape(h.name)} ↗</a>`).join('')}</div>${badge(v)}${v.personalSocial?socialLink(v.personalSocial,v.shortPerson||v.person,'Pessoa'):''}${group.length>1?'<p>Mesma pessoa em duas casas: coordenar uma única abordagem.</p>':''}</article>`;
+      const v=group[0];return `<article class="people-card"><span class="field-label">${v.type==='secretaria'?'SECRETARIA · REFERÊNCIA DO ACERVO':v.type?'EVENTO · REFERÊNCIA DO ACERVO':v.person?'CASA · PONTE / REFERÊNCIA':'CASA · ROTA SEM NOME'}</span><h3>${escape(contactName(v))}</h3><p>${escape(v.role)}</p><div class="houses">${group.map(h=>`<a href="#casa-${h.id}">${escape(h.name)} ↗</a>`).join('')}</div>${badge(v)}${v.personalSocial?socialLink(v.personalSocial,v.shortPerson||v.person,'Pessoa'):''}${group.length>1?'<p>Mesmo canal institucional: coordenar o encaminhamento às duas casas. Não significa mesmo comprador confirmado.</p>':''}</article>`;
     }).join('');
   }
   function renderConsultations() {
@@ -111,7 +116,6 @@
   document.addEventListener('keydown',e=>{ if(e.key==='/' && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)) {e.preventDefault();search.focus();search.scrollIntoView({block:'center'});} });
   document.addEventListener('click',e=>{
     const number=e.target.closest('[data-copy-number]'); if(number){const v=allVenues.find(x=>x.id===number.dataset.copyNumber);copy(v.display);}
-    const message=e.target.closest('[data-copy-message]'); if(message){const v=allVenues.find(x=>x.id===message.dataset.copyMessage);copy(v.message);}
     const anchor=e.target.closest('a[href^="#casa-"]'); if(anchor){e.preventDefault();const id=anchor.getAttribute('href').slice(1);if(!document.getElementById(id)){activeFilter='all';search.value='';consultFilter='all';consultSearch.value='';render();renderConsultations();} const target=document.getElementById(id);if(target){history.replaceState(null,'','#'+id);target.scrollIntoView({behavior:'smooth',block:'start'});}}
   });
   document.addEventListener('input',e=>{
@@ -119,7 +123,7 @@
     tracking[field.dataset.id]={...stateFor(field.dataset.id),[field.dataset.track]:field.value,updatedAt:new Date().toISOString()};persist();
   });
   document.getElementById('exportButton').addEventListener('click',()=>{
-    const data={exportedAt:new Date().toISOString(),project:'João Bosco & Gabriel — casas de show',researchDate:'2026-10-27',retornos:allVenues.map(v=>({casa:v.name,tipo:v.type||'casa',pessoa:v.person,canal:v.channelType,numero:v.phone,...stateFor(v.id)}))};
+    const data={exportedAt:new Date().toISOString(),project:'João Bosco & Gabriel — casas de show',researchDate:'2026-10-27',retornos:allVenues.map(v=>({casa:v.name,tipo:v.type||'casa',pessoa:v.person||null,funcao:v.role,compradorConfirmado:!!v.bookingConfirmed,canal:v.channelType,titularDoCanal:v.contactOwner||'Consultar ressalvas da ficha',numero:v.phone,...stateFor(v.id)}))};
     const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='retornos-casas-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Backup dos retornos exportado.');
   });
   render();renderConsultations();renderPeople();
