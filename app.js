@@ -13,13 +13,13 @@
   const key = 'casasparashow-retornos-v1';
   let tracking = {};
   try { const saved = JSON.parse(localStorage.getItem(key) || '{}'); if (saved && typeof saved === 'object' && !Array.isArray(saved)) tracking = saved; } catch (_) { /* Storage unavailable or an invalid saved file. */ }
-  let activeFilter = 'all';
+  let activeFilter = 'target';
   let toastTimer;
   const escape = (s = '') => String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const normalize = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const stateFor = (id) => tracking[id] || {status:'novo', date:'', note:''};
   const isPending = (v) => !v.bookingConfirmed;
-  const priorityText = ['','Destino artístico publicado','Ponte / função a confirmar','Encaminhamento institucional'];
+  const priorityText = ['','Destino artístico publicado','Canal oficial · pedir produção','Qualificar encaminhamento','Consulta secundária'];
   const contactName = v => v.shortPerson || v.person || (v.contactStatus==='rota-artistica'?'Equipe artística · encaminhamento':'Programação · solicitar encaminhamento');
   const statuses = [['novo','Ainda não contatado'],['tentativa','Contato tentado'],['aguardando','Aguardando retorno'],['encaminhado','Pessoa indicada'],['conversa','Em conversa'],['proposta','Proposta enviada'],['semfit','Sem encaixe agora']];
 
@@ -56,17 +56,29 @@
     if (v.routeUrl && v.contactStatus!=='rota-artistica') buttons.push(external(v.routeUrl,v.routeLabel+' ↗'));
     return buttons.join('');
   }
+  function qualification(v) {
+    if (v.type) return '';
+    const labels={potential:'Priorizar a qualificação · R$ 30 mil',conditional:'Condicional · formato / produtor pendente',hold:'Fora da abordagem imediata'};
+    return `<div class="qualification ${escape(v.screening)}"><span>${escape(labels[v.screening]||'Em qualificação')}</span><small>Orçamento não confirmado</small></div>${v.restriction?`<p class="availability-alert">${escape(v.restriction)}</p>`:''}`;
+  }
+  function secondaryChannel(v) {
+    const c=v.secondaryContact;if(!c)return '';
+    return `<details class="card-details secondary-contact"><summary>Outra ponte nominal · não é booking</summary><div class="detail-content"><h4>${escape(c.person)}</h4><p>${escape(c.role)}. O número é publicado para esta finalidade, não como comprador artístico.</p><strong>${escape(c.display)}</strong><div class="action-row">${external('https://wa.me/'+c.whatsapp,'WhatsApp de reservas · pedir encaminhamento ↗')}<a href="tel:+${escape(c.phone)}">Ligar para reservas</a>${external(c.source,'Fonte da função ↗')}</div></div></details>`;
+  }
   function renderCard(v, index) {
     const saved = stateFor(v.id);
     const bookingState=v.type?'':`<div class="agenda-state"><span class="field-label">QUEM CONTRATA OS SHOWS?</span><strong>${v.contactStatus==='referencia-artistica'?'Referência artística de 2025 · atualização pendente':'Comprador atual ainda não identificado'}</strong><p>${v.contactStatus==='rota-artistica'?'Há destino artístico publicado, mas a pessoa receptora não é nomeada.':v.contactKind==='person'?'Contato nominal abaixo é uma ponte, não comprovação de compra de cachê.':'O canal abaixo pertence à equipe. Não foi atribuído ao dono ou a um comprador.'}</p></div>`;
     const photo=v.photo?`<figure class="house-figure"><a href="${escape(v.photo.file)}" target="_blank" rel="noopener"><img class="house-image" src="${escape(v.photo.file)}" alt="${escape(v.photo.label)}" loading="lazy" width="720" height="400"></a><figcaption>Foto de referência da casa · ${external(v.photo.source,'fonte oficial ↗')} · toque para ampliar</figcaption></figure>`:'';
     return `<article class="venue-card ${v.id==='palacio'?'is-featured':''}" id="casa-${v.id}">
       <div class="venue-identity"><span class="venue-index">${String(index+1).padStart(2,'0')}</span><div><h3>${escape(v.name)}</h3><span class="location">${escape(v.city)} · ${escape(v.category)}</span></div><div>${v.added?'<span class="new-badge">NOVA</span>':''}<span class="priority-label">${escape(priorityText[v.priority])}</span></div></div>
+      ${qualification(v)}
       ${v.booking?`<div class="booking-badge"><span aria-hidden="true">✦</span> ${escape(v.booking.label)} ${external(v.booking.source,'Ver documento ↗')}</div>`:''}
       <div class="social-strip">${socialLink(v.instagram,v.name,v.type==='secretaria'?'Prefeitura / pasta':v.type?'Evento / produtora':'Casa')}${socialLink(v.personalSocial,v.shortPerson||v.person,'Pessoa')}${!v.instagram&&!v.personalSocial?'<span class="social-missing">Instagram não confirmado · nenhum perfil foi inferido</span>':''}</div>
       ${bookingState}
       <div class="person-block"><div class="person-topline"><span class="field-label">${v.type?'REFERÊNCIA NOMINAL DO ACERVO':v.person?'CONTATO / REFERÊNCIA ENCONTRADA':'CAMINHO PARA PEDIR O RESPONSÁVEL'}</span>${badge(v)}</div><strong class="person-name">${escape(contactName(v))}</strong><span class="person-role">${escape(v.role)}</span></div>
-      <div class="channel-area"><div class="channel-description"><span class="field-label">CANAL DISPONÍVEL E SUA FINALIDADE</span></div><b class="channel-description-label">${escape(v.channelType)}</b><span class="number ${v.phone?'':'no-number'}">${escape(v.display)}</span>${v.contactOwner?`<p class="channel-owner"><b>De quem é:</b> ${escape(v.contactOwner)}</p>`:''}<div class="action-row">${actions(v)}</div><p class="channel-caveat ${v.id==='coracao'?'pending-note':''}">${escape(v.whatsappEvidence)}</p>${v.routeInstruction?`<div class="contact-suggestion"><span class="field-label">SUGESTÃO · NÃO É MENSAGEM PRONTA</span><p>${escape(v.routeInstruction)}</p></div>`:''}</div>
+      <div class="channel-area"><div class="channel-description"><span class="field-label">CANAL DISPONÍVEL E SUA FINALIDADE</span></div><b class="channel-description-label">${escape(v.channelType)}</b><span class="number ${v.phone?'':'no-number'}">${escape(v.display)}</span>${v.contactOwner?`<p class="channel-owner"><b>De quem é:</b> ${escape(v.contactOwner)}</p>`:''}<div class="action-row">${actions(v)}</div>${v.contactEvidenceUrl?`<a class="contact-proof" href="${escape(v.contactEvidenceUrl)}" target="_blank" rel="noopener noreferrer">↗ Fonte deste canal · conferida em 28/10/2026</a>`:''}<p class="channel-caveat ${v.id==='coracao'?'pending-note':''}">${escape(v.whatsappEvidence)}</p>${v.routeInstruction?`<div class="contact-suggestion"><span class="field-label">SUGESTÃO · NÃO É MENSAGEM PRONTA</span><p>${escape(v.routeInstruction)}</p></div>`:''}</div>
+      ${secondaryChannel(v)}
+      ${!v.type?`<details class="card-details"><summary>Por que avaliar o cachê de R$ 30 mil?</summary><div class="detail-content"><p>${escape(v.budgetReason)}</p><h4>Quem produz / compra a data?</h4><p>${escape(v.programmingModel)}</p><p class="budget-caveat">Avaliação de prospecção, não faixa de cachê comprovada. Faltam orçamento, demanda regional e aprovação do contratante.</p></div></details>`:''}
       ${artistHistory(v)}
       <details class="card-details"><summary>${v.type?'Operação, calendário e encaixe comercial':'Casa, capacidade e encaixe comercial'}</summary><div class="detail-content">${photo}<div class="facts"><div class="fact"><span class="field-label">CAPACIDADE</span><strong>${escape(v.capacity)}</strong><small>${escape(v.capacityNote)}</small></div><div class="fact"><span class="field-label">INGRESSO</span><strong>${escape(v.ticket)}</strong><small>${escape(v.ticketNote)}</small></div></div><h4>Estrutura e padrão</h4><p>${escape(v.quality)}</p><h4>Encaixe para João Bosco & Gabriel</h4><p>${escape(v.fit)}</p>${v.booking?`<h4>Histórico da dupla · ${escape(v.booking.date)}</h4><p>${escape(v.booking.note)}</p>${external(v.booking.source,'Abrir evidência oficial ↗','history-source')}`:''}</div></details>
       ${v.type?`<details class="card-details"><summary>Sugestão de encaminhamento</summary><div class="detail-content"><p>${escape(v.strategy)}</p><p>O nome do acervo não comprova que a pessoa compra a programação atual. Confirme função, destinatário e canal antes de enviar uma proposta.</p></div></details>`:''}
@@ -77,13 +89,13 @@
   function selected() {
     const query = normalize(search.value.trim());
     return venues.filter(v => {
-      const filterMatch = activeFilter==='all' || (activeFilter==='artistic'&&v.contactStatus==='rota-artistica') || (activeFilter==='whatsapp' && v.whatsapp) || (activeFilter==='direct' && v.direct) || (activeFilter==='new'&&v.added) || (activeFilter==='pending'&&isPending(v)) || (activeFilter==='followup' && (stateFor(v.id).status!=='novo' || stateFor(v.id).date || stateFor(v.id).note));
+      const filterMatch = activeFilter==='all' || (activeFilter==='target'&&v.screening==='potential') || (activeFilter==='conditional'&&v.screening!=='potential') || (activeFilter==='confirmed'&&v.bookingConfirmed) || (activeFilter==='artistic'&&v.contactStatus==='rota-artistica') || (activeFilter==='whatsapp' && v.whatsapp) || (activeFilter==='direct' && v.direct) || (activeFilter==='new'&&v.added) || (activeFilter==='pending'&&isPending(v)) || (activeFilter==='followup' && (stateFor(v.id).status!=='novo' || stateFor(v.id).date || stateFor(v.id).note));
       return filterMatch && (!query || normalize([v.name,v.city,v.region,v.person,v.role,v.channelType].join(' ')).includes(query));
     }).sort((a,b)=>sort.value==='name'?a.name.localeCompare(b.name,'pt-BR'):sort.value==='city'?a.city.localeCompare(b.city,'pt-BR'):a.priority-b.priority || venues.indexOf(a)-venues.indexOf(b));
   }
   function render() {
     const list = selected(); grid.innerHTML = list.map((v,index)=>renderCard(v,index)).join('');
-    document.getElementById('results').textContent = `${list.length} de ${venues.length} casas em SP · ${list.filter(v=>v.direct).length} pontes nominais · ${list.filter(v=>v.contactStatus==='rota-artistica').length} destinos artísticos publicados`;
+    document.getElementById('results').textContent = `${list.length} de ${venues.length} casas em SP · ${list.filter(v=>v.bookingConfirmed).length} compradores com contato direto confirmado · canais públicos não equivalem a atendimento testado`;
     document.getElementById('emptyState').hidden = list.length!==0;
     filterButtons.forEach(b=>{ b.classList.toggle('active',b.dataset.filter===activeFilter); b.setAttribute('aria-pressed',String(b.dataset.filter===activeFilter)); });
   }
@@ -123,9 +135,13 @@
     tracking[field.dataset.id]={...stateFor(field.dataset.id),[field.dataset.track]:field.value,updatedAt:new Date().toISOString()};persist();
   });
   document.getElementById('exportButton').addEventListener('click',()=>{
-    const data={exportedAt:new Date().toISOString(),project:'João Bosco & Gabriel — casas de show',researchDate:'2026-10-27',retornos:allVenues.map(v=>({casa:v.name,tipo:v.type||'casa',pessoa:v.person||null,funcao:v.role,compradorConfirmado:!!v.bookingConfirmed,canal:v.channelType,titularDoCanal:v.contactOwner||'Consultar ressalvas da ficha',numero:v.phone,...stateFor(v.id)}))};
+    const data={exportedAt:new Date().toISOString(),project:'João Bosco & Gabriel — casas de show',researchDate:'2026-10-28',retornos:allVenues.map(v=>({casa:v.name,tipo:v.type||'casa',pessoa:v.person||null,funcao:v.role,compradorConfirmado:!!v.bookingConfirmed,orcamentoConfirmado:!!v.budgetConfirmed,recorte:v.screening||'acervo',canal:v.channelType,titularDoCanal:v.contactOwner||'Consultar ressalvas da ficha',numero:v.phone,whatsapp:v.whatsapp,email:v.email,fonteDoCanal:v.contactEvidenceUrl||null,...stateFor(v.id)}))};
     const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='retornos-casas-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Backup dos retornos exportado.');
   });
+  document.getElementById('totalMetric').textContent=venues.length;
+  document.querySelectorAll('[data-house-count]').forEach(el=>el.textContent=venues.length);
+  document.querySelectorAll('[data-target-count]').forEach(el=>el.textContent=venues.filter(v=>v.screening==='potential').length);
+  document.querySelectorAll('[data-confirmed-count]').forEach(el=>el.textContent=venues.filter(v=>v.bookingConfirmed).length);
   render();renderConsultations();renderPeople();
   const mobileLinks=[...document.querySelectorAll('.mobile-nav a')];
   const mobileSections=mobileLinks.map(a=>document.querySelector(a.getAttribute('href')));

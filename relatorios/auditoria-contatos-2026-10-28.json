@@ -1,0 +1,397 @@
+{
+  "date": "2026-10-28",
+  "scope": "12 casas anteriores e 3 novas. Os 16 registros complementares do acervo não foram revalidados documentalmente.",
+  "limits": "Publicação e destinos de canais, não entrega, resposta, identidade do atendente, autoridade para contratar ou cachê disponível. Sem contato com terceiros.",
+  "records": [
+    {
+      "id": "arena",
+      "venue": "Arena+",
+      "channelSource": "https://arenamais.com/contato/",
+      "phone": "5511942118558",
+      "whatsapp": "5511942118558",
+      "email": null,
+      "phoneOwner": "Equipe da casa — não é contato pessoal",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://arenamais.com/contato/",
+      "phonePublished": true,
+      "emailPublished": null,
+      "contactLinks": [
+        {
+          "label": "",
+          "href": "https://api.whatsapp.com/send/?phone=5511945974353"
+        }
+      ],
+      "formAreas": [],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    },
+    {
+      "id": "chapeu",
+      "venue": "Chapéu Brasil",
+      "channelSource": "https://chapeubrasil.com.br/contato/",
+      "phone": "5519998248291",
+      "whatsapp": "5519998248291",
+      "email": "chapeubrasiloficial@gmail.com",
+      "phoneOwner": "Equipe oficial do Chapéu Brasil · pessoa receptora não publicada",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://chapeubrasil.com.br/contato/",
+      "phonePublished": true,
+      "emailPublished": true,
+      "contactLinks": [],
+      "formAreas": [],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    },
+    {
+      "id": "coracao",
+      "venue": "Coração Sertanejo",
+      "channelSource": "https://www.instagram.com/coracaosertanejo/",
+      "phone": "5511998983963",
+      "whatsapp": "5511998983963",
+      "email": null,
+      "phoneOwner": "Equipe do Coração Sertanejo · titular individual não identificado",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "sourceCheck": {
+        "url": "https://www.instagram.com/coracaosertanejo/",
+        "method": "Bio oficial lida via interface do navegador, em 28/10/2026",
+        "published": "Bio: WhatsApp (11) 99898-3963. Publicações de reservas indicam (11) 95433-5586."
+      },
+      "result": "Publicação conferida manualmente; atendimento não testado"
+    },
+    {
+      "id": "ctn",
+      "venue": "CTN · Centro de Tradições Nordestinas",
+      "channelSource": "https://www.ctn.org.br/contato/",
+      "phone": "551134889420",
+      "whatsapp": "551134889420",
+      "email": null,
+      "phoneOwner": "Equipe da casa — não é contato pessoal",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://www.ctn.org.br/contato/",
+      "phonePublished": true,
+      "emailPublished": null,
+      "contactLinks": [],
+      "formAreas": [
+        "Depoimento",
+        "Melhorias",
+        "Dúvidas",
+        "SAC"
+      ],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    },
+    {
+      "id": "estancia",
+      "venue": "Estância Alto da Serra",
+      "channelSource": "https://estancia.com.br/",
+      "phone": "551141015000",
+      "whatsapp": "551141015000",
+      "email": "estancia@estancia.com.br",
+      "phoneOwner": "Equipe da casa — não é contato pessoal",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://estancia.com.br/",
+      "phonePublished": true,
+      "emailPublished": true,
+      "contactLinks": [],
+      "formAreas": [],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    },
+    {
+      "id": "folk",
+      "venue": "Folk Valley",
+      "channelSource": "https://folkvalley.com.br/info/",
+      "phone": "5519991488131",
+      "whatsapp": "5519991488131",
+      "email": "contato@folkvalley.com.br",
+      "phoneOwner": "Equipe da casa — não é contato pessoal",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://folkvalley.com.br/info/",
+      "phonePublished": true,
+      "emailPublished": true,
+      "contactLinks": [
+        {
+          "label": "contato@folkvalley.com.br",
+          "href": "mailto:contato@folkvalley.com.br"
+        }
+      ],
+      "formAreas": [],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    },
+    {
+      "id": "palacio",
+      "venue": "Palácio Sunset",
+      "channelSource": "https://palaciosunset.com.br/contato/",
+      "phone": "5512981732702",
+      "whatsapp": null,
+      "email": "contato@palaciosunset.com.br",
+      "phoneOwner": "Tomas — nome e celular no contato oficial",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://palaciosunset.com.br/contato/",
+      "phonePublished": true,
+      "emailPublished": true,
+      "contactLinks": [
+        {
+          "label": "contato@palaciosunset.com.br",
+          "href": "mailto:contato@palaciosunset.com.br"
+        }
+      ],
+      "formAreas": [],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    },
+    {
+      "id": "red",
+      "venue": "Red Eventos",
+      "channelSource": "https://redeventos.com.br/sobre/",
+      "phone": "5519993369909",
+      "whatsapp": null,
+      "email": null,
+      "phoneOwner": "Operação de shows / G&P — atendente não identificado",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://redeventos.com.br/sobre/",
+      "phonePublished": true,
+      "emailPublished": null,
+      "contactLinks": [
+        {
+          "label": "19 9 9708-6907",
+          "href": "http://wa.me/5519997086907"
+        },
+        {
+          "label": "Eventos (19) 9 9708 6907",
+          "href": "tel:551938677027"
+        },
+        {
+          "label": "contatocomercial@redeventos.com.br",
+          "href": "mailto:contatocomercial@redeventos.com.br"
+        },
+        {
+          "label": "Shows (19) 9.9336 9909",
+          "href": "tel:5519993369909"
+        },
+        {
+          "label": "sac@agoraingressos.com.br",
+          "href": "mailto:contatocomercial@redeventos.com.br"
+        },
+        {
+          "label": "duvidas@gpproducoes.com.br",
+          "href": "mailto:contatocomercial@redeventos.com.br"
+        }
+      ],
+      "formAreas": [],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    },
+    {
+      "id": "terra",
+      "venue": "Terra SP",
+      "channelSource": "https://terrasp.com/contato/",
+      "phone": "5511932242747",
+      "whatsapp": "5511932242747",
+      "email": "terrasp@email.com",
+      "phoneOwner": "Equipe da casa — não é contato pessoal",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://terrasp.com/contato/",
+      "phonePublished": true,
+      "emailPublished": true,
+      "contactLinks": [
+        {
+          "label": "",
+          "href": "https://api.whatsapp.com/send/?phone=5511945974353"
+        },
+        {
+          "label": "",
+          "href": "https://api.whatsapp.com/send/?phone=5511945974353"
+        }
+      ],
+      "formAreas": [],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    },
+    {
+      "id": "tokio",
+      "venue": "Tokio Marine Hall",
+      "channelSource": "https://cartaodevisita.com.br/conteudo/57495/festas-e-comemoracoes-nas-grandes-casas-de-espetaculos",
+      "phone": null,
+      "whatsapp": null,
+      "email": "site@tokiomarinehall.com.br",
+      "phoneOwner": "Equipe do Tokio Marine Hall — este e-mail não é pessoal de Elvis",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "result": "Não comprovado automaticamente; não confundir bloqueio com contato inválido",
+      "error": "page.goto: Timeout 40000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://cartaodevisita.com.br/conteudo/57495/festas-e-comemoracoes-nas-grandes-casas-de-espetaculos\", waiting until \"networkidle\"\u001b[22m\n"
+    },
+    {
+      "id": "unimed",
+      "venue": "Espaço Unimed",
+      "channelSource": "https://www.saopauloeventos.com.br/#contato",
+      "phone": null,
+      "whatsapp": null,
+      "email": "contato@saopauloeventos.com.br",
+      "phoneOwner": "Equipe do Grupo São Paulo Eventos — não é contato de Marco Tobal",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://www.saopauloeventos.com.br/#contato",
+      "phonePublished": null,
+      "emailPublished": true,
+      "contactLinks": [],
+      "formAreas": [
+        "Selecione uma opção..."
+      ],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    },
+    {
+      "id": "uzna",
+      "venue": "UZNA",
+      "channelSource": "https://www.instagram.com/uzna.oficial/",
+      "phone": "551531912425",
+      "whatsapp": "551531912425",
+      "email": null,
+      "phoneOwner": "Equipe da casa — não é contato pessoal",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "sourceCheck": {
+        "url": "https://www.instagram.com/uzna.oficial/",
+        "method": "Perfil oficial lido via interface do navegador, em 28/10/2026",
+        "published": "Link visível “Entre em contato — WhatsApp”: https://wa.me/551531912425. Camarote separado: 5515996693344."
+      },
+      "result": "Publicação conferida manualmente; atendimento não testado"
+    },
+    {
+      "id": "varanda",
+      "venue": "Varanda Estaiada",
+      "channelSource": "https://varandaestaiada.com.br/",
+      "phone": null,
+      "whatsapp": null,
+      "email": "eventos@varandaestaiada.com.br",
+      "phoneOwner": "Equipe de eventos do Varanda · destinatário individual não publicado",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://varandaestaiada.com.br/",
+      "phonePublished": null,
+      "emailPublished": true,
+      "contactLinks": [],
+      "formAreas": [
+        "Sim",
+        "Não",
+        "À partir de R$ 160.000,00",
+        "À partir de R$ 250.000,00",
+        "À partir de R$ 400.000,00",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    },
+    {
+      "id": "vilajk",
+      "venue": "Vila JK",
+      "channelSource": "https://www.vilajk.com.br/",
+      "phone": null,
+      "whatsapp": null,
+      "email": "vilajk@vilajk.com.br",
+      "phoneOwner": "E-mail institucional do Vila JK · não é e-mail pessoal do Jordan",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://www.vilajk.com.br/",
+      "phonePublished": null,
+      "emailPublished": true,
+      "contactLinks": [
+        {
+          "label": "",
+          "href": "https://wa.me/5511998816008"
+        },
+        {
+          "label": "FALE COM O JORDAN",
+          "href": "https://wa.me/5511998816008"
+        },
+        {
+          "label": "vilajk@vilajk.com.br",
+          "href": "mailto:vilajk@vilajk.com.br"
+        },
+        {
+          "label": "aqui!",
+          "href": "https://wa.me/5511998816008"
+        },
+        {
+          "label": "",
+          "href": "https://wa.me/5511998816008"
+        }
+      ],
+      "formAreas": [],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    },
+    {
+      "id": "villa",
+      "venue": "Villa Country",
+      "channelSource": "https://www.saopauloeventos.com.br/#contato",
+      "phone": null,
+      "whatsapp": null,
+      "email": "contato@saopauloeventos.com.br",
+      "phoneOwner": "Equipe do Grupo São Paulo Eventos — não é contato do proprietário",
+      "bookingConfirmed": false,
+      "budgetConfirmed": false,
+      "deliveryTested": false,
+      "sourceReviewDate": "2026-10-28",
+      "httpStatus": 200,
+      "finalUrl": "https://www.saopauloeventos.com.br/#contato",
+      "phonePublished": null,
+      "emailPublished": true,
+      "contactLinks": [],
+      "formAreas": [
+        "Selecione uma opção..."
+      ],
+      "result": "Página acessível; conferir finalidade na ficha. Não testa atendimento."
+    }
+  ]
+}

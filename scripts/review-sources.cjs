@@ -21,5 +21,5 @@ async function check(url){
 (async()=>{
   let next=0;await Promise.all(Array.from({length:8},async()=>{while(next<urls.length){const url=urls[next++];await check(url);}}));
   fs.mkdirSync(path.join(root,'relatorios'),{recursive:true});
-  fs.writeFileSync(path.join(root,'relatorios','fontes-http.json'),JSON.stringify({researchDate:'2026-10-27',checkedAt:new Date().toISOString(),meaning:'Checagem HTTP das fontes; os fatos foram revisados na pesquisa. Erro ou bloqueio HTTP não significa que a informação seja falsa. Nenhuma mensagem ou ligação foi feita.',records},null,2));
+  fs.writeFileSync(path.join(root,'relatorios','fontes-http.json'),JSON.stringify({researchDate:'2026-10-28',checkedAt:new Date().toISOString(),meaning:'Checagem técnica HTTP de links das casas e do acervo. Não comprova fatos, contato ativo, identidade, cargo, entrega de mensagens ou orçamento. Fontes das casas foram revisadas documentalmente; os 16 registros complementares continuam históricos. Bloqueio automático não significa link quebrado. Nenhuma mensagem ou ligação foi feita.',records},null,2));
 })();

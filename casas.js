@@ -1,4 +1,4 @@
-/* Revisão de agenda/contratação: 27/10/2026. Proprietário não é comprador presumido. Canal nominal não comprova poder de contratar. Sem mensagens prontas nos atalhos. */
+/* Revisão documental: 28/10/2026. Publicação de um canal não comprova atendimento, comprador ou orçamento. */
 window.CASAS = [
   {
     "id": "palacio",
@@ -14,7 +14,7 @@ window.CASAS = [
     "fit": "Boa estrutura e acesso nominal ao comercial. O espaço oferece locação: descobrir se compra o show, faz coprodução ou indica um promotor.",
     "instagram": "https://www.instagram.com/palaciosunset/",
     "added": false,
-    "priority": 2,
+    "priority": 4,
     "person": "Tomas",
     "shortPerson": "",
     "role": "Contato comercial nominal · compra de shows não comprovada",
@@ -28,15 +28,15 @@ window.CASAS = [
     "email": "contato@palaciosunset.com.br",
     "personalSocial": "",
     "contactOwner": "Tomas — nome e celular no contato oficial",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
     "personKey": "tomas",
     "display": "(12) 98173-2702",
     "channelType": "Celular comercial publicado para Tomas",
     "whatsappEvidence": "A página publica o celular de Tomas, sem comprovação de WhatsApp. O atalho foi retirado. Ele é uma ponte comercial, não um comprador artístico confirmado.",
-    "proof": "O contato oficial identifica Tomas e seu celular. Isso não comprova que ele selecione atrações ou aprove cachês. O responsável efetivo pela programação permanece pendente.",
+    "proof": "Tomas e seu celular continuam publicados no contato oficial, conferido na página renderizada. É contato comercial, não comprador comprovado. O Instagram da casa informa indisponibilidade de novas datas em 2026.",
     "routeUrl": "https://palaciosunset.com.br/contato/",
     "routeLabel": "Contato oficial",
-    "routeInstruction": "Confirme com Tomas quem recebe propostas de artistas e aprova os shows. Se ele atender apenas locações, peça o contato do produtor que programa a casa.",
+    "routeInstruction": "Antes de propor o show, confirme a agenda de 2027 e se Tomas indica o produtor que compra atrações. Não oferecer uma locação como se a casa fosse contratar a dupla.",
     "sources": [
       [
         "Nome e celular — contato oficial",
@@ -45,8 +45,20 @@ window.CASAS = [
       [
         "Estrutura e apoio ao produtor — oficial",
         "https://palaciosunset.com.br/apoio-ao-produtor/"
+      ],
+      [
+        "Agenda 2026 sem datas — publicação oficial",
+        "https://www.instagram.com/palaciosunset/p/DdEqwqQtVH4/"
       ]
-    ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "hold",
+    "budgetReason": "Espaço de locação e produção de terceiros; não há evidência de compra direta de cachê. Sem novas datas em 2026, conforme anúncio da casa.",
+    "programmingModel": "Locação / apoio a produtores; comprador de cada evento não identificado.",
+    "restriction": "Agenda 2026 esgotada segundo publicação oficial. Consultar apenas 2027 ou eventual alteração.",
+    "contactEvidenceUrl": "https://palaciosunset.com.br/contato/"
   },
   {
     "id": "red",
@@ -68,7 +80,7 @@ window.CASAS = [
       "image": "https://redeventos.com.br/wp-content/uploads/2022/07/DJI_0172-768x512.jpg"
     },
     "added": false,
-    "priority": 3,
+    "priority": 4,
     "person": "",
     "shortPerson": "",
     "role": "Responsável pela agenda ainda não identificado",
@@ -79,24 +91,32 @@ window.CASAS = [
     "bookingConfirmed": false,
     "phone": "5519993369909",
     "whatsapp": "",
-    "email": "duvidas@gpproducoes.com.br",
+    "email": "",
     "personalSocial": "",
     "contactOwner": "Operação de shows / G&P — atendente não identificado",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
     "personKey": "red-booking",
     "display": "(19) 99336-9909",
-    "channelType": "Canal publicado na seção “Shows”",
-    "whatsappEvidence": "O site separa Shows de Eventos. O botão de WhatsApp de Eventos é de outro número; não foi inferido WhatsApp para o telefone de Shows.",
-    "proof": "Telefone e e-mail pertencem à operação, não comprovadamente a Francisco Granguelli ou Eduardo Prado. Os sócios foram retirados da indicação de agenda por falta de prova de função artística.",
+    "channelType": "Telefone do setor Shows · não é celular pessoal",
+    "whatsappEvidence": "O telefone de Shows foi reconferido. O WhatsApp (19) 99708-6907 é de Eventos/locações e não foi usado como booking. No site, os textos dos e-mails de Shows apontam para outro destinatário ao clicar: use o telefone para confirmar o e-mail correto.",
+    "proof": "O rodapé publica (19) 99336-9909 em Shows e duvidas@gpproducoes.com.br. A página também lista SAC de ingressos. Nenhum nome ou autoridade para contratar foi publicado. O link de e-mail do site está divergente do texto, por isso não foi tratado como entrega validada.",
     "routeUrl": "https://redeventos.com.br/sobre/",
     "routeLabel": "Ver canais de Shows",
-    "routeInstruction": "Ligue para o canal de Shows e peça o nome e o contato da pessoa que programa os shows próprios. Confirme se a G&P recebe propostas ou apenas atende o público. Não confunda a Red com a organização do rodeio.",
+    "routeInstruction": "Ligue para Shows e confirme se é programação ou SAC. Peça nome, função, telefone profissional e e-mail de quem aprova atrações do Red Hall; não confundir com locação do complexo ou curadoria do rodeio.",
     "sources": [
       [
         "Separação dos canais de Eventos e Shows — oficial",
         "https://redeventos.com.br/sobre/"
       ]
-    ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "conditional",
+    "budgetReason": "Porte e histórico permitem estudar a proposta, mas a montagem, o público da dupla e o comprador da data precisam ser qualificados.",
+    "programmingModel": "Complexo que recebe eventos de produtores. Confirmar quem compra a atração para o Red Hall.",
+    "restriction": "",
+    "contactEvidenceUrl": "https://redeventos.com.br/sobre/"
   },
   {
     "id": "terra",
@@ -118,7 +138,7 @@ window.CASAS = [
       "image": "https://terrasp.com/wp-content/uploads/2023/12/04.jpg"
     },
     "added": false,
-    "priority": 3,
+    "priority": 2,
     "person": "",
     "shortPerson": "",
     "role": "Responsável pela agenda ainda não identificado",
@@ -129,13 +149,13 @@ window.CASAS = [
     "bookingConfirmed": false,
     "phone": "5511932242747",
     "whatsapp": "5511932242747",
-    "email": "",
+    "email": "terrasp@email.com",
     "personalSocial": "",
     "contactOwner": "Equipe da casa — não é contato pessoal",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
     "personKey": "terra-booking",
     "display": "(11) 93224-2747",
-    "channelType": "Atendimento / realização de eventos no site oficial",
+    "channelType": "WhatsApp oficial da equipe · encaminhamento pendente",
     "whatsappEvidence": "Número do rodapé e do botão “Faça seu evento”. O antigo (11) 94597-4353 está no FAQ para camarotes e aniversários e foi retirado da rota principal. O atual também é da equipe, não de uma pessoa identificada.",
     "proof": "A fonte comprova atendimento e consulta de estrutura/disponibilidade, não um comprador artístico. O sócio Yhosefe e seu e-mail cadastral foram removidos. O vínculo de Jonatas Camargo não comprovou função atual de contratação ou contato direto.",
     "routeUrl": "https://terrasp.com/contato/",
@@ -149,8 +169,24 @@ window.CASAS = [
       [
         "WhatsApp para realização de evento — oficial",
         "https://terrasp.com/faca-seu-evento/"
+      ],
+      [
+        "Léo Magalhães · agenda oficial 14/11/2026",
+        "https://www.instagram.com/terrasp_/p/De-FxCgRq79/"
+      ],
+      [
+        "Shows produzidos pela Terra SP — publicação oficial",
+        "https://www.instagram.com/terrasp_/p/De0i4YHDny3/"
       ]
-    ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "potential",
+    "budgetReason": "Show sertanejo de Léo Magalhães anunciado para 14/11/2026 e campanha de shows produzidos pela própria Terra SP. Indício de operação com compra de atrações, não de orçamento aprovado para a dupla.",
+    "programmingModel": "O perfil oficial distingue shows produzidos pela Terra SP de outras datas. Confirmar compra própria para a proposta.",
+    "restriction": "",
+    "contactEvidenceUrl": "https://terrasp.com/contato/"
   },
   {
     "id": "arena",
@@ -166,7 +202,7 @@ window.CASAS = [
     "fit": "Público popular e escala interessante. Exige validação da configuração e da compra de cachê fixo.",
     "instagram": "https://www.instagram.com/arenamais_/",
     "added": false,
-    "priority": 3,
+    "priority": 4,
     "person": "",
     "shortPerson": "",
     "role": "Responsável pela agenda ainda não identificado",
@@ -180,15 +216,15 @@ window.CASAS = [
     "email": "",
     "personalSocial": "",
     "contactOwner": "Equipe da casa — não é contato pessoal",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
     "personKey": "arena-booking",
     "display": "(11) 94211-8558",
-    "channelType": "Atendimento institucional da Arena+",
-    "whatsappEvidence": "Número do botão oficial de WhatsApp. Não identifica o profissional que atende ou quem compra a programação.",
-    "proof": "O canal é da Arena+, sem titularidade pessoal publicada. O administrador societário e seu e-mail cadastral não foram mantidos como indicação de booking.",
+    "channelType": "Atendimento / aniversários · não é booking",
+    "whatsappEvidence": "O número oficial aparece também no FAQ para aniversários. Não há prova de encaminhamento ao comprador. O Linktree Arena Sertaneja usa o mesmo WhatsApp; não foi contada uma segunda oportunidade independente.",
+    "proof": "O botão oficial leva a (11) 94211-8558, mas o canal também atende aniversários. Sem nome de programador publicado. O mesmo número consta em linktr.ee/arenasertaneja; isso é sobreposição de canal, não comprovação de dois compradores.",
     "routeUrl": "https://arenamais.com/contato/",
     "routeLabel": "Contato oficial",
-    "routeInstruction": "Peça encaminhamento à produção artística, com nome e contato do comprador. Não presuma que o mesmo profissional cuida do Terra SP por existir vínculo societário.",
+    "routeInstruction": "Só usar para pedir o contato profissional da programação. Se a resposta tratar apenas de aniversário, interromper essa rota e solicitar produção artística. Não repetir abordagem pelo Linktree Arena Sertaneja.",
     "sources": [
       [
         "WhatsApp — contato oficial",
@@ -197,8 +233,20 @@ window.CASAS = [
       [
         "Estrutura — oficial",
         "https://arenamais.com/faca-seu-evento/"
+      ],
+      [
+        "Mesmo WhatsApp no Linktree Arena Sertaneja — evitar duplicidade",
+        "https://linktr.ee/arenasertaneja"
       ]
-    ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "conditional",
+    "budgetReason": "Capacidade publicada permite estudar evento de maior porte, mas programação multigênero e canal de aniversários deixam o encaixe e o acesso ao comprador pendentes.",
+    "programmingModel": "Compra de show, coprodução ou locação: confirmar por data.",
+    "restriction": "",
+    "contactEvidenceUrl": "https://arenamais.com/contato/"
   },
   {
     "id": "villa",
@@ -228,7 +276,7 @@ window.CASAS = [
     "email": "contato@saopauloeventos.com.br",
     "personalSocial": "",
     "contactOwner": "Equipe do Grupo São Paulo Eventos — não é contato do proprietário",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
     "personKey": "spe-artistico",
     "display": "Formulário com opção “Contato Artístico”",
     "channelType": "Encaminhamento artístico formal do grupo",
@@ -245,8 +293,20 @@ window.CASAS = [
       [
         "Agenda — canal da casa",
         "https://www.appvillacountry.com.br/"
+      ],
+      [
+        "Agenda atual — site oficial",
+        "https://villacountry.com.br/"
       ]
-    ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "potential",
+    "budgetReason": "Casa dedicada ao sertanejo, com agenda de duplas nacionais e artistas em desenvolvimento. É o encaixe artístico mais evidente da seleção; a faixa de R$ 30 mil não foi publicada.",
+    "programmingModel": "Programação sertaneja recorrente. Encaminhamento artístico formal publicado pelo grupo.",
+    "restriction": "",
+    "contactEvidenceUrl": "https://www.saopauloeventos.com.br/#contato"
   },
   {
     "id": "uzna",
@@ -254,15 +314,15 @@ window.CASAS = [
     "city": "Sorocaba",
     "region": "Interior",
     "category": "Arena coberta",
-    "capacity": "Referência: até 12.000",
-    "capacityNote": "Capacidade publicada em reportagem. Solicitar layout comercial e capacidade licenciada da data.",
+    "capacity": "Capacidade atual a confirmar",
+    "capacityNote": "A referência antiga de 12.000 não foi reconfirmada em documento técnico atual. Solicitar planta e lotação da configuração da data.",
     "ticket": "A confirmar por configuração",
     "ticketNote": "Sem preço médio comparável validado.",
     "quality": "Arena coberta de grande porte, com lounges, bares e espaços de hospitalidade.",
     "fit": "Mais plausível em noite compartilhada ou programação especial do que headline isolado.",
     "instagram": "https://www.instagram.com/uzna.oficial/",
     "added": false,
-    "priority": 3,
+    "priority": 4,
     "person": "",
     "shortPerson": "",
     "role": "Responsável pela agenda ainda não identificado",
@@ -276,21 +336,33 @@ window.CASAS = [
     "email": "",
     "personalSocial": "",
     "contactOwner": "Equipe da casa — não é contato pessoal",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
     "personKey": "uzna-booking",
     "display": "(15) 3191-2425",
-    "channelType": "“Fale com nosso time” — link oficial atual",
-    "whatsappEvidence": "O Linktree oficial encaminha para esse número. Substitui o celular antigo do acervo. É canal da equipe, não de Gui Moron.",
-    "proof": "Não foi localizado nome verificável do profissional operacional que compra os shows. O CEO e seu Instagram pessoal foram retirados da rota principal. O atendimento atual é apenas uma ponte para localizar o comprador.",
+    "channelType": "WhatsApp geral no perfil oficial · não é pessoal",
+    "whatsappEvidence": "O link atual “Entre em contato — WhatsApp” do Instagram oficial aponta a (15) 3191-2425. O camarote privativo usa outro celular, excluído da rota. O perfil de Gui Moron está privado e não foi apresentado como contato direto do comprador.",
+    "proof": "O número foi conferido nos links visíveis do perfil oficial em 28/10/2026. Comprova um canal geral da UZNA, não nome, função artística ou autoridade de quem atende.",
     "routeUrl": "https://linktr.ee/uzna.oficial",
     "routeLabel": "Canais oficiais da UZNA",
     "routeInstruction": "Peça à equipe o nome e o contato de quem cuida da programação e da compra de shows próprios, distinguindo essa demanda de ingressos, camarotes, eventos de terceiros e locação.",
     "sources": [
       [
-        "WhatsApp em “Fale com nosso time” — oficial",
-        "https://linktr.ee/uzna.oficial"
+        "WhatsApp atual — links do Instagram oficial",
+        "https://www.instagram.com/uzna.oficial/"
+      ],
+      [
+        "Fernando & Sorocaba — agenda anunciada 14/11/2026",
+        "https://www.instagram.com/churrascoonfire/p/DdCeyf4JwwY/"
       ]
-    ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "conditional",
+    "budgetReason": "Recebe grandes atrações sertanejas, mas a escala pode exigir atração complementar, parceria ou montagem reduzida. Não priorizar uma locação grande para um show de R$ 30 mil.",
+    "programmingModel": "Compra de show, coprodução ou locação: confirmar por data.",
+    "restriction": "",
+    "contactEvidenceUrl": "https://www.instagram.com/uzna.oficial/"
   },
   {
     "id": "folk",
@@ -312,7 +384,7 @@ window.CASAS = [
       "image": "https://folkvalley.com.br/wp-content/uploads/2018/12/folk_valley_club_04-min-720x400.jpg"
     },
     "added": false,
-    "priority": 3,
+    "priority": 2,
     "person": "",
     "shortPerson": "",
     "role": "Responsável pela agenda ainda não identificado",
@@ -326,10 +398,10 @@ window.CASAS = [
     "email": "contato@folkvalley.com.br",
     "personalSocial": "",
     "contactOwner": "Equipe da casa — não é contato pessoal",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
     "personKey": "folk-booking",
     "display": "(19) 99148-8131",
-    "channelType": "Atendimento da Folk Valley — site oficial",
+    "channelType": "WhatsApp do atendimento oficial · pedir produção artística",
     "whatsappEvidence": "Número configurado no botão WhatsApp da página oficial “Info”; e-mail apresentado como SAC. Nenhum desses canais é atribuído ao comprador ou a Fauze.",
     "proof": "O site oferece formulário, atendimento e SAC sem identificar o comprador de shows. Fauze Abdouch e seu perfil pessoal saíram da indicação principal: vínculo societário não comprova operação da agenda.",
     "routeUrl": "https://folkvalley.com.br/info/",
@@ -343,8 +415,20 @@ window.CASAS = [
       [
         "Estrutura — oficial",
         "https://folkvalley.com.br/club/"
+      ],
+      [
+        "Matheus & Kauan / Natanzinho — agenda oficial 05/12/2026",
+        "https://www.instagram.com/folkvalley/p/DfAUPHZEVGe/"
       ]
-    ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "potential",
+    "budgetReason": "Histórico e agenda 2026 com atrações nacionais de sertanejo. Considerar data ou montagem compatível, sem pressupor que o orçamento de uma grande noite esteja disponível para a dupla.",
+    "programmingModel": "Agenda própria e eventos especiais; confirmar comprador e modelo da data.",
+    "restriction": "",
+    "contactEvidenceUrl": "https://folkvalley.com.br/info/"
   },
   {
     "id": "estancia",
@@ -360,7 +444,7 @@ window.CASAS = [
     "fit": "Histórico sertanejo e possibilidade de ajustar escala. Confirmar quem produz e compra a data.",
     "instagram": "https://www.instagram.com/estancia.oficial/",
     "added": false,
-    "priority": 3,
+    "priority": 4,
     "person": "",
     "shortPerson": "",
     "role": "Responsável pela agenda ainda não identificado",
@@ -374,11 +458,11 @@ window.CASAS = [
     "email": "estancia@estancia.com.br",
     "personalSocial": "",
     "contactOwner": "Equipe da casa — não é contato pessoal",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
     "personKey": "estancia-booking",
     "display": "(11) 4101-5000",
-    "channelType": "Central institucional da Estância",
-    "whatsappEvidence": "Telefone e e-mail no rodapé; o botão oficial “Chame agora” usa esse número no WhatsApp. Não é celular de sócio ou diretor.",
+    "channelType": "Central oficial de eventos · não é contato de comprador",
+    "whatsappEvidence": "O WhatsApp (11) 4101-5000 permanece no contato oficial. É central institucional, não de uma pessoa. O formulário oferece Orçamento, Dúvida, Comercial e Outro; não há setor artístico nominal publicado.",
     "proof": "A fonte confirma a central do complexo, não o comprador artístico. Nathalia Carlone foi retirada da indicação principal porque cadastro societário não prova que ela feche a programação.",
     "routeUrl": "https://estancia.com.br/contato/",
     "routeLabel": "Contato do complexo",
@@ -392,7 +476,15 @@ window.CASAS = [
         "Contato — oficial",
         "https://estancia.com.br/contato/"
       ]
-    ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "conditional",
+    "budgetReason": "Estrutura e histórico de grandes shows, mas arena de escala superior à proposta isolada. Qualificar palco, público e produtor antes de avançar.",
+    "programmingModel": "Shows especiais, locações e outras operações. O restaurante não representa o orçamento da arena.",
+    "restriction": "",
+    "contactEvidenceUrl": "https://estancia.com.br/"
   },
   {
     "id": "coracao",
@@ -402,45 +494,57 @@ window.CASAS = [
     "category": "Casa sertaneja",
     "capacity": "Não publicada / a confirmar",
     "capacityNote": "Não usar público de DVD como capacidade licenciada.",
-    "ticket": "Referência anterior: R$ 20–35",
-    "ticketNote": "Faixa abaixo do alvo de R$ 50–100; a proposta exige uma data especial.",
+    "ticket": "Consultar o show e o lote",
+    "ticketNote": "A faixa antiga de ingresso não foi revalidada e não foi usada para estimar o cachê disponível.",
     "quality": "Site informa 14 camarotes, duas pistas, climatização e valet.",
-    "fit": "Aderência sertaneja forte, mas economia regular insuficiente para afirmar que cabe R$ 30 mil. Qualificar patrocínio, bar ou evento especial.",
+    "fit": "Aderência sertaneja forte. Qualificar a programação noturna e a demanda da dupla; faltam orçamento e comprador para afirmar que cabe R$ 30 mil.",
     "instagram": "",
     "added": false,
-    "priority": 2,
-    "person": "Zacarias",
+    "priority": 3,
+    "person": "",
     "shortPerson": "",
-    "role": "Gerente citado em publicação histórica · não comprador confirmado",
-    "direct": true,
-    "directType": "Celular nominal histórico",
-    "contactKind": "person",
-    "contactStatus": "ponte",
+    "role": "Pessoa da programação ainda não identificada",
+    "direct": false,
+    "directType": "",
+    "contactKind": "team",
+    "contactStatus": "encaminhamento",
     "bookingConfirmed": false,
-    "phone": "5511987326651",
-    "whatsapp": "",
+    "phone": "5511998983963",
+    "whatsapp": "5511998983963",
     "email": "",
     "personalSocial": "",
-    "contactOwner": "Zacarias — atribuição histórica; titularidade atual pendente",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
-    "personKey": "zacarias",
-    "display": "(11) 98732-6651",
-    "channelType": "Celular atribuído ao gerente em resposta pública histórica",
-    "whatsappEvidence": "Publicação não comprova WhatsApp, função artística ou que o número continue com ele. O atalho de WhatsApp foi retirado; confirme identidade e vínculo ao ligar.",
-    "proof": "Nome e celular constam em resposta atribuída à casa em agregador de avaliações. Isso identifica uma possível ponte operacional histórica, não o comprador artístico nem o titular atual do número.",
+    "contactOwner": "Equipe do Coração Sertanejo · titular individual não identificado",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
+    "personKey": "coracao-booking",
+    "display": "(11) 99898-3963",
+    "channelType": "WhatsApp geral atual da bio oficial",
+    "whatsappEvidence": "Bio oficial e botão do site publicam (11) 99898-3963. O (11) 95433-5586 é divulgado para reservas. O antigo número associado a Zacarias ainda aparece para confraternizações, mas não comprova que seja dele nem de quem compra shows.",
+    "proof": "A atribuição histórica a Zacarias não foi mantida como contato de booking. O canal principal foi atualizado pela bio oficial. A página contém vários números e um link de e-mail genérico de template; nenhum deles foi tratado como comprador identificado.",
     "routeUrl": "https://www.instagram.com/coracaosertanejo/",
-    "routeLabel": "Perfil oficial da casa",
-    "routeInstruction": "Confirme a identidade e o vínculo atual de Zacarias antes da proposta. Peça o contato profissional de quem efetivamente contrata os shows; se o número mudou, use o perfil oficial apenas para encaminhamento.",
+    "routeLabel": "Conferir canal oficial",
+    "routeInstruction": "Pelo atendimento geral, peça a produção da programação noturna e o nome de quem aprova cachês. Evite o atendimento de reservas do almoço ou confraternizações.",
     "sources": [
       [
-        "Resposta com nome e celular — atribuição histórica",
-        "https://restaurantguru.com.br/Coracao-Sertanejo-Sao-Paulo"
+        "Telefone atual — bio oficial",
+        "https://www.instagram.com/coracaosertanejo/"
       ],
       [
-        "Estrutura — casa oficial",
+        "Canais e divergências — site oficial",
         "https://coracaosertanejo.com.br/"
+      ],
+      [
+        "Yasmin Santos — show anunciado 12/11/2026",
+        "https://www.instagram.com/coracaosertanejo/reel/DezDnJGjzof/"
       ]
-    ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "potential",
+    "budgetReason": "O perfil atual anuncia Yasmin Santos e Lucas & Higor em novembro de 2026. A programação de shows sustenta a prospecção; couvert de restaurante e preço antigo de ingresso não definem o cachê que a casa compra.",
+    "programmingModel": "Programação noturna de shows e operação de restaurante. Negociar com a produção dos shows.",
+    "restriction": "",
+    "contactEvidenceUrl": "https://www.instagram.com/coracaosertanejo/"
   },
   {
     "id": "unimed",
@@ -455,8 +559,8 @@ window.CASAS = [
     "quality": "Espaço consolidado com formatos flexíveis, estrutura técnica e acesso pela Barra Funda.",
     "fit": "Oportunidade de composição ou coprodução. Porte alto para headline sem demanda demonstrada.",
     "instagram": "",
-    "added": true,
-    "priority": 1,
+    "added": false,
+    "priority": 4,
     "person": "",
     "shortPerson": "",
     "role": "Responsável pela agenda ainda não identificado",
@@ -470,7 +574,7 @@ window.CASAS = [
     "email": "contato@saopauloeventos.com.br",
     "personalSocial": "",
     "contactOwner": "Equipe do Grupo São Paulo Eventos — não é contato de Marco Tobal",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
     "personKey": "spe-artistico",
     "display": "Formulário com opção “Contato Artístico”",
     "channelType": "Encaminhamento artístico formal do grupo",
@@ -488,7 +592,15 @@ window.CASAS = [
         "Finalidade do antigo celular: comercial / eventos — oficial",
         "https://www.espacounimed.com.br/faca-seu-evento/"
       ]
-    ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "conditional",
+    "budgetReason": "Grande casa de espetáculos e custo operacional potencialmente alto. Trabalhar apenas se houver público, formato reduzido ou produtor parceiro; não é prioridade por ter o mesmo formulário do Villa Country.",
+    "programmingModel": "Mesmo encaminhamento institucional do Villa Country. Não duplicar envio como se fossem dois compradores independentes.",
+    "restriction": "",
+    "contactEvidenceUrl": "https://www.saopauloeventos.com.br/#contato"
   },
   {
     "id": "ctn",
@@ -503,8 +615,8 @@ window.CASAS = [
     "quality": "Complexo permanente com palco, gastronomia e programação recorrente; não se trata de um festival isolado.",
     "fit": "Público popular de música brasileira. O encaixe sertanejo é condicional e deve ser confirmado com a curadoria.",
     "instagram": "",
-    "added": true,
-    "priority": 3,
+    "added": false,
+    "priority": 4,
     "person": "",
     "shortPerson": "",
     "role": "Responsável pela agenda ainda não identificado",
@@ -518,15 +630,15 @@ window.CASAS = [
     "email": "",
     "personalSocial": "",
     "contactOwner": "Equipe da casa — não é contato pessoal",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
     "personKey": "ctn-booking",
     "display": "(11) 3488-9420",
-    "channelType": "Atendimento institucional · pedir Produção Artística",
-    "whatsappEvidence": "Número do botão WhatsApp do site oficial. Atendente não identificado: não é contato da presidente nem contato direto comprovado da produção.",
-    "proof": "O edital oficial confirma Curadoria e Coordenação de Produção Artística, sem identificar o comprador. Christiane Abreu foi retirada da indicação principal: presidência não comprova operação da agenda.",
+    "channelType": "WhatsApp do atendimento / SAC · não é setor artístico",
+    "whatsappEvidence": "O número do widget oficial continua (11) 3488-9420. O formulário tem apenas Depoimento, Melhorias, Dúvidas e SAC: não foi classificado como formulário artístico.",
+    "proof": "O edital menciona Coordenação de Produção Artística, sem nome ou telefone direto. O formulário atual e o WhatsApp são de atendimento. O comercial de publicidade/patrocínio não equivale a compra de atrações.",
     "routeUrl": "https://www.ctn.org.br/contato/",
     "routeLabel": "Contato do CTN",
-    "routeInstruction": "Peça a Coordenação de Produção Artística dos shows especiais e o contato nominal do comprador. O edital de bandas residentes tem outro formato e valores; não suponha que seja o canal para vender o show de R$ 30 mil.",
+    "routeInstruction": "Peça especificamente a Coordenação de Produção Artística mencionada no edital. Solicite nome e canal profissional de quem avalia shows especiais; SAC e comercial de patrocínio não são o comprador.",
     "sources": [
       [
         "Atendimento e botão WhatsApp — oficial",
@@ -540,7 +652,15 @@ window.CASAS = [
         "Shows especiais — oficial",
         "https://www.ctn.org.br/novos-negocios/"
       ]
-    ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "conditional",
+    "budgetReason": "Opera shows especiais em estrutura de grande porte. É necessário comprovar abertura de curadoria para sertanejo e orçamento antes de apresentar a proposta como compatível.",
+    "programmingModel": "Compra de show, coprodução ou locação: confirmar por data.",
+    "restriction": "",
+    "contactEvidenceUrl": "https://www.ctn.org.br/contato/"
   },
   {
     "id": "tokio",
@@ -555,8 +675,8 @@ window.CASAS = [
     "quality": "Som, luz e vídeo instalados, ambientes modulares, gastronomia e estrutura de grande porte.",
     "fit": "Casa multigênero. Histórico sertanejo não significa agenda aberta; validar curadoria, formato e custo operacional.",
     "instagram": "",
-    "added": true,
-    "priority": 2,
+    "added": false,
+    "priority": 3,
     "person": "Elvis Patez",
     "shortPerson": "",
     "role": "Diretor artístico citado em 2025 · função atual pendente",
@@ -570,15 +690,15 @@ window.CASAS = [
     "email": "site@tokiomarinehall.com.br",
     "personalSocial": "",
     "contactOwner": "Equipe do Tokio Marine Hall — este e-mail não é pessoal de Elvis",
-    "checked": "Revisão de finalidade do canal: 27/10/2026. Sem ligação ou mensagem. Nenhum contato direto com comprador atual foi comprovado nesta revisão.",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação do canal conferida; sem ligação, mensagem ou teste de entrega. Identidade de quem atende e poder de contratar ainda não confirmados.",
     "personKey": "elvis",
     "display": "site@tokiomarinehall.com.br",
-    "channelType": "E-mail geral da casa · solicitar direção artística",
+    "channelType": "Formulário geral com área Shows · não comprova booking",
     "whatsappEvidence": "Não foi localizado telefone ou WhatsApp direto público verificável de Elvis. Foram excluídos o telefone cadastral de sua empresa e o número de reserva PCD.",
     "proof": "A reportagem cita expressamente Elvis Patez como diretor artístico, não apenas como proprietário. É referência de função em 2025; a continuidade no cargo e o contato direto permanecem pendentes.",
     "routeUrl": "https://www.tokiomarinehall.com.br/contato/",
-    "routeLabel": "Formulário da casa",
-    "routeInstruction": "Peça à equipe o contato profissional da direção artística e confirme se Elvis ainda cuida da programação ou quem o substituiu. Valide o destinatário antes de enviar proposta completa.",
+    "routeLabel": "Formulário · selecionar Shows",
+    "routeInstruction": "No primeiro formulário “Fale Conosco”, selecione Shows e peça encaminhamento à direção artística. Confirme a função atual de Elvis Patez. Não usar o formulário de reserva PCD logo abaixo nem o telefone exclusivo de ingressos.",
     "sources": [
       [
         "Diretor artístico citado — reportagem de 2025",
@@ -591,6 +711,225 @@ window.CASAS = [
       [
         "Capacidade — oficial",
         "https://www.tokiomarinehall.com.br/faca-seu-evento-3/"
+      ]
+    ],
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "auditDate": "2026-10-28",
+    "screening": "conditional",
+    "budgetReason": "Estrutura profissional, mas curadoria e custos precisam caber no público da dupla. Prioridade secundária até haver comprador e formato definidos.",
+    "programmingModel": "Espetáculos próprios e de produtores externos. Confirmar operação da data antes de negociar.",
+    "restriction": "",
+    "contactEvidenceUrl": "https://cartaodevisita.com.br/conteudo/57495/festas-e-comemoracoes-nas-grandes-casas-de-espetaculos"
+  },
+  {
+    "category": "Casa de shows",
+    "added": true,
+    "priority": 2,
+    "person": "",
+    "shortPerson": "",
+    "role": "Pessoa que avalia e aprova shows ainda não identificada",
+    "direct": false,
+    "directType": "",
+    "contactKind": "team",
+    "contactStatus": "encaminhamento",
+    "bookingConfirmed": false,
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "screening": "potential",
+    "phone": "5519998248291",
+    "whatsapp": "5519998248291",
+    "email": "chapeubrasiloficial@gmail.com",
+    "personalSocial": "",
+    "auditDate": "2026-10-28",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação conferida; sem ligação, mensagem ou teste de entrega. Comprador e orçamento dependem de retorno.",
+    "restriction": "",
+    "ticket": "Consultar o show e o lote",
+    "ticketNote": "Não foi consolidado ticket médio atual. Ingresso não comprova orçamento de contratação.",
+    "programmingModel": "Programação recorrente; compra direta, coprodução ou produtor externo a confirmar.",
+    "id": "chapeu",
+    "name": "Chapéu Brasil",
+    "city": "Sumaré",
+    "region": "Interior",
+    "capacity": "7.000 · palco principal",
+    "capacityNote": "Capacidade comercial do site, não licença verificada. Palco 2 tem divergência de 4.000/5.000 na mesma página; confirmar planta e não somar públicos.",
+    "quality": "Ambientes climatizados, camarins, áreas acessíveis e estacionamento próprio. Pedir ficha técnica e layout para a proposta.",
+    "fit": "Histórico sertanejo nacional e agenda ativa. Estudar uma noite ou montagem compatível com a dupla; o porte não comprova aceitação de R$ 30 mil.",
+    "instagram": "https://www.instagram.com/chapeubrasiloficial/",
+    "contactOwner": "Equipe oficial do Chapéu Brasil · pessoa receptora não publicada",
+    "personKey": "chapeu-booking",
+    "display": "(19) 99824-8291",
+    "channelType": "WhatsApp oficial da casa · pedir produção / comprador",
+    "whatsappEvidence": "O site publica este celular como WhatsApp, e uma divulgação atual do perfil oficial repete o mesmo número. É canal da equipe: não foi atribuído ao proprietário ou ao comprador.",
+    "proof": "O contato foi cruzado entre a página oficial de atendimento e uma publicação do perfil da casa. Nenhuma fonte localizada identifica o atual profissional que aprova cachês.",
+    "routeUrl": "https://chapeubrasil.com.br/contato/",
+    "routeLabel": "Conferir telefone na fonte",
+    "routeInstruction": "Peça o profissional da produção que recebe propostas e aprova cachês. Confirme se contrata diretamente ou se a data é de um produtor externo; só depois negocie os R$ 30 mil.",
+    "contactEvidenceUrl": "https://chapeubrasil.com.br/contato/",
+    "budgetReason": "O histórico oficial inclui Bruno & Marrone, Jorge & Mateus e Eduardo Costa, com estrutura dedicada a shows. É indício de operação profissional, não comprovação de cachê disponível.",
+    "artists": {
+      "names": [
+        "Bruno & Marrone",
+        "Jorge & Mateus",
+        "Eduardo Costa"
+      ],
+      "label": "Histórico publicado pela casa · datas não informadas; agenda atual conferida no Instagram",
+      "source": "https://chapeubrasil.com.br/nossa-historia/"
+    },
+    "sources": [
+      [
+        "WhatsApp e e-mail — site oficial",
+        "https://chapeubrasil.com.br/contato/"
+      ],
+      [
+        "Mesmo WhatsApp em divulgação oficial atual",
+        "https://www.instagram.com/chapeubrasiloficial/reel/DfAzrR2B4zA/"
+      ],
+      [
+        "Estrutura e capacidades — oficial",
+        "https://chapeubrasil.com.br/nossosambientes/"
+      ],
+      [
+        "Artistas — histórico oficial",
+        "https://chapeubrasil.com.br/nossa-historia/"
+      ]
+    ]
+  },
+  {
+    "category": "Casa de shows",
+    "added": true,
+    "priority": 3,
+    "person": "",
+    "shortPerson": "",
+    "role": "Pessoa que avalia e aprova shows ainda não identificada",
+    "direct": false,
+    "directType": "",
+    "contactKind": "team",
+    "contactStatus": "encaminhamento",
+    "bookingConfirmed": false,
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "screening": "potential",
+    "phone": "",
+    "whatsapp": "",
+    "email": "vilajk@vilajk.com.br",
+    "personalSocial": "",
+    "auditDate": "2026-10-28",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação conferida; sem ligação, mensagem ou teste de entrega. Comprador e orçamento dependem de retorno.",
+    "restriction": "",
+    "ticket": "Consultar o show e o lote",
+    "ticketNote": "Não foi consolidado ticket médio atual. Ingresso não comprova orçamento de contratação.",
+    "programmingModel": "Programação recorrente; compra direta, coprodução ou produtor externo a confirmar.",
+    "id": "vilajk",
+    "name": "Vila JK",
+    "city": "São Paulo · Vila Olímpia",
+    "region": "Capital",
+    "capacity": "Capacidade atual não confirmada",
+    "capacityNote": "Não reutilizar lotação de guias antigos como licença atual. Solicitar planta e capacidade do ambiente para o show.",
+    "quality": "Casa noturna com diferentes ambientes, lounges e programação de shows. Necessária ficha técnica de palco e rider para a dupla.",
+    "fit": "Alterna duplas em desenvolvimento e atrações nacionais. Vale qualificar a proposta na produção, sem confundir com o contato de mesas.",
+    "instagram": "https://www.instagram.com/vilajk/",
+    "contactOwner": "E-mail institucional do Vila JK · não é e-mail pessoal do Jordan",
+    "personKey": "vilajk-booking",
+    "display": "vilajk@vilajk.com.br",
+    "channelType": "E-mail oficial · solicitar programação artística",
+    "whatsappEvidence": "Existe um WhatsApp nominal do Jordan, mas o site o apresenta para reservas. Foi separado dos contatos de compra artística. Não há WhatsApp do comprador confirmado.",
+    "proof": "O site publica o e-mail institucional e identifica Jordan na seção de reservas. Isso não comprova que ele compre atrações ou aprove cachês. A agenda oficial do Linktree inclui noites de duplas sertanejas.",
+    "routeUrl": "https://www.vilajk.com.br/",
+    "routeLabel": "Ver contato oficial",
+    "routeInstruction": "Peça pelo e-mail o nome e o contato profissional de quem define a grade do Brilha JK e aprova cachês. Se falar com Jordan, trate-o apenas como ponte de reservas até confirmação da função.",
+    "contactEvidenceUrl": "https://www.vilajk.com.br/",
+    "budgetReason": "A programação oficial inclui duplas sertanejas e há show nacional documentado de Hugo & Guilherme em 2026. Bom indício de curadoria compatível, mas sem orçamento público de R$ 30 mil.",
+    "secondaryContact": {
+      "person": "Jordan",
+      "role": "Reservas de mesas / lounges · não comprador confirmado",
+      "phone": "5511998816008",
+      "whatsapp": "5511998816008",
+      "display": "(11) 99881-6008",
+      "source": "https://www.vilajk.com.br/"
+    },
+    "artists": {
+      "names": [
+        "Hugo & Guilherme",
+        "João Lucas & Leandro",
+        "Matheus Henrique & Gabriel"
+      ],
+      "label": "Hugo & Guilherme anunciado em fev/2026; outras duplas na agenda oficial de out–nov/2026",
+      "source": "https://linktr.ee/agendavilajk"
+    },
+    "sources": [
+      [
+        "E-mail e finalidade do contato Jordan — site oficial",
+        "https://www.vilajk.com.br/"
+      ],
+      [
+        "Agenda da casa — Linktree oficial",
+        "https://linktr.ee/agendavilajk"
+      ],
+      [
+        "Hugo & Guilherme · 27/02/2026 — divulgação",
+        "https://www.sofasertanejo.com.br/hugo-guilherme-comandam-o-brilha-jk-no-vila-jk-nesta-sexta-27-de-fevereiro/"
+      ]
+    ]
+  },
+  {
+    "category": "Casa de shows",
+    "added": true,
+    "priority": 3,
+    "person": "",
+    "shortPerson": "",
+    "role": "Pessoa que avalia e aprova shows ainda não identificada",
+    "direct": false,
+    "directType": "",
+    "contactKind": "team",
+    "contactStatus": "encaminhamento",
+    "bookingConfirmed": false,
+    "budgetConfirmed": false,
+    "budgetLabel": "Cachê de R$ 30 mil ainda não confirmado",
+    "screening": "potential",
+    "phone": "",
+    "whatsapp": "",
+    "email": "eventos@varandaestaiada.com.br",
+    "personalSocial": "",
+    "auditDate": "2026-10-28",
+    "checked": "Fonte e finalidade revisadas em 28/10/2026. Publicação conferida; sem ligação, mensagem ou teste de entrega. Comprador e orçamento dependem de retorno.",
+    "restriction": "",
+    "ticket": "Consultar o show e o lote",
+    "ticketNote": "Não foi consolidado ticket médio atual. Ingresso não comprova orçamento de contratação.",
+    "programmingModel": "Programação recorrente; compra direta, coprodução ou produtor externo a confirmar.",
+    "id": "varanda",
+    "name": "Varanda Estaiada",
+    "city": "São Paulo · Vila Cordeiro",
+    "region": "Capital",
+    "capacity": "Confirmar layout e lotação",
+    "capacityNote": "O site informa até 2.200 na seção da planta e 100–4.780 em outra seção. A divergência impede adotar uma única capacidade confirmada.",
+    "quality": "Espaço open air com infraestrutura para shows e eventos. Solicitar plano de chuva, estrutura técnica e configuração comercial.",
+    "fit": "Histórico forte de sertanejo nacional e projetos próprios. Abordagem depende de identificar o produtor da noite, não de reservar a casa.",
+    "instagram": "https://www.instagram.com/varandaestaiada/",
+    "contactOwner": "Equipe de eventos do Varanda · destinatário individual não publicado",
+    "personKey": "varanda-booking",
+    "display": "eventos@varandaestaiada.com.br",
+    "channelType": "E-mail de Eventos · não comprova compra de shows",
+    "whatsappEvidence": "O WhatsApp público (11) 93348-9161 é identificado como concierge para reservas/aniversários. Não foi oferecido como WhatsApp de contratação. O formulário de orçamento atende realização/locação de eventos.",
+    "proof": "O site separa e-mail de Eventos de Reservas e descreve a finalidade do concierge. Não foi encontrada identificação pública do atual comprador artístico. O e-mail serve apenas para solicitar esse encaminhamento.",
+    "routeUrl": "https://varandaestaiada.com.br/",
+    "routeLabel": "Ver canais e finalidade",
+    "routeInstruction": "Pelo e-mail de Eventos, solicite a pessoa que compra atrações para a programação própria ou o produtor da próxima edição sertaneja. Não usar o formulário para alugar o espaço quando o objetivo é vender o show.",
+    "contactEvidenceUrl": "https://varandaestaiada.com.br/",
+    "budgetReason": "O portfólio oficial reúne duplas nacionais e projetos autorais. A proposta de R$ 30 mil depende da edição e do público; o orçamento de locação de um evento não é verba artística.",
+    "artists": {
+      "names": [
+        "Israel & Rodolffo",
+        "Hugo & Guilherme",
+        "Bruninho & Davi"
+      ],
+      "label": "Histórico oficial do espaço · datas não consolidadas",
+      "source": "https://varandaestaiada.com.br/"
+    },
+    "sources": [
+      [
+        "Histórico, contatos e finalidade do concierge — oficial",
+        "https://varandaestaiada.com.br/"
       ]
     ]
   }
